@@ -1,0 +1,95 @@
+/* Reset de CSS */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* Configuracion del color de fondo y del tipo de letra */
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #B9BFCA; 
+}
+/* Configuracion del menu */
+.main_menu{
+    ul {
+        list-style: none;
+        text-align: center;
+    }
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+/* Titulos del Header */
+.titles{
+    text-transform: uppercase;
+    text-align: left;
+}
+/* Tamaños titulos */
+h1{
+    font-size: 3.7em;
+    font-weight: 600;
+}
+h2{
+    font-size: 2.4em;
+    font-weight: 500;
+}
+h3{
+    font-size: 1.8em;
+}
+h4{
+    font-size: 1.4em;
+}
+.margen2{
+    margin: 2%;
+}  
+/* Banda central de color oscuro */
+.highsquare{
+    background-color: #1D1D1D;
+}
+.center{
+    display: grid;
+    place-items: center;
+}
+/* Para que los textos queden sobre las imagenes */
+.text_over_img{
+    position: relative; /* Necesario para que el texto absoluto se posicione dentro de este div */
+    display: inline-block; /* Ocupa el espacio de la imagen */
+}
+.text_over_img img{
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+.txt_superpuesto{
+    position: absolute;
+    top: 10%; /* Posicion vertical */
+    left: 5%; /* Posicion horizontal */
+    text-align: left;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(75, 47, 153); /* Color del texto */
+    z-index: 2; /* Se asegura que el texto esté encima de todo */
+}
+.box_invisible{       
+    text-align: left;
+}
+.formulario_contacto{
+    border-radius: 5px;
+    position: relative;
+    text-align: left;
+    ul {
+        list-style: none;
+    }
+}
+.img_ajustada_port{
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
+}
+.img_ajustada_high{
+    width: 900px;
+    height: 300px;
+    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
+}
