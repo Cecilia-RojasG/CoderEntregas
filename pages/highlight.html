@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cecilia Rojas - 3D Modeler Portfolio</title>
     <link rel="icon" href="../assets/img/logo/CeciliaRojas_Redondo_32x32.png">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Link a fuente Inter -->
@@ -14,28 +16,35 @@
 </head>
 <body>
     <header>
-        <section id="inicio" class="margen2">
-            <!-- Links de navegacion a las principales secciones y Titulo de la Web -->
-            <nav class="main_menu" aria-label="Main Menu">
-                <ul>
-                    <!-- En un menu hamburguesa que contenga HOME ABOUT PORTFOLIO CLIENTS Y CONTACT, PORTFOLIO podria pasar a mostrar 4 opciones: -General  -Organic  -Hardsurface  -Highlighted -->
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="./aboutme.html">ABOUT ME</a></li>
-                    <li><a href="./portfolio.html">PORTFOLIO</a></li>
-                    <li><a href="./organic.html">ORGANIC</a></li>
-                    <li><a href="./hardsurface.html">HARDSURFACE</a></li>
-                    <li><a href="./highlight.html">HIGHLIGHTED</a></li>
-                    <li><a href="./clients.html">CLIENTS</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-            <!-- Titulo -->
-            <div class="titles">
-                <br>
-                <h1>CECILIA ROJAS PORTFOLIO</h1>
-                <h2>3D MODELER</h2>
-            </div>
-        </section>
+        <!-- Logo -->
+        <div id="inicio">
+            <img src="../assets/img/logo/logo-nombre1.png" alt="Logo CR" class=img_logo >
+        </div>
+        <!-- Links de navegacion a las principales secciones-->
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../pages/aboutme.html">ABOUT</a></li>
+                <!--Menu hamburguesa conteniendo los tres tipos de portafolios necesarios-->
+                <li class="submenu"><a href="#">PORTFOLIO <i class="fa-solid fa-circle-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="../pages/portfolio.html">GENERAL</a>
+                        </li>
+                        <li>
+                            <a href="../pages/hardsurface.html">HARDSURFACE</a>
+                        </li>
+                        <li>
+                            <a href="../pages/organic.html">ORGANIC</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../pages/highlight.html">HIGHLIGHTED</a></li>
+                <li><a href="../pages/clients.html">CLIENTS</a></li>
+                <li><a href="../pages/contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-bars hamburguesa"></i>
     </header>
     <main>
         <!-- Highlighted muestra el último trabajo destacado -->

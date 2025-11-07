@@ -2,29 +2,66 @@
 *{
     margin: 0;
     padding:0;
-    box-sizing: border-box;
 }
-/* Configuracion del color de fondo y del tipo de letra */
+/* Configuracion del color de fondo y orden del header */
+header{
+    display:flex;
+    padding: 10px 30px;
+    background-color: #212121;
+    justify-content: space-between;
+    align-items: center;   
+}
+.img_logo{
+    max-width: 100%;
+    min-width: 20%;
+}
+/*configuracion del menu en el header*/
+header nav{
+    display: flex;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+header nav ul li a{
+        text-decoration: none;
+        font-weight: 600;
+        color:azure;
+}
+header nav ul li a:visited{
+        color: antiquewhite;
+}
+header nav ul li a:hover{
+        color: rgb(115, 57, 223);
+}
+header nav ul li.submenu{
+    position: relative;
+}
+header nav ul li.submenu > ul{
+    display: none;
+    position:absolute;
+    top:11px;
+    left:5px;
+    width: 180px;
+    padding: 13px;
+}
+header nav ul li.submenu:hover > ul{
+    display: block;
+}
+/*Configuracion del menu Hamburguesa */
+header .hamburguesa{
+    color: antiquewhite;
+    padding: 5px;
+    font-size: 20px;
+    display:none;
+}
+/* Configuracion del Body de las diferentes paginas */
 body{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    background-color: #B9BFCA; 
-}
-/* Configuracion del menu */
-.main_menu{
-    ul {
-        list-style: none;
-        text-align: center;
-    }
-    li {
-        display: inline-block;
-        margin-right: 10px;
-    }
-}
-/* Titulos del Header */
-.titles{
-    text-transform: uppercase;
-    text-align: left;
+    background-color: #212121; 
 }
 /* Tamaños titulos */
 h1{
@@ -41,13 +78,12 @@ h3{
 h4{
     font-size: 1.4em;
 }
-.margen2{
-    margin: 2%;
-}  
-/* Banda central de color oscuro */
+/*INDEX */
+/* Banda superior de color negro en el body del Index */
 .highsquare{
-    background-color: #1D1D1D;
+    background-color: #000000;
 }
+/*Configuracion de la posicion de las imagenes*/
 .center{
     display: grid;
     place-items: center;
@@ -73,6 +109,52 @@ h4{
 .box_invisible{       
     text-align: left;
 }
+/*GENERAL PORTFOLIO*/
+.gallery{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+/* Ajuste para imagenes del Portfolio General */
+.img_ajustada_port{
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+}
+/*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE Y ORGANIC*/
+.config_txt{
+    padding: 10%;
+}
+.box_txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 60vh;
+    background-color: rgb(94, 110, 110);
+    border: 2px solid #000000;
+}
+.box_img{
+    display: flex;
+    width: 70%;
+    height: 60vh;
+    justify-content: center;
+    background-color: rgb(110, 108, 94);
+    border: 2px solid #000000;
+}
+.row_0{
+    display: flex;
+    padding: 20px;
+}
+.comun_img{
+    min-width: 10%;
+    min-height: 10%;
+    max-width: 100%;
+    max-height: 100%;
+}
+/*FORMULARIO DE CONTACTO */
 .formulario_contacto{
     border-radius: 5px;
     position: relative;
@@ -81,15 +163,53 @@ h4{
         list-style: none;
     }
 }
-.img_ajustada_port{
-    width: 300px;
-    height: 300px;
-    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
-}
+/*HIGHLIGHT*/
 .img_ajustada_high{
     width: 900px;
     height: 300px;
     object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
+}
+/*RESPONSIVO */
+@media (max-width:991px){
+    .config_txt{
+    padding: 5%;
+    }
+    h4{
+    font-size: 1.1em;
+    }
+    P{
+        font-size: 0.8rem;
+    }
+    /* Ajuste para la grilla del Portfolio General */
+    .gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Ajuste para imagenes del Portfolio General */
+    .img_ajustada_port{
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+    }
+    /*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/   
+    header nav{
+        display:none;
+    }
+    header .hamburguesa{
+        display:block;
+    }
+}
+@media (max-width:600px){
+    /* Ajuste para la grilla del Portfolio General */
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Ajuste para imagenes del Portfolio General */
+    .img_ajustada_port{
+        width: 150px;
+        height: 150px;
+        object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+    }
 }
