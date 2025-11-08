@@ -48,8 +48,8 @@
     </header>
     <main>
         <!-- Highlighted muestra el último trabajo destacado -->
-        <section class="margen2">
-            <div>
+        <section class="highsquare">
+            <div class="edit_text">
                 <h3>HIGHLIGHTED</h3>
                 <br>
                 <p>These models were created for use in an animation about safety in offices and mining work sites.  Everything was created from scratch, including the settings, props, and characters.</p>
@@ -59,6 +59,9 @@
                 <p>Also visit <a href="./organic.html">ORGANIC</a> or <a href="./hardsurface.html">HARDSURFACE</a> to see models created using these techniques. </p>
                 <br>
             </div>
+        </section>
+        <section>
+            <!--Enlaces internos para ir rápido al modelo-->
             <div>
                 <a href="#electrico">Riesgos en sala eléctrica</a>
                 <a href="#chancador">Riesgos en chancador</a>
@@ -66,30 +69,41 @@
             </div>
             <br>
             <section id="electrico">
-                <div>
-                    <h4>Riesgos en sala eléctrica</h4>
+                <!--Muestra un texto a la derecha y una imagen al lado izquierdo-->
+                <div class="row_txt_img">
+                    <div class="box_txt">
+                        <div class="config_txt">
+                            <h4>Riesgos en sala eléctrica</h4>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore autem possimus odit odio cumque, architecto eum explicabo reprehenderit quae porro, est similique esse dicta quod itaque nihil rem quasi.</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../assets/img/portfolio/selectrica.webp" class="comun_img" alt="Puesta candado">
+                    </div>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore autem possimus odit odio cumque, architecto eum explicabo reprehenderit quae porro, est similique esse dicta quod itaque nihil rem quasi.</p>
-                    <br>
-                </div>
-                <div>
-                    <img src="../assets/img/portfolio/selectrica.webp" width="1200" alt="Puesta candado">
                 </div>
             </section>
-            <br>
             <section id="chancador">
-                <div>
-                    <h4>Riesgos en chancador</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, quas? Iste eius aliquam modi unde ducimus consequatur optio sapiente magnam quo amet. Nemo magni voluptatibus est veniam pariatur voluptatem itaque.</p>
-                    <br>
-                </div>
-                <div>
-                    <img src="../assets/img/portfolio/chancador1.jpg" width="1200" alt="Chancador error">
-                </div>
-                <br>
-                <div>
-                    <img src="../assets/img/portfolio/chancador2.webp" width="1200" alt="Chancador seguro">
+                <!--Muestra un una imagen al lado derecho y texto a la izquierda-->
+                <div class="row_img_txt">
+                    <div class="box_txt">
+                        <div class="config_txt">
+                            <h4>Riesgos en chancador</h4>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, quas? Iste eius aliquam modi unde ducimus consequatur optio sapiente magnam quo amet. Nemo magni voluptatibus est veniam pariatur voluptatem itaque.</p>
+                            <br>
+                        </div>
+                    </div>
+                    <!--Carrousel que muestre las otras imagenes (Debe implementarse)-->
+                    <div>
+                        <img src="../assets/img/portfolio/chancador1.jpg" class="comun_img" alt="Chancador error">
+                    </div>
+                    <!--
+                    <div>
+                        <img src="../assets/img/portfolio/chancador2.webp" class="comun_img" alt="Chancador seguro">
+                    </div>-->
                 </div>
             </section>
             <div>

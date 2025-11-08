@@ -48,8 +48,8 @@
     </header>
     <main>
         <!-- Portfolio de solo modelado organico -->
-        <section>
-            <div>
+        <section class="highsquare">
+            <div class="edit_text">
                 <H3>3D ORGANIC MODELING</H3>
                 <br>
                 <p>These models were created in Mudbox and 3D Maya.The textures were created and applied using the Adobe Substance suite.</p>
@@ -58,14 +58,17 @@
                 <p>Visit <a href="./highlight.html">HIGHLIGHTED</a> section to see my most recent featured project in more detail</p>  
                 <br> 
             </div>
+        </section>
+        <section>
             <!--Enlaces internos -->
             <div>
                 <a href="#mario">Mario</a>
                 <a href="#torque">Torque</a>
             </div>
             <br>
-            <section>
-                <div class="row_0">
+            <section id="mario">
+                <!--Muestra un texto a la derecha y una imagen al lado izquierdo-->
+                <div class="row_txt_img">
                     <div class="box_txt">
                         <div class="config_txt">
                             <h4>Modelo de Mario</h4>
@@ -76,28 +79,34 @@
                             <br>
                         </div>
                     </div>
-                    <div id="mario" class="box_img">
-                        <img src="../assets/img/portfolio/Mario.png"  height="900" alt="Mario" class="comun_img">
+                    <div class="box_img">
+                        <img src="../assets/img/portfolio/Mario.png"alt="Mario" class="comun_img">
                     </div>
                 </div> 
-                <div>
-                    <a href="#inicio">Inicio</a>
-                </div>
             </section>
-            <br>
-            <section>
-                <h4>Trabajadores mineros</h4>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sint corporis autem labore magni, nihil, id totam distinctio, ratione enim ex dicta. Ipsam voluptates repellendus voluptatum ipsum vel animi amet!</p>
-                <br>
-                <div id="torque">
-                    <img src="../assets/img/portfolio/torqueorganic1.png" height="900" alt="Chancador error seguridad">
-                    <img src="../assets/img/portfolio/torqueorganic2.png" height="900" alt="Chancador correcta seguridad">
+            <section id="torque">
+                <!--Muestra dos imagenes a la derecha y un texto al lado izquierdo-->
+                <div class="row_img1_img2_txt">
+                    <div class="box_txt">
+                        <div class="config_txt">
+                            <h4>Trabajadores mineros</h4>
+                            <br>
+                            <p>Realizado en 3D maya y Mudbox a partir de imágenes y datos proporcionados por el cliente para que los elementos correspondan a los usados en la realidad.  Sin uso de IA.</p>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sint corporis autem labore magni, nihil, id totam distinctio, ratione enim ex dicta. Ipsam voluptates repellendus voluptatum ipsum vel animi amet!</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="box_img1">
+                        <img src="../assets/img/portfolio/torqueorganic1.png" alt="Chancador error seguridad" class="comun_img">
+                    </div>
+                    <div class="box_img2">
+                        <img src="../assets/img/portfolio/torqueorganic2.png" alt="Chancador correcta seguridad" class="comun_img">
+                    </div>
                 </div>
                 <div>
                     <a href="#inicio">Inicio</a>
                 </div>
-            <br>
             </section>
         </section>
     </main>

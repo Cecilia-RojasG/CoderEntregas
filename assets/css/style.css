@@ -67,16 +67,20 @@ body{
 h1{
     font-size: 3.7em;
     font-weight: 600;
+    text-transform: uppercase;
 }
 h2{
     font-size: 2.4em;
     font-weight: 500;
+    text-transform: uppercase;
 }
 h3{
     font-size: 1.8em;
+    text-transform: uppercase;
 }
 h4{
     font-size: 1.4em;
+    text-transform: uppercase;
 }
 /*INDEX */
 /* Banda superior de color negro en el body del Index */
@@ -87,6 +91,13 @@ h4{
 .center{
     display: grid;
     place-items: center;
+}
+.center_grid{
+    display: grid;
+    place-items: center;
+    grid-template-areas: 
+    "organic hardsurface"
+    ;
 }
 /* Para que los textos queden sobre las imagenes */
 .text_over_img{
@@ -109,50 +120,129 @@ h4{
 .box_invisible{       
     text-align: left;
 }
+.img_ajustada_high{
+    width: 900px;
+    height: 300px;
+    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
+}
 /*GENERAL PORTFOLIO*/
+.edit_text{
+    padding: 30px;
+    color: azure;
+    text-align: left;
+}
 .gallery{
     display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap: 10px;
-    padding: 20px;
+    grid-template-columns:repeat(4, 300px);
+    gap: 5px;
+    grid-template-areas: 
+    "portafolio1 portafolio2 portafolio3 portafolio4"
+    "portafolio5 portafolio6 portafolio7 portafolio8"
+    "portafolio9 portafolio10 portafolio11 portafolio12";
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
 }
-/* Ajuste para imagenes del Portfolio General */
+/* Ajuste para el tamaño de las imagenes del Portfolio General */
 .img_ajustada_port{
     width: 300px;
     height: 300px;
     object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
 }
-/*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE Y ORGANIC*/
+.triciclo{
+    grid-area: portafolio1;
+}
+.auto{
+    grid-area: portafolio2;
+}
+.mario{
+    grid-area: portafolio3;
+}
+.pizzeria_otro{
+    grid-area: portafolio4;
+}
+.pizzeria{
+    grid-area: portafolio5;
+}
+.bota{
+    grid-area: portafolio6;
+}
+.electrica{
+    grid-area: portafolio7;
+}
+.chancador{
+    grid-area: portafolio8;
+}
+/*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
 .config_txt{
     padding: 10%;
 }
+/*Contenedores*/
 .box_txt{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 100%;
     height: 60vh;
-    background-color: rgb(94, 110, 110);
-    border: 2px solid #000000;
+    color: antiquewhite;
+    grid-area: texto;
 }
 .box_img{
     display: flex;
-    width: 70%;
+    width: 100%;
     height: 60vh;
     justify-content: center;
-    background-color: rgb(110, 108, 94);
-    border: 2px solid #000000;
+    grid-area: imagen;
 }
-.row_0{
+.box_img1{
     display: flex;
-    padding: 20px;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    grid-area: imagen1;
 }
+.box_img2{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    grid-area: imagen2;
+}
+/*Posiciones en pantalla*/
+.row_txt_img{
+    display: grid;
+    grid-template-columns: 500px 1000px;
+    grid-template-areas: 
+    "texto imagen"
+    ;
+    width: 100%;
+    justify-content: center;
+}
+.row_img_txt{
+    display: grid;
+    grid-template-columns: 1000px 500px;
+    grid-template-areas: 
+    "imagen texto"
+    ;
+    width: 100%;
+    justify-content: center;
+}
+.row_img1_img2_txt{
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    grid-template-areas: 
+    "imagen1 imagen2 texto"
+    ;
+    width: 100%;
+    justify-content: center;
+}
+/*Tamaño imagenes en PC*/
 .comun_img{
-    min-width: 10%;
-    min-height: 10%;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 1000px;
+    max-height: 600px;
+    object-fit: cover;
 }
 /*FORMULARIO DE CONTACTO */
 .formulario_contacto{
@@ -163,15 +253,24 @@ h4{
         list-style: none;
     }
 }
-/*HIGHLIGHT*/
-.img_ajustada_high{
-    width: 900px;
-    height: 300px;
-    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
-}
 /*RESPONSIVO */
+@media (max-width:1800px){
+    .center_grid{
+    display: grid;
+    place-items: center;
+    grid-template-areas: 
+    "organic"
+    "hardsurface"
+    ;
+    }
+}
 @media (max-width:991px){
+    .img_ajustada_high{
+        width: 500px;
+        height: 250px;
+        object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
+    }
     .config_txt{
     padding: 5%;
     }
@@ -179,11 +278,18 @@ h4{
     font-size: 1.1em;
     }
     P{
-        font-size: 0.8rem;
+        font-size: 0.8em;
     }
     /* Ajuste para la grilla del Portfolio General */
     .gallery{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 200px);
+        grid-template-areas: 
+        "portafolio1 portafolio2 portafolio3"
+        "portafolio4 portafolio5 portafolio6" 
+        "portafolio7 portafolio8 portafolio9"
+        "portafolio10 portafolio11 portafolio12";
+        width: 100%;
+        justify-content: center;
     }
     /* Ajuste para imagenes del Portfolio General */
     .img_ajustada_port{
@@ -199,11 +305,26 @@ h4{
     header .hamburguesa{
         display:block;
     }
+    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 991*/
+    .comun_img{
+        max-width: 500px;
+        max-height: 300px;
+        object-fit: cover;
+    }
 }
-@media (max-width:600px){
+@media (max-width:576px){
     /* Ajuste para la grilla del Portfolio General */
     .gallery{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 150px);
+        grid-template-areas: 
+        "portafolio1 portafolio2"
+        "portafolio3 portafolio4"
+        "portafolio5 portafolio6" 
+        "portafolio7 portafolio8" 
+        "portafolio9 portafolio10"
+        "portafolio11 portafolio12";
+        width: 100%;
+        justify-content: center;
     }
     /* Ajuste para imagenes del Portfolio General */
     .img_ajustada_port{
@@ -211,5 +332,11 @@ h4{
         height: 150px;
         object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
         object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+    }
+    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 576*/
+    .comun_img{
+        max-width: 300px;
+        max-height: 150px;
+        object-fit: cover;
     }
 }
