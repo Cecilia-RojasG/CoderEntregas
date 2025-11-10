@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cecilia Rojas - 3D Modeler Portfolio</title>
     <link rel="icon" href="../assets/img/logo/CeciliaRojas_Redondo_32x32.png">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--Fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- CSS -->
@@ -12,80 +16,105 @@
     <!-- Link a fuente Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <!-- Logo -->
         <div id="inicio">
-            <img src="../assets/img/logo/logo-nombre1.png" alt="Logo CR" class=img_logo >
+            <img src="../assets/img/logo/logo-nombre1.png" alt="Logo CR" class=img_logo>
         </div>
         <!-- Links de navegacion a las principales secciones-->
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="pages/aboutme.html">ABOUT</a></li>
-                <!--Menu hamburguesa conteniendo los tres tipos de portafolios necesarios-->
+        <button id="abrir" class="abrir_menu"><i class="fa-solid fa-bars hamburguesa"></i></button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar_menu"><i class="fa-solid fa-bars hamburguesa"></i></button>
+            <ul class="nav_list">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../pages/aboutme.html">ABOUT</a></li>
+                <!--Submenu conteniendo los tres tipos de portafolios necesarios-->
                 <li class="submenu"><a href="#">PORTFOLIO <i class="fa-solid fa-circle-chevron-down"></i></a>
                     <ul>
                         <li>
-                            <a href="pages/portfolio.html">GENERAL</a>
+                            <a href="../pages/portfolio.html">GENERAL</a>
                         </li>
                         <li>
-                            <a href="pages/hardsurface.html">HARDSURFACE</a>
+                            <a href="../pages/hardsurface.html">HARDSURFACE</a>
                         </li>
                         <li>
-                            <a href="pages/organic.html">ORGANIC</a>
+                            <a href="../pages/organic.html">ORGANIC</a>
                         </li>
                     </ul>
                 </li>
-                <li><a href="pages/highlight.html">HIGHLIGHTED</a></li>
-                <li><a href="pages/clients.html">CLIENTS</a></li>
-                <li><a href="pages/contact.html">CONTACT</a></li>
+                <li><a href="../pages/highlight.html">HIGHLIGHTED</a></li>
+                <li><a href="../pages/clients.html">CLIENTS</a></li>
+                <li><a href="../pages/contact.html">CONTACT</a></li>
             </ul>
         </nav>
-        <i class="fa-solid fa-bars hamburguesa"></i>
     </header>
     <main>
         <!-- Imagen que lleva a la pagina HIGHLIGHT o "destacado"-->
         <section class="highsquare">
-            <br>
-            <div class="center">
-                <div class="text_over_img">
-                    <h3 class="txt_superpuesto">HIGHLIGHTED</h3>
-                    <a href="pages/highlight.html"><img src="assets/img/vistasindex/highlight.png" alt="highlight" class="img_ajustada_high"></a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12 col-xxl-12">
+                        <div class="center">
+                            <div class="text_over_img">
+                                <h3 class="txt_superpuesto">HIGHLIGHTED</h3>
+                                <a href="pages/highlight.html"><img src="assets/img/vistasindex/highlight2.png"
+                                        alt="highlight" class="img_ajustada_high"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br>
         </section>
         <br>
         <!-- Imagenes con links a las paginas donde se agrupan por tipo ORGANIC y HARDSURFACE -->
-        <section>
-            <div class="center_grid">
-                <div class="text_over_img">
-                    <h3 class="txt_superpuesto">ORGANIC</h3>
-                    <a href="pages/organic.html"><img src="assets/img/vistasindex/organic.png" alt="organic" class="img_ajustada_high"></a>
-                </div>
-                    <div class="text_over_img">
-                    <h3 class="txt_superpuesto">HARDSURFACE</h3>
-                <a href="pages/hardsurface.html"><img src="assets/img/vistasindex/hardsurface.png" alt="hardsurface" class="img_ajustada_high"></a>
+        <section class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xxl-12">
+                    <div class="center_grid">
+                        <div class="text_over_img">
+                            <h3 class="txt_superpuesto">ORGANIC</h3>
+                            <a href="pages/organic.html"><img src="assets/img/vistasindex/organic.png" alt="organic"
+                                    class="img_ajustada_grid"></a>
+                        </div>
+                        <div class="text_over_img">
+                            <h3 class="txt_superpuesto">HARDSURFACE</h3>
+                            <a href="pages/hardsurface.html"><img src="assets/img/vistasindex/hardsurface.png"
+                                    alt="hardsurface" class="img_ajustada_grid"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section> 
+        </section>
     </main>
     <footer>
         <!-- Imagenes con links a Redes sociales de ejemplo *A FUTURO SERAN COMPLETADAS*-->
         <br>
         <div class="center">
             <div>
-                <a href="https://www.youtube.com" target="_blank"><img src="assets/img/rrs/ytb.png" height=45 alt="Youtube"></a>
-                <a href="https://www.twitch.com" target="_blank"><img src="assets/img/rrs/twt.png" height=45 alt="Twitch"></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="assets/img/rrs/ins.png" height=45 alt="Instagram"></a>
-                <a href="https://www.facebook.com" target="_blank"><img src="assets/img/rrs/fcb.png" height=45 alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="assets/img/rrs/ytb.png" height=45
+                        alt="Youtube"></a>
+                <a href="https://www.twitch.com" target="_blank"><img src="assets/img/rrs/twt.png" height=45
+                        alt="Twitch"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="assets/img/rrs/ins.png" height=45
+                        alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="assets/img/rrs/fcb.png" height=45
+                        alt="Facebook"></a>
             </div>
             <!-- Creditos -->
             <span>© 2025 Cecilia Rojas</span>
         </div>
     </footer>
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

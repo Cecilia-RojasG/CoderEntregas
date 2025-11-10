@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cecilia Rojas - 3D Modeler Portfolio</title>
     <link rel="icon" href="../assets/img/logo/CeciliaRojas_Redondo_32x32.png">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--Fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- CSS -->
@@ -25,7 +27,7 @@
             <ul>
                 <li><a href="../index.html">HOME</a></li>
                 <li><a href="../pages/aboutme.html">ABOUT</a></li>
-                <!--Menu hamburguesa conteniendo los tres tipos de portafolios necesarios-->
+                <!--Submenu conteniendo los tres tipos de portafolios necesarios-->
                 <li class="submenu"><a href="#">PORTFOLIO <i class="fa-solid fa-circle-chevron-down"></i></a>
                     <ul>
                         <li>
@@ -49,26 +51,26 @@
     <main>
         <!-- Portfolio de solo modelado organico -->
         <section class="highsquare">
-            <div class="edit_text">
-                <H3>3D ORGANIC MODELING</H3>
-                <br>
-                <p>These models were created in Mudbox and 3D Maya.The textures were created and applied using the Adobe Substance suite.</p>
-                <p>Visit <a href="./portfolio.html">PORTFOLIO</a> for an overview of my work.</p>
-                <P>Visit <a href="./hardsurface.html">HARDSURFACE</a> to see models created using this technique. </p> 
-                <p>Visit <a href="./highlight.html">HIGHLIGHTED</a> section to see my most recent featured project in more detail</p>  
-                <br> 
-            </div>
-        </section>
-        <section>
+            <H3>3D ORGANIC MODELING</H3>
+            <br>
+            <p>These models were created in Mudbox and 3D Maya.The textures were created and applied using the Adobe Substance suite.</p>
+            <br>
+            <p>Visit <a href="./portfolio.html">PORTFOLIO</a> for an overview of my work.</p>
+            <P>Visit <a href="./hardsurface.html">HARDSURFACE</a> to see models created using this technique. </p> 
+            <p>Visit <a href="./highlight.html">HIGHLIGHTED</a> section to see my most recent featured project in more detail</p>  
+            <br> 
             <!--Enlaces internos -->
             <div>
                 <a href="#mario">Mario</a>
                 <a href="#torque">Torque</a>
             </div>
+            </div>
+        </section>
+        <section>
             <br>
             <section id="mario">
                 <!--Muestra un texto a la derecha y una imagen al lado izquierdo-->
-                <div class="row_txt_img">
+                <div class="row_txt_img1">
                     <div class="box_txt">
                         <div class="config_txt">
                             <h4>Modelo de Mario</h4>
@@ -79,10 +81,11 @@
                             <br>
                         </div>
                     </div>
-                    <div class="box_img">
-                        <img src="../assets/img/portfolio/Mario.png"alt="Mario" class="comun_img">
+                    <div class="box_img_tall_1">
+                        <img src="../assets/img/portfolio/Mario.png"alt="Mario" class="tall_img">
                     </div>
-                </div> 
+                </div>
+                <br> 
             </section>
             <section id="torque">
                 <!--Muestra dos imagenes a la derecha y un texto al lado izquierdo-->
@@ -97,11 +100,11 @@
                             <br>
                         </div>
                     </div>
-                    <div class="box_img1">
-                        <img src="../assets/img/portfolio/torqueorganic1.png" alt="Chancador error seguridad" class="comun_img">
+                    <div class="box_img_tall_1">
+                        <img src="../assets/img/portfolio/torqueorganic1.png" alt="Chancador error seguridad" class="tall_img">
                     </div>
-                    <div class="box_img2">
-                        <img src="../assets/img/portfolio/torqueorganic2.png" alt="Chancador correcta seguridad" class="comun_img">
+                    <div class="box_img_tall_2">
+                        <img src="../assets/img/portfolio/torqueorganic2.png" alt="Chancador correcta seguridad" class="tall_img">
                     </div>
                 </div>
                 <div>
@@ -124,5 +127,7 @@
             <span>© 2025 Cecilia Rojas</span>
         </div>
     </footer>
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,342 +1,827 @@
 /* Reset de CSS */
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
 }
+
 /* Configuracion del color de fondo y orden del header */
-header{
-    display:flex;
+header {
+    display: flex;
     padding: 10px 30px;
     background-color: #212121;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;
 }
-.img_logo{
-    max-width: 100%;
+
+.img_logo {
+    max-width: 95%;
     min-width: 20%;
 }
+
+/*AGREGA COLOR PARA PROBAR LIMITES
+.seccion>div{
+    background-color: rgb(53, 32, 4); 
+}*/
 /*configuracion del menu en el header*/
-header nav{
+.nav {
     display: flex;
     align-items: center;
 }
-header nav ul{
+
+.nav_list {
     display: flex;
     gap: 15px;
     list-style: none;
 }
-header nav ul li a{
-        text-decoration: none;
-        font-weight: 600;
-        color:azure;
+
+header nav ul li a:link {
+    text-decoration: none;
+    font-weight: 400;
+    color: azure;
 }
-header nav ul li a:visited{
-        color: antiquewhite;
+
+header nav ul li a:visited {
+    color: antiquewhite;
 }
-header nav ul li a:hover{
-        color: rgb(115, 57, 223);
+
+header nav ul li a:hover {
+    color: rgb(166, 90, 253);
 }
-header nav ul li.submenu{
+
+header nav ul li a:active {
+    background-color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+header nav ul li.submenu {
     position: relative;
 }
-header nav ul li.submenu > ul{
+
+header nav ul li.submenu>ul {
     display: none;
-    position:absolute;
-    top:11px;
-    left:5px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
     width: 180px;
-    padding: 13px;
+    padding: 11px;
 }
-header nav ul li.submenu:hover > ul{
+
+header nav ul li.submenu:hover>ul {
     display: block;
 }
+
 /*Configuracion del menu Hamburguesa */
-header .hamburguesa{
-    color: antiquewhite;
-    padding: 5px;
-    font-size: 20px;
-    display:none;
+.abrir_menu, .cerrar_menu{
+    display: none;
+    border: 0;
+    color: azure;
+    font-size: 1.9rem;
+    background-color: transparent;
 }
+
 /* Configuracion del Body de las diferentes paginas */
-body{
+body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    background-color: #212121; 
+    background-color: #212121;
 }
+
 /* Tamaños titulos */
-h1{
+h1 {
     font-size: 3.7em;
     font-weight: 600;
     text-transform: uppercase;
 }
-h2{
+
+h2 {
     font-size: 2.4em;
     font-weight: 500;
     text-transform: uppercase;
 }
-h3{
+
+h3 {
+    font-size: 2.0em;
+    text-transform: uppercase;
+}
+
+h4 {
     font-size: 1.8em;
     text-transform: uppercase;
 }
-h4{
-    font-size: 1.4em;
-    text-transform: uppercase;
+
+p {
+    font-size: clamp(0.4rem, 0.9vw, 1.2rem);
 }
+
 /*INDEX */
 /* Banda superior de color negro en el body del Index */
-.highsquare{
+.highsquare {
     background-color: #000000;
-}
-/*Configuracion de la posicion de las imagenes*/
-.center{
-    display: grid;
-    place-items: center;
-}
-.center_grid{
-    display: grid;
-    place-items: center;
-    grid-template-areas: 
-    "organic hardsurface"
-    ;
-}
-/* Para que los textos queden sobre las imagenes */
-.text_over_img{
-    position: relative; /* Necesario para que el texto absoluto se posicione dentro de este div */
-    display: inline-block; /* Ocupa el espacio de la imagen */
-}
-.text_over_img img{
-    display: block; /* Elimina espacio extra debajo de la imagen */
-}
-.txt_superpuesto{
-    position: absolute;
-    top: 10%; /* Posicion vertical */
-    left: 5%; /* Posicion horizontal */
-    text-align: left;
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: rgb(75, 47, 153); /* Color del texto */
-    z-index: 2; /* Se asegura que el texto esté encima de todo */
-}
-.box_invisible{       
-    text-align: left;
-}
-.img_ajustada_high{
-    width: 900px;
-    height: 300px;
-    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
-}
-/*GENERAL PORTFOLIO*/
-.edit_text{
     padding: 30px;
     color: azure;
     text-align: left;
 }
-.gallery{
+
+/*Configuracion de la posicion de las imagenes*/
+.center {
     display: grid;
-    grid-template-columns:repeat(4, 300px);
+    place-items: center;
+}
+
+.center_grid {
+    display: grid;
+    place-items: center;
+    grid-template-areas:
+        "organic hardsurface"
+    ;
+}
+
+/* Para que los textos queden sobre las imagenes */
+.text_over_img {
+    position: relative;
+    /* Necesario para que el texto absoluto se posicione dentro de este div */
+    display: inline-block;
+    /* Ocupa el espacio de la imagen */
+}
+
+.text_over_img img {
+    display: block;
+    /* Elimina espacio extra debajo de la imagen */
+}
+
+.txt_superpuesto {
+    position: absolute;
+    top: 10%;
+    /* Posicion vertical */
+    left: 5%;
+    /* Posicion horizontal */
+    text-align: left;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(75, 47, 153);
+    /* Color del texto */
+    z-index: 2;
+    /* Se asegura que el texto esté encima de todo */
+}
+
+/* Ajuste para el tamaño de las imagenes*/
+.img_ajustada_high {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 45% 50%;
+    /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+}
+
+.img_ajustada_grid {
+    width: 640px;
+    height: 300px;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+}
+
+/*Sombreado cuando se pasa el mouse sobre las imagenes*  CUANDO SE ACTIVA OCURRE UN PROBLEMA CON LOS LINKS - AUN NO SOLUCIONADO/
+/*.highsquare div div{
+    position: relative;
+}
+.highsquare div div::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0,0.3);
+    opacity: 0;
+}
+.highsquare div>div:hover::after{
+    opacity: 1;
+}
+.center_grid div{
+    position: relative;
+}
+.center_grid div::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0,0.3);
+    opacity: 0;
+}
+.center_grid>div:hover::after{
+    opacity: 1;
+}*/
+/*Para que el cursor sea una manito*/
+/*.img_ajustada_high>div:hover{
+    cursor: pointer;
+}*/
+/*GENERAL PORTFOLIO*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
     gap: 5px;
-    grid-template-areas: 
-    "portafolio1 portafolio2 portafolio3 portafolio4"
-    "portafolio5 portafolio6 portafolio7 portafolio8"
-    "portafolio9 portafolio10 portafolio11 portafolio12";
+    grid-template-areas:
+        "portafolio1 portafolio2 portafolio3 portafolio4"
+        "portafolio5 portafolio6 portafolio7 portafolio8"
+        "portafolio9 portafolio10 portafolio11 portafolio12";
     width: 100%;
     justify-content: center;
     margin-top: 10px;
 }
+
+.gallery div {
+    position: relative;
+}
+
+/*Para que el cursor sea una manito y se active la sombra*/
+.gallery>div:hover::after {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.gallery div::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+}
+
 /* Ajuste para el tamaño de las imagenes del Portfolio General */
-.img_ajustada_port{
+.img_ajustada_port {
     width: 300px;
     height: 300px;
-    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
 }
-.triciclo{
+
+.triciclo {
     grid-area: portafolio1;
 }
-.auto{
+
+.auto {
     grid-area: portafolio2;
 }
-.mario{
+
+.mario {
     grid-area: portafolio3;
 }
-.pizzeria_otro{
+
+.pizzeria_otro {
     grid-area: portafolio4;
 }
-.pizzeria{
+
+.pizzeria {
     grid-area: portafolio5;
 }
-.bota{
+
+.bota {
     grid-area: portafolio6;
 }
-.electrica{
+
+.electrica {
     grid-area: portafolio7;
 }
-.chancador{
+
+.chancador {
     grid-area: portafolio8;
 }
+
 /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
-.config_txt{
-    padding: 10%;
+.config_txt {
+    padding: 1%;
+    color: antiquewhite;
+    text-align: left;
 }
+
 /*Contenedores*/
-.box_txt{
+.box_txt {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 60vh;
-    color: antiquewhite;
     grid-area: texto;
 }
-.box_img{
+
+.box_img {
     display: flex;
     width: 100%;
     height: 60vh;
     justify-content: center;
+    align-items: center;
     grid-area: imagen;
 }
-.box_img1{
+
+.box_img_tall_1 {
     display: flex;
     width: 100%;
     height: 60vh;
     justify-content: center;
     grid-area: imagen1;
 }
-.box_img2{
+
+.box_img_tall_2 {
     display: flex;
     width: 100%;
     height: 60vh;
     justify-content: center;
     grid-area: imagen2;
 }
+
 /*Posiciones en pantalla*/
-.row_txt_img{
+.row_txt_img {
     display: grid;
     grid-template-columns: 500px 1000px;
-    grid-template-areas: 
-    "texto imagen"
+    grid-template-areas:
+        "texto imagen"
     ;
     width: 100%;
     justify-content: center;
 }
-.row_img_txt{
+
+.row_img_txt {
     display: grid;
     grid-template-columns: 1000px 500px;
-    grid-template-areas: 
-    "imagen texto"
+    grid-template-areas:
+        "imagen texto"
     ;
     width: 100%;
     justify-content: center;
 }
-.row_img1_img2_txt{
+
+.row_img1_img2_txt {
     display: grid;
     grid-template-columns: 500px 500px 500px;
-    grid-template-areas: 
-    "imagen1 imagen2 texto"
+    grid-template-areas:
+        "imagen1 imagen2 texto"
     ;
     width: 100%;
     justify-content: center;
 }
+
+.row_txt_img1 {
+    display: grid;
+    grid-template-columns: 500px 1000px;
+    grid-template-areas:
+        "texto imagen1"
+    ;
+    width: 100%;
+    justify-content: center;
+}
+
 /*Tamaño imagenes en PC*/
-.comun_img{
+.comun_img {
     max-width: 1000px;
-    max-height: 600px;
+    max-height: 500px;
     object-fit: cover;
 }
+
+.tall_img {
+    max-width: 1000px;
+    max-height: 900px;
+    object-fit: cover;
+}
+
 /*FORMULARIO DE CONTACTO */
-.formulario_contacto{
+.form_contact {
     border-radius: 5px;
     position: relative;
-    text-align: left;
+    text-align: lef;
+
     ul {
         list-style: none;
     }
 }
-/*RESPONSIVO */
-@media (max-width:1800px){
-    .center_grid{
-    display: grid;
-    place-items: center;
-    grid-template-areas: 
-    "organic"
-    "hardsurface"
-    ;
+
+.form_contact ul li label {
+    color: antiquewhite;
+    width: 140px;
+}
+
+.form_contact ul li {
+    display: flex;
+    padding: 1%;
+}
+
+.form_contact input:focus {
+    background-color: bisque;
+}
+
+.name::after {
+    content: '*';
+    color: brown;
+}
+
+.mail::after {
+    content: '*';
+    color: brown;
+}
+
+.subject::after {
+    content: '*';
+    color: brown;
+}
+
+.message::after {
+    content: '*';
+    color: brown;
+}
+
+/*CLIENTS*/
+/*Ajuste posicion insert pagina web*/
+.web_insert {
+    padding: 2%;
+}
+
+footer span {
+    color: azure;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------RESPONSIVO --------------------------------------*/
+@media (max-width:1800px) {
+    header nav ul li.submenu>ul {
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        width: 180px;
+        padding: 11px;
+        font-size: small;
+    }
+
+    .nav_list {
+        display: flex;
+        gap: 15px;
+        list-style: none;
+        font-size: small;
     }
 }
-@media (max-width:991px){
-    .img_ajustada_high{
-        width: 500px;
-        height: 250px;
-        object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
-        object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura */
+
+@media (max-width:1400px) {
+
+    /*INDEX*/
+    .center_grid {
+        display: grid;
+        place-items: center;
+        grid-template-areas:
+            "organic"
+            "hardsurface"
+        ;
     }
-    .config_txt{
-    padding: 5%;
+
+    /*CLIENTS*/
+    /*Ajuste tamaño insert pagina web*/
+    .web_insert {
+        max-width: 450px;
     }
-    h4{
-    font-size: 1.1em;
+}
+
+@media (max-width:991px) {
+/*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/
+    header nav {
+        display: none;
     }
-    P{
-        font-size: 0.8em;
+    .abrir_menu, .cerrar_menu{
+        display: block;
     }
+    .nav_list {
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /*INDEX*/
+    .img_ajustada_grid {
+        width: 700px;
+        height: 300px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    }
+
+    .config_txt {
+        padding: 5%;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
     /* Ajuste para la grilla del Portfolio General */
-    .gallery{
+    .gallery {
         grid-template-columns: repeat(3, 200px);
-        grid-template-areas: 
-        "portafolio1 portafolio2 portafolio3"
-        "portafolio4 portafolio5 portafolio6" 
-        "portafolio7 portafolio8 portafolio9"
-        "portafolio10 portafolio11 portafolio12";
+        grid-template-areas:
+            "portafolio1 portafolio2 portafolio3"
+            "portafolio4 portafolio5 portafolio6"
+            "portafolio7 portafolio8 portafolio9"
+            "portafolio10 portafolio11 portafolio12";
         width: 100%;
         justify-content: center;
     }
+
     /* Ajuste para imagenes del Portfolio General */
-    .img_ajustada_port{
-    width: 200px;
-    height: 200px;
-    object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+    .img_ajustada_port {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
     }
-    /*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/   
-    header nav{
-        display:none;
-    }
-    header .hamburguesa{
-        display:block;
-    }
+
     /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 991*/
-    .comun_img{
+    .comun_img {
         max-width: 500px;
         max-height: 300px;
         object-fit: cover;
     }
-}
-@media (max-width:576px){
-    /* Ajuste para la grilla del Portfolio General */
-    .gallery{
-        grid-template-columns: repeat(2, 150px);
-        grid-template-areas: 
-        "portafolio1 portafolio2"
-        "portafolio3 portafolio4"
-        "portafolio5 portafolio6" 
-        "portafolio7 portafolio8" 
-        "portafolio9 portafolio10"
-        "portafolio11 portafolio12";
+
+    .tall_img {
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .box_txt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        color: antiquewhite;
+        grid-area: texto;
+    }
+
+    .row_txt_img {
+        display: grid;
+        grid-template-columns: 250px 500px;
+        grid-template-areas:
+            "texto imagen"
+        ;
         width: 100%;
         justify-content: center;
     }
+
+    .row_img_txt {
+        display: grid;
+        grid-template-columns: 500px 250px;
+        grid-template-areas:
+            "imagen texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_txt_img1 {
+        display: grid;
+        grid-template-columns: 250px 500px;
+        grid-template-areas:
+            "texto imagen1"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img1_img2_txt {
+        display: grid;
+        grid-template-columns: 250px 250px 250px;
+        grid-template-areas:
+            "imagen1 imagen2 texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /*CLIENTS*/
+    /*Ajuste tamaño insert pagina web*/
+    .web_insert {
+        max-width: 600px;
+    }
+
+    /*CONTACT*/
+    /*Ajuste tamaño form mensaje*/
+    .mensaje {
+        max-width: 450px;
+    }
+}
+
+@media (max-width:767px) {
+
+    /*PARA TODO*/
+    h4 {
+        font-size: 0.8em;
+    }
+
+    /*INDEX*/
+    .img_ajustada_grid {
+        width: 560px;
+        height: 300px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    }
+
+    /*PORTFOLIO*/
+    /* Ajuste para la grilla del Portfolio General */
+    .gallery {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-areas:
+            "portafolio1 portafolio2"
+            "portafolio3 portafolio4"
+            "portafolio5 portafolio6"
+            "portafolio7 portafolio8"
+            "portafolio9 portafolio10"
+            "portafolio11 portafolio12";
+        width: 100%;
+        justify-content: center;
+    }
+
     /* Ajuste para imagenes del Portfolio General */
-    .img_ajustada_port{
+    .img_ajustada_port {
         width: 150px;
         height: 150px;
-        object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
-        object-position: 50% 50%; /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
-    }
-    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 576*/
-    .comun_img{
-        max-width: 300px;
-        max-height: 150px;
         object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+    }
+
+    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 576*/
+    .comun_img {
+        max-width: 300px;
+        max-height: 200px;
+    }
+
+    .tall_img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .box_img {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        grid-area: imagen;
+    }
+
+    .row_txt_img {
+        display: grid;
+        grid-template-columns: 150px 300px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "texto imagen"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img_txt {
+        display: grid;
+        grid-template-columns: 300px 150px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "imagen texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img1_img2_txt {
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "imagen1 imagen2 texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_txt_img1 {
+        display: grid;
+        grid-template-columns: 150px 300px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "texto imagen1"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /*CLIENTS*/
+    /*Ajuste tamaño insert pagina web*/
+    .web_insert {
+        max-width: 500px;
+    }
+
+    /*CONTACT*/
+    /*Ajuste tamaño form mensaje*/
+    .mensaje {
+        max-width: 350px;
+    }
+}
+
+@media (max-width:575px) {
+    h4 {
+        font-size: 0.6em;
+    }
+
+    /*INDEX*/
+    .img_ajustada_grid {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    }
+
+    .comun_img {
+        max-width: 220px;
+        max-height: 200px;
+    }
+
+    .tall_img {
+        max-width: 110px;
+        max-height: 300px;
+    }
+
+    .box_txt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 110px;
+        width: 100%;
+        height: 300px;
+        color: antiquewhite;
+        grid-area: texto;
+    }
+
+    .row_img1_img2_txt {
+        display: grid;
+        grid-template-columns: 110px 110px 110px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "imagen1 imagen2 texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_txt_img1 {
+        display: grid;
+        grid-template-columns: 120px 230px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "texto imagen1"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /*CLIENTS*/
+    /*Ajuste tamaño insert pagina web*/
+    .web_insert {
+        max-width: 400px;
+    }
+
+    /*CONTACT*/
+    /*Ajuste tamaño form mensaje*/
+    .mensaje {
+        max-width: 250px;
     }
 }
