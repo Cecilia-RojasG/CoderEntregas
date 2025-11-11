@@ -21,10 +21,10 @@ header {
     position: relative;
     display: inline-block;
 }
-/*AGREGA COLOR PARA PROBAR LIMITES*/
+/*AGREGA COLOR PARA PROBAR LIMITES
 .seccion>div{
     background-color: rgb(53, 32, 4); 
-}
+}*/
 /*configuracion del menu en el header*/
 .nav {
     display: flex;
