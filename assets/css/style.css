@@ -17,15 +17,19 @@ header {
     max-width: 95%;
     min-width: 20%;
 }
-
-/*AGREGA COLOR PARA PROBAR LIMITES
+.menu_completo{
+    position: relative;
+    display: inline-block;
+}
+/*AGREGA COLOR PARA PROBAR LIMITES*/
 .seccion>div{
     background-color: rgb(53, 32, 4); 
-}*/
+}
 /*configuracion del menu en el header*/
 .nav {
     display: flex;
     align-items: center;
+    z-index: 999;
 }
 
 .nav_list {
@@ -86,7 +90,7 @@ body {
     background-color: #212121;
 }
 
-/* Tamaños titulos */
+/* Tamaños titulos, configuraciones de los textos*/
 h1 {
     font-size: 3.7em;
     font-weight: 600;
@@ -112,12 +116,26 @@ h4 {
 p {
     font-size: clamp(0.4rem, 0.9vw, 1.2rem);
 }
-
+.config_txt {
+    padding: 1%;
+    color: antiquewhite;
+    text-align: left;
+}
+.edit_links{
+    text-transform: uppercase;
+    color: azure;
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+.edit_links a:visited {
+    color: rgb(211, 175, 128);
+}
 /*INDEX */
 /* Banda superior de color negro en el body del Index */
 .highsquare {
     background-color: #000000;
-    padding: 30px;
+    padding: 5px 5px 5px 5%;
     color: azure;
     text-align: left;
 }
@@ -298,26 +316,20 @@ p {
 }
 
 /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
-.config_txt {
-    padding: 1%;
-    color: antiquewhite;
-    text-align: left;
-}
-
 /*Contenedores*/
 .box_txt {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     grid-area: texto;
 }
 
 .box_img {
     display: flex;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     justify-content: center;
     align-items: center;
     grid-area: imagen;
@@ -342,7 +354,7 @@ p {
 /*Posiciones en pantalla*/
 .row_txt_img {
     display: grid;
-    grid-template-columns: 500px 1000px;
+    grid-template-columns: 400px 900px;
     grid-template-areas:
         "texto imagen"
     ;
@@ -352,7 +364,7 @@ p {
 
 .row_img_txt {
     display: grid;
-    grid-template-columns: 1000px 500px;
+    grid-template-columns: 900px 400px;
     grid-template-areas:
         "imagen texto"
     ;
@@ -382,13 +394,13 @@ p {
 
 /*Tamaño imagenes en PC*/
 .comun_img {
-    max-width: 1000px;
+    max-width: 900px;
     max-height: 500px;
     object-fit: cover;
 }
 
 .tall_img {
-    max-width: 1000px;
+    max-width: 900px;
     max-height: 900px;
     object-fit: cover;
 }
@@ -471,7 +483,7 @@ footer span {
 
 @media (max-width:1400px) {
 
-    /*INDEX*/
+/*INDEX*/
     .center_grid {
         display: grid;
         place-items: center;
@@ -480,14 +492,107 @@ footer span {
             "hardsurface"
         ;
     }
+/* PORTFOLIO GENERAL */
+    .img_ajustada_port {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+    }
+     /* Ajuste para la grilla del Portfolio General */
+    .gallery {
+        grid-template-columns: repeat(4, 250px);
+        grid-template-areas:
+            "portafolio1 portafolio2 portafolio3 portafolio4"
+            "portafolio5 portafolio6 portafolio7 portafolio8"
+            "portafolio9 portafolio10 portafolio11 portafolio12";
+        width: 100%;
+        justify-content: center;
+    }
 
-    /*CLIENTS*/
+/*CLIENTS*/
     /*Ajuste tamaño insert pagina web*/
     .web_insert {
         max-width: 450px;
     }
-}
 
+/*HARDSURFACE*/
+    .row_txt_img {
+        display: grid;
+        grid-template-columns: 300px 800px;
+        grid-template-areas:
+            "texto imagen"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img_txt {
+        display: grid;
+        grid-template-columns: 800px 300px;
+        grid-template-areas:
+            "imagen texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .comun_img {
+            max-width: 700px;
+            max-height: 100%;
+            object-fit: cover;
+        }
+}
+@media (max-width:1200px) {
+    .img_ajustada_port {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+    }
+     /* Ajuste para la grilla del Portfolio General */
+    .gallery {
+        grid-template-columns: repeat(3, 250px);
+        grid-template-areas:
+            "portafolio1 portafolio2 portafolio3"
+            "portafolio4 portafolio5 portafolio6"
+            "portafolio7 portafolio8 portafolio9"
+            "portafolio10 portafolio11 portafolio12";
+        width: 100%;
+        justify-content: center;
+    }
+
+/*HARDSURFACE*/
+    .row_txt_img {
+        display: grid;
+        grid-template-columns: 200px 700px;
+        grid-template-areas:
+            "texto imagen"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img_txt {
+        display: grid;
+        grid-template-columns: 700px 200px;
+        grid-template-areas:
+            "imagen texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .comun_img {
+            max-width: 600px;
+            max-height: 100%;
+            object-fit: cover;
+        }
+}
 @media (max-width:991px) {
 /*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/
     header nav {
@@ -517,6 +622,18 @@ footer span {
     .nav.visible {
         opacity: 1;
         visibility: visible;
+    }
+    header nav ul li.submenu:hover>ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: black;
+        padding: 2rem;
+        gap: 1rem;
+        top: 30px;
+        left: -50px;
+        font-size: smaller;
+        background-color: #212121;
     }
 
     /*INDEX*/
@@ -566,7 +683,7 @@ footer span {
     /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 991*/
     .comun_img {
         max-width: 500px;
-        max-height: 300px;
+        max-height: 100%;
         object-fit: cover;
     }
 
@@ -587,7 +704,7 @@ footer span {
 
     .row_txt_img {
         display: grid;
-        grid-template-columns: 250px 500px;
+        grid-template-columns: 200px 500px;
         grid-template-areas:
             "texto imagen"
         ;
@@ -597,7 +714,7 @@ footer span {
 
     .row_img_txt {
         display: grid;
-        grid-template-columns: 500px 250px;
+        grid-template-columns: 500px 200px;
         grid-template-areas:
             "imagen texto"
         ;
@@ -682,8 +799,8 @@ footer span {
 
     /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 576*/
     .comun_img {
-        max-width: 300px;
-        max-height: 200px;
+        max-width: 400px;
+        max-height: 100%;
     }
 
     .tall_img {
@@ -700,7 +817,7 @@ footer span {
 
     .row_txt_img {
         display: grid;
-        grid-template-columns: 150px 300px;
+        grid-template-columns: 150px 400px;
         grid-template-rows: 300px;
         grid-template-areas:
             "texto imagen"
@@ -711,7 +828,7 @@ footer span {
 
     .row_img_txt {
         display: grid;
-        grid-template-columns: 300px 150px;
+        grid-template-columns: 400px 150px;
         grid-template-rows: 300px;
         grid-template-areas:
             "imagen texto"
@@ -771,8 +888,8 @@ footer span {
     }
 
     .comun_img {
-        max-width: 220px;
-        max-height: 200px;
+        max-width: 280px;
+        max-height: 100%;
     }
 
     .tall_img {
@@ -784,13 +901,34 @@ footer span {
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 110px;
+        max-width: 80px;
         width: 100%;
-        height: 300px;
+        height: 100%;
         color: antiquewhite;
         grid-area: texto;
     }
 
+    .row_txt_img {
+        display: grid;
+        grid-template-columns: 80px 280px;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "texto imagen"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img_txt {
+        display: grid;
+        grid-template-columns: 280px 80px;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "imagen texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
     .row_img1_img2_txt {
         display: grid;
         grid-template-columns: 110px 110px 110px;

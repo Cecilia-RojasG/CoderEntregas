@@ -20,50 +20,61 @@
     <header>
         <!-- Logo -->
         <div id="inicio">
-            <img src="../assets/img/logo/logo-nombre1.png" alt="Logo CR" class=img_logo >
+            <img src="../assets/img/logo/logo-nombre1.png" alt="Logo CR" class=img_logo>
         </div>
         <!-- Links de navegacion a las principales secciones-->
-        <nav>
-            <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../pages/aboutme.html">ABOUT</a></li>
-                <!--Submenu conteniendo los tres tipos de portafolios necesarios-->
-                <li class="submenu"><a href="#">PORTFOLIO <i class="fa-solid fa-circle-chevron-down"></i></a>
-                    <ul>
-                        <li>
-                            <a href="../pages/portfolio.html">GENERAL</a>
-                        </li>
-                        <li>
-                            <a href="../pages/hardsurface.html">HARDSURFACE</a>
-                        </li>
-                        <li>
-                            <a href="../pages/organic.html">ORGANIC</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="../pages/highlight.html">HIGHLIGHTED</a></li>
-                <li><a href="../pages/clients.html">CLIENTS</a></li>
-                <li><a href="../pages/contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-        <i class="fa-solid fa-bars hamburguesa"></i>
+        <div class="menu_completo">
+            <button id="abrir" class="abrir_menu"><i class="fa-solid fa-bars hamburguesa"></i></button>
+            <nav class="nav" id="nav">
+                <button id="cerrar" class="cerrar_menu"><i class="fa-solid fa-bars hamburguesa"></i></button>
+                <ul class="nav_list">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../pages/aboutme.html">ABOUT</a></li>
+                    <!--Submenu conteniendo los tres tipos de portafolios necesarios-->
+                    <li class="submenu"><a href="#">PORTFOLIO <i class="fa-solid fa-circle-chevron-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="../pages/portfolio.html">GENERAL</a>
+                            </li>
+                            <li>
+                                <a href="../pages/hardsurface.html">HARDSURFACE</a>
+                            </li>
+                            <li>
+                                <a href="../pages/organic.html">ORGANIC</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/highlight.html">HIGHLIGHTED</a></li>
+                    <li><a href="../pages/clients.html">CLIENTS</a></li>
+                    <li><a href="../pages/contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <!-- Highlighted muestra el último trabajo destacado -->
         <section class="highsquare">
-            <h3>HIGHLIGHTED</h3>
-            <br>
-            <p>These models were created for use in an animation about safety in offices and mining work sites.  Everything was created from scratch, including the settings, props, and characters.</p>
-            <p>Mudbox and 3D Maya were used for modeling. The textures were created and applied using the Substance suite.</p>
-            <p>Post-production was done in Photoshop and Premiere</p>
-            <p>Visit <a href="./portfolio.html">PORTFOLIO</a> for an overview of my work.</p>
-            <p>Also visit <a href="./organic.html">ORGANIC</a> or <a href="./hardsurface.html">HARDSURFACE</a> to see models created using these techniques. </p>
-            <br>
-            <!--Enlaces internos para ir rápido al modelo-->
-            <div>
-                <a href="#electrico">Riesgos en sala eléctrica</a>
-                <a href="#chancador">Riesgos en chancador</a>
-                <br>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12 col-xxl-12">
+                        <div class="config_txt">
+                            <h3>HIGHLIGHTED</h3>
+                            <br>
+                            <p>These models were created for use in an animation about safety in offices and mining work sites.  Everything was created from scratch, including the settings, props, and characters.</p>
+                            <p>Mudbox and 3D Maya were used for modeling. The textures were created and applied using the Substance suite.</p>
+                            <p>Post-production was done in Photoshop and Premiere</p>
+                            <p>Visit <a href="./portfolio.html">PORTFOLIO</a> for an overview of my work.</p>
+                            <p>Also visit <a href="./organic.html">ORGANIC</a> or <a href="./hardsurface.html">HARDSURFACE</a> to see models created using these techniques. </p>
+                            <br>
+                        </div>
+                        <!--Enlaces internos para ir rápido al modelo-->
+                        <div class="edit_links">
+                            <a href="#electrico">Riesgos en sala eléctrica</a>
+                            <a href="#chancador">Riesgos en chancador</a>
+                            <br>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
@@ -105,10 +116,10 @@
                         <img src="../assets/img/portfolio/chancador2.webp" class="comun_img" alt="Chancador seguro">
                     </div>-->
                 </div>
+                <div class="edit_links">
+                    <a href="#inicio">Inicio</a>
+                </div>
             </section>
-            <div>
-                <a href="#inicio">Inicio</a>
-            </div>
         </section>
     </main>
     <footer>
@@ -127,5 +138,7 @@
     </footer>
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--Scripts-->
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
