@@ -96,8 +96,7 @@ body {
 
 /* Tamaños titulos, configuraciones de los textos*/
 h1 {
-    font-size: 3.7em;
-    font-weight: 600;
+    font-size: clamp(0.8rem, 2.0vw, 2.2rem);
     text-transform: uppercase;
 }
 
@@ -118,7 +117,7 @@ h4 {
 }
 
 p {
-    font-size: clamp(0.4rem, 0.9vw, 1.2rem);
+    font-size: clamp(0.4rem, 0.8vw, 1.0rem);
 }
 
 span {
@@ -148,6 +147,7 @@ label {
     font-weight: 500;
     color: azure;
     text-align: left;
+    margin-bottom: 5px;
 }
 
 .links_internos {
@@ -162,6 +162,10 @@ label {
 
 /*INDEX */
 
+/* Oculta el titulo del Index */
+#index_title{
+    display: none;
+}
 /* Banda superior de color negro en el body del Index */
 .highsquare {
     background-color: #000000;
@@ -402,6 +406,7 @@ label {
     ;
     width: 100%;
     justify-content: center;
+    margin: 10px 0 10px 0;
 }
 
 .row_img_txt {
@@ -412,6 +417,7 @@ label {
     ;
     width: 100%;
     justify-content: center;
+    margin: 10px 0 10px 0;
 }
 
 .row_img1_img2_txt {
@@ -422,6 +428,7 @@ label {
     ;
     width: 100%;
     justify-content: center;
+    margin: 10px 0 10px 0;
 }
 
 .row_txt_img1 {
@@ -432,17 +439,18 @@ label {
     ;
     width: 100%;
     justify-content: center;
+    margin: 10px 0 10px 0;
 }
 
 /*Tamaño imagenes en PC*/
 .comun_img {
     max-width: 900px;
-    max-height: 500px;
+    max-height: 100%;
     object-fit: cover;
 }
 
 .tall_img {
-    max-width: 900px;
+    max-width: 100%;
     max-height: 900px;
     object-fit: cover;
 }
@@ -645,13 +653,16 @@ footer span {
         ;
     }
 
+        /*INDEX*/
+
     .img_ajustada_grid {
         width: 900px;
-        height: 300px;
+        height: 100%;
         object-fit: cover;
         /* La imagen se recorta para cubrir el contenedor */
         object-position: 50% 50%;
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+        margin: 5px 0 5px 0;
     }
 
     /*PORTFOLIO GENERAL*/
@@ -758,13 +769,15 @@ footer span {
     }
 
     /*INDEX 993*/
+
     .img_ajustada_grid {
-        width: 600px;
-        height: 300px;
+        width: 640px;
+        height: 100%;
         object-fit: cover;
         /* La imagen se recorta para cubrir el contenedor */
         object-position: 50% 50%;
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+        margin: 5px 0 5px 0;
     }
 
     /* Ajuste para la grilla del Portfolio General */
@@ -888,14 +901,15 @@ footer span {
         gap: 10px;
     }
 
-    /*INDEX*/
+        /*INDEX*/
     .img_ajustada_grid {
         width: 500px;
-        height: 300px;
+        height: 100%;
         object-fit: cover;
         /* La imagen se recorta para cubrir el contenedor */
         object-position: 50% 50%;
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+        margin: 5px 0 5px 0;
     }
 
     /*PORTFOLIO*/
@@ -1023,12 +1037,13 @@ footer span {
 
     /*INDEX*/
     .img_ajustada_grid {
-        width: 300px;
-        height: 300px;
+        width: 340px;
+        height: 100%;
         object-fit: cover;
         /* La imagen se recorta para cubrir el contenedor */
         object-position: 50% 50%;
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+        margin: 5px 0 5px 0;
     }
 
     /*ORGANIC, HARDSURFACE, HIGHLIGHT*/
@@ -1123,6 +1138,17 @@ footer span {
 /*----------------380--------------------*/
 
 @media (max-width:380px) {
+
+    /*INDEX*/
+    .img_ajustada_grid {
+        width: 290px;
+        height: 100%;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+        margin: 5px 0 5px 0;
+    }
 
     .comun_img {
         max-width: 260px;
