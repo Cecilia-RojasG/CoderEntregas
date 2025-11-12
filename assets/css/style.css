@@ -17,14 +17,17 @@ header {
     max-width: 95%;
     min-width: 20%;
 }
-.menu_completo{
+
+.menu_completo {
     position: relative;
     display: inline-block;
 }
+
 /*AGREGA COLOR PARA PROBAR LIMITES
 .seccion>div{
     background-color: rgb(53, 32, 4); 
 }*/
+
 /*configuracion del menu en el header*/
 .nav {
     display: flex;
@@ -75,7 +78,8 @@ header nav ul li.submenu:hover>ul {
 }
 
 /*Configuracion del menu Hamburguesa */
-.abrir_menu, .cerrar_menu{
+.abrir_menu,
+.cerrar_menu {
     display: none;
     border: 0;
     color: azure;
@@ -104,54 +108,85 @@ h2 {
 }
 
 h3 {
-    font-size: 2.0em;
+    font-size: clamp(0.8rem, 2.0vw, 2.2rem);
     text-transform: uppercase;
 }
 
 h4 {
-    font-size: 1.8em;
+    font-size: clamp(0.4rem, 1.8vw, 2.0rem);
     text-transform: uppercase;
 }
 
 p {
     font-size: clamp(0.4rem, 0.9vw, 1.2rem);
 }
+
+span {
+    font-size: clamp(0.4rem, 0.9vw, 1.2rem);
+}
+
+label {
+    font-size: clamp(0.6rem, 0.9vw, 1.1rem);
+}
+
 .config_txt {
     padding: 1%;
     color: antiquewhite;
     text-align: left;
 }
-.edit_links{
-    text-transform: uppercase;
-    color: azure;
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-.edit_links a:visited {
-    color: rgb(211, 175, 128);
-}
-/*INDEX */
-/* Banda superior de color negro en el body del Index */
-.highsquare {
-    background-color: #000000;
-    padding: 5px 5px 5px 5%;
-    color: azure;
-    text-align: left;
-}
 
-/*Configuracion de la posicion de las imagenes*/
 .center {
     display: grid;
     place-items: center;
 }
 
+/*Configuracion de los links del body*/
+.edit_links {
+    text-decoration: none;
+    font-size: small;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: azure;
+    text-align: left;
+}
+
+.links_internos {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.edit_links a:visited {
+    color: rgb(211, 175, 128);
+}
+
+/*INDEX */
+
+/* Banda superior de color negro en el body del Index */
+.highsquare {
+    background-color: #000000;
+    padding: 10px 0px 10px 0px;
+    color: azure;
+}
+
+/*Configuracion de la posicion de las imagenes del grid */
 .center_grid {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
     place-items: center;
+    grid-template-rows: auto;
+    /* La altura se ajusta al contenido */
     grid-template-areas:
-        "organic hardsurface"
-    ;
+        "organic hardsurface";
+}
+
+#organic_area {
+    grid-area: organic;
+}
+
+#hardsurface_area {
+    grid-area: hardsurface;
 }
 
 /* Para que los textos queden sobre las imagenes */
@@ -238,6 +273,7 @@ p {
 /*.img_ajustada_high>div:hover{
     cursor: pointer;
 }*/
+
 /*GENERAL PORTFOLIO*/
 .gallery {
     display: grid;
@@ -316,6 +352,7 @@ p {
 }
 
 /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
+
 /*Contenedores*/
 .box_txt {
     display: flex;
@@ -324,6 +361,7 @@ p {
     width: 100%;
     height: 100%;
     grid-area: texto;
+    margin-top: 5px;
 }
 
 .box_img {
@@ -349,6 +387,10 @@ p {
     height: 60vh;
     justify-content: center;
     grid-area: imagen2;
+}
+
+#txt_der {
+    margin: 5px;
 }
 
 /*Posiciones en pantalla*/
@@ -450,10 +492,26 @@ p {
     color: brown;
 }
 
+/*Ajuste tamaño form mensaje*/
+.form_contact {
+    max-width: 100%;
+    box-sizing: border-box;
+    /* Incluye padding y borde en el cálculo del ancho */
+    font-size: clamp(0.7rem, 0.9vw, 1.1rem);
+}
+
+
 /*CLIENTS*/
+
 /*Ajuste posicion insert pagina web*/
 .web_insert {
     padding: 2%;
+}
+
+/*FOOTER*/
+
+.icon {
+    height: 45px;
 }
 
 footer span {
@@ -462,7 +520,11 @@ footer span {
 
 /*---------------------------------------------------------------------------------*/
 /*---------------------------------RESPONSIVO --------------------------------------*/
-@media (max-width:1800px) {
+
+@media (max-width:1801px) {
+
+    /*HEADER*/
+
     header nav ul li.submenu>ul {
         display: none;
         position: absolute;
@@ -479,20 +541,36 @@ footer span {
         list-style: none;
         font-size: small;
     }
+
+    /*INDEX*/
+
+    .img_ajustada_grid {
+        width: 640px;
+        height: 300px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    }
 }
 
-@media (max-width:1400px) {
+/*----------------1400--------------------*/
 
-/*INDEX*/
-    .center_grid {
-        display: grid;
-        place-items: center;
-        grid-template-areas:
-            "organic"
-            "hardsurface"
-        ;
+@media (max-width:1401px) {
+
+    /*INDEX*/
+
+    .img_ajustada_grid {
+        width: 550px;
+        height: 300px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
     }
-/* PORTFOLIO GENERAL */
+
+    /* PORTFOLIO GENERAL */
+
     .img_ajustada_port {
         width: 250px;
         height: 250px;
@@ -501,7 +579,8 @@ footer span {
         object-position: 50% 50%;
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
     }
-     /* Ajuste para la grilla del Portfolio General */
+
+    /* Ajuste para la grilla del Portfolio General */
     .gallery {
         grid-template-columns: repeat(4, 250px);
         grid-template-areas:
@@ -512,13 +591,13 @@ footer span {
         justify-content: center;
     }
 
-/*CLIENTS*/
+    /*CLIENTS*/
     /*Ajuste tamaño insert pagina web*/
     .web_insert {
         max-width: 450px;
     }
 
-/*HARDSURFACE*/
+    /*HARDSURFACE*/
     .row_txt_img {
         display: grid;
         grid-template-columns: 300px 800px;
@@ -540,12 +619,43 @@ footer span {
     }
 
     .comun_img {
-            max-width: 700px;
-            max-height: 100%;
-            object-fit: cover;
-        }
+        max-width: 700px;
+        max-height: 100%;
+        object-fit: cover;
+    }
 }
-@media (max-width:1200px) {
+
+/*----------------1200--------------------*/
+
+@media (max-width:1201px) {
+
+    /*INDEX*/
+
+    /*Configuracion de la posicion de las imagenes del grid */
+    .center_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        place-items: center;
+        grid-template-rows: auto;
+        /* La altura se ajusta al contenido */
+        grid-template-areas:
+            "organic"
+            "hardsurface"
+        ;
+    }
+
+    .img_ajustada_grid {
+        width: 900px;
+        height: 300px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    }
+
+    /*PORTFOLIO GENERAL*/
+
     .img_ajustada_port {
         width: 250px;
         height: 250px;
@@ -554,7 +664,8 @@ footer span {
         object-position: 50% 50%;
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
     }
-     /* Ajuste para la grilla del Portfolio General */
+
+    /* Ajuste para la grilla del Portfolio General */
     .gallery {
         grid-template-columns: repeat(3, 250px);
         grid-template-areas:
@@ -566,7 +677,7 @@ footer span {
         justify-content: center;
     }
 
-/*HARDSURFACE*/
+    /*HARDSURFACE*/
     .row_txt_img {
         display: grid;
         grid-template-columns: 200px 700px;
@@ -588,23 +699,31 @@ footer span {
     }
 
     .comun_img {
-            max-width: 600px;
-            max-height: 100%;
-            object-fit: cover;
-        }
+        max-width: 600px;
+        max-height: 100%;
+        object-fit: cover;
+    }
 }
-@media (max-width:991px) {
-/*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/
+
+/*----------------993--------------------*/
+
+@media (max-width:993px) {
+
+    /*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/
     header nav {
         display: none;
     }
-    .abrir_menu, .cerrar_menu{
+
+    .abrir_menu,
+    .cerrar_menu {
         display: block;
     }
+
     .nav_list {
         flex-direction: column;
         align-items: end;
     }
+
     .nav {
         opacity: 0;
         visibility: hidden;
@@ -619,10 +738,12 @@ footer span {
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
     }
+
     .nav.visible {
         opacity: 1;
         visibility: visible;
     }
+
     header nav ul li.submenu:hover>ul {
         display: flex;
         flex-direction: column;
@@ -636,26 +757,14 @@ footer span {
         background-color: #212121;
     }
 
-    /*INDEX*/
+    /*INDEX 993*/
     .img_ajustada_grid {
-        width: 700px;
+        width: 600px;
         height: 300px;
         object-fit: cover;
         /* La imagen se recorta para cubrir el contenedor */
         object-position: 50% 50%;
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
-    }
-
-    .config_txt {
-        padding: 5%;
-    }
-
-    h3 {
-        font-size: 1.6em;
-    }
-
-    h4 {
-        font-size: 1.1em;
     }
 
     /* Ajuste para la grilla del Portfolio General */
@@ -749,22 +858,39 @@ footer span {
     }
 
     /*CONTACT*/
-    /*Ajuste tamaño form mensaje*/
-    .mensaje {
-        max-width: 450px;
+
+
+
+    /*FOOTER*/
+
+    .icon {
+        height: 35px;
     }
 }
 
-@media (max-width:767px) {
+/*----------------767--------------------*/
 
-    /*PARA TODO*/
-    h4 {
-        font-size: 0.8em;
+@media (max-width:768px) {
+
+    /*Configuracion de los links del body*/
+    .edit_links {
+        text-decoration: none;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        font-weight: none;
+        color: azure;
+        text-align: left;
+    }
+
+    .links_internos {
+        display: flex;
+        list-style: none;
+        gap: 10px;
     }
 
     /*INDEX*/
     .img_ajustada_grid {
-        width: 560px;
+        width: 500px;
         height: 300px;
         object-fit: cover;
         /* La imagen se recorta para cubrir el contenedor */
@@ -797,7 +923,7 @@ footer span {
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
     }
 
-    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 576*/
+    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic.*/
     .comun_img {
         max-width: 400px;
         max-height: 100%;
@@ -866,20 +992,38 @@ footer span {
     }
 
     /*CONTACT*/
+
     /*Ajuste tamaño form mensaje*/
-    .mensaje {
-        max-width: 350px;
+
+    #mensaje {
+        max-width: 260px;
     }
 }
 
+
+/*----------------575--------------------*/
+
 @media (max-width:575px) {
-    h4 {
-        font-size: 0.6em;
+
+    /*Configuracion de los links del body*/
+    .edit_links {
+        text-decoration: none;
+        font-size: 0.4rem;
+        text-transform: uppercase;
+        font-weight: none;
+        color: azure;
+        text-align: left;
+    }
+
+    .links_internos {
+        display: flex;
+        list-style: none;
+        gap: 10px;
     }
 
     /*INDEX*/
     .img_ajustada_grid {
-        width: 400px;
+        width: 300px;
         height: 300px;
         object-fit: cover;
         /* La imagen se recorta para cubrir el contenedor */
@@ -887,8 +1031,10 @@ footer span {
         /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
     }
 
+    /*ORGANIC, HARDSURFACE, HIGHLIGHT*/
+
     .comun_img {
-        max-width: 280px;
+        max-width: 279px;
         max-height: 100%;
     }
 
@@ -901,7 +1047,7 @@ footer span {
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 80px;
+        max-width: 79px;
         width: 100%;
         height: 100%;
         color: antiquewhite;
@@ -929,6 +1075,7 @@ footer span {
         width: 100%;
         justify-content: center;
     }
+
     .row_img1_img2_txt {
         display: grid;
         grid-template-columns: 110px 110px 110px;
@@ -952,14 +1099,70 @@ footer span {
     }
 
     /*CLIENTS*/
+
     /*Ajuste tamaño insert pagina web*/
     .web_insert {
-        max-width: 400px;
+        max-width: 378px;
     }
 
     /*CONTACT*/
+
     /*Ajuste tamaño form mensaje*/
-    .mensaje {
-        max-width: 250px;
+    #mensaje {
+        max-width: 190px;
+    }
+
+    /*FOOTER*/
+
+    .icon {
+        height: 25px;
+    }
+
+}
+
+/*----------------380--------------------*/
+
+@media (max-width:380px) {
+
+    .comun_img {
+        max-width: 260px;
+        max-height: 100%;
+    }
+
+    .row_txt_img {
+        display: grid;
+        grid-template-columns: 70px 260px;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "texto imagen"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img_txt {
+        display: grid;
+        grid-template-columns: 260px 70px;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "imagen texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /*CLIENTS*/
+    /*Ajuste tamaño insert pagina web*/
+    .web_insert {
+        max-width: 300px;
+    }
+
+    /*CONTACT*/
+
+    /*Ajuste tamaño form mensaje*/
+
+    #mensaje {
+        max-width: 160px;
     }
 }
