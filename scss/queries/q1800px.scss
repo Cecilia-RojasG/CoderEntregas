@@ -1,0 +1,30 @@
+/*--------------------1801px-----------------*/
+@media (max-width:1801px) {
+    header {
+        .menu_completo {
+            .nav {
+                .nav_list {
+                    font-size: small;
+
+                    .submenu {
+                        &>ul {
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*-----INDEX-----*/
+    /*---Main---*/
+    /* Ajuste para el tamaño de las imagenes*/
+    .img_ajustada_grid {
+        width: 640px;
+        height: 300px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 45% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    }
+}

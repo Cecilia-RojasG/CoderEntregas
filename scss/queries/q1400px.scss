@@ -1,0 +1,70 @@
+/*----------------1400--------------------*/
+
+@media (max-width:1401px) {
+
+    /*INDEX*/
+
+    .img_ajustada_grid {
+        width: 550px;
+        height: 300px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    }
+
+    /* PORTFOLIO GENERAL */
+
+    .img_ajustada_port {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+    }
+
+    /* Ajuste para la grilla del Portfolio General */
+    .gallery {
+        grid-template-columns: repeat(4, 250px);
+        grid-template-areas:
+            "portafolio1 portafolio2 portafolio3 portafolio4"
+            "portafolio5 portafolio6 portafolio7 portafolio8"
+            "portafolio9 portafolio10 portafolio11 portafolio12";
+        width: 100%;
+        justify-content: center;
+    }
+
+    /*CLIENTS*/
+    /*Ajuste tamaño insert pagina web*/
+    .web_insert {
+        max-width: 450px;
+    }
+
+    /*HARDSURFACE*/
+    .row_txt_img {
+        display: grid;
+        grid-template-columns: 300px 800px;
+        grid-template-areas:
+            "texto imagen"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img_txt {
+        display: grid;
+        grid-template-columns: 800px 300px;
+        grid-template-areas:
+            "imagen texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .comun_img {
+        max-width: 700px;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
