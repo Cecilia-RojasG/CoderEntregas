@@ -1,26 +1,751 @@
-/*INDEX */
-main{
-    /* Banda superior de color negro en el body del Index */
+main {
+
     .highsquare {
+        /*CONFIGURACION DEL CUADRADO NEGRO SUPERIOR DE TODAS LAS PAGINAS*/
         background-color: #000000;
         padding: 10px 0px 10px 0px;
         color: azure;
+
         /* Oculta el titulo del Index */
-        #index_title{
+        #index_title {
             display: none;
         }
-        .container-fluid{
-            .row{
-                .col-12 col-md-12 col-lg-12 col-xxl-12{
-                    center{
-                        /* Ajuste para el tamaño de las imagenes*/
-                        .img_ajustada_high {
+
+        .container-fluid {
+            .row {
+                .col {
+                    .config_txt {
+                        h1 {
+                            margin-left: 1.0rem;
+                            margin-right: 1.0rem;
+                        }
+
+                        p {
+                            margin-left: 3.0rem;
+                            margin-right: 3.0rem;
+                        }
+                    }
+
+                    .center {
+                        .text_over_img {
+                            position: relative;
+                            /* Necesario para que el texto absoluto se posicione dentro de este div */
+                            display: inline-block;
+                            /* Ocupa el espacio de la imagen */
+
+                            .txt_superpuesto {
+                                position: absolute;
+                                top: 10%;
+                                /* Posicion vertical */
+                                left: 5%;
+                                /* Posicion horizontal */
+                                text-align: left;
+                                font-weight: bolder;
+                                text-transform: uppercase;
+                                color: rgb(75, 47, 153);
+                                /* Color del texto */
+                                z-index: 2;
+                                /* Se asegura que el texto esté encima de todo */
+
+                                .img_ajustada_high {
+                                    width: 100%;
+                                    height: 300px;
+                                    object-fit: cover;
+                                    /* La imagen se recorta para cubrir el contenedor */
+                                    object-position: 45% 50%;
+                                    /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        .container {
+            .row {
+                .col {
+                    .center_grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 0px;
+                        place-items: center;
+                        /* La altura se ajusta al contenido */
+                        grid-template-rows: auto;
+                        grid-template-areas:
+                            "organic hardsurface";
+
+                        .organic_area {
+                            grid-area: organic;
+                        }
+
+                        .hardsurface_area {
+                            grid-area: hardsurface;
+                        }
+
+                        .text_over_img {
+                            position: relative;
+                            /* Necesario para que el texto absoluto se posicione dentro de este div */
+                            display: inline-block;
+                            /* Ocupa el espacio de la imagen */
+
+                            .txt_superpuesto {
+                                position: absolute;
+                                top: 10%;
+                                /* Posicion vertical */
+                                left: 5%;
+                                /* Posicion horizontal */
+                                text-align: left;
+                                font-weight: bolder;
+                                text-transform: uppercase;
+                                color: rgb(75, 47, 153);
+                                /* Color del texto */
+                                z-index: 2;
+                                /* Se asegura que el texto esté encima de todo */
+
+                            }
+
+                            .img_ajustada_grid {
+                                width: 640px;
+                                height: 300px;
+                                object-fit: cover;
+                                /* La imagen se recorta para cubrir el contenedor */
+                                object-position: 50% 50%;
+                                /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+
+                            }
+
+                            img {
+                                display: block;
+                                /* Elimina espacio extra debajo de la imagen */
+                            }
+                        }
+                    }
+
+                    div {
+                        .gallery {
+                            /*CONFIGRUACION DEL MAIN DE PORTFOLIO GENERAL*/
+                            display: grid;
+                            grid-template-columns: repeat(4, 320px);
+                            gap: 5px;
+                            grid-template-areas:
+                                "portafolio1 portafolio2 portafolio3 portafolio4"
+                                "portafolio5 portafolio6 portafolio7 portafolio8"
+                                "portafolio9 portafolio10 portafolio11 portafolio12";
                             width: 100%;
-                            height: 300px;
-                            object-fit: cover;
-                            /* La imagen se recorta para cubrir el contenedor */
-                            object-position: 45% 50%;
-                            /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+                            justify-content: center;
+                            margin-top: 10px;
+                            
+                            
+                            div {
+                                .img_ajustada_port {
+                                     /* Ajuste para el tamaño de las imagenes del Portfolio General */
+                                    width: 100%;
+                                    height: 300px;
+                                    object-fit: cover;
+                                    /* La imagen se recorta para cubrir el contenedor */
+                                    object-position: 50% 50%;
+                                    /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+                                }
+
+                            }
+                            .triciclo {
+                                grid-area: portafolio1;
+                            }
+
+                            .auto {
+                                grid-area: portafolio2;
+                            }
+
+                            .mario {
+                                grid-area: portafolio3;
+                            }
+
+                            .pizzeria_otro {
+                                grid-area: portafolio4;
+                            }
+
+                            .pizzeria {
+                                grid-area: portafolio5;
+                            }
+
+                            .bota {
+                                grid-area: portafolio6;
+                            }
+
+                            .electrica {
+                                grid-area: portafolio7;
+                            }
+
+                            .chancador {
+                                grid-area: portafolio8;
+                            }
+                        }
+                    }
+
+                    .config_flex {
+                        /*------------------CLIENTS......................*/
+                        display: flex;
+                        justify-content: center;
+                        padding: 0.5rem;
+
+                        .box_txt {
+                            display: flexbox;
+                            align-items: center;
+                            justify-content: center;
+                            width: 30%;
+                            height: 100%;
+                            grid-area: texto;
+                            margin-top: 0.5rem;
+                            color: antiquewhite;
+
+                            h4 {
+                                margin-left: 1.5rem;
+                                margin-right: 1.5rem;
+                            }
+
+                            p {
+                                margin-left: 1.5rem;
+                                margin-right: 1.5rem;
+                            }
+                        }
+
+                        .box_txt_about {
+                            display: flexbox;
+                            align-items: center;
+                            justify-content: center;
+                            width: 80%;
+                            height: 100%;
+                            grid-area: texto;
+                            margin-top: 0.5rem;
+                            color: antiquewhite;
+
+                            h4 {
+                                margin-left: 1.5rem;
+                                margin-right: 1.5rem;
+                            }
+
+                            p {
+                                margin-left: 1.5rem;
+                                margin-right: 1.5rem;
+                            }
+                        }
+
+                        div {
+                            img {
+                                margin: 1%;
+                                width: 100%;
+                                max-width: 10vw;
+                            }
+
+                            .web_insert {
+                                /*Ajuste posicion insert pagina web*/
+                                height: 100%;
+                                padding: 0.5%;
+                            }
+                        }
+                    }
+
+                    .mario {
+                        .row_txt_img1 {
+                            /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
+                            display: grid;
+                            grid-template-columns: 400px 900px;
+                            grid-template-areas:
+                                "texto imagen1"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img_tall_1 {
+                                display: flex;
+                                width: 100%;
+                                height: 60vh;
+                                justify-content: center;
+                                grid-area: imagen1;
+
+                                .tall_img_0 {
+                                    max-width: 900px;
+                                    max-height: 60vh;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    .seguridad {
+                        .row_img1_img2_txt {
+                            display: grid;
+                            grid-template-columns: 450px 450px 400px;
+                            grid-template-areas:
+                                "imagen1 imagen2 texto"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img_tall_1 {
+                                display: flex;
+                                width: 100%;
+                                height: 60vh;
+                                justify-content: center;
+                                grid-area: imagen1;
+
+                                .tall_img {
+                                    max-width: 450px;
+                                    max-height: 60vh;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .box_img_tall_2 {
+                                display: flex;
+                                width: 100%;
+                                height: 60vh;
+                                justify-content: center;
+                                grid-area: imagen2;
+
+                                .tall_img {
+                                    max-width: 450px;
+                                    max-height: 60vh;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    .electrico {
+                        .row_txt_img {
+                            display: grid;
+                            grid-template-columns: 400px 900px;
+                            grid-template-areas:
+                                "texto imagen"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                grid-area: imagen;
+                            }
+
+                            .comun_img {
+                                max-width: 900px;
+                                max-height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .triciclo {
+                        .row_txt_img {
+                            display: grid;
+                            grid-template-columns: 400px 900px;
+                            grid-template-areas:
+                                "texto imagen"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                grid-area: imagen;
+                            }
+
+                            .comun_img {
+                                max-width: 900px;
+                                max-height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .pizzeria {
+                        .row_txt_img {
+                            display: grid;
+                            grid-template-columns: 400px 900px;
+                            grid-template-areas:
+                                "texto imagen"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                grid-area: imagen;
+                            }
+
+                            .comun_img {
+                                max-width: 900px;
+                                max-height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .torque {
+                        .row_txt_img {
+                            display: grid;
+                            grid-template-columns: 400px 900px;
+                            grid-template-areas:
+                                "texto imagen"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                grid-area: imagen;
+                            }
+
+                            .comun_img {
+                                max-width: 900px;
+                                max-height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .chancador {
+                        .row_img_txt {
+                            display: grid;
+                            grid-template-columns: 900px 400px;
+                            grid-template-areas:
+                                "imagen texto"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                grid-area: imagen;
+
+                                .comun_img {
+                                    max-width: 900px;
+                                    max-height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    .auto {
+                        .row_img_txt {
+                            display: grid;
+                            grid-template-columns: 900px 400px;
+                            grid-template-areas:
+                                "imagen texto"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                grid-area: imagen;
+
+                                .comun_img {
+                                    max-width: 900px;
+                                    max-height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    .bota {
+                        .row_img_txt {
+                            display: grid;
+                            grid-template-columns: 900px 400px;
+                            grid-template-areas:
+                                "imagen texto"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            margin: 10px 0 10px 0;
+
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: antiquewhite;
+
+                                h4 {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+
+                                p {
+                                    margin-left: 1.5rem;
+                                    margin-right: 1.5rem;
+                                }
+                            }
+
+                            .box_img {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                grid-area: imagen;
+
+                                .comun_img {
+                                    max-width: 900px;
+                                    max-height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    .form_contact {
+                        /*-------------FORMULARIO DE CONTACTO----------------*/
+                        border-radius: 5px;
+                        position: relative;
+                        text-align: lef;
+                        max-width: 100%;
+                        box-sizing: border-box;
+                        /* Incluye padding y borde en el cálculo del ancho */
+                        font-size: clamp(0.7rem, 0.9vw, 1.1rem);
+                        input:focus {
+                            background-color: bisque;
+                        }
+                        .center{
+                            ul {
+                                list-style: none;
+                                li{
+                                    display: flex;
+                                    padding: 1%;
+                                    label {
+                                        color: antiquewhite;
+                                        width: 140px;
+                                    
+                                        .name::after {
+                                            content: '*';
+                                            color: brown;
+                                        }
+
+                                        .mail::after {
+                                            content: '*';
+                                            color: brown;
+                                        }
+
+                                        .subject::after {
+                                            content: '*';
+                                            color: brown;
+                                        }
+
+                                        .message::after {
+                                            content: '*';
+                                            color: brown;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -29,336 +754,13 @@ main{
     }
 }
 
-/*Configuracion de la posicion de las imagenes del grid */
-.center_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px;
-    place-items: center;
-    grid-template-rows: auto;
-    /* La altura se ajusta al contenido */
-    grid-template-areas:
-        "organic hardsurface";
-}
-
-#organic_area {
-    grid-area: organic;
-}
-
-#hardsurface_area {
-    grid-area: hardsurface;
-}
-
-/* Para que los textos queden sobre las imagenes */
-.text_over_img {
-    position: relative;
-    /* Necesario para que el texto absoluto se posicione dentro de este div */
-    display: inline-block;
-    /* Ocupa el espacio de la imagen */
-}
-
-.text_over_img img {
-    display: block;
-    /* Elimina espacio extra debajo de la imagen */
-}
-
-.txt_superpuesto {
-    position: absolute;
-    top: 10%;
-    /* Posicion vertical */
-    left: 5%;
-    /* Posicion horizontal */
-    text-align: left;
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: rgb(75, 47, 153);
-    /* Color del texto */
-    z-index: 2;
-    /* Se asegura que el texto esté encima de todo */
-}
 
 
-.img_ajustada_grid {
-    width: 640px;
-    height: 300px;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
-}
-
-/*Sombreado cuando se pasa el mouse sobre las imagenes*  CUANDO SE ACTIVA OCURRE UN PROBLEMA CON LOS LINKS - AUN NO SOLUCIONADO/
-/*.highsquare div div{
-    position: relative;
-}
-.highsquare div div::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0,0.3);
-    opacity: 0;
-}
-.highsquare div>div:hover::after{
-    opacity: 1;
-}
-.center_grid div{
-    position: relative;
-}
-.center_grid div::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0,0.3);
-    opacity: 0;
-}
-.center_grid>div:hover::after{
-    opacity: 1;
-}*/
-/*Para que el cursor sea una manito*/
-/*.img_ajustada_high>div:hover{
-    cursor: pointer;
-}*/
-
-/*GENERAL PORTFOLIO*/
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 300px);
-    gap: 5px;
-    grid-template-areas:
-        "portafolio1 portafolio2 portafolio3 portafolio4"
-        "portafolio5 portafolio6 portafolio7 portafolio8"
-        "portafolio9 portafolio10 portafolio11 portafolio12";
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.gallery div {
-    position: relative;
-}
-
-/*Para que el cursor sea una manito y se active la sombra*/
-.gallery>div:hover::after {
-    opacity: 1;
-    cursor: pointer;
-}
-
-.gallery div::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-}
-
-/* Ajuste para el tamaño de las imagenes del Portfolio General */
-.img_ajustada_port {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
-}
-
-.triciclo {
-    grid-area: portafolio1;
-}
-
-.auto {
-    grid-area: portafolio2;
-}
-
-.mario {
-    grid-area: portafolio3;
-}
-
-.pizzeria_otro {
-    grid-area: portafolio4;
-}
-
-.pizzeria {
-    grid-area: portafolio5;
-}
-
-.bota {
-    grid-area: portafolio6;
-}
-
-.electrica {
-    grid-area: portafolio7;
-}
-
-.chancador {
-    grid-area: portafolio8;
-}
-
-/*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
-
-/*Contenedores*/
-.box_txt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: texto;
-    margin-top: 5px;
-}
-
-.box_img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    grid-area: imagen;
-}
-
-.box_img_tall_1 {
-    display: flex;
-    width: 100%;
-    height: 60vh;
-    justify-content: center;
-    grid-area: imagen1;
-}
-
-.box_img_tall_2 {
-    display: flex;
-    width: 100%;
-    height: 60vh;
-    justify-content: center;
-    grid-area: imagen2;
-}
-
-#txt_der {
-    margin: 5px;
-}
-
-/*Posiciones en pantalla*/
-.row_txt_img {
-    display: grid;
-    grid-template-columns: 400px 900px;
-    grid-template-areas:
-        "texto imagen"
-    ;
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-}
-
-.row_img_txt {
-    display: grid;
-    grid-template-columns: 900px 400px;
-    grid-template-areas:
-        "imagen texto"
-    ;
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-}
-
-.row_img1_img2_txt {
-    display: grid;
-    grid-template-columns: 450px 450px 400px;
-    grid-template-areas:
-        "imagen1 imagen2 texto"
-    ;
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-}
-
-.row_txt_img1 {
-    display: grid;
-    grid-template-columns: 500px 1000px;
-    grid-template-areas:
-        "texto imagen1"
-    ;
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-}
-
-/*Tamaño imagenes en PC*/
-.comun_img {
-    max-width: 900px;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.tall_img {
-    max-width: 100%;
-    max-height: 900px;
-    object-fit: cover;
-}
-
-/*FORMULARIO DE CONTACTO */
-.form_contact {
-    border-radius: 5px;
-    position: relative;
-    text-align: lef;
-
-    ul {
-        list-style: none;
-    }
-}
-
-.form_contact ul li label {
-    color: antiquewhite;
-    width: 140px;
-}
-
-.form_contact ul li {
-    display: flex;
-    padding: 1%;
-}
-
-.form_contact input:focus {
-    background-color: bisque;
-}
-
-.name::after {
-    content: '*';
-    color: brown;
-}
-
-.mail::after {
-    content: '*';
-    color: brown;
-}
-
-.subject::after {
-    content: '*';
-    color: brown;
-}
-
-.message::after {
-    content: '*';
-    color: brown;
-}
-
-/*Ajuste tamaño form mensaje*/
-.form_contact {
-    max-width: 100%;
-    box-sizing: border-box;
-    /* Incluye padding y borde en el cálculo del ancho */
-    font-size: clamp(0.7rem, 0.9vw, 1.1rem);
-}
 
 
-/*CLIENTS*/
 
-/*Ajuste posicion insert pagina web*/
-.web_insert {
-    padding: 2%;
-}
+
+
+
+
+

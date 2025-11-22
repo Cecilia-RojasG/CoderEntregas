@@ -1,8 +1,21 @@
 /* -------------FOOTER---------------*/
-.icon {
-    height: 45px;
+footer{
+    .container{
+        .row{
+            .col{
+                .center{
+                    div{
+                        .icon {
+                            height: 45px;
+                        }
+                    }
+                    span {
+                        color: azure;
+                    }
+                }
+            }
+        }
+    }
 }
 
-footer span {
-    color: azure;
-}
+

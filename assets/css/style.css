@@ -102,9 +102,6 @@ header .menu_completo .abrir_menu {
   font-size: 1.8rem;
   background-color: transparent;
 }
-header .menu_completo {
-  /*configuracion del menu en el header*/
-}
 header .menu_completo .nav {
   display: flex;
   align-items: center;
@@ -153,11 +150,8 @@ header .menu_completo .nav .nav_list .submenu:hover > ul {
   display: block;
 }
 
-/*INDEX */
-main {
-  /* Banda superior de color negro en el body del Index */
-}
 main .highsquare {
+  /*CONFIGURACION DEL CUADRADO NEGRO SUPERIOR DE TODAS LAS PAGINAS*/
   background-color: #000000;
   padding: 10px 0px 10px 0px;
   color: azure;
@@ -166,51 +160,21 @@ main .highsquare {
 main .highsquare #index_title {
   display: none;
 }
-main .highsquare .container-fluid .row .col-12 col-md-12 col-lg-12 col-xxl-12 center {
-  /* Ajuste para el tamaño de las imagenes*/
+main .highsquare .container-fluid .row .col .config_txt h1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-main .highsquare .container-fluid .row .col-12 col-md-12 col-lg-12 col-xxl-12 center .img_ajustada_high {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  /* La imagen se recorta para cubrir el contenedor */
-  object-position: 45% 50%;
-  /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+main .highsquare .container-fluid .row .col .config_txt p {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
-
-/*Configuracion de la posicion de las imagenes del grid */
-.center_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0px;
-  place-items: center;
-  grid-template-rows: auto;
-  /* La altura se ajusta al contenido */
-  grid-template-areas: "organic hardsurface";
-}
-
-#organic_area {
-  grid-area: organic;
-}
-
-#hardsurface_area {
-  grid-area: hardsurface;
-}
-
-/* Para que los textos queden sobre las imagenes */
-.text_over_img {
+main .highsquare .container-fluid .row .col .center .text_over_img {
   position: relative;
   /* Necesario para que el texto absoluto se posicione dentro de este div */
   display: inline-block;
   /* Ocupa el espacio de la imagen */
 }
-
-.text_over_img img {
-  display: block;
-  /* Elimina espacio extra debajo de la imagen */
-}
-
-.txt_superpuesto {
+main .highsquare .container-fluid .row .col .center .text_over_img .txt_superpuesto {
   position: absolute;
   top: 10%;
   /* Posicion vertical */
@@ -224,8 +188,50 @@ main .highsquare .container-fluid .row .col-12 col-md-12 col-lg-12 col-xxl-12 ce
   z-index: 2;
   /* Se asegura que el texto esté encima de todo */
 }
-
-.img_ajustada_grid {
+main .highsquare .container-fluid .row .col .center .text_over_img .txt_superpuesto .img_ajustada_high {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  /* La imagen se recorta para cubrir el contenedor */
+  object-position: 45% 50%;
+  /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+}
+main section .container .row .col .center_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  place-items: center;
+  /* La altura se ajusta al contenido */
+  grid-template-rows: auto;
+  grid-template-areas: "organic hardsurface";
+}
+main section .container .row .col .center_grid .organic_area {
+  grid-area: organic;
+}
+main section .container .row .col .center_grid .hardsurface_area {
+  grid-area: hardsurface;
+}
+main section .container .row .col .center_grid .text_over_img {
+  position: relative;
+  /* Necesario para que el texto absoluto se posicione dentro de este div */
+  display: inline-block;
+  /* Ocupa el espacio de la imagen */
+}
+main section .container .row .col .center_grid .text_over_img .txt_superpuesto {
+  position: absolute;
+  top: 10%;
+  /* Posicion vertical */
+  left: 5%;
+  /* Posicion horizontal */
+  text-align: left;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: rgb(75, 47, 153);
+  /* Color del texto */
+  z-index: 2;
+  /* Se asegura que el texto esté encima de todo */
+}
+main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
   width: 640px;
   height: 300px;
   object-fit: cover;
@@ -233,179 +239,145 @@ main .highsquare .container-fluid .row .col-12 col-md-12 col-lg-12 col-xxl-12 ce
   object-position: 50% 50%;
   /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
 }
-
-/*Sombreado cuando se pasa el mouse sobre las imagenes*  CUANDO SE ACTIVA OCURRE UN PROBLEMA CON LOS LINKS - AUN NO SOLUCIONADO/
-/*.highsquare div div{
-    position: relative;
+main section .container .row .col .center_grid .text_over_img img {
+  display: block;
+  /* Elimina espacio extra debajo de la imagen */
 }
-.highsquare div div::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0,0.3);
-    opacity: 0;
-}
-.highsquare div>div:hover::after{
-    opacity: 1;
-}
-.center_grid div{
-    position: relative;
-}
-.center_grid div::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0,0.3);
-    opacity: 0;
-}
-.center_grid>div:hover::after{
-    opacity: 1;
-}*/
-/*Para que el cursor sea una manito*/
-/*.img_ajustada_high>div:hover{
-    cursor: pointer;
-}*/
-/*GENERAL PORTFOLIO*/
-.gallery {
+main section .container .row .col div .gallery {
+  /*CONFIGRUACION DEL MAIN DE PORTFOLIO GENERAL*/
   display: grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(4, 320px);
   gap: 5px;
   grid-template-areas: "portafolio1 portafolio2 portafolio3 portafolio4" "portafolio5 portafolio6 portafolio7 portafolio8" "portafolio9 portafolio10 portafolio11 portafolio12";
   width: 100%;
   justify-content: center;
   margin-top: 10px;
 }
-
-.gallery div {
-  position: relative;
-}
-
-/*Para que el cursor sea una manito y se active la sombra*/
-.gallery > div:hover::after {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.gallery div::after {
-  content: "";
+main section .container .row .col div .gallery div .img_ajustada_port {
+  /* Ajuste para el tamaño de las imagenes del Portfolio General */
   width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-}
-
-/* Ajuste para el tamaño de las imagenes del Portfolio General */
-.img_ajustada_port {
-  width: 300px;
   height: 300px;
   object-fit: cover;
   /* La imagen se recorta para cubrir el contenedor */
   object-position: 50% 50%;
   /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
 }
-
-.triciclo {
+main section .container .row .col div .gallery .triciclo {
   grid-area: portafolio1;
 }
-
-.auto {
+main section .container .row .col div .gallery .auto {
   grid-area: portafolio2;
 }
-
-.mario {
+main section .container .row .col div .gallery .mario {
   grid-area: portafolio3;
 }
-
-.pizzeria_otro {
+main section .container .row .col div .gallery .pizzeria_otro {
   grid-area: portafolio4;
 }
-
-.pizzeria {
+main section .container .row .col div .gallery .pizzeria {
   grid-area: portafolio5;
 }
-
-.bota {
+main section .container .row .col div .gallery .bota {
   grid-area: portafolio6;
 }
-
-.electrica {
+main section .container .row .col div .gallery .electrica {
   grid-area: portafolio7;
 }
-
-.chancador {
+main section .container .row .col div .gallery .chancador {
   grid-area: portafolio8;
 }
-
-/*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
-/*Contenedores*/
-.box_txt {
+main section .container .row .col .config_flex {
+  /*------------------CLIENTS......................*/
   display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+main section .container .row .col .config_flex .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .config_flex .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .config_flex .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .config_flex .box_txt_about {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .config_flex .box_txt_about h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .config_flex .box_txt_about p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .config_flex div img {
+  margin: 1%;
+  width: 100%;
+  max-width: 10vw;
+}
+main section .container .row .col .config_flex div .web_insert {
+  /*Ajuste posicion insert pagina web*/
+  height: 100%;
+  padding: 0.5%;
+}
+main section .container .row .col .mario .row_txt_img1 {
+  /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
+  display: grid;
+  grid-template-columns: 400px 900px;
+  grid-template-areas: "texto imagen1";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .mario .row_txt_img1 .box_txt {
+  display: flexbox;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   grid-area: texto;
-  margin-top: 5px;
+  margin-top: 0.5rem;
+  color: antiquewhite;
 }
-
-.box_img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  grid-area: imagen;
+main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
-
-.box_img_tall_1 {
+main section .container .row .col .mario .row_txt_img1 .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 {
   display: flex;
   width: 100%;
   height: 60vh;
   justify-content: center;
   grid-area: imagen1;
 }
-
-.box_img_tall_2 {
-  display: flex;
-  width: 100%;
-  height: 60vh;
-  justify-content: center;
-  grid-area: imagen2;
+main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
+  max-width: 900px;
+  max-height: 60vh;
+  object-fit: cover;
 }
-
-#txt_der {
-  margin: 5px;
-}
-
-/*Posiciones en pantalla*/
-.row_txt_img {
-  display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-
-.row_img_txt {
-  display: grid;
-  grid-template-columns: 900px 400px;
-  grid-template-areas: "imagen texto";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-
-.row_img1_img2_txt {
+main section .container .row .col .seguridad .row_img1_img2_txt {
   display: grid;
   grid-template-columns: 450px 450px 400px;
   grid-template-areas: "imagen1 imagen2 texto";
@@ -413,93 +385,367 @@ main .highsquare .container-fluid .row .col-12 col-md-12 col-lg-12 col-xxl-12 ce
   justify-content: center;
   margin: 10px 0 10px 0;
 }
-
-.row_txt_img1 {
+main section .container .row .col .seguridad .row_img1_img2_txt .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .seguridad .row_img1_img2_txt .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  grid-area: imagen1;
+}
+main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
+  max-width: 450px;
+  max-height: 60vh;
+  object-fit: cover;
+}
+main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  grid-area: imagen2;
+}
+main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
+  max-width: 450px;
+  max-height: 60vh;
+  object-fit: cover;
+}
+main section .container .row .col .electrico .row_txt_img {
   display: grid;
-  grid-template-columns: 500px 1000px;
-  grid-template-areas: "texto imagen1";
+  grid-template-columns: 400px 900px;
+  grid-template-areas: "texto imagen";
   width: 100%;
   justify-content: center;
   margin: 10px 0 10px 0;
 }
-
-/*Tamaño imagenes en PC*/
-.comun_img {
+main section .container .row .col .electrico .row_txt_img .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .electrico .row_txt_img .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .electrico .row_txt_img .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .electrico .row_txt_img .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .electrico .row_txt_img .comun_img {
   max-width: 900px;
   max-height: 100%;
   object-fit: cover;
 }
-
-.tall_img {
-  max-width: 100%;
-  max-height: 900px;
+main section .container .row .col .triciclo .row_txt_img {
+  display: grid;
+  grid-template-columns: 400px 900px;
+  grid-template-areas: "texto imagen";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .triciclo .row_txt_img .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .triciclo .row_txt_img .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .triciclo .row_txt_img .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .triciclo .row_txt_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
   object-fit: cover;
 }
-
-/*FORMULARIO DE CONTACTO */
-.form_contact {
+main section .container .row .col .pizzeria .row_txt_img {
+  display: grid;
+  grid-template-columns: 400px 900px;
+  grid-template-areas: "texto imagen";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .pizzeria .row_txt_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .torque .row_txt_img {
+  display: grid;
+  grid-template-columns: 400px 900px;
+  grid-template-areas: "texto imagen";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .torque .row_txt_img .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .torque .row_txt_img .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .torque .row_txt_img .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .torque .row_txt_img .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .torque .row_txt_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .chancador .row_img_txt {
+  display: grid;
+  grid-template-columns: 900px 400px;
+  grid-template-areas: "imagen texto";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .chancador .row_img_txt .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .chancador .row_img_txt .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .chancador .row_img_txt .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .chancador .row_img_txt .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .chancador .row_img_txt .box_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .auto .row_img_txt {
+  display: grid;
+  grid-template-columns: 900px 400px;
+  grid-template-areas: "imagen texto";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .auto .row_img_txt .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .auto .row_img_txt .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .auto .row_img_txt .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .auto .row_img_txt .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .auto .row_img_txt .box_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .bota .row_img_txt {
+  display: grid;
+  grid-template-columns: 900px 400px;
+  grid-template-areas: "imagen texto";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .bota .row_img_txt .box_txt {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .bota .row_img_txt .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .bota .row_img_txt .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .bota .row_img_txt .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .bota .row_img_txt .box_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .form_contact {
+  /*-------------FORMULARIO DE CONTACTO----------------*/
   border-radius: 5px;
   position: relative;
   text-align: lef;
-}
-.form_contact ul {
-  list-style: none;
-}
-
-.form_contact ul li label {
-  color: antiquewhite;
-  width: 140px;
-}
-
-.form_contact ul li {
-  display: flex;
-  padding: 1%;
-}
-
-.form_contact input:focus {
-  background-color: bisque;
-}
-
-.name::after {
-  content: "*";
-  color: brown;
-}
-
-.mail::after {
-  content: "*";
-  color: brown;
-}
-
-.subject::after {
-  content: "*";
-  color: brown;
-}
-
-.message::after {
-  content: "*";
-  color: brown;
-}
-
-/*Ajuste tamaño form mensaje*/
-.form_contact {
   max-width: 100%;
   box-sizing: border-box;
   /* Incluye padding y borde en el cálculo del ancho */
   font-size: clamp(0.7rem, 0.9vw, 1.1rem);
 }
-
-/*CLIENTS*/
-/*Ajuste posicion insert pagina web*/
-.web_insert {
-  padding: 2%;
+main section .container .row .col .form_contact input:focus {
+  background-color: bisque;
+}
+main section .container .row .col .form_contact .center ul {
+  list-style: none;
+}
+main section .container .row .col .form_contact .center ul li {
+  display: flex;
+  padding: 1%;
+}
+main section .container .row .col .form_contact .center ul li label {
+  color: antiquewhite;
+  width: 140px;
+}
+main section .container .row .col .form_contact .center ul li label .name::after {
+  content: "*";
+  color: brown;
+}
+main section .container .row .col .form_contact .center ul li label .mail::after {
+  content: "*";
+  color: brown;
+}
+main section .container .row .col .form_contact .center ul li label .subject::after {
+  content: "*";
+  color: brown;
+}
+main section .container .row .col .form_contact .center ul li label .message::after {
+  content: "*";
+  color: brown;
 }
 
 /* -------------FOOTER---------------*/
-.icon {
+footer .container .row .col .center div .icon {
   height: 45px;
 }
-
-footer span {
+footer .container .row .col .center span {
   color: azure;
 }
 
