@@ -8,7 +8,8 @@
 body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    background-color: #212121;
+    background: #9241d9;
+    background: radial-gradient(circle,rgba(146, 65, 217, 1) 0%, rgba(33, 33, 33, 1) 89%);
 }
 
 /* Tamaños titulos, configuraciones de los textos*/
@@ -18,61 +19,29 @@ h1 {
 }
 
 h2 {
-    font-size: 2.4em;
-    font-weight: 500;
+    font-size: clamp(0.7rem, 1.9vw, 2.1rem);
     text-transform: uppercase;
 }
 
 h3 {
-    font-size: clamp(0.8rem, 2.0vw, 2.2rem);
+    font-size: clamp(18px, 1.8vw, 2.0rem);
     text-transform: uppercase;
 }
 
 h4 {
-    font-size: clamp(0.4rem, 1.8vw, 2.0rem);
+    font-size: clamp(16px, 1.7vw, 1.9rem);
     text-transform: uppercase;
 }
 
 p {
-    font-size: clamp(0.4rem, 0.8vw, 1.0rem);
+    font-size: clamp(16px, 0.8vw, 0.9rem);
 }
 
 span {
-    font-size: clamp(0.4rem, 0.9vw, 1.2rem);
+    font-size: clamp(0.3rem, 0.9vw, 1.1rem);
 }
 
 label {
-    font-size: clamp(0.6rem, 0.9vw, 1.1rem);
+    font-size: clamp(0.5rem, 0.9vw, 1.1rem);
 }
 
-.config_txt {
-    padding: 1%;
-    color: antiquewhite;
-    text-align: left;
-}
-
-.center {
-    display: grid;
-    place-items: center;
-}
-
-/*Configuracion de los links del main*/
-.edit_links {
-    text-decoration: none;
-    font-size: small;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: azure;
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-.links_internos {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.edit_links a:visited {
-    color: rgb(211, 175, 128);
-}

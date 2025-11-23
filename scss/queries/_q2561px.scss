@@ -1,0 +1,24 @@
+/*---------------Desde 2561px-----------------*/
+/*--------HEADER---------*/
+@media (min-width:2561px) {
+    header {
+        .img_logo {
+            max-width: 100%;
+        }
+        .menu_completo {
+            min-width: 40%;
+            .nav {
+                .nav_list {
+                    font-size: xx-large;
+
+                    .submenu {
+                        &>ul {
+                            font-size: x-large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

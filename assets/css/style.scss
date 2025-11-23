@@ -72,8 +72,8 @@ header {
   align-items: center;
 }
 header .img_logo {
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 50%;
+  min-height: 50%;
 }
 header .menu_completo {
   position: relative;
@@ -186,10 +186,9 @@ main .highsquare .container-fluid .row .col .center .text_over_img .txt_superpue
   z-index: 2;
   /* Se asegura que el texto esté encima de todo */
 }
-main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada_high {
-  margin: 0%;
+main .highsquare .container-fluid .row .col .center .text_over_img .txt_superpuesto .img_ajustada_high {
   width: 100%;
-  height: 30vh;
+  height: 300px;
   object-fit: cover;
   /* La imagen se recorta para cubrir el contenedor */
   object-position: 45% 50%;
@@ -231,8 +230,8 @@ main section .container .row .col .center_grid .text_over_img .txt_superpuesto {
   /* Se asegura que el texto esté encima de todo */
 }
 main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-  width: 100%;
-  height: 25vh;
+  width: 640px;
+  height: 300px;
   object-fit: cover;
   /* La imagen se recorta para cubrir el contenedor */
   object-position: 50% 50%;
@@ -804,7 +803,7 @@ footer .container .row .col .center span {
     font-size: larger;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
-    font-size: large;
+    font-size: medium;
   }
 }
 /*--------------------1800px-----------------*/
@@ -817,15 +816,9 @@ footer .container .row .col .center span {
     font-size: large;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
-    font-size: medium;
+    font-size: large;
   }
 }
-/*INDEX 1800*/
-main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-  width: 100%;
-  height: 100%;
-}
-
 /*----------------1490--------------------*/
 /*--------HEADER---------*/
 @media (max-width: 1490px) {
@@ -833,15 +826,19 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     min-width: 52%;
   }
   header .menu_completo .nav .nav_list {
-    font-size: medium;
+    font-size: large;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
-    font-size: small;
+    font-size: medium;
   }
-  /*INDEX 1400*/
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 100%;
-    height: 100%;
+  /*INDEX*/
+  .img_ajustada_grid {
+    width: 550px;
+    height: 300px;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
   }
   /* PORTFOLIO GENERAL */
   .img_ajustada_port {
@@ -885,16 +882,38 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     object-fit: cover;
   }
 }
-/*----------------1290--------------------*/
+/*----------------1200--------------------*/
+/*--------HEADER---------*/
 @media (max-width: 1290px) {
   header .menu_completo {
-    min-width: 55%;
+    min-width: 62%;
   }
   header .menu_completo .nav .nav_list {
-    font-size: small;
+    font-size: medium;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
-    font-size: small;
+    font-size: medium;
+  }
+  /*INDEX*/
+  /*Configuracion de la posicion de las imagenes del grid */
+  .center_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+    place-items: center;
+    grid-template-rows: auto;
+    /* La altura se ajusta al contenido */
+    grid-template-areas: "organic" "hardsurface";
+  }
+  /*INDEX*/
+  .img_ajustada_grid {
+    width: 900px;
+    height: 100%;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    margin: 5px 0 5px 0;
   }
   /*PORTFOLIO GENERAL*/
   .img_ajustada_port {
@@ -932,147 +951,11 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     max-height: 100%;
     object-fit: cover;
   }
-  /* -------------FOOTER---------------*/
-  footer .container .row .col .center div .icon {
-    height: 30px;
-  }
-  footer .container .row .col .center span {
-    color: azure;
-  }
 }
-/*----------------1024--------------------*/
+/*----------------1001--------------------*/
 /*--------HEADER---------*/
-@media (max-width: 1024px) {
-  header .menu_completo {
-    min-width: 57%;
-  }
-  header .menu_completo .nav .nav_list {
-    font-size: smaller;
-  }
-  header .menu_completo .nav .nav_list .submenu > ul {
-    font-size: x-small;
-  }
-  /*INDEX 1024*/
-  main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
-    gap: 10px;
-  }
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 100%;
-    height: 100%;
-  }
-}
-/* Ajuste para la grilla del Portfolio General 1024*/
-.gallery {
-  grid-template-columns: repeat(3, 200px);
-  grid-template-areas: "portafolio1 portafolio2 portafolio3" "portafolio4 portafolio5 portafolio6" "portafolio7 portafolio8 portafolio9" "portafolio10 portafolio11 portafolio12";
-  width: 100%;
-  justify-content: center;
-}
-
-/* Ajuste para imagenes del Portfolio General */
-.img_ajustada_port {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  /* La imagen se recorta para cubrir el contenedor */
-  object-position: 50% 50%;
-  /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-}
-
-/*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 991*/
-.comun_img {
-  max-width: 500px;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.tall_img {
-  max-width: 500px;
-  max-height: 500px;
-}
-
-.box_txt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 300px;
-  color: antiquewhite;
-  grid-area: texto;
-}
-
-.row_txt_img {
-  display: grid;
-  grid-template-columns: 200px 500px;
-  grid-template-areas: "texto imagen";
-  width: 100%;
-  justify-content: center;
-}
-
-.row_img_txt {
-  display: grid;
-  grid-template-columns: 500px 200px;
-  grid-template-areas: "imagen texto";
-  width: 100%;
-  justify-content: center;
-}
-
-.row_txt_img1 {
-  display: grid;
-  grid-template-columns: 250px 500px;
-  grid-template-areas: "texto imagen1";
-  width: 100%;
-  justify-content: center;
-}
-
-.row_img1_img2_txt {
-  display: grid;
-  grid-template-columns: 250px 250px 250px;
-  grid-template-areas: "imagen1 imagen2 texto";
-  width: 100%;
-  justify-content: center;
-}
-
-/*CLIENTS*/
-/*Ajuste tamaño insert pagina web*/
-.web_insert {
-  max-width: 600px;
-}
-
-/*CONTACT*/
-/*FOOTER*/
-.icon {
-  height: 35px;
-}
-
-/*----------------960-------------------*/
-/*--------HEADER---------*/
-@media (max-width: 990px) {
-  header .menu_completo {
-    min-width: 58%;
-  }
-  header .menu_completo .nav .nav_list {
-    font-size: x-small;
-  }
-  header .menu_completo .nav .nav_list .submenu > ul {
-    font-size: x-small;
-  }
-  /*INDEX 1024*/
-  main .highsquare .container-fluid .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 100%;
-    height: 100%;
-  }
-}
-/*----------------768--------------------*/
-@media (max-width: 768px) {
-  header .img_logo {
-    width: 100%;
-    height: 100%;
-  }
-  header .menu_completo {
-    min-width: 20%;
-  }
-  header .menu_completo .nav {
+@media (max-width: 1001px) {
+  body header .menu_completo .nav {
     /*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/
     display: none;
     visibility: hidden;
@@ -1088,22 +971,22 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     padding: 2rem;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
-  header .menu_completo .nav.visible {
+  body header .menu_completo .nav.visible {
     opacity: 1;
     visibility: visible;
   }
-  header .menu_completo .nav .cerrar_menu {
+  body header .menu_completo .nav .cerrar_menu {
     display: block;
     border: 0;
     color: azure;
     font-size: 1rem;
     background-color: transparent;
   }
-  header .menu_completo .nav .nav_list {
+  body header .menu_completo .nav .nav_list {
     flex-direction: column;
     align-items: end;
   }
-  header .menu_completo .nav .nav_list .submenu:hover > ul {
+  body header .menu_completo .nav .nav_list .submenu:hover > ul {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -1115,7 +998,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     font-size: 1rem;
     background-color: #212121;
   }
-  header .abrir_menu {
+  body header .abrir_menu {
     /*Configuracion del menu Hamburguesa */
     display: block;
     border: 0;
@@ -1123,26 +1006,117 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     font-size: 1rem;
     background-color: transparent;
   }
-  main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
-    gap: 10px;
+  body {
+    /*INDEX 993*/
   }
-  main section .container .row .col .center_grid {
-    margin: 1.5%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0px;
-    place-items: center;
-    grid-template-rows: auto;
-    /* La altura se ajusta al contenido */
-    grid-template-areas: "organic" "hardsurface";
-  }
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 500px;
+  body main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
+    width: 340px;
+    height: 100%;
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
-    margin: 3px 0 3px 0;
+    margin: 5px 0 5px 0;
+  }
+  /* Ajuste para la grilla del Portfolio General */
+  .gallery {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-areas: "portafolio1 portafolio2 portafolio3" "portafolio4 portafolio5 portafolio6" "portafolio7 portafolio8 portafolio9" "portafolio10 portafolio11 portafolio12";
+    width: 100%;
+    justify-content: center;
+  }
+  /* Ajuste para imagenes del Portfolio General */
+  .img_ajustada_port {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+  }
+  /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 991*/
+  .comun_img {
+    max-width: 500px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .tall_img {
+    max-width: 500px;
+    max-height: 500px;
+  }
+  .box_txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    color: antiquewhite;
+    grid-area: texto;
+  }
+  .row_txt_img {
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+  }
+  .row_img_txt {
+    display: grid;
+    grid-template-columns: 500px 200px;
+    grid-template-areas: "imagen texto";
+    width: 100%;
+    justify-content: center;
+  }
+  .row_txt_img1 {
+    display: grid;
+    grid-template-columns: 250px 500px;
+    grid-template-areas: "texto imagen1";
+    width: 100%;
+    justify-content: center;
+  }
+  .row_img1_img2_txt {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-areas: "imagen1 imagen2 texto";
+    width: 100%;
+    justify-content: center;
+  }
+  /*CLIENTS*/
+  /*Ajuste tamaño insert pagina web*/
+  .web_insert {
+    max-width: 600px;
+  }
+  /*CONTACT*/
+  /*FOOTER*/
+  .icon {
+    height: 35px;
+  }
+}
+/*----------------768--------------------*/
+@media (max-width: 768px) {
+  /*Configuracion de los links del body*/
+  .edit_links {
+    text-decoration: none;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: none;
+    color: azure;
+    text-align: left;
+  }
+  .links_internos {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+  /*INDEX*/
+  .img_ajustada_grid {
+    width: 500px;
+    height: 100%;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    margin: 5px 0 5px 0;
   }
   /*PORTFOLIO*/
   /* Ajuste para la grilla del Portfolio General */
@@ -1218,19 +1192,32 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   #mensaje {
     max-width: 260px;
   }
-  /* -------------FOOTER---------------*/
-  footer .container .row .col .center div .icon {
-    height: 30px;
-  }
-  footer .container .row .col .center span {
-    color: azure;
-  }
 }
 /*----------------575--------------------*/
 @media (max-width: 575px) {
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 100%;
+  /*Configuracion de los links del body*/
+  .edit_links {
+    text-decoration: none;
+    font-size: 0.4rem;
+    text-transform: uppercase;
+    font-weight: none;
+    color: azure;
+    text-align: left;
+  }
+  .links_internos {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+  /*INDEX*/
+  .img_ajustada_grid {
+    width: 340px;
     height: 100%;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    margin: 5px 0 5px 0;
   }
   /*ORGANIC, HARDSURFACE, HIGHLIGHT*/
   .comun_img {
@@ -1301,29 +1288,20 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
 /*----------------380--------------------*/
 @media (max-width: 380px) {
   /*INDEX*/
-  main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada_high {
-    margin: 0%;
-    width: 100%;
-    height: 30vh;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 45% 50%;
-    /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
-  }
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
+  .img_ajustada_grid {
     width: 290px;
-    height: 25vh;
+    height: 100%;
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
     margin: 5px 0 5px 0;
   }
-  main .comun_img {
+  .comun_img {
     max-width: 260px;
     max-height: 100%;
   }
-  main .row_txt_img {
+  .row_txt_img {
     display: grid;
     grid-template-columns: 70px 260px;
     grid-template-rows: 100%;
@@ -1331,7 +1309,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 100%;
     justify-content: center;
   }
-  main .row_img_txt {
+  .row_img_txt {
     display: grid;
     grid-template-columns: 260px 70px;
     grid-template-rows: 100%;
@@ -1339,27 +1317,16 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 100%;
     justify-content: center;
   }
-  main {
-    /*CLIENTS*/
-    /*Ajuste tamaño insert pagina web*/
-  }
-  main .web_insert {
+  /*CLIENTS*/
+  /*Ajuste tamaño insert pagina web*/
+  .web_insert {
     max-width: 300px;
   }
-  main {
-    /*CONTACT*/
-    /*Ajuste tamaño form mensaje*/
-  }
-  main #mensaje {
+  /*CONTACT*/
+  /*Ajuste tamaño form mensaje*/
+  #mensaje {
     max-width: 160px;
-  }
-  /* -------------FOOTER---------------*/
-  footer .container .row .col .center div .icon {
-    height: 20px;
-  }
-  footer .container .row .col .center span {
-    color: azure;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */

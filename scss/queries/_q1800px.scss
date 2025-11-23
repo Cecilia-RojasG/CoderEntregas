@@ -1,0 +1,40 @@
+/*--------------------1800px-----------------*/
+/*--------HEADER---------*/
+@media (max-width:1800px) {
+    header {
+        .menu_completo {
+            min-width: 45%;
+            .nav {
+                .nav_list {
+                    font-size:large;
+
+                    .submenu {
+                        &>ul {
+                            font-size:medium;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*INDEX 1800*/
+
+    main {
+        section {
+            .container {
+                .row {
+                    .col {
+                        .center_grid {
+                            .text_over_img {
+                                .img_ajustada_grid {
+                                    width: 100%;
+                                    height:100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

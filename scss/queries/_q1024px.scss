@@ -1,0 +1,158 @@
+/*----------------1024--------------------*/
+/*--------HEADER---------*/
+@media (max-width:1024px) {
+    header {
+        .menu_completo {
+            min-width: 57%;
+            .nav {
+                .nav_list {
+                    font-size: smaller;
+
+                    .submenu {
+                        &>ul {
+                            font-size:x-small;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*INDEX 1024*/
+    main {
+        .highsquare {
+            .container-fluid {
+                .row {
+                    .col {
+                        .config_margin_txt {
+                            div {
+                                nav {
+                                    .links_internos {
+                                        gap: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section {
+            .container {
+                .row {
+                    .col {
+                        .center_grid {
+                            .text_over_img {
+                                .img_ajustada_grid {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Ajuste para la grilla del Portfolio General 1024*/
+.gallery {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-areas:
+        "portafolio1 portafolio2 portafolio3"
+        "portafolio4 portafolio5 portafolio6"
+        "portafolio7 portafolio8 portafolio9"
+        "portafolio10 portafolio11 portafolio12";
+    width: 100%;
+    justify-content: center;
+}
+
+/* Ajuste para imagenes del Portfolio General */
+.img_ajustada_port {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+}
+
+/*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 991*/
+.comun_img {
+    max-width: 500px;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.tall_img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.box_txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    color: antiquewhite;
+    grid-area: texto;
+}
+
+.row_txt_img {
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-areas:
+        "texto imagen"
+    ;
+    width: 100%;
+    justify-content: center;
+}
+
+.row_img_txt {
+    display: grid;
+    grid-template-columns: 500px 200px;
+    grid-template-areas:
+        "imagen texto"
+    ;
+    width: 100%;
+    justify-content: center;
+}
+
+.row_txt_img1 {
+    display: grid;
+    grid-template-columns: 250px 500px;
+    grid-template-areas:
+        "texto imagen1"
+    ;
+    width: 100%;
+    justify-content: center;
+}
+
+.row_img1_img2_txt {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-areas:
+        "imagen1 imagen2 texto"
+    ;
+    width: 100%;
+    justify-content: center;
+}
+
+/*CLIENTS*/
+/*Ajuste tamaño insert pagina web*/
+.web_insert {
+    max-width: 600px;
+}
+
+/*CONTACT*/
+
+
+
+/*FOOTER*/
+
+.icon {
+    height: 35px;
+}

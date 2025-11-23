@@ -1,0 +1,23 @@
+/*--------------------1961px-----------------*/
+/*--------HEADER---------*/
+@media (max-width:1961px) {
+    header {
+        .img_logo {
+            max-width: 90%;
+        }
+        .menu_completo {
+            min-width: 40%;
+            .nav {
+                .nav_list {
+                    font-size:larger;
+
+                    .submenu {
+                        &>ul {
+                            font-size: large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,14 +1,19 @@
-/*--------------------1801px-----------------*/
-@media (max-width:1801px) {
+/*----------------hasta 2560px-----------------*/
+/*--------HEADER---------*/
+@media (max-width:2560px) {
     header {
+        .img_logo {
+            max-width: 95%;
+        }
         .menu_completo {
+            min-width: 35%;
             .nav {
                 .nav_list {
-                    font-size: small;
+                    font-size: x-large;
 
                     .submenu {
                         &>ul {
-                            font-size: small;
+                            font-size: larger;
                         }
                     }
                 }

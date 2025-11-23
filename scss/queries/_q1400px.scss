@@ -1,16 +1,41 @@
-/*----------------1400--------------------*/
+/*----------------1490--------------------*/
+/*--------HEADER---------*/
+@media (max-width:1490px) {
+header {
+        .menu_completo {
+            min-width: 52%;
+            .nav {
+                .nav_list {
+                    font-size: medium;
 
-@media (max-width:1401px) {
+                    .submenu {
+                        &>ul {
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*INDEX 1400*/
 
-    /*INDEX*/
-
-    .img_ajustada_grid {
-        width: 550px;
-        height: 300px;
-        object-fit: cover;
-        /* La imagen se recorta para cubrir el contenedor */
-        object-position: 50% 50%;
-        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    main {
+        section {
+            .container {
+                .row {
+                    .col {
+                        .center_grid {
+                            .text_over_img {
+                                .img_ajustada_grid {
+                                    width: 100%;
+                                    height:100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /* PORTFOLIO GENERAL */

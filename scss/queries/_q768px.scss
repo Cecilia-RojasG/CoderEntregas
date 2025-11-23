@@ -1,0 +1,248 @@
+/*----------------768--------------------*/
+
+@media (max-width:768px) {
+
+    header {
+        .img_logo {
+            width: 100%;
+            height: 100%;
+        }
+        .menu_completo {
+            min-width: 20%;
+            .nav {
+                /*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                gap: 1.0rem;
+                position: absolute;
+                top: -1rem;
+                right: -2rem;
+                background-color: black;
+                padding: 2rem;
+                box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+
+                &.visible {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .cerrar_menu {
+                    display: block;
+                    border: 0;
+                    color: azure;
+                    font-size: 1.0rem;
+                    background-color: transparent;
+                }
+
+                .nav_list {
+                    flex-direction: column;
+                    align-items: end;
+
+                    .submenu {
+                        &:hover {
+                            &>ul {
+                                display: flex;
+                                flex-direction: column;
+                                position: absolute;
+                                background-color: black;
+                                padding: 2rem;
+                                gap: 1rem;
+                                top: 0.5rem;
+                                left: -50px;
+                                font-size: 1.0rem;
+                                background-color: #212121;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .abrir_menu {
+            /*Configuracion del menu Hamburguesa */
+            display: block;
+            border: 0;
+            color: azure;
+            font-size: 1.0rem;
+            background-color: transparent;
+        }
+    } 
+    
+    main {
+        .highsquare {
+            .container-fluid {
+                .row {
+                    .col {
+                        .config_margin_txt {
+                            div {
+                                nav {
+                                    .links_internos {
+                                        gap: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section {
+            .container {
+                .row {
+                    .col {
+                        .center_grid {
+                            margin: 1.5%;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            gap: 0px;
+                            place-items: center;
+                            grid-template-rows: auto;
+                            /* La altura se ajusta al contenido */
+                            grid-template-areas:
+                                "organic"
+                                "hardsurface"
+                            ;
+                            .text_over_img {
+                                .img_ajustada_grid {
+                                    width: 500px;
+                                    object-fit: cover;
+                                    /* La imagen se recorta para cubrir el contenedor */
+                                    object-position: 50% 50%;
+                                    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+                                    margin: 3px 0 3px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*PORTFOLIO*/
+    /* Ajuste para la grilla del Portfolio General */
+    .gallery {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-areas:
+            "portafolio1 portafolio2"
+            "portafolio3 portafolio4"
+            "portafolio5 portafolio6"
+            "portafolio7 portafolio8"
+            "portafolio9 portafolio10"
+            "portafolio11 portafolio12";
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Ajuste para imagenes del Portfolio General */
+    .img_ajustada_port {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        /* La imagen se recorta para cubrir el contenedor */
+        object-position: 50% 50%;
+        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+    }
+
+    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic.*/
+    .comun_img {
+        max-width: 400px;
+        max-height: 100%;
+    }
+
+    .tall_img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .box_img {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        grid-area: imagen;
+    }
+
+    .row_txt_img {
+        display: grid;
+        grid-template-columns: 150px 400px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "texto imagen"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img_txt {
+        display: grid;
+        grid-template-columns: 400px 150px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "imagen texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_img1_img2_txt {
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "imagen1 imagen2 texto"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .row_txt_img1 {
+        display: grid;
+        grid-template-columns: 150px 300px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+            "texto imagen1"
+        ;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /*CLIENTS*/
+    /*Ajuste tamaño insert pagina web*/
+    .web_insert {
+        max-width: 500px;
+    }
+
+    /*CONTACT*/
+
+    /*Ajuste tamaño form mensaje*/
+
+    #mensaje {
+        max-width: 260px;
+    }
+
+    /* -------------FOOTER---------------*/
+    footer{
+        .container{
+            .row{
+                .col{
+                    .center{
+                        div{
+                            .icon {
+                                height: 30px;
+                            }
+                        }
+                        span {
+                            color: azure;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
