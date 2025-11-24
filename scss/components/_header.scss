@@ -1,3 +1,4 @@
+@use '../base/variables' as var;
 /* -------------HEADER-------------- */
 header {
     display: flex;
@@ -36,18 +37,18 @@ header {
                         &:link {
                             text-decoration: none;
                             font-weight: 400;
-                            color: azure;
+                            color: var.$txt;
                         }
                         &:visited {
-                            color: antiquewhite;
+                            color: var.$used;
                         }
 
                         &:hover {
-                            color: rgb(166, 90, 253);
+                            color: var.$mora;
                         }
 
                         &:active {
-                            background-color: rgb(0, 0, 0);
+                            background-color: black;
                             font-weight: bolder;
                         }
                     }

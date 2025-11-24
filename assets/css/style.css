@@ -15,22 +15,22 @@ body {
 
 /* Tamaños titulos, configuraciones de los textos*/
 h1 {
-  font-size: clamp(0.8rem, 2vw, 2.2rem);
+  font-size: clamp(1.9rem, 2vw, 2.2rem);
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: clamp(0.7rem, 1.9vw, 2.1rem);
+  font-size: clamp(1.7rem, 1.9vw, 2.1rem);
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: clamp(18px, 1.8vw, 2rem);
+  font-size: clamp(1.3rem, 1.8vw, 2rem);
   text-transform: uppercase;
 }
 
 h4 {
-  font-size: clamp(16px, 1.7vw, 1.9rem);
+  font-size: clamp(18px, 1.7vw, 1.9rem);
   text-transform: uppercase;
 }
 
@@ -43,7 +43,7 @@ span {
 }
 
 label {
-  font-size: clamp(0.5rem, 0.9vw, 1.1rem);
+  font-size: clamp(16px, 0.9vw, 1.1rem);
 }
 
 /*Centra con grid*/
@@ -103,10 +103,10 @@ header .menu_completo .nav .nav_list li a:visited {
   color: antiquewhite;
 }
 header .menu_completo .nav .nav_list li a:hover {
-  color: rgb(166, 90, 253);
+  color: rgb(139, 50, 241);
 }
 header .menu_completo .nav .nav_list li a:active {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   font-weight: bolder;
 }
 header .menu_completo .nav .nav_list .submenu {
@@ -160,7 +160,7 @@ main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_in
   color: antiquewhite;
 }
 main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos li a:hover {
-  color: rgb(166, 90, 253);
+  color: rgb(139, 50, 241);
 }
 main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos li a:active {
   background-color: rgb(0, 0, 0);
@@ -181,7 +181,7 @@ main .highsquare .container-fluid .row .col .center .text_over_img .txt_superpue
   text-align: left;
   font-weight: bolder;
   text-transform: uppercase;
-  color: rgb(75, 47, 153);
+  color: rgb(139, 50, 241);
   /* Color del texto */
   z-index: 2;
   /* Se asegura que el texto esté encima de todo */
@@ -189,7 +189,7 @@ main .highsquare .container-fluid .row .col .center .text_over_img .txt_superpue
 main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada_high {
   margin: 0%;
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   object-fit: cover;
   /* La imagen se recorta para cubrir el contenedor */
   object-position: 45% 50%;
@@ -225,14 +225,14 @@ main section .container .row .col .center_grid .text_over_img .txt_superpuesto {
   text-align: left;
   font-weight: bolder;
   text-transform: uppercase;
-  color: rgb(75, 47, 153);
+  color: rgb(139, 50, 241);
   /* Color del texto */
   z-index: 2;
   /* Se asegura que el texto esté encima de todo */
 }
 main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
   width: 100%;
-  height: 25vh;
+  height: 35vh;
   object-fit: cover;
   /* La imagen se recorta para cubrir el contenedor */
   object-position: 50% 50%;
@@ -309,6 +309,19 @@ main section .container .row .col .config_flex .box_txt p {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+main section .container .row .col .config_flex div .web_insert {
+  /*Ajuste posicion insert pagina web*/
+  height: 100%;
+  padding: 0.5%;
+}
+main section .container .row .col .config_flex {
+  /*ABOUT*/
+}
+main section .container .row .col .config_flex .image_about {
+  margin: 1%;
+  width: 5%;
+  height: 100%;
+}
 main section .container .row .col .config_flex .box_txt_about {
   display: flexbox;
   align-items: center;
@@ -316,7 +329,7 @@ main section .container .row .col .config_flex .box_txt_about {
   width: 80%;
   height: 100%;
   grid-area: texto;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   color: antiquewhite;
 }
 main section .container .row .col .config_flex .box_txt_about h4 {
@@ -327,18 +340,10 @@ main section .container .row .col .config_flex .box_txt_about p {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .config_flex div img {
-  margin: 1%;
-  width: 100%;
-  max-width: 10vw;
-}
-main section .container .row .col .config_flex div .web_insert {
-  /*Ajuste posicion insert pagina web*/
-  height: 100%;
-  padding: 0.5%;
+main section .container .row .col {
+  /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
 }
 main section .container .row .col .mario .row_txt_img1 {
-  /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
   display: grid;
   grid-template-columns: 400px 900px;
   grid-template-areas: "texto imagen1";
@@ -426,6 +431,9 @@ main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 
   max-height: 60vh;
   object-fit: cover;
 }
+main section .container .row .col {
+  /*HIGHLIGHTED*/
+}
 main section .container .row .col .electrico .row_txt_img {
   display: grid;
   grid-template-columns: 400px 900px;
@@ -436,6 +444,7 @@ main section .container .row .col .electrico .row_txt_img {
 }
 main section .container .row .col .electrico .row_txt_img .box_txt {
   display: flexbox;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -460,124 +469,7 @@ main section .container .row .col .electrico .row_txt_img .box_img {
   align-items: center;
   grid-area: imagen;
 }
-main section .container .row .col .electrico .row_txt_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
-}
-main section .container .row .col .triciclo .row_txt_img {
-  display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-main section .container .row .col .triciclo .row_txt_img .box_txt {
-  display: flexbox;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  grid-area: texto;
-  margin-top: 0.5rem;
-  color: antiquewhite;
-}
-main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .triciclo .row_txt_img .box_txt p {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .triciclo .row_txt_img .box_img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  grid-area: imagen;
-}
-main section .container .row .col .triciclo .row_txt_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
-}
-main section .container .row .col .pizzeria .row_txt_img {
-  display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-main section .container .row .col .pizzeria .row_txt_img .box_txt {
-  display: flexbox;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  grid-area: texto;
-  margin-top: 0.5rem;
-  color: antiquewhite;
-}
-main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .pizzeria .row_txt_img .box_txt p {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .pizzeria .row_txt_img .box_img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  grid-area: imagen;
-}
-main section .container .row .col .pizzeria .row_txt_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
-}
-main section .container .row .col .torque .row_txt_img {
-  display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-main section .container .row .col .torque .row_txt_img .box_txt {
-  display: flexbox;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  grid-area: texto;
-  margin-top: 0.5rem;
-  color: antiquewhite;
-}
-main section .container .row .col .torque .row_txt_img .box_txt h4 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .torque .row_txt_img .box_txt p {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .torque .row_txt_img .box_img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  grid-area: imagen;
-}
-main section .container .row .col .torque .row_txt_img .comun_img {
+main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
   max-width: 900px;
   max-height: 100%;
   object-fit: cover;
@@ -592,6 +484,7 @@ main section .container .row .col .chancador .row_img_txt {
 }
 main section .container .row .col .chancador .row_img_txt .box_txt {
   display: flexbox;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -621,6 +514,129 @@ main section .container .row .col .chancador .row_img_txt .box_img .comun_img {
   max-height: 100%;
   object-fit: cover;
 }
+main section .container .row .col {
+  /*HARDSURFACE*/
+}
+main section .container .row .col .triciclo .row_txt_img {
+  display: grid;
+  grid-template-columns: 400px 900px;
+  grid-template-areas: "texto imagen";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .triciclo .row_txt_img .box_txt {
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .triciclo .row_txt_img .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .triciclo .row_txt_img .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .pizzeria .row_txt_img {
+  display: grid;
+  grid-template-columns: 400px 900px;
+  grid-template-areas: "texto imagen";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_txt {
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .torque .row_txt_img {
+  display: grid;
+  grid-template-columns: 400px 900px;
+  grid-template-areas: "texto imagen";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .torque .row_txt_img .box_txt {
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .torque .row_txt_img .box_txt h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .torque .row_txt_img .box_txt p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .torque .row_txt_img .box_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .torque .row_txt_img .box_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
 main section .container .row .col .auto .row_img_txt {
   display: grid;
   grid-template-columns: 900px 400px;
@@ -631,6 +647,7 @@ main section .container .row .col .auto .row_img_txt {
 }
 main section .container .row .col .auto .row_img_txt .box_txt {
   display: flexbox;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -670,6 +687,7 @@ main section .container .row .col .bota .row_img_txt {
 }
 main section .container .row .col .bota .row_img_txt .box_txt {
   display: flexbox;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -1066,11 +1084,12 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
 /*----------------768--------------------*/
 @media (max-width: 768px) {
   header .img_logo {
+    min-width: 90%;
     width: 100%;
     height: 100%;
   }
   header .menu_completo {
-    min-width: 20%;
+    min-width: 10%;
   }
   header .menu_completo .nav {
     /*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/
@@ -1083,7 +1102,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     gap: 1rem;
     position: absolute;
     top: -1rem;
-    right: -2rem;
+    right: -5rem;
     background-color: black;
     padding: 2rem;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
@@ -1096,10 +1115,11 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     display: block;
     border: 0;
     color: azure;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: transparent;
   }
   header .menu_completo .nav .nav_list {
+    font-size: small;
     flex-direction: column;
     align-items: end;
   }
@@ -1108,23 +1128,36 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     flex-direction: column;
     position: absolute;
     background-color: black;
-    padding: 2rem;
+    padding: 1.5rem;
     gap: 1rem;
     top: 0.5rem;
     left: -50px;
-    font-size: 1rem;
     background-color: #212121;
+    font-size: small;
   }
   header .abrir_menu {
     /*Configuracion del menu Hamburguesa */
     display: block;
     border: 0;
     color: azure;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: transparent;
+    padding: 3%;
   }
   main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
     gap: 10px;
+  }
+  main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada_high {
+    margin: 0%;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 45% 50%;
+    /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+  }
+  main section .container .row .col {
+    /*Index*/
   }
   main section .container .row .col .center_grid {
     margin: 1.5%;
@@ -1137,54 +1170,101 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-template-areas: "organic" "hardsurface";
   }
   main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 500px;
+    width: 100%;
+    height: 25vh;
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
     margin: 3px 0 3px 0;
   }
-  /*PORTFOLIO*/
-  /* Ajuste para la grilla del Portfolio General */
-  .gallery {
-    grid-template-columns: repeat(2, 150px);
+  main section .container .row .col div {
+    /*PORTFOLIO*/
+    /* Ajuste para la grilla del Portfolio General */
+  }
+  main section .container .row .col div .gallery {
+    grid-template-columns: repeat(2, 220px);
     grid-template-areas: "portafolio1 portafolio2" "portafolio3 portafolio4" "portafolio5 portafolio6" "portafolio7 portafolio8" "portafolio9 portafolio10" "portafolio11 portafolio12";
     width: 100%;
     justify-content: center;
   }
-  /* Ajuste para imagenes del Portfolio General */
-  .img_ajustada_port {
-    width: 150px;
-    height: 150px;
+  main section .container .row .col div .gallery div {
+    /* Ajuste para imagenes del Portfolio General */
+  }
+  main section .container .row .col div .gallery div .img_ajustada_port {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic.*/
-  .comun_img {
-    max-width: 400px;
+  main section .container .row .col .config_flex {
+    /*CLIENTS*/
+  }
+  main section .container .row .col .config_flex .box_txt {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .config_flex div {
+    /*CLIENTS*/
+    /*Ajuste tamaño insert pagina web*/
+  }
+  main section .container .row .col .config_flex div .web_insert {
+    margin-top: 5%;
+    max-width: 100%;
     max-height: 100%;
   }
-  .tall_img {
-    max-width: 300px;
-    max-height: 300px;
+  main section .container .row .col .config_flex {
+    /*ABOUT*/
   }
-  .box_img {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    grid-area: imagen;
+  main section .container .row .col .config_flex .image_about {
+    width: 10%;
   }
-  .row_txt_img {
+  main section .container .row .col .config_flex .box_txt_about p {
+    font-size: small;
+    margin-left: 1.5rem;
+    margin-right: 4rem;
+  }
+  main section .container .row .col {
+    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic.*/
+    /*HIGHLIGHT*/
+  }
+  main section .container .row .col .electrico .row_txt_img {
     display: grid;
     grid-template-columns: 150px 400px;
     grid-template-rows: 300px;
     grid-template-areas: "texto imagen";
     width: 100%;
     justify-content: center;
+    margin: 10px 0 10px 0;
   }
-  .row_img_txt {
+  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt p {
+    font-size: small;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
+    max-width: 100%;
+    height: 60vh;
+  }
+  main section .container .row .col .chancador .row_img_txt {
     display: grid;
     grid-template-columns: 400px 150px;
     grid-template-rows: 300px;
@@ -1192,38 +1272,208 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 100%;
     justify-content: center;
   }
-  .row_img1_img2_txt {
+  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt p {
+    font-size: small;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_img .comun_img {
+    max-width: 100%;
+    height: 60vh;
+  }
+  main section .container .row .col .triciclo .row_txt_img {
     display: grid;
-    grid-template-columns: 150px 150px 150px;
+    grid-template-columns: 150px 400px;
     grid-template-rows: 300px;
-    grid-template-areas: "imagen1 imagen2 texto";
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt p {
+    font-size: small;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
+    max-width: 400px;
+  }
+  main section .container .row .col .bota .row_img_txt {
+    display: grid;
+    grid-template-columns: 400px 150px;
+    grid-template-rows: 300px;
+    grid-template-areas: "imagen texto";
     width: 100%;
     justify-content: center;
   }
-  .row_txt_img1 {
+  main section .container .row .col .bota .row_img_txt .box_txt h4 {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt p {
+    font-size: small;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
+    max-width: 400px;
+  }
+  main section .container .row .col .torque .row_txt_img {
+    display: grid;
+    grid-template-columns: 150px 400px;
+    grid-template-rows: 300px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h4 {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt p {
+    font-size: small;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
+    max-width: 400px;
+  }
+  main section .container .row .col .auto .row_img_txt {
+    display: grid;
+    grid-template-columns: 400px 150px;
+    grid-template-rows: 300px;
+    grid-template-areas: "imagen texto";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h4 {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt p {
+    font-size: small;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .auto .row_img_txt .box_img .comun_img {
+    max-width: 400px;
+  }
+  main section .container .row .col .pizzeria .row_txt_img {
+    display: grid;
+    grid-template-columns: 150px 400px;
+    grid-template-rows: 300px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt p {
+    font-size: small;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_img .comun_img {
+    max-width: 400px;
+  }
+  main section .container .row .col {
+    /*ORGANICO*/
+  }
+  main section .container .row .col .mario .row_txt_img1 {
     display: grid;
     grid-template-columns: 150px 300px;
-    grid-template-rows: 300px;
     grid-template-areas: "texto imagen1";
+  }
+  main section .container .row .col .mario .box_txt h4 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  main section .container .row .col .mario .box_txt p {
+    font-size: small;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  main section .container .row .col .mario .box_img_tall_1 .tall_img_0 {
     width: 100%;
-    justify-content: center;
+    height: 60vh;
   }
-  /*CLIENTS*/
-  /*Ajuste tamaño insert pagina web*/
-  .web_insert {
-    max-width: 500px;
+  main section .container .row .col .seguridad .row_img1_img2_txt {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 50vhpx;
+    grid-template-areas: "imagen1 imagen2 texto";
   }
-  /*CONTACT*/
-  /*Ajuste tamaño form mensaje*/
-  #mensaje {
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
+    width: 100%;
+    height: 60vh;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
+    width: 100%;
+    height: 60vh;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt p {
+    font-size: small;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  main #mensaje {
     max-width: 260px;
   }
   /* -------------FOOTER---------------*/
   footer .container .row .col .center div .icon {
-    height: 30px;
-  }
-  footer .container .row .col .center span {
-    color: azure;
+    height: 25px;
   }
 }
 /*----------------575--------------------*/

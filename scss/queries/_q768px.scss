@@ -1,14 +1,17 @@
+@use '../base/variables' as v;
+
 /*----------------768--------------------*/
 
 @media (max-width:768px) {
 
     header {
         .img_logo {
+            min-width: 90%;
             width: 100%;
             height: 100%;
         }
         .menu_completo {
-            min-width: 20%;
+            min-width: 10%;
             .nav {
                 /*Oculta el menu mientras se muestra el icono de menú hamburguesa en el header*/
                 display: none;
@@ -20,7 +23,7 @@
                 gap: 1.0rem;
                 position: absolute;
                 top: -1rem;
-                right: -2rem;
+                right: -5rem;
                 background-color: black;
                 padding: 2rem;
                 box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
@@ -33,12 +36,13 @@
                 .cerrar_menu {
                     display: block;
                     border: 0;
-                    color: azure;
-                    font-size: 1.0rem;
+                    color: v.$txt;
+                    font-size: 1.5rem;
                     background-color: transparent;
                 }
 
                 .nav_list {
+                    font-size: small;
                     flex-direction: column;
                     align-items: end;
 
@@ -49,12 +53,12 @@
                                 flex-direction: column;
                                 position: absolute;
                                 background-color: black;
-                                padding: 2rem;
+                                padding: 1.5rem;
                                 gap: 1rem;
                                 top: 0.5rem;
                                 left: -50px;
-                                font-size: 1.0rem;
                                 background-color: #212121;
+                                font-size:small;
                             }
                         }
                     }
@@ -66,9 +70,10 @@
             /*Configuracion del menu Hamburguesa */
             display: block;
             border: 0;
-            color: azure;
-            font-size: 1.0rem;
+            color: v.$txt;
+            font-size: 1.5rem;
             background-color: transparent;
+            padding: 3%;
         }
     } 
     
@@ -86,6 +91,19 @@
                                 }
                             }
                         }
+                        .center {
+                            .text_over_img {
+                                .img_ajustada_high {
+                                    margin: 0%;
+                                    width: 100%;
+                                    height: 30vh;
+                                    object-fit: cover;
+                                    /* La imagen se recorta para cubrir el contenedor */
+                                    object-position: 45% 50%;
+                                    /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -95,6 +113,7 @@
             .container {
                 .row {
                     .col {
+                        /*Index*/
                         .center_grid {
                             margin: 1.5%;
                             display: grid;
@@ -109,7 +128,8 @@
                             ;
                             .text_over_img {
                                 .img_ajustada_grid {
-                                    width: 500px;
+                                    width: 100%;
+                                    height: 25vh;
                                     object-fit: cover;
                                     /* La imagen se recorta para cubrir el contenedor */
                                     object-position: 50% 50%;
@@ -118,111 +138,398 @@
                                 }
                             }
                         }
+                        div{
+                            /*PORTFOLIO*/
+                            /* Ajuste para la grilla del Portfolio General */
+                            .gallery {
+                                grid-template-columns: repeat(2, 220px);
+                                grid-template-areas:
+                                    "portafolio1 portafolio2"
+                                    "portafolio3 portafolio4"
+                                    "portafolio5 portafolio6"
+                                    "portafolio7 portafolio8"
+                                    "portafolio9 portafolio10"
+                                    "portafolio11 portafolio12";
+                                width: 100%;
+                                justify-content: center;
+
+                                div{
+                                    /* Ajuste para imagenes del Portfolio General */
+                                    .img_ajustada_port {
+                                        width: 100%;
+                                        height: 200px;
+                                        object-fit: cover;
+                                        /* La imagen se recorta para cubrir el contenedor */
+                                        object-position: 50% 50%;
+                                        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+                                    }
+                                }
+                            }
+                        }
+                        .config_flex{
+                            /*CLIENTS*/
+                            .box_txt {
+                                display: flexbox;
+                                align-items: center;
+                                justify-content: center;
+                                width: 80%;
+                                height: 100%;
+                                grid-area: texto;
+                                margin-top: 0.5rem;
+                                color: v.$used;
+                            }
+                            div{
+                                /*CLIENTS*/
+                                /*Ajuste tamaño insert pagina web*/
+                                .web_insert {
+                                    margin-top: 5%;
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                }
+                            }
+                            /*ABOUT*/
+                                .image_about{
+                                    width: 10%;
+                            }
+                            .box_txt_about {
+                                p {
+                                    font-size: small;
+                                    margin-left: 1.5rem;
+                                    margin-right: 4.0rem;
+                                }
+                            }
+                        }
+                        /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic.*/
+                        /*HIGHLIGHT*/
+                        .electrico {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 150px 400px;
+                                grid-template-rows: 300px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+                                
+                                .box_txt {
+                                    h4 {
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 100%;
+                                        height:60vh;
+                                    }
+                                }
+                            }
+                        }
+                        .chancador {
+                            .row_img_txt {
+                                display: grid;
+                                grid-template-columns: 400px 150px;
+                                grid-template-rows: 300px;
+                                grid-template-areas:
+                                    "imagen texto"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    h4 {
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+                                }
+                                
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 100%;
+                                        height:60vh;
+                                    }
+                                }
+                            }
+                        }
+                        .triciclo {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 150px 400px;
+                                grid-template-rows: 300px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+                                
+                                .box_txt {
+                                    h4 {
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                        }
+                        .bota {
+                            .row_img_txt {
+                                display: grid;
+                                grid-template-columns: 400px 150px;
+                                grid-template-rows: 300px;
+                                grid-template-areas:
+                                    "imagen texto"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    h4 {
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+                                }
+                                
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                        }
+                        .torque {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 150px 400px;
+                                grid-template-rows: 300px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+                                
+                                .box_txt {
+                                    h4 {
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                        }
+                        .auto {
+                            .row_img_txt {
+                                display: grid;
+                                grid-template-columns: 400px 150px;
+                                grid-template-rows: 300px;
+                                grid-template-areas:
+                                    "imagen texto"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    h4 {
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+                                }
+                                
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                        }
+                        .pizzeria {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 150px 400px;
+                                grid-template-rows: 300px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+                                
+                                .box_txt {
+                                    h4 {
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.7rem;
+                                        margin-right: 0.7rem;
+                                    }
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                        }
+                        /*ORGANICO*/
+                        .mario{
+                            .row_txt_img1 {
+                                display: grid;
+                                grid-template-columns: 150px 300px;
+                                grid-template-areas:
+                                "texto imagen1"
+                                ;
+                            }
+                            .box_txt {
+                                h4 {
+                                    margin-left: 0.5rem;
+                                    margin-right: 0.5rem;
+                                }
+
+                                p {
+                                    font-size: small;
+                                    margin-left: 0.5rem;
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                            .box_img_tall_1{
+                                    .tall_img_0 {
+                                        width: 100%;
+                                        height: 60vh;
+                                    }
+                                }
+                        }
+                        .seguridad{                            
+                            .row_img1_img2_txt {
+                                display: grid;
+                                grid-template-columns: 150px 150px 150px;
+                                grid-template-rows: 50vhpx;
+                                grid-template-areas:
+                                "imagen1 imagen2 texto"
+                                ;
+                                .box_img_tall_1{
+                                    .tall_img {
+                                        width: 100%;
+                                        height: 60vh;
+                                    }
+                                }
+                                .box_img_tall_2{
+                                    .tall_img {
+                                        width: 100%;
+                                        height: 60vh;
+                                    }
+                                }
+
+                                .box_txt {
+
+                                    h4 {
+                                        margin-left: 0.5rem;
+                                        margin-right: 0.5rem;
+                                    }
+
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.5rem;
+                                        margin-right: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
-    }
-
-    /*PORTFOLIO*/
-    /* Ajuste para la grilla del Portfolio General */
-    .gallery {
-        grid-template-columns: repeat(2, 150px);
-        grid-template-areas:
-            "portafolio1 portafolio2"
-            "portafolio3 portafolio4"
-            "portafolio5 portafolio6"
-            "portafolio7 portafolio8"
-            "portafolio9 portafolio10"
-            "portafolio11 portafolio12";
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Ajuste para imagenes del Portfolio General */
-    .img_ajustada_port {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        /* La imagen se recorta para cubrir el contenedor */
-        object-position: 50% 50%;
-        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-    }
-
-    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic.*/
-    .comun_img {
-        max-width: 400px;
-        max-height: 100%;
-    }
-
-    .tall_img {
-        max-width: 300px;
-        max-height: 300px;
-    }
-
-    .box_img {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        grid-area: imagen;
-    }
-
-    .row_txt_img {
-        display: grid;
-        grid-template-columns: 150px 400px;
-        grid-template-rows: 300px;
-        grid-template-areas:
-            "texto imagen"
-        ;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .row_img_txt {
-        display: grid;
-        grid-template-columns: 400px 150px;
-        grid-template-rows: 300px;
-        grid-template-areas:
-            "imagen texto"
-        ;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .row_img1_img2_txt {
-        display: grid;
-        grid-template-columns: 150px 150px 150px;
-        grid-template-rows: 300px;
-        grid-template-areas:
-            "imagen1 imagen2 texto"
-        ;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .row_txt_img1 {
-        display: grid;
-        grid-template-columns: 150px 300px;
-        grid-template-rows: 300px;
-        grid-template-areas:
-            "texto imagen1"
-        ;
-        width: 100%;
-        justify-content: center;
-    }
-
-    /*CLIENTS*/
-    /*Ajuste tamaño insert pagina web*/
-    .web_insert {
-        max-width: 500px;
-    }
-
-    /*CONTACT*/
-
-    /*Ajuste tamaño form mensaje*/
-
-    #mensaje {
-        max-width: 260px;
+        #mensaje {
+            max-width: 260px;
+        }
     }
 
     /* -------------FOOTER---------------*/
@@ -233,11 +540,8 @@
                     .center{
                         div{
                             .icon {
-                                height: 30px;
+                                height: 25px;
                             }
-                        }
-                        span {
-                            color: azure;
                         }
                     }
                 }

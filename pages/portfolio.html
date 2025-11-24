@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cecilia Rojas - 3D Modeler Portfolio</title>
-    <link rel="icon" href="assets/img/logo/ceciliarojas_redondo_32x32.png">
+    <link rel="icon" href="../assets/img/logo/ceciliarojas_redondo_32x32.png">
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!--Animate CSS-->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <!--Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            <!--Animate CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <!--Fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- CSS -->
@@ -24,6 +24,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <header>
         <!-- Logo -->
@@ -32,7 +33,6 @@
         </div>
         <!-- Links de navegacion a las principales secciones-->
         <div class="menu_completo">
-            <button id="abrir" class="abrir_menu"><i class="fa-solid fa-bars hamburguesa"></i></button>
             <nav class="nav" id="nav">
                 <button id="cerrar" class="cerrar_menu"><i class="fa-solid fa-bars hamburguesa"></i></button>
                 <ul class="nav_list">
@@ -58,7 +58,11 @@
                 </ul>
             </nav>
         </div>
+        <button id="abrir" class="abrir_menu">
+            <i class="fa-solid fa-bars hamburguesa"></i>
+        </button>
     </header>
+    
     <main>
         <!-- Galeria que contiene trabajos de todo tipo, para objetivos generales -->
         <section class="highsquare">
@@ -137,10 +141,15 @@
                 </div>
             </div>
         </section>
-    </footer>
     <!--Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <!--Scripts-->
     <script src="../assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
