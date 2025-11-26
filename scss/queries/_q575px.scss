@@ -102,10 +102,21 @@
         max-width: 190px;
     }
 
-    /*FOOTER*/
-
-    .icon {
-        height: 25px;
-    }
-
 }
+/* -------------FOOTER---------------*/
+footer{
+    .container{
+        .row{
+            .col{
+                .center{
+                    div{
+                        .icon {
+                            height: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

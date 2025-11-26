@@ -46,23 +46,74 @@ label {
   font-size: clamp(16px, 0.9vw, 1.1rem);
 }
 
+/* 
+    these type the CSS variable as color
+    unlocking the ability for the browser 
+    to animate just that portion
+*/
+@property --＠color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsl(98, 100%, 62%);
+}
+@property --＠color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsl(204, 100%, 59%);
+}
+/* keyframes that change the color variable */
+@keyframes gradient-change {
+  to {
+    --＠color-1: hsl(210 100% 59%);
+    --＠color-2: hsl(310 100% 59%);
+  }
+}
+article {
+  /* apply variable changes over time */
+  animation: gradient-change 2s linear infinite alternate;
+  background: linear-gradient(to right in oklch, var(--＠color-1), var(--＠color-2));
+  /* old browser support */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* modern browser version */
+  background-clip: text;
+  color: transparent;
+}
+
+@layer demo.support {
+  body {
+    background: hsl(204, 100%, 5%);
+    font-size: min(200%, 4vmin);
+    padding: 5vmin;
+  }
+  h1,
+  h3,
+  p,
+  body {
+    margin: 0;
+    text-wrap: balance;
+  }
+  h1 {
+    line-height: 1.25cap;
+  }
+  h3 {
+    line-height: 1.25cap;
+  }
+  html {
+    block-size: 100%;
+  }
+  article {
+    display: grid;
+    gap: 1lh;
+  }
+}
 /*Centra con grid*/
-.center {
+footer .container .row .col .center, main .highsquare .container-fluid .row .col .center {
   display: grid;
   place-items: center;
 }
 
-/*Configuracion de los links solitarios*/
-.edit_links {
-  text-decoration: none;
-  font-size: small;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: rgb(163, 202, 223);
-  text-align: left;
-  margin-bottom: 5px;
-}
-
+/*Margenes de Text Box - HrdSurface*/
 /* -------------HEADER-------------- */
 header {
   display: flex;
@@ -185,6 +236,7 @@ main .highsquare .container-fluid .row .col .center .text_over_img .txt_superpue
   /* Color del texto */
   z-index: 2;
   /* Se asegura que el texto esté encima de todo */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada_high {
   margin: 0%;
@@ -197,9 +249,9 @@ main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada
 }
 main section .container .row .col .center_grid {
   display: grid;
+  place-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 0px;
-  place-items: center;
   /* La altura se ajusta al contenido */
   grid-template-rows: auto;
   grid-template-areas: "organic hardsurface";
@@ -227,6 +279,7 @@ main section .container .row .col .center_grid .text_over_img .txt_superpuesto {
   text-transform: uppercase;
   color: rgb(139, 50, 241);
   /* Color del texto */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
   /* Se asegura que el texto esté encima de todo */
 }
@@ -241,6 +294,9 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
 main section .container .row .col .center_grid .text_over_img img {
   display: block;
   /* Elimina espacio extra debajo de la imagen */
+}
+main section .container .row .col {
+  /*-----------------PORTFOLIO---------------*/
 }
 main section .container .row .col div .gallery {
   /*CONFIGRUACION DEL MAIN DE PORTFOLIO GENERAL*/
@@ -289,59 +345,67 @@ main section .container .row .col .config_flex {
   /*------------------CLIENTS......................*/
   display: flex;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.1rem;
 }
-main section .container .row .col .config_flex .box_txt {
-  display: flexbox;
-  align-items: center;
+main section .container .row .col .config_flex .box_txt_clients {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
   justify-content: center;
-  width: 30%;
+  width: 40%;
   height: 100%;
   grid-area: texto;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   color: antiquewhite;
 }
-main section .container .row .col .config_flex .box_txt h4 {
-  margin-left: 1.5rem;
+main section .container .row .col .config_flex .box_txt_clients h4 {
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .config_flex .box_txt p {
-  margin-left: 1.5rem;
+main section .container .row .col .config_flex .box_txt_clients p {
+  margin-left: 1rem;
   margin-right: 1.5rem;
+}
+main section .container .row .col .config_flex div {
+  width: 50%;
+  margin-top: 0.8rem;
 }
 main section .container .row .col .config_flex div .web_insert {
   /*Ajuste posicion insert pagina web*/
-  height: 100%;
-  padding: 0.5%;
+  width: 100%;
+  height: 60vh;
 }
 main section .container .row .col .config_flex {
-  /*ABOUT*/
+  /*--------------ABOUT-----------------*/
 }
-main section .container .row .col .config_flex .image_about {
-  margin: 1%;
-  width: 5%;
-  height: 100%;
+main section .container .row .col .config_flex .logo {
+  margin: 0.8rem;
+  width: 10%;
+}
+main section .container .row .col .config_flex .logo .image_about {
+  width: 100%;
 }
 main section .container .row .col .config_flex .box_txt_about {
-  display: flexbox;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
   justify-content: center;
-  width: 80%;
+  width: 70%;
   height: 100%;
   grid-area: texto;
   margin-top: 0.8rem;
   color: antiquewhite;
 }
 main section .container .row .col .config_flex .box_txt_about h4 {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .config_flex .box_txt_about p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col {
-  /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
+  /*-------------ORGANIC-----------------*/
 }
 main section .container .row .col .mario .row_txt_img1 {
   display: grid;
@@ -351,22 +415,23 @@ main section .container .row .col .mario .row_txt_img1 {
   justify-content: center;
   margin: 10px 0 10px 0;
 }
-main section .container .row .col .mario .row_txt_img1 .box_txt {
-  display: flexbox;
-  align-items: center;
+main section .container .row .col .mario .row_txt_img1 .box_txt_1pj {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
   justify-content: center;
-  width: 100%;
+  width: 400px;
   height: 100%;
   grid-area: texto;
   margin-top: 0.5rem;
   color: antiquewhite;
 }
-main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
-  margin-left: 1.5rem;
+main section .container .row .col .mario .row_txt_img1 .box_txt_1pj h4 {
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .mario .row_txt_img1 .box_txt p {
-  margin-left: 1.5rem;
+main section .container .row .col .mario .row_txt_img1 .box_txt_1pj p {
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 {
@@ -383,39 +448,40 @@ main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img
 }
 main section .container .row .col .seguridad .row_img1_img2_txt {
   display: grid;
-  grid-template-columns: 450px 450px 400px;
+  grid-template-columns: 400px 400px 400px;
   grid-template-areas: "imagen1 imagen2 texto";
   width: 100%;
   justify-content: center;
   margin: 10px 0 10px 0;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_txt {
-  display: flexbox;
-  align-items: center;
+main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
   justify-content: center;
-  width: 100%;
+  width: 400px;
   height: 100%;
   grid-area: texto;
   margin-top: 0.5rem;
   color: antiquewhite;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
-  margin-left: 1.5rem;
+main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs h4 {
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_txt p {
-  margin-left: 1.5rem;
+main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs p {
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 {
   display: flex;
   width: 100%;
   height: 60vh;
-  justify-content: center;
+  justify-content: flex-start;
   grid-area: imagen1;
 }
 main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
-  max-width: 450px;
+  max-width: 400px;
   max-height: 60vh;
   object-fit: cover;
 }
@@ -423,16 +489,16 @@ main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 
   display: flex;
   width: 100%;
   height: 60vh;
-  justify-content: center;
+  justify-content: flex-start;
   grid-area: imagen2;
 }
 main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
-  max-width: 450px;
+  max-width: 400px;
   max-height: 60vh;
   object-fit: cover;
 }
 main section .container .row .col {
-  /*HIGHLIGHTED*/
+  /*--------------------HIGHLIGHTED--------------*/
 }
 main section .container .row .col .electrico .row_txt_img {
   display: grid;
@@ -443,7 +509,7 @@ main section .container .row .col .electrico .row_txt_img {
   margin: 10px 0 10px 0;
 }
 main section .container .row .col .electrico .row_txt_img .box_txt {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -454,17 +520,17 @@ main section .container .row .col .electrico .row_txt_img .box_txt {
   color: antiquewhite;
 }
 main section .container .row .col .electrico .row_txt_img .box_txt h4 {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .electrico .row_txt_img .box_txt p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .electrico .row_txt_img .box_img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   grid-area: imagen;
@@ -480,10 +546,10 @@ main section .container .row .col .chancador .row_img_txt {
   grid-template-areas: "imagen texto";
   width: 100%;
   justify-content: center;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 30px 0;
 }
 main section .container .row .col .chancador .row_img_txt .box_txt {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -494,28 +560,28 @@ main section .container .row .col .chancador .row_img_txt .box_txt {
   color: antiquewhite;
 }
 main section .container .row .col .chancador .row_img_txt .box_txt h4 {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .chancador .row_img_txt .box_txt p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .chancador .row_img_txt .box_img {
+main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   grid-area: imagen;
 }
-main section .container .row .col .chancador .row_img_txt .box_img .comun_img {
+main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
   max-width: 900px;
   max-height: 100%;
   object-fit: cover;
 }
 main section .container .row .col {
-  /*HARDSURFACE*/
+  /*-------------------HARDSURFACE--------------------*/
 }
 main section .container .row .col .triciclo .row_txt_img {
   display: grid;
@@ -526,7 +592,7 @@ main section .container .row .col .triciclo .row_txt_img {
   margin: 10px 0 10px 0;
 }
 main section .container .row .col .triciclo .row_txt_img .box_txt {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -537,17 +603,17 @@ main section .container .row .col .triciclo .row_txt_img .box_txt {
   color: antiquewhite;
 }
 main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .triciclo .row_txt_img .box_txt p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .triciclo .row_txt_img .box_img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   grid-area: imagen;
@@ -566,7 +632,7 @@ main section .container .row .col .pizzeria .row_txt_img {
   margin: 10px 0 10px 0;
 }
 main section .container .row .col .pizzeria .row_txt_img .box_txt {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -577,22 +643,22 @@ main section .container .row .col .pizzeria .row_txt_img .box_txt {
   color: antiquewhite;
 }
 main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .pizzeria .row_txt_img .box_txt p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .pizzeria .row_txt_img .box_img {
+main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   grid-area: imagen;
 }
-main section .container .row .col .pizzeria .row_txt_img .box_img .comun_img {
+main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
   max-width: 900px;
   max-height: 100%;
   object-fit: cover;
@@ -606,7 +672,7 @@ main section .container .row .col .torque .row_txt_img {
   margin: 10px 0 10px 0;
 }
 main section .container .row .col .torque .row_txt_img .box_txt {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -617,17 +683,17 @@ main section .container .row .col .torque .row_txt_img .box_txt {
   color: antiquewhite;
 }
 main section .container .row .col .torque .row_txt_img .box_txt h4 {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .torque .row_txt_img .box_txt p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .torque .row_txt_img .box_img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   grid-area: imagen;
@@ -646,7 +712,7 @@ main section .container .row .col .auto .row_img_txt {
   margin: 10px 0 10px 0;
 }
 main section .container .row .col .auto .row_img_txt .box_txt {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -657,22 +723,22 @@ main section .container .row .col .auto .row_img_txt .box_txt {
   color: antiquewhite;
 }
 main section .container .row .col .auto .row_img_txt .box_txt h4 {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .auto .row_img_txt .box_txt p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .auto .row_img_txt .box_img {
+main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   grid-area: imagen;
 }
-main section .container .row .col .auto .row_img_txt .box_img .comun_img {
+main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
   max-width: 900px;
   max-height: 100%;
   object-fit: cover;
@@ -686,9 +752,9 @@ main section .container .row .col .bota .row_img_txt {
   margin: 10px 0 10px 0;
 }
 main section .container .row .col .bota .row_img_txt .box_txt {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -697,17 +763,17 @@ main section .container .row .col .bota .row_img_txt .box_txt {
   color: antiquewhite;
 }
 main section .container .row .col .bota .row_img_txt .box_txt h4 {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .bota .row_img_txt .box_txt p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1.5rem;
 }
 main section .container .row .col .bota .row_img_txt .box_img {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   grid-area: imagen;
@@ -756,6 +822,28 @@ main section .container .row .col .form_contact .center ul li label .subject::af
 main section .container .row .col .form_contact .center ul li label .message::after {
   content: "*";
   color: brown;
+}
+main section .container .row .col {
+  /*--LINKS MAIN---*/
+}
+main section .container .row .col div .edit_links {
+  text-decoration: none;
+  font-size: small;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(163, 202, 223);
+  text-align: left;
+  margin-bottom: 5px;
+}
+main section .container .row .col div .edit_links:visited {
+  color: antiquewhite;
+}
+main section .container .row .col div .edit_links:hover {
+  color: rgb(139, 50, 241);
+}
+main section .container .row .col div .edit_links:active {
+  background-color: rgb(0, 0, 0);
+  font-weight: bolder;
 }
 
 /* -------------FOOTER---------------*/
@@ -857,31 +945,25 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     font-size: small;
   }
   /*INDEX 1400*/
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 100%;
-    height: 100%;
+  main section .container .row .col {
+    /* Ajuste para la grilla del Portfolio General */
   }
-  /* PORTFOLIO GENERAL */
-  .img_ajustada_port {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-  }
-  /* Ajuste para la grilla del Portfolio General */
-  .gallery {
+  main section .container .row .col .gallery {
     grid-template-columns: repeat(4, 250px);
     grid-template-areas: "portafolio1 portafolio2 portafolio3 portafolio4" "portafolio5 portafolio6 portafolio7 portafolio8" "portafolio9 portafolio10 portafolio11 portafolio12";
     width: 100%;
     justify-content: center;
+    /* PORTFOLIO GENERAL */
+  }
+  main section .container .row .col .gallery div .img_ajustada_port {
+    width: 250px;
+    height: 250px;
   }
   /*CLIENTS*/
   /*Ajuste tamaño insert pagina web*/
-  .web_insert {
-    max-width: 450px;
-  }
+  /*.web_insert {
+      max-width: 450px;
+  }*/
   /*HARDSURFACE*/
   .row_txt_img {
     display: grid;
@@ -974,92 +1056,394 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
     gap: 10px;
   }
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
+  main section .container .row .col div {
+    /*-----------PORTFOLIO GENERAL 1024----------*/
+  }
+  main section .container .row .col div .gallery {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-areas: "portafolio1 portafolio2 portafolio3" "portafolio4 portafolio5 portafolio6" "portafolio7 portafolio8 portafolio9" "portafolio10 portafolio11 portafolio12";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col div .gallery div {
+    /* Ajuste para imagenes del Portfolio General */
+  }
+  main section .container .row .col div .gallery div .img_ajustada_port {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+  }
+  main section .container .row .col {
+    /*-------------ORGANIC-----------------*/
+  }
+  main section .container .row .col .mario .row_txt_img1 {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-areas: "texto imagen1";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt_about {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    width: 400px;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt_about h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt_about p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    grid-area: imagen1;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
+    max-width: 400px;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt {
+    display: grid;
+    grid-template-columns: 200px 200px 400px;
+    grid-template-areas: "imagen1 imagen2 texto";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    width: 400px;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
+    max-width: 200px;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
+    max-width: 200px;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+  main section .container .row .col {
+    /*--------------------HIGHLIGHTED--------------*/
+  }
+  main section .container .row .col .electrico .row_txt_img {
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
+    max-width: 500px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .chancador .row_img_txt {
+    display: grid;
+    grid-template-columns: 500px 200px;
+    grid-template-areas: "imagen texto";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 30px 0;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
+    max-width: 500px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col {
+    /*-------------------HARDSURFACE--------------------*/
+  }
+  main section .container .row .col .triciclo .row_txt_img {
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
+    max-width: 500px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .pizzeria .row_txt_img {
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
+    max-width: 400px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .torque .row_txt_img {
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
+    max-width: 500px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .auto .row_img_txt {
+    display: grid;
+    grid-template-columns: 500px 200px;
+    grid-template-areas: "imagen texto";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
+    max-width: 400px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .bota .row_img_txt {
+    display: grid;
+    grid-template-columns: 500px 200px;
+    grid-template-areas: "imagen texto";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
+    max-width: 500px;
+    max-height: 100%;
+    object-fit: cover;
   }
 }
-/* Ajuste para la grilla del Portfolio General 1024*/
-.gallery {
-  grid-template-columns: repeat(3, 200px);
-  grid-template-areas: "portafolio1 portafolio2 portafolio3" "portafolio4 portafolio5 portafolio6" "portafolio7 portafolio8 portafolio9" "portafolio10 portafolio11 portafolio12";
-  width: 100%;
-  justify-content: center;
-}
-
-/* Ajuste para imagenes del Portfolio General */
-.img_ajustada_port {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  /* La imagen se recorta para cubrir el contenedor */
-  object-position: 50% 50%;
-  /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-}
-
-/*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 991*/
-.comun_img {
-  max-width: 500px;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.tall_img {
-  max-width: 500px;
-  max-height: 500px;
-}
-
-.box_txt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 300px;
-  color: antiquewhite;
-  grid-area: texto;
-}
-
-.row_txt_img {
-  display: grid;
-  grid-template-columns: 200px 500px;
-  grid-template-areas: "texto imagen";
-  width: 100%;
-  justify-content: center;
-}
-
-.row_img_txt {
-  display: grid;
-  grid-template-columns: 500px 200px;
-  grid-template-areas: "imagen texto";
-  width: 100%;
-  justify-content: center;
-}
-
-.row_txt_img1 {
-  display: grid;
-  grid-template-columns: 250px 500px;
-  grid-template-areas: "texto imagen1";
-  width: 100%;
-  justify-content: center;
-}
-
-.row_img1_img2_txt {
-  display: grid;
-  grid-template-columns: 250px 250px 250px;
-  grid-template-areas: "imagen1 imagen2 texto";
-  width: 100%;
-  justify-content: center;
-}
-
-/*CLIENTS*/
-/*Ajuste tamaño insert pagina web*/
-.web_insert {
-  max-width: 600px;
-}
-
-/*CONTACT*/
-/*FOOTER*/
-.icon {
+/* -------------FOOTER---------------*/
+footer .container .row .col .center div .icon {
   height: 35px;
 }
 
@@ -1157,7 +1541,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
   }
   main section .container .row .col {
-    /*Index*/
+    /*-------------------HOME---------------------*/
   }
   main section .container .row .col .center_grid {
     margin: 1.5%;
@@ -1179,7 +1563,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin: 3px 0 3px 0;
   }
   main section .container .row .col div {
-    /*PORTFOLIO*/
+    /*-------------PORTFOLIO--------------------*/
     /* Ajuste para la grilla del Portfolio General */
   }
   main section .container .row .col div .gallery {
@@ -1200,11 +1584,12 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
   main section .container .row .col .config_flex {
-    /*CLIENTS*/
+    /*--------CLIENTS---------*/
   }
   main section .container .row .col .config_flex .box_txt {
-    display: flexbox;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
     justify-content: center;
     width: 80%;
     height: 100%;
@@ -1212,20 +1597,22 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: antiquewhite;
   }
+  main section .container .row .col .config_flex .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .config_flex div {
-    /*CLIENTS*/
     /*Ajuste tamaño insert pagina web*/
   }
   main section .container .row .col .config_flex div .web_insert {
     margin-top: 5%;
-    max-width: 100%;
-    max-height: 100%;
   }
   main section .container .row .col .config_flex {
-    /*ABOUT*/
-  }
-  main section .container .row .col .config_flex .image_about {
-    width: 10%;
+    /*----------ABOUT----------*/
   }
   main section .container .row .col .config_flex .box_txt_about p {
     font-size: small;
@@ -1238,7 +1625,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   }
   main section .container .row .col .electrico .row_txt_img {
     display: grid;
-    grid-template-columns: 150px 400px;
+    grid-template-columns: 140px 390px;
     grid-template-rows: 300px;
     grid-template-areas: "texto imagen";
     width: 100%;
@@ -1256,21 +1643,24 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   }
   main section .container .row .col .electrico .row_txt_img .box_img {
     display: flex;
-    width: 100%;
+    width: 390px;
     justify-content: center;
     grid-area: imagen;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 100%;
+    width: 390px;
     height: 60vh;
   }
   main section .container .row .col .chancador .row_img_txt {
     display: grid;
-    grid-template-columns: 400px 150px;
+    grid-template-columns: 390px 140px;
     grid-template-rows: 300px;
     grid-template-areas: "imagen texto";
     width: 100%;
     justify-content: center;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt {
+    width: 140px;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt h4 {
     margin-left: 0.7rem;
@@ -1281,15 +1671,12 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-left: 0.7rem;
     margin-right: 0.7rem;
   }
-  main section .container .row .col .chancador .row_img_txt .box_img {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    grid-area: imagen;
+  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+    width: 390px;
   }
-  main section .container .row .col .chancador .row_img_txt .box_img .comun_img {
+  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 100%;
-    height: 60vh;
+    height: 40vh;
   }
   main section .container .row .col .triciclo .row_txt_img {
     display: grid;
@@ -1425,7 +1812,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     max-width: 400px;
   }
   main section .container .row .col {
-    /*ORGANICO*/
+    /*----------------ORGANIC-------------------*/
   }
   main section .container .row .col .mario .row_txt_img1 {
     display: grid;
@@ -1433,12 +1820,12 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-template-areas: "texto imagen1";
   }
   main section .container .row .col .mario .box_txt h4 {
-    margin-left: 0.5rem;
+    margin-left: 0.1rem;
     margin-right: 0.5rem;
   }
   main section .container .row .col .mario .box_txt p {
     font-size: small;
-    margin-left: 0.5rem;
+    margin-left: 0.1rem;
     margin-right: 0.5rem;
   }
   main section .container .row .col .mario .box_img_tall_1 .tall_img_0 {
@@ -1461,19 +1848,15 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.2rem;
   }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt p {
     font-size: small;
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.2rem;
   }
   main #mensaje {
     max-width: 260px;
-  }
-  /* -------------FOOTER---------------*/
-  footer .container .row .col .center div .icon {
-    height: 25px;
   }
 }
 /*----------------575--------------------*/
@@ -1543,11 +1926,12 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   #mensaje {
     max-width: 190px;
   }
-  /*FOOTER*/
-  .icon {
-    height: 25px;
-  }
 }
+/* -------------FOOTER---------------*/
+footer .container .row .col .center div .icon {
+  height: 35px;
+}
+
 /*----------------380--------------------*/
 @media (max-width: 380px) {
   /*INDEX*/

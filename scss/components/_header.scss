@@ -1,9 +1,10 @@
 @use '../base/variables' as var;
+@use '../utilities/extend' as ext;
 /* -------------HEADER-------------- */
 header {
     display: flex;
     padding: 10px 30px;
-    background-color: #212121;
+    background-color: var.$back;
     justify-content: space-between;
     align-items: center;
 

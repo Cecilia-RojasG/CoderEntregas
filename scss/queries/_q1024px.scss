@@ -1,3 +1,6 @@
+@use '../base/variables' as v;
+@use '../utilities/extend';
+@use '../utilities/mixin.scss' as mix;
 /*----------------1024--------------------*/
 /*--------HEADER---------*/
 @media (max-width:1024px) {
@@ -42,13 +45,359 @@
             .container {
                 .row {
                     .col {
-                        .center_grid {
-                            .text_over_img {
-                                .img_ajustada_grid {
-                                    width: 100%;
-                                    height: 100%;
+                        div{
+                            /*-----------PORTFOLIO GENERAL 1024----------*/
+                            .gallery {
+                                grid-template-columns: repeat(3, 200px);
+                                grid-template-areas:
+                                    "portafolio1 portafolio2 portafolio3"
+                                    "portafolio4 portafolio5 portafolio6"
+                                    "portafolio7 portafolio8 portafolio9"
+                                    "portafolio10 portafolio11 portafolio12";
+                                width: 100%;
+                                justify-content: center;
+
+                                div{
+                                    /* Ajuste para imagenes del Portfolio General */
+                                    .img_ajustada_port {
+                                        width: 200px;
+                                        height: 200px;
+                                        object-fit: cover;
+                                        /* La imagen se recorta para cubrir el contenedor */
+                                        object-position: 50% 50%;
+                                        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+                                    }
                                 }
                             }
+                        }
+                        /*-------------ORGANIC-----------------*/
+                        .mario {
+                            .row_txt_img1 {
+                                display: grid;
+                                grid-template-columns: 400px 400px;
+                                grid-template-areas:
+                                    "texto imagen1"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+                                
+                                .box_txt_about {
+                                    @include mix.box_txt(column, self-start, 400px, 0.5rem);
+                                }
+
+                                .box_img_tall_1 {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 60vh;
+                                    justify-content: center;
+                                    grid-area: imagen1;
+
+                                    .tall_img_0 {
+                                        max-width: 400px;
+                                        max-height: 60vh;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+
+                        .seguridad {
+                            .row_img1_img2_txt {
+                                display: grid;
+                                grid-template-columns: 200px 200px 400px;
+                                grid-template-areas:
+                                    "imagen1 imagen2 texto"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+
+                                .box_txt_2pj{
+                                    @include mix.box_txt(column, self-start, 400px, 0.5rem);
+                                }
+
+                                .box_img_tall_1 {
+
+                                    .tall_img {
+                                        max-width: 200px;
+                                        max-height: 60vh;
+                                        object-fit: cover;
+                                    }
+                                }
+
+                                .box_img_tall_2 {
+
+                                    .tall_img {
+                                        max-width: 200px;
+                                        max-height: 60vh;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                        
+                                            /*--------------------HIGHLIGHTED--------------*/
+                        .electrico {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 200px 500px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+
+                                .box_txt{
+                                    @include mix.box_txt(column, center, 100%, 0.5rem);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 500px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+
+                        .chancador {
+                            .row_img_txt {
+                                display: grid;
+                                grid-template-columns: 500px 200px;
+                                grid-template-areas:
+                                    "imagen texto"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 30px 0;
+
+                                .box_txt{
+                                    @include mix.box_txt(column, center, 100%, 0.5rem);
+                                }
+
+                                .carousel{
+                                    .carousel-inner{
+                                        .carousel-item{
+                                            .box_img {
+                                                display: flex;
+                                                width: 100%;
+                                                height: 40vh;
+                                                justify-content: center;
+                                                align-items: center;
+                                                grid-area: imagen;
+
+                                                .comun_img {
+                                                    max-width: 500px;
+                                                    max-height: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            } 
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+
+                        
+                        /*-------------------HARDSURFACE--------------------*/
+                        .triciclo {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 200px 500px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+
+                                .box_txt {
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 500px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+
+                        .pizzeria {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 200px 500px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+
+                                .box_txt {
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                }
+
+                                .carousel{
+                                    .carousel-inner{
+                                        .carousel-item{
+                                            .box_img {
+                                                display: flex;
+                                                width: 100%;
+                                                height: 40vh;
+                                                justify-content: center;
+                                                align-items: center;
+                                                grid-area: imagen;
+
+                                                .comun_img {
+                                                    max-width: 400px;
+                                                    max-height: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            } 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .torque {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 200px 500px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+
+                                .box_txt {
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+                                    .comun_img {
+                                        max-width: 500px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+
+                        .auto {
+                            .row_img_txt {
+                                display: grid;
+                                grid-template-columns: 500px 200px;
+                                grid-template-areas:
+                                    "imagen texto"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+
+                                .box_txt {
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                }
+
+                                .carousel{
+                                    .carousel-inner{
+                                        .carousel-item{
+                                            .box_img {
+                                                display: flex;
+                                                width: 100%;
+                                                height: 40vh;
+                                                justify-content: center;
+                                                align-items: center;
+                                                grid-area: imagen;
+
+                                                .comun_img {
+                                                    max-width: 400px;
+                                                    max-height: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            } 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .bota {
+                            .row_img_txt {
+                                display: grid;
+                                grid-template-columns: 500px 200px;
+                                grid-template-areas:
+                                    "imagen texto"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 10px 0 10px 0;
+
+                                .box_txt {
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 500px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -------------FOOTER---------------*/
+footer{
+    .container{
+        .row{
+            .col{
+                .center{
+                    div{
+                        .icon {
+                            height: 35px;
                         }
                     }
                 }
@@ -57,102 +406,5 @@
     }
 }
 
-/* Ajuste para la grilla del Portfolio General 1024*/
-.gallery {
-    grid-template-columns: repeat(3, 200px);
-    grid-template-areas:
-        "portafolio1 portafolio2 portafolio3"
-        "portafolio4 portafolio5 portafolio6"
-        "portafolio7 portafolio8 portafolio9"
-        "portafolio10 portafolio11 portafolio12";
-    width: 100%;
-    justify-content: center;
-}
-
-/* Ajuste para imagenes del Portfolio General */
-.img_ajustada_port {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-}
-
-/*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic. Tamaño imagenes en 991*/
-.comun_img {
-    max-width: 500px;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.tall_img {
-    max-width: 500px;
-    max-height: 500px;
-}
-
-.box_txt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 300px;
-    color: antiquewhite;
-    grid-area: texto;
-}
-
-.row_txt_img {
-    display: grid;
-    grid-template-columns: 200px 500px;
-    grid-template-areas:
-        "texto imagen"
-    ;
-    width: 100%;
-    justify-content: center;
-}
-
-.row_img_txt {
-    display: grid;
-    grid-template-columns: 500px 200px;
-    grid-template-areas:
-        "imagen texto"
-    ;
-    width: 100%;
-    justify-content: center;
-}
-
-.row_txt_img1 {
-    display: grid;
-    grid-template-columns: 250px 500px;
-    grid-template-areas:
-        "texto imagen1"
-    ;
-    width: 100%;
-    justify-content: center;
-}
-
-.row_img1_img2_txt {
-    display: grid;
-    grid-template-columns: 250px 250px 250px;
-    grid-template-areas:
-        "imagen1 imagen2 texto"
-    ;
-    width: 100%;
-    justify-content: center;
-}
-
-/*CLIENTS*/
-/*Ajuste tamaño insert pagina web*/
-.web_insert {
-    max-width: 600px;
-}
-
-/*CONTACT*/
 
 
-
-/*FOOTER*/
-
-.icon {
-    height: 35px;
-}

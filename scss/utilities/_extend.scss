@@ -1,0 +1,19 @@
+@use '../base/variables' as v;
+
+
+/*Centra con grid*/
+%center {
+    display: grid;
+    place-items: center;
+}
+
+/*Margenes de Text Box - HrdSurface*/
+%HS_h4 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+%HS_p {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}

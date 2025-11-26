@@ -24,13 +24,25 @@ header {
             .container {
                 .row {
                     .col {
-                        .center_grid {
-                            .text_over_img {
-                                .img_ajustada_grid {
-                                    width: 100%;
-                                    height:100%;
+                         /* Ajuste para la grilla del Portfolio General */
+                        .gallery {
+                            grid-template-columns: repeat(4, 250px);
+                            grid-template-areas:
+                                "portafolio1 portafolio2 portafolio3 portafolio4"
+                                "portafolio5 portafolio6 portafolio7 portafolio8"
+                                "portafolio9 portafolio10 portafolio11 portafolio12";
+                            width: 100%;
+                            justify-content: center;
+                        
+                        
+                            /* PORTFOLIO GENERAL */
+                            div{
+                                .img_ajustada_port {
+                                width: 250px;
+                                height: 250px;
                                 }
                             }
+                            
                         }
                     }
                 }
@@ -38,33 +50,11 @@ header {
         }
     }
 
-    /* PORTFOLIO GENERAL */
-
-    .img_ajustada_port {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-        /* La imagen se recorta para cubrir el contenedor */
-        object-position: 50% 50%;
-        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-    }
-
-    /* Ajuste para la grilla del Portfolio General */
-    .gallery {
-        grid-template-columns: repeat(4, 250px);
-        grid-template-areas:
-            "portafolio1 portafolio2 portafolio3 portafolio4"
-            "portafolio5 portafolio6 portafolio7 portafolio8"
-            "portafolio9 portafolio10 portafolio11 portafolio12";
-        width: 100%;
-        justify-content: center;
-    }
-
     /*CLIENTS*/
     /*Ajuste tamaño insert pagina web*/
-    .web_insert {
+    /*.web_insert {
         max-width: 450px;
-    }
+    }*/
 
     /*HARDSURFACE*/
     .row_txt_img {

@@ -11,9 +11,9 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--Animate -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-            <!--Animate CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <!--Fontawesome-->
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--Fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -62,7 +62,7 @@
             <i class="fa-solid fa-bars hamburguesa"></i>
         </button>
     </header>
-    
+
     <main>
         <!-- Highlighted muestra el último trabajo destacado -->
         <section class="highsquare">
@@ -70,19 +70,26 @@
                 <div class="row">
                     <div class="col">
                         <div class="config_margin_txt">
-                            <h1>HIGHLIGHTED</h1>
+                            <article>
+                                <h1>HIGHLIGHTED</h1>
+                            </article>
                             <br>
                             <div>
-                                <p>These models were created for use in an animation about safety in offices and mining work
-                                sites. Everything was created from scratch, including the settings, props, and
-                                characters.
-                                <br>Mudbox and 3D Maya were used for modeling. The textures were created and applied using
-                                the Substance suite.
-                                <br>Post-production was done in Photoshop and Premiere
-                                <p>Visit <a href="./portfolio.html" class="edit_links">PORTFOLIO</a> for an overview of my work.
-                                <br>Also visit <a href="./organic.html" class="edit_links">ORGANIC</a> or <a
-                                    href="./hardsurface.html" class="edit_links">HARDSURFACE</a> to see models created using these
-                                techniques. </p>
+                                <p>These models were created for use in an animation about safety in offices and mining
+                                    work
+                                    sites. Everything was created from scratch, including the settings, props, and
+                                    characters.
+                                    <br>Mudbox and 3D Maya were used for modeling. The textures were created and applied
+                                    using
+                                    the Substance suite.
+                                    <br>Post-production was done in Adobe Photoshop and Premiere.
+                                <p>Visit <a href="./portfolio.html" class="edit_links">PORTFOLIO</a> for an overview of
+                                    my work.
+                                    <br>Also visit <a href="./organic.html" class="edit_links">ORGANIC</a> or <a
+                                        href="./hardsurface.html" class="edit_links">HARDSURFACE</a> to see models
+                                    created using these
+                                    techniques.
+                                </p>
                             </div>
                             <!--Enlaces internos para ir rápido al modelo-->
                             <div>
@@ -106,9 +113,9 @@
                             <!--Muestra un texto a la derecha y una imagen al lado izquierdo-->
                             <div class="row_txt_img">
                                 <div class="box_txt">
-                                    <h4>Riesgos en sala eléctrica</h4>
+                                    <h4>Proper use of locks in an electrical room.</h4>
                                     <br>
-                                    <p>Se trabajó junto al personal de Prevención de riesgos para crear la secuencia de uso correcto de EPPs y bloqueo de candado.</p>
+                                    <p>Work carried out in conjunction with the Risk Prevention staff to create the sequence for the correct use of equipment and padlocking.</p>
                                     <br>
                                 </div>
                                 <div class="box_img">
@@ -121,24 +128,40 @@
                             <!--Muestra un una imagen al lado derecho y texto a la izquierda-->
                             <div class="row_img_txt">
                                 <div class="box_txt">
-                                    <h4>Riesgos en chancador</h4>
+                                    <h4>Risks in primary crushing</h4>
                                     <br>
-                                    <p>En esta secuencia se muestra la forma incorrecta de equiparse y comportarse dentro de un chancador, y sus consecuencias.</p>
+                                    <p>This sequence shows the incorrect way to equip oneself and behave inside a primary crusher, and its consequences.  It then shows the correct way, along with the equipment that workers must wear.</p>
                                 </div>
-                                <!--Carrousel que muestre las otras imagenes (Debe implementarse)-->
-                                <div class="box_img">
-                                    <img src="../assets/img/portfolio/chancador1.jpg" class="comun_img"
-                                        alt="Chancador error">
+                                <!--CAROUSEL DE IMAGENES-->
+                                <div id="carouselChancador" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/chancador1.jpg" class="comun_img" alt="Chancador error">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/chancador2.webp" class="comun_img" alt="Chancador seguro">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselChancador" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselChancador" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
                                 </div>
-                                <!--
-                                    <div>
-                                        <img src="../assets/img/portfolio/chancador2.webp" class="comun_img" alt="Chancador seguro">
-                                    </div>-->
-                            </div>
-                            <div>
-                                <a href="#inicio" class="edit_links">Inicio</a>
                             </div>
                         </section>
+                        <div>
+                            <a href="#inicio"class="edit_links">Inicio</a>
+                        </div>
                     </div>
                 </div>
             </div>

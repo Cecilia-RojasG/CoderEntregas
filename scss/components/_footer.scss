@@ -1,9 +1,12 @@
+@use '../utilities/extend';
+
 /* -------------FOOTER---------------*/
 footer{
     .container{
         .row{
             .col{
                 .center{
+                    @extend %center;
                     div{
                         .icon {
                             height: 45px;

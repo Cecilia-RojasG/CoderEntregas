@@ -1,4 +1,6 @@
 @use '../base/variables' as v;
+@use '../utilities/extend';
+@use '../utilities/mixin.scss' as mix;
 
 /* -------------MAIN-------------- */
 main {
@@ -62,6 +64,7 @@ main {
                     }
 
                     .center {
+                        @extend %center;
                         .text_over_img {
                             position: relative;
                             /* Necesario para que el texto absoluto se posicione dentro de este div */
@@ -81,6 +84,7 @@ main {
                                 /* Color del texto */
                                 z-index: 2;
                                 /* Se asegura que el texto esté encima de todo */
+                                background-color: rgba(0, 0, 0, 0.5);
                             }
 
                             .img_ajustada_high {
@@ -105,9 +109,9 @@ main {
                 .col {
                     .center_grid {
                         display: grid;
+                        place-items: center;
                         grid-template-columns: 1fr 1fr;
                         gap: 0px;
-                        place-items: center;
                         /* La altura se ajusta al contenido */
                         grid-template-rows: auto;
                         grid-template-areas:
@@ -138,6 +142,7 @@ main {
                                 text-transform: uppercase;
                                 color: v.$mora;
                                 /* Color del texto */
+                                background-color: rgba(0, 0, 0, 0.4);
                                 z-index: 2;
                                 /* Se asegura que el texto esté encima de todo */
 
@@ -160,6 +165,7 @@ main {
                         }
                     }
 
+                    /*-----------------PORTFOLIO---------------*/
                     div {
                         .gallery {
                             /*CONFIGRUACION DEL MAIN DE PORTFOLIO GENERAL*/
@@ -225,64 +231,36 @@ main {
                         /*------------------CLIENTS......................*/
                         display: flex;
                         justify-content: center;
-                        padding: 0.5rem;
-                        .box_txt {
-                            display: flexbox;
-                            align-items: center;
-                            justify-content: center;
-                            width: 30%;
-                            height: 100%;
-                            grid-area: texto;
-                            margin-top: 0.5rem;
-                            color: v.$used;
-
-                            h4 {
-                                margin-left: 1.5rem;
-                                margin-right: 1.5rem;
-                            }
-
-                            p {
-                                margin-left: 1.5rem;
-                                margin-right: 1.5rem;
-                            }
+                        padding: 0.1rem;
+                        .box_txt_clients{
+                            @include mix.box_txt(column, self-start, 40%, 0.8rem);
                         }
+                        
+
                         div {
+                            width: 50%;
+                            margin-top: 0.8rem;
                             .web_insert {
                                 /*Ajuste posicion insert pagina web*/
-                                height: 100%;
-                                padding: 0.5%;
+                                width: 100%;
+                                height: 60vh;
                             }
                         }
 
-                        /*ABOUT*/
-                        .image_about{
-                            margin:1%;
-                            width: 5%;
-                            height: 100%;
+                        /*--------------ABOUT-----------------*/
+                        .logo{
+                            margin:0.8rem;
+                            width: 10%;
+                            .image_about{
+                                width: 100%;
+                            }
                         }
 
                         .box_txt_about {
-                            display: flexbox;
-                            align-items: center;
-                            justify-content: center;
-                            width: 80%;
-                            height: 100%;
-                            grid-area: texto;
-                            margin-top: 0.8rem;
-                            color: v.$used;
-
-                            h4 {
-                                margin-left: 1.5rem;
-                                margin-right: 1.5rem;
-                            }
-
-                            p {
-                                margin-left: 1.5rem;
-                                margin-right: 1.5rem;
-                            }
+                            @include mix.box_txt(column, self-start, 70%, 0.8rem);
                         }
                     }
-                    /*ORGANIZACION DE ESPACIOS GALERIAS HARDSURFACE, ORGANIC y HIGHLIGHTED*/
+                    /*-------------ORGANIC-----------------*/
                     .mario {
                         .row_txt_img1 {
                             display: grid;
@@ -293,26 +271,9 @@ main {
                             width: 100%;
                             justify-content: center;
                             margin: 10px 0 10px 0;
-
-                            .box_txt {
-                                display: flexbox;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                            
+                            .box_txt_1pj {
+                                @include mix.box_txt(column, self-start, 400px, 0.5rem);
                             }
 
                             .box_img_tall_1 {
@@ -334,7 +295,7 @@ main {
                     .seguridad {
                         .row_img1_img2_txt {
                             display: grid;
-                            grid-template-columns: 450px 450px 400px;
+                            grid-template-columns: 400px 400px 400px;
                             grid-template-areas:
                                 "imagen1 imagen2 texto"
                             ;
@@ -342,36 +303,19 @@ main {
                             justify-content: center;
                             margin: 10px 0 10px 0;
 
-                            .box_txt {
-                                display: flexbox;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                            .box_txt_2pjs {
+                                @include mix.box_txt(column, self-start, 400px, 0.5rem);
                             }
 
                             .box_img_tall_1 {
                                 display: flex;
                                 width: 100%;
                                 height: 60vh;
-                                justify-content: center;
+                                justify-content: flex-start;
                                 grid-area: imagen1;
 
                                 .tall_img {
-                                    max-width: 450px;
+                                    max-width: 400px;
                                     max-height: 60vh;
                                     object-fit: cover;
                                 }
@@ -381,18 +325,18 @@ main {
                                 display: flex;
                                 width: 100%;
                                 height: 60vh;
-                                justify-content: center;
+                                justify-content: flex-start;
                                 grid-area: imagen2;
 
                                 .tall_img {
-                                    max-width: 450px;
+                                    max-width: 400px;
                                     max-height: 60vh;
                                     object-fit: cover;
                                 }
                             }
                         }
                     }
-                    /*HIGHLIGHTED*/
+                    /*--------------------HIGHLIGHTED--------------*/
                     .electrico {
                         .row_txt_img {
                             display: grid;
@@ -404,40 +348,22 @@ main {
                             justify-content: center;
                             margin: 10px 0 10px 0;
 
-                            .box_txt {
-                                display: flexbox;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                            .box_txt{
+                                @include mix.box_txt(column, center, 100%, 0.5rem);
                             }
 
                             .box_img {
                                 display: flex;
                                 width: 100%;
-                                height: 100%;
+                                height: 40vh;
                                 justify-content: center;
                                 align-items: center;
                                 grid-area: imagen;
 
                                 .comun_img {
-                                max-width: 900px;
-                                max-height: 100%;
-                                object-fit: cover;
+                                    max-width: 900px;
+                                    max-height: 100%;
+                                    object-fit: cover;
                                 }
                             }
                         }
@@ -452,48 +378,37 @@ main {
                             ;
                             width: 100%;
                             justify-content: center;
-                            margin: 10px 0 10px 0;
+                            margin: 10px 0 30px 0;
 
-                            .box_txt {
-                                display: flexbox;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                            .box_txt{
+                                @include mix.box_txt(column, center, 100%, 0.5rem);
                             }
 
-                            .box_img {
-                                display: flex;
-                                width: 100%;
-                                height: 100%;
-                                justify-content: center;
-                                align-items: center;
-                                grid-area: imagen;
+                            .carousel{
+                                .carousel-inner{
+                                    .carousel-item{
+                                        .box_img {
+                                            display: flex;
+                                            width: 100%;
+                                            height: 40vh;
+                                            justify-content: center;
+                                            align-items: center;
+                                            grid-area: imagen;
 
-                                .comun_img {
-                                    max-width: 900px;
-                                    max-height: 100%;
-                                    object-fit: cover;
+                                            .comun_img {
+                                                max-width: 900px;
+                                                max-height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        } 
+                                    }
                                 }
                             }
+                            
                         }
                     }
 
-                    /*HARDSURFACE*/
+                    /*-------------------HARDSURFACE--------------------*/
                     .triciclo {
                         .row_txt_img {
                             display: grid;
@@ -506,39 +421,21 @@ main {
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                display: flexbox;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                                @include mix.box_txt(column, center, 100%, 0.5rem);
                             }
 
                             .box_img {
                                 display: flex;
                                 width: 100%;
-                                height: 100%;
+                                height: 40vh;
                                 justify-content: center;
                                 align-items: center;
                                 grid-area: imagen;
 
                                 .comun_img {
-                                max-width: 900px;
-                                max-height: 100%;
-                                object-fit: cover;
+                                    max-width: 900px;
+                                    max-height: 100%;
+                                    object-fit: cover;
                                 }
                             }
                         }
@@ -556,37 +453,27 @@ main {
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                display: flexbox;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                                @include mix.box_txt(column, center, 100%, 0.5rem);
                             }
 
-                            .box_img {
-                                display: flex;
-                                width: 100%;
-                                height: 100%;
-                                justify-content: center;
-                                align-items: center;
-                                grid-area: imagen;
-                                .comun_img {
-                                    max-width: 900px;
-                                    max-height: 100%;
-                                    object-fit: cover;
+                            .carousel{
+                                .carousel-inner{
+                                    .carousel-item{
+                                        .box_img {
+                                            display: flex;
+                                            width: 100%;
+                                            height: 40vh;
+                                            justify-content: center;
+                                            align-items: center;
+                                            grid-area: imagen;
+
+                                            .comun_img {
+                                                max-width: 900px;
+                                                max-height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        } 
+                                    }
                                 }
                             }
                         }
@@ -604,31 +491,13 @@ main {
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                display: flexbox;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                                @include mix.box_txt(column, center, 100%, 0.5rem);
                             }
 
                             .box_img {
                                 display: flex;
                                 width: 100%;
-                                height: 100%;
+                                height: 40vh;
                                 justify-content: center;
                                 align-items: center;
                                 grid-area: imagen;
@@ -653,38 +522,27 @@ main {
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                display: flexbox;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                                @include mix.box_txt(column, center, 100%, 0.5rem);
                             }
 
-                            .box_img {
-                                display: flex;
-                                width: 100%;
-                                height: 100%;
-                                justify-content: center;
-                                align-items: center;
-                                grid-area: imagen;
-                                .comun_img {
-                                    max-width: 900px;
-                                    max-height: 100%;
-                                    object-fit: cover;
+                            .carousel{
+                                .carousel-inner{
+                                    .carousel-item{
+                                        .box_img {
+                                            display: flex;
+                                            width: 100%;
+                                            height: 40vh;
+                                            justify-content: center;
+                                            align-items: center;
+                                            grid-area: imagen;
+
+                                            .comun_img {
+                                                max-width: 900px;
+                                                max-height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        } 
+                                    }
                                 }
                             }
                         }
@@ -702,30 +560,13 @@ main {
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                display: flexbox;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                width: 100%;
-                                height: 100%;
-                                grid-area: texto;
-                                margin-top: 0.5rem;
-                                color: v.$used;
-                                h4 {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
-
-                                p {
-                                    margin-left: 1.5rem;
-                                    margin-right: 1.5rem;
-                                }
+                                @include mix.box_txt(column, flex-start, 100%, 0.5rem);
                             }
 
                             .box_img {
                                 display: flex;
                                 width: 100%;
-                                height: 100%;
+                                height: 40vh;
                                 justify-content: center;
                                 align-items: center;
                                 grid-area: imagen;
@@ -782,6 +623,31 @@ main {
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+
+                    /*--LINKS MAIN---*/
+                    div{
+                        .edit_links{
+                            text-decoration: none;
+                            font-size: small;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            color: rgb(163, 202, 223);
+                            text-align: left;
+                            margin-bottom: 5px;
+                            &:visited {
+                                color: v.$used;
+                            }
+
+                            &:hover {
+                                color: v.$mora;
+                            }
+
+                            &:active {
+                                background-color: rgb(0, 0, 0);
+                                font-weight: bolder;
                             }
                         }
                     }

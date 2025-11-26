@@ -70,7 +70,9 @@
                 <div class="row">
                     <div class="col">
                         <div class="config_margin_txt">
-                            <H1>3D HARDSURFACE MODELING</H1>
+                            <article>
+                                <H1>3D HARDSURFACE MODELING</H1>
+                            </article>
                             <br>
                             <div>
                                 <p>These models were created in 3D Maya. The textures were created and applied using the Adobe Substance suite.</p>
@@ -101,9 +103,9 @@
                             <!--Muestra un texto a la derecha y una imagen al lado izquierdo-->
                             <div class="row_txt_img">
                                 <div class="box_txt">
-                                    <h4>Triciclo Infantil</h4>
+                                    <h4>Children's Tricycle</h4>
                                     <br>
-                                    <p>Modelado a partir de una imagen, usando solo texturas e iluminación de Maya y Arnold.</p>
+                                    <p>Practice model based on an image, using only Maya and Arnold lighting.</p>
                                     <br>
                                 </div>
                                 <div class="box_img">
@@ -115,39 +117,94 @@
                             <!--Muestra un una imagen al lado derecho y texto a la izquierda-->
                             <div class="row_img_txt">
                                 <div class="box_txt">
-                                    <h4>Auto a pedales</h4>
+                                    <h4>Pedal car</h4>
                                     <br>
-                                    <p>Auto modelado como práctica</p>
+                                    <p>Practical model. The images show the work in progress on a pedal car, modeling the entire interior and its body separately.</p>
                                     <br>
                                 </div>
-                                <!-- Aqui se deberia ver una imagen y las demas deberian verse a traves de un slider, carrousel o similar -->
-                                <div class="box_img">
-                                    <img src="../assets/img/portfolio/car00.png" class="comun_img" alt="Auto Pedales wireframe">
-                                    <!--<img src="../assets/img/portfolio/car01.png" class="comun_img" alt="Auto Pedales modelado">
-                                    <img src="../assets/img/portfolio/car02.png" class="comun_img" alt="Auto Pedales corte lateral trasero">
-                                    <img src="../assets/img/portfolio/car03.png" class="comun_img" alt="Auto Pedales corte lateral frente">-->
+                                <!--CAROUSEL DE IMAGENES-->
+                                <div id="carouselAuto" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/car00.png" class="comun_img" alt="Auto Pedales wireframe">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/car01.png" class="comun_img" alt="Auto Pedales modelado">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/car02.png" class="comun_img" alt="Auto Pedales corte lateral trasero">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/car03.png" class="comun_img" alt="Auto Pedales corte lateral frente">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselAuto" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselAuto" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <a href="#inicio" class="edit_links">Inicio</a>
                             </div>    
                         </section>
+                        <div>
+                                <a href="#inicio" class="edit_links">Inicio</a>
+                        </div>
                         <section class="pizzeria" id="pizzeria">
                             <div class="row_txt_img">
                                 <!--Muestra un texto a la derecha y una imagen al lado izquierdo-->
                                 <div class="box_txt">
-                                    <h4>Pizzeria estilo toon</h4>
+                                    <h4>Toon-style pizzeria</h4>
                                     <br>
-                                    <p>Práctica de creación de mini escenario.  Texturas e iluminación aplicadas con Maya y Arnold.</p>
+                                    <p>Practice creating mini scenes. Lighting applied with Maya and Arnold. Post-production retouching in Photoshop.</p>
                                     <br>
                                 </div>
-                                <!-- Aqui se deberia ver una imagen y las demas deberian verse a traves de un slider, carrousel o similar -->
-                                <div class="box_img">
-                                    <img src="../assets/img/portfolio/pizzeria1.webp" class="comun_img" alt="Pizzeria frente">
-                                    <!--<img src="../assets/img/portfolio/pizzeria2.png" class="comun_img" alt="Pizzeria frente 2">
-                                    <img src="../assets/img/portfolio/pizzeriaocc.png" class="comun_img" alt="Pizzeria occlusion">
-                                    <img src="../assets/img/portfolio/pizzeriawire.png" class="comun_img" alt="Pizzeria wireframe">
-                                    <img src="../assets/img/portfolio/pizzeriaotro.jpg" class="comun_img" alt="Pizzeria modificada">-->
+                                <!--CAROUSEL DE IMAGENES-->
+                                <div id="carouselPizzeria" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/pizzeria1.webp" class="comun_img" alt="Pizzeria frontal">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/pizzeria2.png" class="comun_img" alt="Pizzeria frente 2">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/pizzeriaocc.png" class="comun_img" alt="Pizzeria occlusion">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="box_img">
+                                                <img src="../assets/img/portfolio/pizzeriawire.png" class="comun_img" alt="Pizzeria wireframe">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselPizzeria" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselPizzeria" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -155,9 +212,9 @@
                             <!--Muestra un una imagen al lado derecho y texto a la izquierda-->
                             <div class="row_img_txt">
                                 <div class="box_txt">
-                                    <h4 id="txt_der">Bota de Navidad</h4>
+                                    <h4 id="txt_der">Christmas stocking</h4>
                                     <br>
-                                    <p id="txt_der">Práctica de creación de texturas de piel y tela.</p>
+                                    <p id="txt_der">Practice creating fur and fabric textures.<br>To achieve a realistic coat, a combination of short and long strokes was used, focusing on the points where light and shadow fall, while for the fabric, different techniques were explored in Maya 3D. </p>
                                     <br>
                                 </div>
                                 <div div class="box_img">
@@ -169,22 +226,20 @@
                             <div class="row_txt_img">
                                 <!--Muestra un texto a la derecha y una imagen al lado izquierdo-->
                                 <div class="box_txt">
-                                    <h4>Comisión para la empresa Torque Ingeniería</h4>
+                                    <h4>Commission for the company Torque Engineering</h4>
                                     <br>
-                                    <p>Se trabajó junto al personal de Prevención de riesgos para crear la secuencia de uso correcto de EPPs y bloqueo de candado.</p>
+                                    <p>These models were created for use in an animation about safety in offices and mining
+                                    work sites. <br>You can visit the <a href="./highlight.html" class="edit_links">HIGHLIGHTED</a> section to learn more about this project.</p>
                                     <br>
                                 </div>
                                 <div class="box_img">
-                                    <!-- Aqui se deberia ver una imagen y las demas deberian verse a traves de un slider o similar -->
-                                    <img src="../assets/img/portfolio/selectrica.webp" class="comun_img" alt="Puesta candado">
-                                    <!--<img src="../assets/img/portfolio/chancador1.jpg" class="comun_img" alt="Chancador fallo seguridad">
-                                    <img src="../assets/img/portfolio/chancador2.webp" class="comun_img" alt="Chancador correcta seguridad">-->
+                                    <img src="../assets/img/portfolio/selectrica.webp" class="comun_img" alt="Puesta candado"> 
                                 </div>
                             </div>
-                            <div>
-                                <a href="#inicio" class="edit_links">Inicio</a>
-                            </div>
                         </section>
+                        <div>
+                                <a href="#inicio" class="edit_links">Inicio</a>
+                        </div>
                     </div>
                 </div>
             </div>
