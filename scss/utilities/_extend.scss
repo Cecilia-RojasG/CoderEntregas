@@ -7,7 +7,14 @@
     place-items: center;
 }
 
-/*Margenes de Text Box - HrdSurface*/
+/*Centra con flex*/
+%center_flex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/*Margenes de Text Box - HrdSurface - Highlight*/
 %HS_h4 {
     margin-left: 1.5rem;
     margin-right: 1.5rem;

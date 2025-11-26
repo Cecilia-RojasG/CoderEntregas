@@ -1,3 +1,8 @@
+@use '../base/variables' as v;
+@use '../utilities/extend';
+@use '../utilities/mixin.scss' as mix;
+
+
 /*----------------1490--------------------*/
 /*--------HEADER---------*/
 @media (max-width:1490px) {
@@ -17,7 +22,7 @@ header {
             }
         }
     }
-    /*INDEX 1400*/
+    /*--------------INDEX 1490*/
 
     main {
         section {

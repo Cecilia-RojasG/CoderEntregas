@@ -72,7 +72,7 @@
                             <article>
                                 <h1>CONTACT</h1>
                             </article>
-                                <p>If you would like to discuss your project needs, I would love for you to contact me!</p>
+                            <p>If you would like to discuss your project needs, I would love for you to contact me!</p>
                         </div>
                     </div>
                 </div>
@@ -82,32 +82,36 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <form name="formulario" action="/submit" method="post" class="form_contact">
-                            <div class="center">
-                                <ul>
-                                    <!-- Name input -->
-                                    <li>
-                                        <label class="name" for="nombre">Your Name:</label>
-                                        <input id="nombre" type="text" required name="nombre" placeholder="Your Name"> 
-                                    </li>
-                                    <!-- mail input -->
-                                    <li>
-                                        <label class="mail" for="email">E-mail:</label>
-                                        <input id="email" type="email" required name="correo" placeholder="name@domain.com"> 
-                                    </li>
-                                    <li>
-                                        <label class="subject" for="asunto">Subject:</label>
-                                        <input id="asunto" type="text" required name="asunto" placeholder="Subject">
-                                    </li>
-                                    <li>
-                                        <label class="message" for="mensaje">Your Message:</label>
-                                        <textarea id="mensaje" name="mensaje" required rows="10" cols="56" placeholder="Your Message"></textarea>
-                                    </li>
-                                    <br>
-                                    <input type="submit" value="Submit">  
-                                </ul>   
+                        <div class="flex_center">
+                            <div>
+                                <form name="formulario" action="/submit" method="post" class="form_contact">
+                                    <ul>
+                                        <!-- Name input -->
+                                        <li>
+                                            <label class="name" for="nombre">Your Name:</label>
+                                            <input id="nombre" type="text" required name="nombre" placeholder="Your Name">
+                                        </li>
+                                        <!-- mail input -->
+                                        <li>
+                                            <label class="mail" for="email">E-mail:</label>
+                                            <input id="email" type="email" required name="correo"
+                                                placeholder="name@domain.com">
+                                        </li>
+                                        <li>
+                                            <label class="subject" for="asunto">Subject:</label>
+                                            <input id="asunto" type="text" required name="asunto" placeholder="Subject">
+                                        </li>
+                                        <li>
+                                            <label class="message" for="mensaje">Your Message:</label>
+                                            <textarea id="mensaje" name="mensaje" required rows="10" cols="56"
+                                                placeholder="Your Message"></textarea>
+                                        </li>
+                                        <br>
+                                        <input type="submit" value="Submit">
+                                    </ul>
+                                </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,10 +125,14 @@
                         <div class="center">
                             <!-- Imagenes con links a Redes sociales de ejemplo *A FUTURO SERAN COMPLETADAS*-->
                             <div>
-                                <a href="https://www.youtube.com" target="_blank"><img src="../assets/img/rrs/ytb.png" class="icon" alt="Youtube"></a>
-                                <a href="https://www.twitch.com" target="_blank"><img src="../assets/img/rrs/twt.png" class="icon" alt="Twitch"></a>
-                                <a href="https://www.instagram.com" target="_blank"><img src="../assets/img/rrs/ins.png" class="icon" alt="Instagram"></a>
-                                <a href="https://www.facebook.com" target="_blank"><img src="../assets/img/rrs/fcb.png" class="icon" alt="Facebook"></a>
+                                <a href="https://www.youtube.com" target="_blank"><img src="../assets/img/rrs/ytb.png"
+                                        class="icon" alt="Youtube"></a>
+                                <a href="https://www.twitch.com" target="_blank"><img src="../assets/img/rrs/twt.png"
+                                        class="icon" alt="Twitch"></a>
+                                <a href="https://www.instagram.com" target="_blank"><img src="../assets/img/rrs/ins.png"
+                                        class="icon" alt="Instagram"></a>
+                                <a href="https://www.facebook.com" target="_blank"><img src="../assets/img/rrs/fcb.png"
+                                        class="icon" alt="Facebook"></a>
                             </div>
                             <!-- Creditos -->
                             <span>© 2025 Cecilia Rojas</span>
@@ -145,4 +153,5 @@
         AOS.init();
     </script>
 </body>
+
 </html>

@@ -1,7 +1,12 @@
+@use '../base/variables' as v;
+@use '../utilities/extend';
+@use '../utilities/mixin.scss' as mix;
+
 /*----------------575--------------------*/
 
 @media (max-width:575px) {
 
+    /*-------------MAIN------------*/
     main {
         section {
             .container {
@@ -15,6 +20,8 @@
                                 }
                             }
                         }
+                        /*-------------FORMULARIO DE CONTACTO----------------*/
+                        
                     }
                 }
             }
@@ -95,21 +102,15 @@
         max-width: 378px;
     }
 
-    /*CONTACT*/
-
-    /*Ajuste tamaño form mensaje*/
-    #mensaje {
-        max-width: 190px;
-    }
-
 }
+
 /* -------------FOOTER---------------*/
-footer{
-    .container{
-        .row{
-            .col{
-                .center{
-                    div{
+footer {
+    .container {
+        .row {
+            .col {
+                .center {
+                    div {
                         .icon {
                             height: 35px;
                         }
@@ -119,4 +120,3 @@ footer{
         }
     }
 }
-

@@ -1,19 +1,21 @@
 @use '../base/variables' as v;
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
+
 /*----------------1024--------------------*/
-/*--------HEADER---------*/
+
 @media (max-width:1024px) {
+
+    /*-------------HEADER------------*/
     header {
         .menu_completo {
             min-width: 57%;
             .nav {
                 .nav_list {
                     font-size: smaller;
-
                     .submenu {
                         &>ul {
-                            font-size:x-small;
+                            font-size:smaller;
                         }
                     }
                 }
@@ -21,7 +23,7 @@
         }
     }
 
-    /*INDEX 1024*/
+    /*---------------MAIN 1024--------------------*/
     main {
         .highsquare {
             .container-fluid {
@@ -137,7 +139,7 @@
                             }
                         }
                         
-                                            /*--------------------HIGHLIGHTED--------------*/
+                        /*--------------------HIGHLIGHTED--------------*/
                         .electrico {
                             .row_txt_img {
                                 display: grid;

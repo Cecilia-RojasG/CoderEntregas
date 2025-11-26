@@ -1,3 +1,7 @@
+@use '../base/variables' as v;
+@use '../utilities/extend';
+@use '../utilities/mixin.scss' as mix;
+
 /*----------------1290--------------------*/
 @media (max-width:1290px) {
     header {

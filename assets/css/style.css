@@ -30,7 +30,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(18px, 1.7vw, 1.9rem);
+  font-size: clamp(17px, 1.6vw, 1.9rem);
   text-transform: uppercase;
 }
 
@@ -113,7 +113,14 @@ footer .container .row .col .center, main .highsquare .container-fluid .row .col
   place-items: center;
 }
 
-/*Margenes de Text Box - HrdSurface*/
+/*Centra con flex*/
+main section .container .row .col .flex_center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/*Margenes de Text Box - HrdSurface - Highlight*/
 /* -------------HEADER-------------- */
 header {
   display: flex;
@@ -594,7 +601,7 @@ main section .container .row .col .triciclo .row_txt_img {
 main section .container .row .col .triciclo .row_txt_img .box_txt {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -623,6 +630,46 @@ main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
   max-height: 100%;
   object-fit: cover;
 }
+main section .container .row .col .auto .row_img_txt {
+  display: grid;
+  grid-template-columns: 900px 400px;
+  grid-template-areas: "imagen texto";
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+main section .container .row .col .auto .row_img_txt .box_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: texto;
+  margin-top: 0.5rem;
+  color: antiquewhite;
+}
+main section .container .row .col .auto .row_img_txt .box_txt h4 {
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .auto .row_img_txt .box_txt p {
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+}
+main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
+  max-width: 900px;
+  max-height: 100%;
+  object-fit: cover;
+}
 main section .container .row .col .pizzeria .row_txt_img {
   display: grid;
   grid-template-columns: 400px 900px;
@@ -634,7 +681,7 @@ main section .container .row .col .pizzeria .row_txt_img {
 main section .container .row .col .pizzeria .row_txt_img .box_txt {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -674,7 +721,7 @@ main section .container .row .col .torque .row_txt_img {
 main section .container .row .col .torque .row_txt_img .box_txt {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -699,46 +746,6 @@ main section .container .row .col .torque .row_txt_img .box_img {
   grid-area: imagen;
 }
 main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
-}
-main section .container .row .col .auto .row_img_txt {
-  display: grid;
-  grid-template-columns: 900px 400px;
-  grid-template-areas: "imagen texto";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-main section .container .row .col .auto .row_img_txt .box_txt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  grid-area: texto;
-  margin-top: 0.5rem;
-  color: antiquewhite;
-}
-main section .container .row .col .auto .row_img_txt .box_txt h4 {
-  margin-left: 1rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .auto .row_img_txt .box_txt p {
-  margin-left: 1rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-  display: flex;
-  width: 100%;
-  height: 40vh;
-  justify-content: center;
-  align-items: center;
-  grid-area: imagen;
-}
-main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
   max-width: 900px;
   max-height: 100%;
   object-fit: cover;
@@ -783,7 +790,7 @@ main section .container .row .col .bota .row_img_txt .box_img .comun_img {
   max-height: 100%;
   object-fit: cover;
 }
-main section .container .row .col .form_contact {
+main section .container .row .col .flex_center div .form_contact {
   /*-------------FORMULARIO DE CONTACTO----------------*/
   border-radius: 5px;
   position: relative;
@@ -793,33 +800,33 @@ main section .container .row .col .form_contact {
   /* Incluye padding y borde en el cálculo del ancho */
   font-size: clamp(0.7rem, 0.9vw, 1.1rem);
 }
-main section .container .row .col .form_contact input:focus {
+main section .container .row .col .flex_center div .form_contact input:focus {
   background-color: bisque;
 }
-main section .container .row .col .form_contact .center ul {
+main section .container .row .col .flex_center div .form_contact ul {
   list-style: none;
 }
-main section .container .row .col .form_contact .center ul li {
+main section .container .row .col .flex_center div .form_contact ul li {
   display: flex;
   padding: 1%;
 }
-main section .container .row .col .form_contact .center ul li label {
+main section .container .row .col .flex_center div .form_contact ul li label {
   color: antiquewhite;
   width: 140px;
 }
-main section .container .row .col .form_contact .center ul li label .name::after {
+main section .container .row .col .flex_center div .form_contact ul li label .name::after {
   content: "*";
   color: brown;
 }
-main section .container .row .col .form_contact .center ul li label .mail::after {
+main section .container .row .col .flex_center div .form_contact ul li label .mail::after {
   content: "*";
   color: brown;
 }
-main section .container .row .col .form_contact .center ul li label .subject::after {
+main section .container .row .col .flex_center div .form_contact ul li label .subject::after {
   content: "*";
   color: brown;
 }
-main section .container .row .col .form_contact .center ul li label .message::after {
+main section .container .row .col .flex_center div .form_contact ul li label .message::after {
   content: "*";
   color: brown;
 }
@@ -883,7 +890,7 @@ footer .container .row .col .center span {
     font-size: x-large;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
-    font-size: larger;
+    font-size: large;
   }
   /*-----INDEX-----*/
   /*---Main---*/
@@ -944,7 +951,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   header .menu_completo .nav .nav_list .submenu > ul {
     font-size: small;
   }
-  /*INDEX 1400*/
+  /*--------------INDEX 1490*/
   main section .container .row .col {
     /* Ajuste para la grilla del Portfolio General */
   }
@@ -1041,8 +1048,8 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   }
 }
 /*----------------1024--------------------*/
-/*--------HEADER---------*/
 @media (max-width: 1024px) {
+  /*-------------HEADER------------*/
   header .menu_completo {
     min-width: 57%;
   }
@@ -1050,9 +1057,9 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     font-size: smaller;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
-    font-size: x-small;
+    font-size: smaller;
   }
-  /*INDEX 1024*/
+  /*---------------MAIN 1024--------------------*/
   main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
     gap: 10px;
   }
@@ -1459,18 +1466,56 @@ footer .container .row .col .center div .icon {
   header .menu_completo .nav .nav_list .submenu > ul {
     font-size: x-small;
   }
-  /*INDEX 1024*/
-  main .highsquare .container-fluid .row .col .center_grid .text_over_img .img_ajustada_grid {
+  main .highsquare .container-fluid .row .col {
+    /*---------------HIGHLIGHT-------------*/
+  }
+  main .highsquare .container-fluid .row .col .electrico .row_txt_img {
+    display: grid;
+    grid-template-columns: 300px 500px;
+    grid-template-rows: 300px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0 5px 0;
+  }
+  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
+  }
+  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt h4 {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt p {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_img .comun_img {
+    width: 500px;
+    height: 100%;
+    object-fit: cover;
   }
 }
 /*----------------768--------------------*/
 @media (max-width: 768px) {
+  /*-------------HEADER------------*/
   header .img_logo {
     min-width: 90%;
-    width: 100%;
-    height: 100%;
   }
   header .menu_completo {
     min-width: 10%;
@@ -1528,6 +1573,7 @@ footer .container .row .col .center div .icon {
     background-color: transparent;
     padding: 3%;
   }
+  /*-------------------MAIN 768-------------------*/
   main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
     gap: 10px;
   }
@@ -1541,7 +1587,7 @@ footer .container .row .col .center div .icon {
     /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
   }
   main section .container .row .col {
-    /*-------------------HOME---------------------*/
+    /*-----------------INDEX------------*/
   }
   main section .container .row .col .center_grid {
     margin: 1.5%;
@@ -1620,63 +1666,84 @@ footer .container .row .col .center div .icon {
     margin-right: 4rem;
   }
   main section .container .row .col {
-    /*Ajuste para imagenes del Portfolio Hardsurface, Highlighted y Organic.*/
-    /*HIGHLIGHT*/
+    /*---------------HIGHLIGHT-------------*/
   }
   main section .container .row .col .electrico .row_txt_img {
     display: grid;
-    grid-template-columns: 140px 390px;
+    grid-template-columns: 250px 400px;
     grid-template-rows: 300px;
     grid-template-areas: "texto imagen";
     width: 100%;
     justify-content: center;
-    margin: 10px 0 10px 0;
+    margin: 5px 0 5px 0;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
   }
   main section .container .row .col .electrico .row_txt_img .box_txt h4 {
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .electrico .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .electrico .row_txt_img .box_img {
     display: flex;
-    width: 390px;
+    width: 100%;
+    height: 300px;
     justify-content: center;
+    align-items: center;
     grid-area: imagen;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    width: 390px;
-    height: 60vh;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
   }
   main section .container .row .col .chancador .row_img_txt {
     display: grid;
-    grid-template-columns: 390px 140px;
+    grid-template-columns: 400px 250px;
     grid-template-rows: 300px;
     grid-template-areas: "imagen texto";
     width: 100%;
     justify-content: center;
+    margin: 5px 0 5px 0;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt {
-    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: antiquewhite;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt h4 {
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    width: 390px;
+    height: 300px;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 100%;
-    height: 40vh;
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
   }
   main section .container .row .col .triciclo .row_txt_img {
     display: grid;
@@ -1816,35 +1883,42 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .mario .row_txt_img1 {
     display: grid;
-    grid-template-columns: 150px 300px;
+    grid-template-columns: 400px 200px;
     grid-template-areas: "texto imagen1";
   }
+  main section .container .row .col .mario .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.3rem;
+    color: antiquewhite;
+  }
   main section .container .row .col .mario .box_txt h4 {
-    margin-left: 0.1rem;
-    margin-right: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .mario .box_txt p {
-    font-size: small;
-    margin-left: 0.1rem;
-    margin-right: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .mario .box_img_tall_1 .tall_img_0 {
-    width: 100%;
-    height: 60vh;
+    width: 200px;
   }
   main section .container .row .col .seguridad .row_img1_img2_txt {
     display: grid;
-    grid-template-columns: 150px 150px 150px;
+    grid-template-columns: 100px 100px 400px;
     grid-template-rows: 50vhpx;
     grid-template-areas: "imagen1 imagen2 texto";
   }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
     width: 100%;
-    height: 60vh;
   }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
     width: 100%;
-    height: 60vh;
   }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
     margin-left: 0.5rem;
@@ -1855,15 +1929,22 @@ footer .container .row .col .center div .icon {
     margin-left: 0.5rem;
     margin-right: 0.2rem;
   }
-  main #mensaje {
-    max-width: 260px;
+  main section .container .row .col {
+    /*-------------FORMULARIO DE CONTACTO----------------*/
+  }
+  main section .container .row .col .center_flex div .form_contact {
+    max-width: 100%;
   }
 }
 /*----------------575--------------------*/
 @media (max-width: 575px) {
+  /*-------------MAIN------------*/
   main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
     width: 100%;
     height: 100%;
+  }
+  main section .container .row .col {
+    /*-------------FORMULARIO DE CONTACTO----------------*/
   }
   /*ORGANIC, HARDSURFACE, HIGHLIGHT*/
   .comun_img {
@@ -1921,11 +2002,6 @@ footer .container .row .col .center div .icon {
   .web_insert {
     max-width: 378px;
   }
-  /*CONTACT*/
-  /*Ajuste tamaño form mensaje*/
-  #mensaje {
-    max-width: 190px;
-  }
 }
 /* -------------FOOTER---------------*/
 footer .container .row .col .center div .icon {
@@ -1982,17 +2058,10 @@ footer .container .row .col .center div .icon {
   }
   main {
     /*CONTACT*/
-    /*Ajuste tamaño form mensaje*/
-  }
-  main #mensaje {
-    max-width: 160px;
   }
   /* -------------FOOTER---------------*/
   footer .container .row .col .center div .icon {
     height: 20px;
-  }
-  footer .container .row .col .center span {
-    color: azure;
   }
 }
 
