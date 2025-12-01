@@ -1,6 +1,7 @@
-@use '../base/variables' as v;
+@use "sass:map";
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
+@use '../utilities/maps';
 
 /*----------------768--------------------*/
 
@@ -25,7 +26,7 @@
                 position: absolute;
                 top: -1rem;
                 right: -5rem;
-                background-color: black;
+                background-color: map.get(maps.$colores,highsq_back);
                 padding: 2rem;
                 box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
 
@@ -37,7 +38,7 @@
                 .cerrar_menu {
                     display: block;
                     border: 0;
-                    color: v.$txt;
+                    color: map.get(maps.$colores,txt);
                     font-size: 1.5rem;
                     background-color: transparent;
                 }
@@ -53,12 +54,12 @@
                                 display: flex;
                                 flex-direction: column;
                                 position: absolute;
-                                background-color: black;
+                                background-color: map.get(maps.$colores,highsq_back);
                                 padding: 1.5rem;
                                 gap: 1rem;
                                 top: 0.5rem;
                                 left: -50px;
-                                background-color: #212121;
+                                background-color: map.get(maps.$colores,back);
                                 font-size:small;
                             }
                         }
@@ -71,7 +72,7 @@
             /*Configuracion del menu Hamburguesa */
             display: block;
             border: 0;
-            color: v.$txt;
+            color: map.get(maps.$colores,txt);
             font-size: 1.5rem;
             background-color: transparent;
             padding: 3%;

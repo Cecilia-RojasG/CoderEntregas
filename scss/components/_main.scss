@@ -1,15 +1,16 @@
-@use '../base/variables' as v;
+@use "sass:map";
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
+@use '../utilities/maps';
 
 /* -------------MAIN-------------- */
 main {
 
     .highsquare {
         /*CONFIGURACION DEL CUADRADO NEGRO SUPERIOR DE TODAS LAS PAGINAS*/
-        background-color: #000000;
+        background-color: map.get(maps.$colores,highsq_back);
         padding: 10px 0px 10px 0px;
-        color: v.$txt;
+        color: map.get(maps.$colores,txt);
 
         /* Oculta el titulo del Index */
         #index_title {
@@ -42,19 +43,19 @@ main {
                                             &:link {
                                                 text-decoration: none;
                                                 font-weight: 400;
-                                                color: v.$txt;
+                                                color: map.get(maps.$colores,txt);
                                             }
 
                                             &:visited {
-                                                color: v.$used;
+                                                color: map.get(maps.$colores,used);
                                             }
 
                                             &:hover {
-                                                color: v.$mora;
+                                                color: map.get(maps.$colores,mora);
                                             }
 
                                             &:active {
-                                                background-color: rgb(0, 0, 0);
+                                                background-color: map.get(maps.$colores,highsq_back);
                                                 font-weight: bolder;
                                             }
                                         }
@@ -82,7 +83,7 @@ main {
                                 text-align: left;
                                 font-weight: bolder;
                                 text-transform: uppercase;
-                                color: v.$mora;
+                                color: map.get(maps.$colores,mora);
                                 /* Color del texto */
                                 z-index: 2;
                                 /* Se asegura que el texto esté encima de todo */
@@ -142,9 +143,9 @@ main {
                                 text-align: left;
                                 font-weight: bolder;
                                 text-transform: uppercase;
-                                color: v.$mora;
+                                color: map.get(maps.$colores,mora);
                                 /* Color del texto */
-                                background-color: rgba(0, 0, 0, 0.4);
+                                background-color: map.get(maps.$colores,transp);
                                 z-index: 2;
                                 /* Se asegura que el texto esté encima de todo */
 
@@ -606,7 +607,7 @@ main {
                                 font-size: clamp(0.7rem, 0.9vw, 1.1rem);
 
                                 input:focus {
-                                    background-color: bisque;
+                                    background-color: map.get(maps.$colores,focus);
                                 }
 
                                 ul {
@@ -617,7 +618,7 @@ main {
                                         padding: 1%;
 
                                         label {
-                                            color: v.$used;
+                                            color: map.get(maps.$colores,used);
                                             width: 140px;
 
                                             .name::after {
@@ -650,26 +651,10 @@ main {
                     /*--LINKS MAIN---*/
                     div {
                         .edit_links {
-                            text-decoration: none;
+                            @extend %edit_links_gral;
                             font-size: small;
-                            text-transform: uppercase;
-                            font-weight: 500;
-                            color: rgb(163, 202, 223);
                             text-align: left;
                             margin-bottom: 5px;
-
-                            &:visited {
-                                color: v.$used;
-                            }
-
-                            &:hover {
-                                color: v.$mora;
-                            }
-
-                            &:active {
-                                background-color: rgb(0, 0, 0);
-                                font-weight: bolder;
-                            }
                         }
                     }
                 }

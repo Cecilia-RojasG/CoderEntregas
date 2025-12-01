@@ -1,4 +1,6 @@
-@use '../base/variables' as v;
+@use "sass:map";
+@use '../utilities/mixin' as mix;
+@use '../utilities/maps';
 
 
 /*Centra con grid*/
@@ -23,4 +25,22 @@
 %HS_p {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+}
+
+%edit_links_gral {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: map.get(maps.$colores,lnk_color);
+    &:visited {
+        color: map.get(maps.$colores,used);
+    }
+
+    &:hover {
+        color: map.get(maps.$colores,mora);
+    }
+    &:active {
+        background-color: map.get(maps.$colores,highsq_back);
+        font-weight: bolder;
+    }
 }

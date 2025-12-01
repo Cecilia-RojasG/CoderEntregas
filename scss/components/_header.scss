@@ -1,10 +1,11 @@
-@use '../base/variables' as var;
+@use "sass:map";
 @use '../utilities/extend' as ext;
+@use '../utilities/maps';
 /* -------------HEADER-------------- */
 header {
     display: flex;
     padding: 10px 30px;
-    background-color: var.$back;
+    background-color: map.get(maps.$colores,back);
     justify-content: space-between;
     align-items: center;
 
@@ -38,18 +39,18 @@ header {
                         &:link {
                             text-decoration: none;
                             font-weight: 400;
-                            color: var.$txt;
+                            color: map.get(maps.$colores,txt);
                         }
                         &:visited {
-                            color: var.$used;
+                            color: map.get(maps.$colores,used);
                         }
 
                         &:hover {
-                            color: var.$mora;
+                            color: map.get(maps.$colores,mora);
                         }
 
                         &:active {
-                            background-color: black;
+                            background-color: map.get(maps.$colores,highsq_back);
                             font-weight: bolder;
                         }
                     }
@@ -65,6 +66,7 @@ header {
                         left: 5px;
                         width: 180px;
                         padding: 11px;
+                        background-color: map.get(maps.$colores,back);
                     }
 
                     &:hover>ul {
