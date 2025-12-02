@@ -40,7 +40,7 @@
                                 margin: 5px 0 5px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, center, 100%, 0.5rem);
+                                    @include mix.box_txt(column, center, 100%, 0.5rem, medium);
                                 }
 
                                 .box_img {

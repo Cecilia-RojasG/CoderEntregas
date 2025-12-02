@@ -20,8 +20,275 @@
                                 }
                             }
                         }
-                        /*-------------FORMULARIO DE CONTACTO----------------*/
-                        
+                        div{
+                            /*-------------PORTFOLIO--------------------*/
+                            /* Ajuste para la grilla del Portfolio General */
+                            .gallery {
+                                grid-template-columns: repeat(2, 190px);
+                                grid-template-areas:
+                                    "portafolio1 portafolio2"
+                                    "portafolio3 portafolio4"
+                                    "portafolio5 portafolio6"
+                                    "portafolio7 portafolio8"
+                                    "portafolio9 portafolio10"
+                                    "portafolio11 portafolio12";
+                                width: 100%;
+                                justify-content: center;
+
+                                div{
+                                    /* Ajuste para imagenes del Portfolio General */
+                                    .img_ajustada_port {
+                                        width: 100%;
+                                        height: 190px;
+                                        object-fit: cover;
+                                        /* La imagen se recorta para cubrir el contenedor */
+                                        object-position: 50% 50%;
+                                        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+                                    }
+                                }
+                            }
+                        }
+
+
+                        /*---------------HIGHLIGHT-------------*/
+                        .electrico {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 380px;
+                                grid-template-rows: 300px 300px;
+                                gap: 2px;
+                                grid-template-areas:
+                                    "texto"
+                                    "imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 380px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                        .chancador {
+                            .row_img_txt {
+                                display: grid;
+                                grid-template-columns: 380px;
+                                grid-template-rows: 300px 300px;
+                                gap: 2px;
+                                grid-template-areas:
+                                    "texto"
+                                    "imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                }
+
+                                .carousel {
+                                    .carousel-inner {
+                                        .carousel-item {
+                                            .box_img {
+                                                display: flex;
+                                                width: 100%;
+                                                height: 40vh;
+                                                justify-content: center;
+                                                align-items: center;
+                                                grid-area: imagen;
+
+                                                .comun_img {
+                                                    max-width: 380px;
+                                                    max-height: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        /*---------------HARDSURFACE-------------*/
+                        .triciclo {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 380px;
+                                grid-template-rows: 300px 300px;
+                                gap: 2px;
+                                grid-template-areas:
+                                    "texto"
+                                    "imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 380px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                        .bota {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 380px;
+                                grid-template-rows: 300px 300px;
+                                gap: 2px;
+                                grid-template-areas:
+                                    "texto"
+                                    "imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 380px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                        .torque {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 380px;
+                                grid-template-rows: 300px 300px;
+                                gap: 2px;
+                                grid-template-areas:
+                                    "texto"
+                                    "imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 380px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                        .auto {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 380px;
+                                grid-template-rows: 300px 300px;
+                                gap: 2px;
+                                grid-template-areas:
+                                    "texto"
+                                    "imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 380px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                        .pizzeria {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 380px;
+                                grid-template-rows: 300px 300px;
+                                gap: 2px;
+                                grid-template-areas:
+                                    "texto"
+                                    "imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                }
+
+                                .box_img {
+                                    display: flex;
+                                    width: 100%;
+                                    height: 40vh;
+                                    justify-content: center;
+                                    align-items: center;
+                                    grid-area: imagen;
+
+                                    .comun_img {
+                                        max-width: 380px;
+                                        max-height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -29,49 +296,6 @@
     }
 
     /*ORGANIC, HARDSURFACE, HIGHLIGHT*/
-
-    .comun_img {
-        max-width: 279px;
-        max-height: 100%;
-    }
-
-    .tall_img {
-        max-width: 110px;
-        max-height: 300px;
-    }
-
-    .box_txt {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 79px;
-        width: 100%;
-        height: 100%;
-        color: antiquewhite;
-        grid-area: texto;
-    }
-
-    .row_txt_img {
-        display: grid;
-        grid-template-columns: 80px 280px;
-        grid-template-rows: 100%;
-        grid-template-areas:
-            "texto imagen"
-        ;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .row_img_txt {
-        display: grid;
-        grid-template-columns: 280px 80px;
-        grid-template-rows: 100%;
-        grid-template-areas:
-            "imagen texto"
-        ;
-        width: 100%;
-        justify-content: center;
-    }
 
     .row_img1_img2_txt {
         display: grid;

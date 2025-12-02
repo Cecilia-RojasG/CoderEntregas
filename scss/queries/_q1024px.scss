@@ -85,7 +85,7 @@
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt_about {
-                                    @include mix.box_txt(column, self-start, 400px, 0.5rem);
+                                    @include mix.box_txt(column, self-start, 400px, 0.5rem, medium);
                                 }
 
                                 .box_img_tall_1 {
@@ -116,7 +116,7 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt_2pj{
-                                    @include mix.box_txt(column, self-start, 400px, 0.5rem);
+                                    @include mix.box_txt(column, self-start, 400px, 0.5rem, medium);
                                 }
 
                                 .box_img_tall_1 {
@@ -152,7 +152,7 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt{
-                                    @include mix.box_txt(column, center, 100%, 0.5rem);
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
                                 }
 
                                 .box_img {
@@ -184,7 +184,7 @@
                                 margin: 10px 0 30px 0;
 
                                 .box_txt{
-                                    @include mix.box_txt(column, center, 100%, 0.5rem);
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
                                 }
 
                                 .carousel{
@@ -225,7 +225,7 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                    @include mix.box_txt(column, center, 100%, 0.5rem, medium);
                                 }
 
                                 .box_img {
@@ -257,7 +257,7 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                    @include mix.box_txt(column, center, 100%, 0.5rem, medium);
                                 }
 
                                 .carousel{
@@ -295,7 +295,7 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                    @include mix.box_txt(column, center, 100%, 0.5rem, medium);
                                 }
 
                                 .box_img {
@@ -326,7 +326,7 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                    @include mix.box_txt(column, center, 100%, 0.5rem, medium);
                                 }
 
                                 .carousel{
@@ -364,7 +364,7 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem);
+                                    @include mix.box_txt(column, center, 100%, 0.5rem, medium);
                                 }
 
                                 .box_img {

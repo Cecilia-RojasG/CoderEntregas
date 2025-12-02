@@ -1,7 +1,7 @@
 @use "sass:map";
 @use '../utilities/maps';
 
-@mixin box_txt ($direction, $align, $width, $marg_top) {
+@mixin box_txt ($direction, $align, $width, $marg_top, $fnt_size) {
     display: flex;
     flex-direction: $direction;
     align-items: $align;
@@ -12,12 +12,13 @@
     margin-top: $marg_top;
     color: map.get(maps.$colores,used);
     h4 {
-        margin-left: 1.0rem;
+        margin-left: 0.8rem;
         margin-right: 1.5rem;
     }
 
     p {
-        margin-left: 1.0rem;
+        font-size: $fnt_size;
+        margin-left: 0.8rem;
         margin-right: 1.5rem;
     }
 }

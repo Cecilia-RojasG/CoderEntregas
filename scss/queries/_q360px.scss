@@ -46,48 +46,52 @@
                                 }
                             }
                         }
+                        div{
+                            /*-------------PORTFOLIO--------------------*/
+                            /* Ajuste para la grilla del Portfolio General */
+                            .gallery {
+                                grid-template-columns: repeat(2, 150px);
+                                grid-template-areas:
+                                    "portafolio1 portafolio2"
+                                    "portafolio3 portafolio4"
+                                    "portafolio5 portafolio6"
+                                    "portafolio7 portafolio8"
+                                    "portafolio9 portafolio10"
+                                    "portafolio11 portafolio12";
+                                width: 100%;
+                                justify-content: center;
+
+                                div{
+                                    /* Ajuste para imagenes del Portfolio General */
+                                    .img_ajustada_port {
+                                        width: 100%;
+                                        height: 150px;
+                                        object-fit: cover;
+                                        /* La imagen se recorta para cubrir el contenedor */
+                                        object-position: 50% 50%;
+                                        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+                                    }
+                                }
+                            }
+                        }
+
+                        /*CLIENTS*/
+                        .config_flex{
+                            .box_txt_clients {
+                                flex-direction:column;
+                                @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                            }
+                            div{
+                                /*Ajuste tamaño insert pagina web*/
+                                .web_insert {
+                                    width: 280px;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
-    
-        .comun_img {
-            max-width: 260px;
-            max-height: 100%;
-        }
-
-        .row_txt_img {
-            display: grid;
-            grid-template-columns: 70px 260px;
-            grid-template-rows: 100%;
-            grid-template-areas:
-                "texto imagen"
-            ;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .row_img_txt {
-            display: grid;
-            grid-template-columns: 260px 70px;
-            grid-template-rows: 100%;
-            grid-template-areas:
-                "imagen texto"
-            ;
-            width: 100%;
-            justify-content: center;
-        }
-
-
-        /*CLIENTS*/
-        /*Ajuste tamaño insert pagina web*/
-        .web_insert {
-            max-width: 300px;
-        }
-
-        /*CONTACT*/
-
-        
     }
 
     /* -------------FOOTER---------------*/

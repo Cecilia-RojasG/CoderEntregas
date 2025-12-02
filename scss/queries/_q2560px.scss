@@ -1,3 +1,7 @@
+@use "sass:map";
+@use '../utilities/extend';
+@use '../utilities/mixin.scss' as mix;
+@use '../utilities/maps';
 /*----------------hasta 2560px-----------------*/
 /*--------HEADER---------*/
 @media (max-width:2560px) {
@@ -21,15 +25,50 @@
         }
     }
 
-    /*-----INDEX-----*/
-    /*---Main---*/
-    /* Ajuste para el tamaño de las imagenes*/
-    .img_ajustada_grid {
-        width: 640px;
-        height: 300px;
-        object-fit: cover;
-        /* La imagen se recorta para cubrir el contenedor */
-        object-position: 45% 50%;
-        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    main{
+        section {
+            .container {
+                .row {
+                    .col {
+                        .center_grid {
+                            .text_over_img {
+                                /*-----INDEX-----*/
+                                /*---Main---*/
+                                /* Ajuste para el tamaño de las imagenes*/
+                                .img_ajustada_grid {
+                                    width: 640px;
+                                    height: 300px;
+                                    object-fit: cover;
+                                    /* La imagen se recorta para cubrir el contenedor */
+                                    object-position: 45% 50%;
+                                    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+                                }
+                            }
+                        }
+                        .config_flex{
+                            /*--------CLIENTS---------*/
+                            .box_txt_clients {
+                                @include mix.box_txt(column, self-start, 100%, 0.5rem, large);
+                            }
+                            div{
+                                /*Ajuste tamaño insert pagina web*/
+                                .web_insert {
+                                    margin-top: 5%;
+                                }
+                            }
+                            /*----------ABOUT----------*/  
+                            
+                            .box_txt_about {
+                                p {
+                                    font-size: larger;
+                                    margin-left: 0.5rem;
+                                    margin-right: 1.0rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

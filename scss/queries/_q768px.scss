@@ -88,7 +88,8 @@
                             div {
                                 nav {
                                     .links_internos {
-                                        gap: 10px;
+                                        gap: 5px;
+                                        font-size: x-small;
                                     }
                                 }
                             }
@@ -170,24 +171,25 @@
                         }
                         .config_flex{
                             /*--------CLIENTS---------*/
-                            .box_txt {
-                                @include mix.box_txt(column, self-start, 80%, 0.5rem);
+                            .box_txt_clients {
+                                @include mix.box_txt(column, self-start, 40%, 2.5rem, small);
                             }
                             div{
                                 /*Ajuste tamaño insert pagina web*/
                                 .web_insert {
                                     margin-top: 5%;
                                 }
-                            }
-                            /*----------ABOUT----------*/  
+                                /*----------ABOUT----------*/  
                             
-                            .box_txt_about {
-                                p {
-                                    font-size: small;
-                                    margin-left: 1.5rem;
-                                    margin-right: 4.0rem;
+                                .box_txt_about {
+                                    p {
+                                        font-size: small;
+                                        margin-left: 0.5rem;
+                                        margin-right: 3.0rem;
+                                    }
                                 }
                             }
+                            
                         }
                         
                         /*---------------HIGHLIGHT-------------*/
@@ -204,7 +206,7 @@
                                 margin: 5px 0 5px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, center, 100%, 0.5rem);
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
                                 }
 
                                 .box_img {
@@ -236,7 +238,7 @@
                                 margin: 5px 0 5px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, center, 100%, 0.5rem);
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
                                 }
                                 .carousel{
                                     .carousel-inner{
@@ -254,6 +256,7 @@
                                 }
                             }
                         }
+                        /*---------------HARDSURFACE-------------*/
                         .triciclo {
                             .row_txt_img {
                                 display: grid;
@@ -267,16 +270,7 @@
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    h4 {
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
-
-                                    p {
-                                        font-size: small;
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
                                 }
 
                                 .box_img {
@@ -303,16 +297,7 @@
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    h4 {
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
-
-                                    p {
-                                        font-size: small;
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
                                 }
                                 
                                 .box_img {
@@ -340,16 +325,7 @@
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    h4 {
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
-
-                                    p {
-                                        font-size: small;
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
                                 }
 
                                 .box_img {
@@ -367,7 +343,7 @@
                         .auto {
                             .row_img_txt {
                                 display: grid;
-                                grid-template-columns: 400px 150px;
+                                grid-template-columns: 400px 200px;
                                 grid-template-rows: 300px;
                                 grid-template-areas:
                                     "imagen texto"
@@ -375,27 +351,28 @@
                                 width: 100%;
                                 justify-content: center;
                                 
-                                .box_txt {
-                                    h4 {
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
-
-                                    p {
-                                        font-size: small;
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
+                                .box_txt{
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
                                 }
                                 
-                                .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    justify-content: center;
-                                    grid-area: imagen;
+                                .carousel{
+                                    .carousel-inner{
+                                        .carousel-item{
+                                            .box_img {
+                                                display: flex;
+                                                width: 100%;
+                                                height: 40vh;
+                                                justify-content: center;
+                                                align-items: center;
+                                                grid-area: imagen;
 
-                                    .comun_img {
-                                        max-width: 400px;
+                                                .comun_img {
+                                                    max-width: 400px;
+                                                    max-height: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            } 
+                                        }
                                     }
                                 }
                             }
@@ -413,26 +390,27 @@
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    h4 {
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
-
-                                    p {
-                                        font-size: small;
-                                        margin-left: 0.7rem;
-                                        margin-right: 0.7rem;
-                                    }
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
                                 }
 
-                                .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    justify-content: center;
-                                    grid-area: imagen;
+                                .carousel{
+                                    .carousel-inner{
+                                        .carousel-item{
+                                            .box_img {
+                                                display: flex;
+                                                width: 100%;
+                                                height: 40vh;
+                                                justify-content: center;
+                                                align-items: center;
+                                                grid-area: imagen;
 
-                                    .comun_img {
-                                        max-width: 400px;
+                                                .comun_img {
+                                                    max-width: 400px;
+                                                    max-height: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            } 
+                                        }
                                     }
                                 }
                             }
@@ -445,16 +423,17 @@
                                 grid-template-areas:
                                 "texto imagen1"
                                 ;
-                            }
-                            .box_txt {
-                                @include mix.box_txt(column, flex-start, 80%, 0.3rem);
-                            }
+                            
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 80%, 0.5rem, small);
+                                }
 
-                            .box_img_tall_1{
+                                .box_img_tall_1{
                                     .tall_img_0 {
                                         width: 200px;
                                     }
                                 }
+                            }
                         }
                         .seguridad{                            
                             .row_img1_img2_txt {
@@ -464,32 +443,25 @@
                                 grid-template-areas:
                                 "imagen1 imagen2 texto"
                                 ;
+
+                                .box_txt {
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
+                                }
+
                                 .box_img_tall_1{
                                     .tall_img {
                                         width: 100%;
                                     }
                                 }
+
                                 .box_img_tall_2{
                                     .tall_img {
                                         width: 100%;
                                     }
                                 }
-
-                                .box_txt {
-
-                                    h4 {
-                                        margin-left: 0.5rem;
-                                        margin-right: 0.2rem;
-                                    }
-
-                                    p {
-                                        font-size: small;
-                                        margin-left: 0.5rem;
-                                        margin-right: 0.2rem;
-                                    }
-                                }
                             }
                         }
+
                         /*-------------FORMULARIO DE CONTACTO----------------*/
                         .center_flex{
                             div{
@@ -501,7 +473,6 @@
                     }
                 }
             }
-        }
-                    
+        }            
     }
 }

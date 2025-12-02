@@ -1,3 +1,7 @@
+@use "sass:map";
+@use '../utilities/extend';
+@use '../utilities/mixin.scss' as mix;
+@use '../utilities/maps';
 /*---------------Desde 2561px-----------------*/
 /*--------HEADER---------*/
 @media (min-width:2561px) {
@@ -20,5 +24,36 @@
             }
         }
     }
-}
 
+    main{
+        section {
+            .container {
+                .row {
+                    .col {
+                        .config_flex{
+                            /*--------CLIENTS---------*/
+                            .box_txt {
+                                @include mix.box_txt(column, self-start, 100%, 0.5rem, large);
+                            }
+                            div{
+                                /*Ajuste tamaño insert pagina web*/
+                                .web_insert {
+                                    margin-top: 5%;
+                                }
+                            }
+                            /*----------ABOUT----------*/  
+                            
+                            .box_txt_about {
+                                p {
+                                    font-size: medium;
+                                    margin-left: 1.5rem;
+                                    margin-right: 4.0rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
