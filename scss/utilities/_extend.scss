@@ -2,27 +2,27 @@
 @use '../utilities/mixin' as mix;
 @use '../utilities/maps';
 
-
-/*Centra con grid*/
 %center {
+    /*Centra con grid*/
     display: grid;
     place-items: center;
 }
 
-/*Centra con flex*/
 %center_flex{
+    /*Centra con flex*/
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
-/*Margenes de Text Box - HrdSurface - Highlight*/
 %HS_h4 {
+    /*Margenes de Text Box - HrdSurface - Highlight*/
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
 
 %HS_p {
+    /*Margenes de Text Box - HrdSurface - Highlight*/
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }

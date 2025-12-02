@@ -2,11 +2,12 @@
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
 @use '../utilities/maps';
+
 /*---------------Desde 2561px-----------------*/
-/*--------HEADER---------*/
 @media (min-width:2561px) {
     header {
         .img_logo {
+            /*--------HEADER----2561-----*/
             max-width: 100%;
         }
         .menu_completo {
@@ -31,20 +32,19 @@
                 .row {
                     .col {
                         .config_flex{
-                            /*--------CLIENTS---------*/
                             .box_txt {
+                                /*--------CLIENTS------2561---*/
                                 @include mix.box_txt(column, self-start, 100%, 0.5rem, large);
                             }
                             div{
-                                /*Ajuste tamaño insert pagina web*/
                                 .web_insert {
+                                    /*Ajuste tamaño insert pagina web*/
                                     margin-top: 5%;
                                 }
-                            }
-                            /*----------ABOUT----------*/  
-                            
+                            } 
                             .box_txt_about {
                                 p {
+                                    /*----------ABOUT---2561-------*/ 
                                     font-size: medium;
                                     margin-left: 1.5rem;
                                     margin-right: 4.0rem;

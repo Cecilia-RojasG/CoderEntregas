@@ -21,14 +21,12 @@ main {
             .row {
                 .col {
                     .config_margin_txt {
+                        margin-left: 1.9rem;
                         h1 {
-                            margin-left: 1.9rem;
-                            margin-right: 1.0rem;
+                            margin-right: 0.5rem;
                         }
-
                         p {
-                            margin-left: 3.9rem;
-                            margin-right: 3.9rem;
+                            margin-left: 1.9rem;
                         }
 
                         div {
@@ -168,7 +166,6 @@ main {
                         }
                     }
 
-                    /*-----------------PORTFOLIO---------------*/
                     div {
                         .gallery {
                             /*CONFIGRUACION DEL MAIN DE PORTFOLIO GENERAL*/
@@ -238,13 +235,13 @@ main {
                         padding: 0.1rem;
 
                         .box_txt_clients {
-                            @include mix.box_txt(column, self-start, 40%, 0.8rem, medium);
+                            @include mix.box_txt(column, self-start, 40%, 2.5rem, medium);
                         }
 
 
                         div {
                             width: 50%;
-                            margin-top: 0.8rem;
+                            margin-top: 0.1rem;
 
                             .web_insert {
                                 /*Ajuste posicion insert pagina web*/
@@ -253,8 +250,9 @@ main {
                             }
                         }
 
-                        /*--------------ABOUT-----------------*/
+                        
                         .logo {
+                            /*--------------ABOUT-----------------*/
                             margin: 0.8rem;
                             width: 10%;
 
@@ -268,9 +266,10 @@ main {
                         }
                     }
 
-                    /*-------------ORGANIC-----------------*/
+                    
                     .mario {
                         .row_txt_img1 {
+                            /*-------------ORGANIC-----------------*/
                             display: grid;
                             grid-template-columns: 400px 900px;
                             grid-template-areas:
@@ -345,9 +344,9 @@ main {
                         }
                     }
 
-                    /*--------------------HIGHLIGHTED--------------*/
                     .electrico {
                         .row_txt_img {
+                            /*--------------------HIGHLIGHTED--------------*/
                             display: grid;
                             grid-template-columns: 400px 900px;
                             grid-template-areas:
@@ -417,9 +416,9 @@ main {
                         }
                     }
 
-                    /*-------------------HARDSURFACE--------------------*/
                     .triciclo {
                         .row_txt_img {
+                            /*-------------------HARDSURFACE--------------------*/
                             display: grid;
                             grid-template-columns: 400px 900px;
                             grid-template-areas:
@@ -648,9 +647,9 @@ main {
     
                     }
 
-                    /*--LINKS MAIN---*/
                     div {
                         .edit_links {
+                            /*--LINKS MAIN---*/
                             @extend %edit_links_gral;
                             font-size: small;
                             text-align: left;

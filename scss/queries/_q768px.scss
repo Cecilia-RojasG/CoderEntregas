@@ -7,9 +7,9 @@
 
 @media (max-width:768px) {
 
-    /*-------------HEADER------------*/
     header {
         .img_logo {
+            /*-------------HEADER--768-------*/
             min-width: 90%;
         }
         .menu_completo {
@@ -78,7 +78,7 @@
             padding: 3%;
         }
     } 
-    /*-------------------MAIN 768-------------------*/
+    
     main {
         .highsquare {
             .container-fluid {
@@ -88,6 +88,7 @@
                             div {
                                 nav {
                                     .links_internos {
+                                        /*-------------------MAIN 768-------------------*/
                                         gap: 5px;
                                         font-size: x-small;
                                     }
@@ -116,8 +117,8 @@
             .container {
                 .row {
                     .col {
-                        /*-----------------INDEX------------*/
                         .center_grid {
+                            /*-----------------INDEX-----768-------*/
                             margin: 1.5%;
                             display: grid;
                             grid-template-columns: 1fr;
@@ -142,9 +143,9 @@
                             }
                         }
                         div{
-                            /*-------------PORTFOLIO--------------------*/
-                            /* Ajuste para la grilla del Portfolio General */
                             .gallery {
+                                /*-------------PORTFOLIO------768--------------*/
+                                /* Ajuste para la grilla del Portfolio General */
                                 grid-template-columns: repeat(2, 220px);
                                 grid-template-areas:
                                     "portafolio1 portafolio2"
@@ -157,8 +158,8 @@
                                 justify-content: center;
 
                                 div{
-                                    /* Ajuste para imagenes del Portfolio General */
                                     .img_ajustada_port {
+                                        /* Ajuste para imagenes del Portfolio General */
                                         width: 100%;
                                         height: 200px;
                                         object-fit: cover;
@@ -170,19 +171,18 @@
                             }
                         }
                         .config_flex{
-                            /*--------CLIENTS---------*/
                             .box_txt_clients {
+                                /*--------CLIENTS----768-----*/
                                 @include mix.box_txt(column, self-start, 40%, 2.5rem, small);
                             }
                             div{
-                                /*Ajuste tamaño insert pagina web*/
                                 .web_insert {
                                     margin-top: 5%;
-                                }
-                                /*----------ABOUT----------*/  
+                                } 
                             
                                 .box_txt_about {
                                     p {
+                                        /*----------ABOUT----768------*/ 
                                         font-size: small;
                                         margin-left: 0.5rem;
                                         margin-right: 3.0rem;
@@ -192,9 +192,9 @@
                             
                         }
                         
-                        /*---------------HIGHLIGHT-------------*/
                         .electrico {
                             .row_txt_img {
+                                /*---------------HIGHLIGHT---768----------*/
                                 display: grid;
                                 grid-template-columns: 250px 400px;
                                 grid-template-rows: 300px;
@@ -256,9 +256,10 @@
                                 }
                             }
                         }
-                        /*---------------HARDSURFACE-------------*/
+                    
                         .triciclo {
                             .row_txt_img {
+                                /*---------------HARDSURFACE--768--------*/
                                 display: grid;
                                 grid-template-columns: 150px 400px;
                                 grid-template-rows: 300px;
@@ -415,9 +416,10 @@
                                 }
                             }
                         }
-                        /*----------------ORGANIC-------------------*/
+                        
                         .mario{
                             .row_txt_img1 {
+                                /*----------------ORGANIC---768------------*/
                                 display: grid;
                                 grid-template-columns: 400px 200px;
                                 grid-template-areas:
@@ -462,10 +464,10 @@
                             }
                         }
 
-                        /*-------------FORMULARIO DE CONTACTO----------------*/
                         .center_flex{
                             div{
                                 .form_contact {
+                                    /*-------------FORMULARIO DE CONTACTO---768---------*/
                                     max-width: 100%;
                                 }
                             }

@@ -21,9 +21,9 @@
                             }
                         }
                         div{
-                            /*-------------PORTFOLIO--------------------*/
-                            /* Ajuste para la grilla del Portfolio General */
                             .gallery {
+                                /*-------------PORTFOLIO-------575-----------*/
+                                /* Ajuste para la grilla del Portfolio General */
                                 grid-template-columns: repeat(2, 190px);
                                 grid-template-areas:
                                     "portafolio1 portafolio2"
@@ -36,8 +36,8 @@
                                 justify-content: center;
 
                                 div{
-                                    /* Ajuste para imagenes del Portfolio General */
                                     .img_ajustada_port {
+                                        /* Ajuste para imagenes del Portfolio General 575*/
                                         width: 100%;
                                         height: 190px;
                                         object-fit: cover;
@@ -49,10 +49,9 @@
                             }
                         }
 
-
-                        /*---------------HIGHLIGHT-------------*/
                         .electrico {
                             .row_txt_img {
+                                /*---------------HIGHLIGHT----575----------*/
                                 display: grid;
                                 grid-template-columns: 380px;
                                 grid-template-rows: 300px 300px;
@@ -123,9 +122,10 @@
                                 }
                             }
                         }
-                        /*---------------HARDSURFACE-------------*/
+                        
                         .triciclo {
                             .row_txt_img {
+                                /*---------------HARDSURFACE---575-------*/
                                 display: grid;
                                 grid-template-columns: 380px;
                                 grid-template-rows: 300px 300px;
@@ -328,7 +328,7 @@
 
 }
 
-/* -------------FOOTER---------------*/
+
 footer {
     .container {
         .row {
@@ -336,6 +336,7 @@ footer {
                 .center {
                     div {
                         .icon {
+                            /* -------------FOOTER---575--------*/
                             height: 35px;
                         }
                     }

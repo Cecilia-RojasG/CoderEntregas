@@ -3,9 +3,7 @@
 @use '../utilities/mixin.scss' as mix;
 
 /*----------------1024--------------------*/
-
 @media (max-width:1024px) {
-
     /*-------------HEADER------------*/
     header {
         .menu_completo {
@@ -23,7 +21,7 @@
         }
     }
 
-    /*---------------MAIN 1024--------------------*/
+    
     main {
         .highsquare {
             .container-fluid {
@@ -33,6 +31,7 @@
                             div {
                                 nav {
                                     .links_internos {
+                                        /*---------------MAIN 1024--------------------*/
                                         gap: 10px;
                                     }
                                 }
@@ -48,8 +47,8 @@
                 .row {
                     .col {
                         div{
-                            /*-----------PORTFOLIO GENERAL 1024----------*/
                             .gallery {
+                                /*-----------PORTFOLIO GENERAL 1024----------*/
                                 grid-template-columns: repeat(3, 200px);
                                 grid-template-areas:
                                     "portafolio1 portafolio2 portafolio3"
@@ -60,21 +59,16 @@
                                 justify-content: center;
 
                                 div{
-                                    /* Ajuste para imagenes del Portfolio General */
                                     .img_ajustada_port {
-                                        width: 200px;
-                                        height: 200px;
-                                        object-fit: cover;
-                                        /* La imagen se recorta para cubrir el contenedor */
-                                        object-position: 50% 50%;
-                                        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+                                        @include mix.ajuste_img_portafolio(200px, 200px);
                                     }
                                 }
                             }
                         }
-                        /*-------------ORGANIC-----------------*/
+
                         .mario {
                             .row_txt_img1 {
+                                /*-------------ORGANIC-------1024------*/
                                 display: grid;
                                 grid-template-columns: 400px 400px;
                                 grid-template-areas:
@@ -139,9 +133,9 @@
                             }
                         }
                         
-                        /*--------------------HIGHLIGHTED--------------*/
                         .electrico {
                             .row_txt_img {
+                                /*--------------------HIGHLIGHTED-------1024-------*/
                                 display: grid;
                                 grid-template-columns: 200px 500px;
                                 grid-template-areas:
@@ -158,7 +152,7 @@
                                 .box_img {
                                     display: flex;
                                     width: 100%;
-                                    height: 40vh;
+                                    height: fit-content;
                                     justify-content: center;
                                     align-items: center;
                                     grid-area: imagen;
@@ -193,7 +187,7 @@
                                             .box_img {
                                                 display: flex;
                                                 width: 100%;
-                                                height: 40vh;
+                                                height: fit-content;
                                                 justify-content: center;
                                                 align-items: center;
                                                 grid-area: imagen;
@@ -211,10 +205,9 @@
                             }
                         }
 
-                        
-                        /*-------------------HARDSURFACE--------------------*/
                         .triciclo {
                             .row_txt_img {
+                                /*-------------------HARDSURFACE-----1024--------------*/
                                 display: grid;
                                 grid-template-columns: 200px 500px;
                                 grid-template-areas:
@@ -272,7 +265,7 @@
                                                 grid-area: imagen;
 
                                                 .comun_img {
-                                                    max-width: 400px;
+                                                    max-width: 500px;
                                                     max-height: 100%;
                                                     object-fit: cover;
                                                 }
@@ -341,7 +334,7 @@
                                                 grid-area: imagen;
 
                                                 .comun_img {
-                                                    max-width: 400px;
+                                                    max-width: 500px;
                                                     max-height: 100%;
                                                     object-fit: cover;
                                                 }
@@ -355,7 +348,7 @@
                         .bota {
                             .row_img_txt {
                                 display: grid;
-                                grid-template-columns: 500px 200px;
+                                grid-template-columns: 400px 300px;
                                 grid-template-areas:
                                     "imagen texto"
                                 ;
@@ -364,7 +357,7 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt {
-                                    @include mix.box_txt(column, center, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
                                 }
 
                                 .box_img {
@@ -376,7 +369,7 @@
                                     grid-area: imagen;
 
                                     .comun_img {
-                                        max-width: 500px;
+                                        max-width: 400px;
                                         max-height: 100%;
                                         object-fit: cover;
                                     }
@@ -391,7 +384,6 @@
     }
 }
 
-/* -------------FOOTER---------------*/
 footer{
     .container{
         .row{
@@ -399,6 +391,7 @@ footer{
                 .center{
                     div{
                         .icon {
+                            /* -------------FOOTER-----1024----------*/
                             height: 35px;
                         }
                     }

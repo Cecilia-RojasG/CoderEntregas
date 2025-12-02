@@ -23,8 +23,18 @@
     }
 }
 
-/*  FUTUROS MIXINS
+/* Ajuste para imagenes del Portfolio General */
+@mixin ajuste_img_portafolio($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+}
 
+
+/*  FUTUROS MIXINS
 @mixin box_img (){
     display: flex;
     width: 100%;

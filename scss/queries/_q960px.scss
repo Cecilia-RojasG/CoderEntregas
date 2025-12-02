@@ -1,11 +1,12 @@
 @use '../base/variables' as v;
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
+
 /*----------------960-------------------*/
-/*--------HEADER---------*/
 @media (max-width:990px) {
     header {
         .menu_completo {
+            /*--------HEADER---------*/
             min-width: 58%;
             .nav {
                 .nav_list {
@@ -26,9 +27,9 @@
             .container-fluid {
                 .row {
                     .col {
-                        /*---------------HIGHLIGHT-------------*/
                         .electrico {
                             .row_txt_img {
+                                /*---------------HIGHLIGHT-----960------*/
                                 display: grid;
                                 grid-template-columns: 300px 500px;
                                 grid-template-rows: 300px;

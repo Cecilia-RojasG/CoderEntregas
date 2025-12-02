@@ -3,14 +3,17 @@
 @use '../utilities/mixin.scss' as mix;
 @use '../utilities/maps';
 /*----------------hasta 2560px-----------------*/
-/*--------HEADER---------*/
+
 @media (max-width:2560px) {
     header {
         .img_logo {
+            /*--------HEADER---2560------*/
             max-width: 95%;
         }
+
         .menu_completo {
             min-width: 35%;
+
             .nav {
                 .nav_list {
                     font-size: x-large;
@@ -25,17 +28,17 @@
         }
     }
 
-    main{
+    main {
         section {
             .container {
                 .row {
                     .col {
                         .center_grid {
                             .text_over_img {
-                                /*-----INDEX-----*/
-                                /*---Main---*/
-                                /* Ajuste para el tamaño de las imagenes*/
+
                                 .img_ajustada_grid {
+                                    /*-..........--Main-.............--*/
+                                    /* Ajuste para el tamaño de las imagenes*/
                                     width: 640px;
                                     height: 300px;
                                     object-fit: cover;
@@ -45,21 +48,26 @@
                                 }
                             }
                         }
-                        .config_flex{
-                            /*--------CLIENTS---------*/
+
+                        .config_flex {
+
                             .box_txt_clients {
+                                /*-------------CLIENTS------2560---*/
                                 @include mix.box_txt(column, self-start, 100%, 0.5rem, large);
                             }
-                            div{
-                                /*Ajuste tamaño insert pagina web*/
+
+                            div {
+
                                 .web_insert {
+                                    /*Ajuste tamaño insert pagina web*/
                                     margin-top: 5%;
                                 }
                             }
-                            /*----------ABOUT----------*/  
-                            
+
+
                             .box_txt_about {
                                 p {
+                                    /*----------ABOUT----------*/
                                     font-size: larger;
                                     margin-left: 0.5rem;
                                     margin-right: 1.0rem;
