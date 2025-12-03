@@ -43,9 +43,9 @@
                                 }
                             } 
                             .box_txt_about {
+                                @include mix.box_txt(column, self-start, 70%, 0.8rem, large);
                                 p {
                                     /*----------ABOUT---2561-------*/ 
-                                    font-size: medium;
                                     margin-left: 1.5rem;
                                     margin-right: 4.0rem;
                                 }

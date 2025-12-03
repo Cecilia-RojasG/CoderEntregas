@@ -60,7 +60,7 @@
 
                                 div{
                                     .img_ajustada_port {
-                                        @include mix.ajuste_img_portafolio(200px, 200px);
+                                        @include mix.ajuste_de_imagen(200px, 200px, 50%, 50%);
                                     }
                                 }
                             }
@@ -146,22 +146,11 @@
                                 margin: 10px 0 10px 0;
 
                                 .box_txt{
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, medium);
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    height: fit-content;
-                                    justify-content: center;
-                                    align-items: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 500px;
-                                        max-height: 100%;
-                                        object-fit: cover;
-                                    }
+                                    @include mix.box_img(fit-content, center, imagen, 500px, 100%);
                                 }
                             }
                         }
@@ -178,25 +167,15 @@
                                 margin: 10px 0 30px 0;
 
                                 .box_txt{
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, medium);
                                 }
 
                                 .carousel{
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                display: flex;
-                                                width: 100%;
-                                                height: fit-content;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 500px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(fit-content, center, imagen, 500px, 100%);
+                                                
                                             } 
                                         }
                                     }
@@ -222,18 +201,7 @@
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    height: 40vh;
-                                    justify-content: center;
-                                    align-items: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 500px;
-                                        max-height: 100%;
-                                        object-fit: cover;
-                                    }
+                                    @include mix.box_img(40vh, center, imagen, 500px, 100%);
                                 }
                             }
                         }
@@ -257,18 +225,7 @@
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                display: flex;
-                                                width: 100%;
-                                                height: 40vh;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 500px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(40vh, center, imagen, 500px, 100%);
                                             } 
                                         }
                                     }
@@ -292,17 +249,7 @@
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    height: 40vh;
-                                    justify-content: center;
-                                    align-items: center;
-                                    grid-area: imagen;
-                                    .comun_img {
-                                        max-width: 500px;
-                                        max-height: 100%;
-                                        object-fit: cover;
-                                    }
+                                    @include mix.box_img(40vh, center, imagen, 500px, 100%);
                                 }
                             }
                         }
@@ -326,19 +273,8 @@
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                display: flex;
-                                                width: 100%;
-                                                height: 40vh;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 500px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
-                                            } 
+                                                @include mix.box_img(40vh, center, imagen, 500px, 100%);
+                                            }
                                         }
                                     }
                                 }
@@ -361,18 +297,7 @@
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    height: 40vh;
-                                    justify-content: center;
-                                    align-items: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 400px;
-                                        max-height: 100%;
-                                        object-fit: cover;
-                                    }
+                                    @include mix.box_img(40vh, center, imagen, 400px, 100%);
                                 }
                             }
                         }

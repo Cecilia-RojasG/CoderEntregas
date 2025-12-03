@@ -35,22 +35,15 @@
                     .col {
                         .center_grid {
                             .text_over_img {
-
                                 .img_ajustada_grid {
                                     /*-..........--Main-.............--*/
                                     /* Ajuste para el tamaño de las imagenes*/
-                                    width: 640px;
-                                    height: 300px;
-                                    object-fit: cover;
-                                    /* La imagen se recorta para cubrir el contenedor */
-                                    object-position: 45% 50%;
-                                    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+                                    @include mix.ajuste_de_imagen(640px, 300px, 50%, 50%);
                                 }
                             }
                         }
 
                         .config_flex {
-
                             .box_txt_clients {
                                 /*-------------CLIENTS------2560---*/
                                 @include mix.box_txt(column, self-start, 100%, 0.5rem, large);
@@ -66,9 +59,9 @@
 
 
                             .box_txt_about {
+                                @include mix.box_txt(column, self-start, 70%, 0.8rem, larger);
                                 p {
                                     /*----------ABOUT----------*/
-                                    font-size: larger;
                                     margin-left: 0.5rem;
                                     margin-right: 1.0rem;
                                 }

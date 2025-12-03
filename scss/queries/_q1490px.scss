@@ -42,8 +42,7 @@ header {
                             
                                 div{
                                     .img_ajustada_port {
-                                    width: 250px;
-                                    height: 250px;
+                                        @include mix.ajuste_de_imagen(250px, 250px, 50%, 50%);
                                     }
                                 } 
                             }

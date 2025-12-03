@@ -41,7 +41,7 @@
 
                                 div{
                                     .img_ajustada_port {
-                                        @include mix.ajuste_img_portafolio(250px, 250px);
+                                        @include mix.ajuste_de_imagen(250px, 250px, 50%, 50%);
                                     }
                                 }
                             }

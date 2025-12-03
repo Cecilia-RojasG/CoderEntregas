@@ -11,6 +11,14 @@
     grid-area: texto;
     margin-top: $marg_top;
     color: map.get(maps.$colores,used);
+    h2 {
+        margin-left: 0.8rem;
+        margin-right: 1.5rem;
+    }
+    h3 {
+        margin-left: 0.8rem;
+        margin-right: 1.5rem;
+    }
     h4 {
         margin-left: 0.8rem;
         margin-right: 1.5rem;
@@ -24,31 +32,34 @@
 }
 
 /* Ajuste para imagenes del Portfolio General */
-@mixin ajuste_img_portafolio($width, $height) {
+@mixin ajuste_de_imagen($width, $height, $alin1, $alin2) {
     width: $width;
     height: $height;
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
+    object-position: $alin1 $alin2;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
 }
 
 
-/*  FUTUROS MIXINS
-@mixin box_img (){
+
+@mixin box_img ($height, $justify, $grd_area, $max_w, $max_h){
     display: flex;
     width: 100%;
-    height: 40vh;
-    justify-content: center;
+    height: $height;
+    justify-content: $justify;
     align-items: center;
-    grid-area: imagen;
-}
+    grid-area: $grd_area;
 
-@mixin comun_img ($max_w, $max_h){
+    .comun_img {
         max-width: $max_w;
         max-height: $max_h;
         object-fit: cover;
     }
+}
+
+/*  FUTUROS MIXINS
+
 
 @mixin row_txt_img ($col1, $col2, $margin) {
     display: grid;

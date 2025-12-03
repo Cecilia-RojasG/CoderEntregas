@@ -109,20 +109,7 @@ article {
 }
 /* Ajuste para imagenes del Portfolio General */
 /*  FUTUROS MIXINS
-@mixin box_img (){
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: imagen;
-}
 
-@mixin comun_img ($max_w, $max_h){
-        max-width: $max_w;
-        max-height: $max_h;
-        object-fit: cover;
-    }
 
 @mixin row_txt_img ($col1, $col2, $margin) {
     display: grid;
@@ -308,7 +295,7 @@ main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada
   object-fit: cover;
   /* La imagen se recorta para cubrir el contenedor */
   object-position: 45% 50%;
-  /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+  /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
 }
 main section .container .row .col .center_grid {
   display: grid;
@@ -352,7 +339,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   object-fit: cover;
   /* La imagen se recorta para cubrir el contenedor */
   object-position: 50% 50%;
-  /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+  /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
 }
 main section .container .row .col .center_grid .text_over_img img {
   display: block;
@@ -369,13 +356,12 @@ main section .container .row .col div .gallery {
   margin-top: 10px;
 }
 main section .container .row .col div .gallery div .img_ajustada_port {
-  /* Ajuste para el tamaño de las imagenes del Portfolio General */
   width: 100%;
   height: 300px;
   object-fit: cover;
   /* La imagen se recorta para cubrir el contenedor */
   object-position: 50% 50%;
-  /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+  /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
 }
 main section .container .row .col div .gallery .triciclo {
   grid-area: portafolio1;
@@ -418,6 +404,14 @@ main section .container .row .col .config_flex .box_txt_clients {
   margin-top: 2.5rem;
   color: #faebd7;
 }
+main section .container .row .col .config_flex .box_txt_clients h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .config_flex .box_txt_clients h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
 main section .container .row .col .config_flex .box_txt_clients h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
@@ -455,6 +449,14 @@ main section .container .row .col .config_flex .box_txt_about {
   margin-top: 0.8rem;
   color: #faebd7;
 }
+main section .container .row .col .config_flex .box_txt_about h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .config_flex .box_txt_about h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
 main section .container .row .col .config_flex .box_txt_about h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
@@ -483,6 +485,14 @@ main section .container .row .col .mario .row_txt_img1 .box_txt_1pj {
   grid-area: texto;
   margin-top: 0.5rem;
   color: #faebd7;
+}
+main section .container .row .col .mario .row_txt_img1 .box_txt_1pj h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .mario .row_txt_img1 .box_txt_1pj h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
 }
 main section .container .row .col .mario .row_txt_img1 .box_txt_1pj h4 {
   margin-left: 0.8rem;
@@ -523,6 +533,14 @@ main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs {
   grid-area: texto;
   margin-top: 0.5rem;
   color: #faebd7;
+}
+main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
 }
 main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs h4 {
   margin-left: 0.8rem;
@@ -577,6 +595,14 @@ main section .container .row .col .electrico .row_txt_img .box_txt {
   margin-top: 0.5rem;
   color: #faebd7;
 }
+main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
 main section .container .row .col .electrico .row_txt_img .box_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
@@ -617,6 +643,14 @@ main section .container .row .col .chancador .row_img_txt .box_txt {
   grid-area: texto;
   margin-top: 0.5rem;
   color: #faebd7;
+}
+main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
 }
 main section .container .row .col .chancador .row_img_txt .box_txt h4 {
   margin-left: 0.8rem;
@@ -660,6 +694,14 @@ main section .container .row .col .triciclo .row_txt_img .box_txt {
   margin-top: 0.5rem;
   color: #faebd7;
 }
+main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
 main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
@@ -700,6 +742,14 @@ main section .container .row .col .auto .row_img_txt .box_txt {
   grid-area: texto;
   margin-top: 0.5rem;
   color: #faebd7;
+}
+main section .container .row .col .auto .row_img_txt .box_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .auto .row_img_txt .box_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
 }
 main section .container .row .col .auto .row_img_txt .box_txt h4 {
   margin-left: 0.8rem;
@@ -742,6 +792,14 @@ main section .container .row .col .pizzeria .row_txt_img .box_txt {
   margin-top: 0.5rem;
   color: #faebd7;
 }
+main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
 main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
@@ -783,6 +841,14 @@ main section .container .row .col .torque .row_txt_img .box_txt {
   margin-top: 0.5rem;
   color: #faebd7;
 }
+main section .container .row .col .torque .row_txt_img .box_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .torque .row_txt_img .box_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
 main section .container .row .col .torque .row_txt_img .box_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
@@ -823,6 +889,14 @@ main section .container .row .col .bota .row_img_txt .box_txt {
   grid-area: texto;
   margin-top: 0.5rem;
   color: #faebd7;
+}
+main section .container .row .col .bota .row_img_txt .box_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .bota .row_img_txt .box_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
 }
 main section .container .row .col .bota .row_img_txt .box_txt h4 {
   margin-left: 0.8rem;
@@ -928,6 +1002,14 @@ footer .container .row .col .center span {
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .config_flex .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .config_flex .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -941,9 +1023,36 @@ footer .container .row .col .center span {
     /*Ajuste tamaño insert pagina web*/
     margin-top: 5%;
   }
+  main section .container .row .col .config_flex .box_txt_about {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.8rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_about h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about p {
+    font-size: large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .config_flex .box_txt_about p {
     /*----------ABOUT---2561-------*/
-    font-size: medium;
     margin-left: 1.5rem;
     margin-right: 4rem;
   }
@@ -970,8 +1079,8 @@ footer .container .row .col .center span {
     height: 300px;
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
-    object-position: 45% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
   main section .container .row .col .config_flex .box_txt_clients {
     /*-------------CLIENTS------2560---*/
@@ -984,6 +1093,14 @@ footer .container .row .col .center span {
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex .box_txt_clients h4 {
     margin-left: 0.8rem;
@@ -998,9 +1115,36 @@ footer .container .row .col .center span {
     /*Ajuste tamaño insert pagina web*/
     margin-top: 5%;
   }
+  main section .container .row .col .config_flex .box_txt_about {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.8rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_about h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about p {
+    font-size: larger;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .config_flex .box_txt_about p {
     /*----------ABOUT----------*/
-    font-size: larger;
     margin-left: 0.5rem;
     margin-right: 1rem;
   }
@@ -1038,6 +1182,10 @@ footer .container .row .col .center span {
 main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  /* La imagen se recorta para cubrir el contenedor */
+  object-position: 50% 50%;
+  /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
 }
 
 /*----------------1490--------------------*/
@@ -1063,6 +1211,10 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col div .gallery div .img_ajustada_port {
     width: 250px;
     height: 250px;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
   main section .container .row .col .electrico .row_txt_img {
     /*---------------HIGHLIGHT-------------*/
@@ -1083,6 +1235,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .electrico .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -1124,6 +1284,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -1167,6 +1335,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1204,6 +1380,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .bota .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -1244,6 +1428,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .torque .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .torque .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1279,6 +1471,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .auto .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -1320,6 +1520,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -1363,6 +1571,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1400,6 +1616,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1432,6 +1656,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 1.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex .box_txt_clients h4 {
     margin-left: 0.8rem;
@@ -1499,6 +1731,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .electrico .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1539,6 +1779,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -1582,6 +1830,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1619,6 +1875,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .bota .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -1659,6 +1923,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .torque .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .torque .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1694,6 +1966,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .auto .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -1735,6 +2015,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -1778,6 +2066,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1817,6 +2113,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h4 {
     margin-left: 0.8rem;
@@ -1896,6 +2200,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .mario .row_txt_img1 .box_txt_about h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt_about h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .mario .row_txt_img1 .box_txt_about h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1936,6 +2248,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -1967,13 +2287,21 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .electrico .row_txt_img .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .electrico .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -2008,13 +2336,21 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .chancador .row_img_txt .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -2058,6 +2394,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -2098,6 +2442,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -2140,6 +2492,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .torque .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .torque .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -2181,6 +2541,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-top: 0.5rem;
     color: #faebd7;
   }
+  main section .container .row .col .auto .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
   main section .container .row .col .auto .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
@@ -2221,6 +2589,14 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .bota .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -2282,6 +2658,14 @@ footer .container .row .col .center div .icon {
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -2380,7 +2764,7 @@ footer .container .row .col .center div .icon {
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 45% 50%;
-    /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
   main section .container .row .col .center_grid {
     /*-----------------INDEX-----768-------*/
@@ -2399,7 +2783,7 @@ footer .container .row .col .center div .icon {
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
     margin: 3px 0 3px 0;
   }
   main section .container .row .col div .gallery {
@@ -2411,7 +2795,6 @@ footer .container .row .col .center div .icon {
     justify-content: center;
   }
   main section .container .row .col div .gallery div .img_ajustada_port {
-    /* Ajuste para imagenes del Portfolio General */
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -2423,13 +2806,21 @@ footer .container .row .col .center div .icon {
     /*--------CLIENTS----768-----*/
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 40%;
     height: 100%;
     grid-area: texto;
     margin-top: 2.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex .box_txt_clients h4 {
     margin-left: 0.8rem;
@@ -2445,7 +2836,34 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .config_flex div .box_txt_about p {
     /*----------ABOUT----768------*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p p {
     font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p {
     margin-left: 0.5rem;
     margin-right: 3rem;
   }
@@ -2462,13 +2880,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .electrico .row_txt_img .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .electrico .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -2488,8 +2914,8 @@ footer .container .row .col .center div .icon {
     grid-area: imagen;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    width: 400px;
-    height: 300px;
+    max-width: 400px;
+    max-height: 300px;
     object-fit: cover;
   }
   main section .container .row .col .chancador .row_img_txt {
@@ -2504,13 +2930,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .chancador .row_img_txt .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -2522,33 +2956,45 @@ footer .container .row .col .center div .icon {
     margin-right: 1.5rem;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+    display: flex;
+    width: 100%;
     height: 300px;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    width: 400px;
-    height: 100%;
+    max-width: 400px;
+    max-height: 300px;
     object-fit: cover;
   }
   main section .container .row .col .triciclo .row_txt_img {
     /*---------------HARDSURFACE--768--------*/
     display: grid;
-    grid-template-columns: 150px 400px;
+    grid-template-columns: 200px 400px;
     grid-template-rows: 300px;
     grid-template-areas: "texto imagen";
     width: 100%;
     justify-content: center;
-    margin: 10px 0 10px 0;
   }
   main section .container .row .col .triciclo .row_txt_img .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -2562,86 +3008,15 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .triciclo .row_txt_img .box_img {
     display: flex;
     width: 100%;
+    height: 300px;
     justify-content: center;
+    align-items: center;
     grid-area: imagen;
   }
   main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
     max-width: 400px;
-  }
-  main section .container .row .col .bota .row_img_txt {
-    display: grid;
-    grid-template-columns: 400px 150px;
-    grid-template-rows: 300px;
-    grid-template-areas: "imagen texto";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: texto;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    grid-area: imagen;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
-    max-width: 400px;
-  }
-  main section .container .row .col .torque .row_txt_img {
-    display: grid;
-    grid-template-columns: 150px 400px;
-    grid-template-rows: 300px;
-    grid-template-areas: "texto imagen";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: texto;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    grid-area: imagen;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-    max-width: 400px;
+    max-height: 300px;
+    object-fit: cover;
   }
   main section .container .row .col .auto .row_img_txt {
     display: grid;
@@ -2654,13 +3029,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .auto .row_img_txt .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .auto .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -2674,35 +3057,140 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
     display: flex;
     width: 100%;
-    height: 40vh;
+    height: 300px;
     justify-content: center;
     align-items: center;
     grid-area: imagen;
   }
   main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 400px;
-    max-height: 100%;
+    max-height: 300px;
     object-fit: cover;
   }
-  main section .container .row .col .pizzeria .row_txt_img {
+  main section .container .row .col .bota .row_img_txt {
     display: grid;
-    grid-template-columns: 150px 400px;
-    grid-template-rows: 300px;
-    grid-template-areas: "texto imagen";
+    grid-template-columns: 350px 200px;
+    grid-template-rows: 350px;
+    grid-template-areas: "imagen texto";
     width: 100%;
     justify-content: center;
-    margin: 10px 0 10px 0;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt {
+  main section .container .row .col .bota .row_img_txt .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt p {
+    font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_img {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
+    max-width: 350px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  main section .container .row .col .torque .row_txt_img {
+    display: grid;
+    grid-template-columns: 200px 350px;
+    grid-template-rows: 300px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt p {
+    font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_img {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
+    max-width: 350px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  main section .container .row .col .pizzeria .row_txt_img {
+    display: grid;
+    grid-template-columns: 200px 400px;
+    grid-template-rows: 300px;
+    grid-template-areas: "texto imagen";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.5rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -2716,14 +3204,14 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
     display: flex;
     width: 100%;
-    height: 40vh;
+    height: 300px;
     justify-content: center;
     align-items: center;
     grid-area: imagen;
   }
   main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 400px;
-    max-height: 100%;
+    max-height: 300px;
     object-fit: cover;
   }
   main section .container .row .col .mario .row_txt_img1 {
@@ -2735,13 +3223,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .mario .row_txt_img1 .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 80%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
     margin-left: 0.8rem;
@@ -2764,13 +3260,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
     margin-top: 0.5rem;
     color: #faebd7;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -2795,9 +3299,23 @@ footer .container .row .col .center div .icon {
 /*----------------575--------------------*/
 @media (max-width: 575px) {
   /*-------------MAIN------------*/
+  main .highsquare .container-fluid .row .col .config_margin_txt {
+    margin-left: 1.2rem;
+  }
+  main .highsquare .container-fluid .row .col .config_margin_txt h1 {
+    margin-right: 0.5rem;
+  }
+  main .highsquare .container-fluid .row .col .config_margin_txt p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
   main section .container .row .col div .gallery {
     /*-------------PORTFOLIO-------575-----------*/
@@ -2808,7 +3326,6 @@ footer .container .row .col .center div .icon {
     justify-content: center;
   }
   main section .container .row .col div .gallery div .img_ajustada_port {
-    /* Ajuste para imagenes del Portfolio General 575*/
     width: 100%;
     height: 190px;
     object-fit: cover;
@@ -2816,17 +3333,11 @@ footer .container .row .col .center div .icon {
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  main section .container .row .col .electrico .row_txt_img {
-    /*---------------HIGHLIGHT----575----------*/
-    display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: 300px 300px;
-    gap: 2px;
-    grid-template-areas: "texto" "imagen";
-    width: 100%;
-    justify-content: center;
+  main section .container .row .col .config_flex {
+    flex-direction: column;
   }
-  main section .container .row .col .electrico .row_txt_img .box_txt {
+  main section .container .row .col .config_flex .box_txt_clients {
+    /*----------- --CLIENTS--575------------*/
     display: flex;
     flex-direction: column;
     align-items: self-start;
@@ -2836,6 +3347,96 @@ footer .container .row .col .center div .icon {
     grid-area: texto;
     margin-top: 0.2rem;
     color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_clients p {
+    font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .web_insert {
+    /*Ajuste tamaño insert pagina web  380*/
+    width: 380px;
+  }
+  main section .container .row .col .config_flex .logo {
+    /*--------------ABOUT---575--------------*/
+    margin: 0.4rem;
+    width: 20%;
+  }
+  main section .container .row .col .config_flex .logo .image_about {
+    width: 100%;
+  }
+  main section .container .row .col .config_flex .box_txt_about {
+    display: flex;
+    flex-direction: column;
+    align-items: fit-content;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.2rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_about h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about p {
+    font-size: 16px;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about {
+    margin-left: 0.8rem;
+    margin-right: 1.3rem;
+  }
+  main section .container .row .col .electrico .row_txt_img {
+    /*---------------HIGHLIGHT----575----------*/
+    display: grid;
+    grid-template-columns: 370px;
+    grid-template-rows: 200px 300px;
+    gap: 2px;
+    grid-template-areas: "texto" "imagen";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: fit-content;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .electrico .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -2849,20 +3450,23 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .electrico .row_txt_img .box_img {
     display: flex;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     justify-content: center;
     align-items: center;
     grid-area: imagen;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 380px;
+    max-width: 370px;
     max-height: 100%;
     object-fit: cover;
   }
+  main section .container .row .col .electrico .row_txt_img .box_img {
+    width: 370px;
+  }
   main section .container .row .col .chancador .row_img_txt {
     display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: 370px;
+    grid-template-rows: 200px 300px;
     gap: 2px;
     grid-template-areas: "texto" "imagen";
     width: 100%;
@@ -2871,13 +3475,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .chancador .row_img_txt .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: fit-content;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
     color: #faebd7;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .chancador .row_img_txt .box_txt h4 {
     margin-left: 0.8rem;
@@ -2891,21 +3503,24 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
     display: flex;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     justify-content: center;
     align-items: center;
     grid-area: imagen;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 380px;
+    max-width: 370px;
     max-height: 100%;
     object-fit: cover;
+  }
+  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+    width: 370px;
   }
   main section .container .row .col .triciclo .row_txt_img {
     /*---------------HARDSURFACE---575-------*/
     display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: 370px;
+    grid-template-rows: 200px 300px;
     gap: 2px;
     grid-template-areas: "texto" "imagen";
     width: 100%;
@@ -2914,13 +3529,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .triciclo .row_txt_img .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: fit-content;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
     color: #faebd7;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -2940,23 +3563,22 @@ footer .container .row .col .center div .icon {
     grid-area: imagen;
   }
   main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
-    max-width: 380px;
-    max-height: 100%;
+    max-width: 370px;
+    max-height: 300px;
     object-fit: cover;
   }
-  main section .container .row .col .bota .row_txt_img {
+  main section .container .row .col .auto .row_img_txt {
     display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: 300px 300px;
-    gap: 2px;
+    grid-template-columns: 370px;
+    grid-template-rows: 200px 300px;
     grid-template-areas: "texto" "imagen";
     width: 100%;
     justify-content: center;
   }
-  main section .container .row .col .bota .row_txt_img .box_txt {
+  main section .container .row .col .auto .row_img_txt .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -2964,16 +3586,24 @@ footer .container .row .col .center div .icon {
     margin-top: 0.2rem;
     color: #faebd7;
   }
-  main section .container .row .col .bota .row_txt_img .box_txt h4 {
+  main section .container .row .col .auto .row_img_txt .box_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .bota .row_txt_img .box_txt p {
+  main section .container .row .col .auto .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .auto .row_img_txt .box_txt p {
     font-size: small;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .bota .row_txt_img .box_img {
+  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
     display: flex;
     width: 100%;
     height: 40vh;
@@ -2981,8 +3611,57 @@ footer .container .row .col .center div .icon {
     align-items: center;
     grid-area: imagen;
   }
-  main section .container .row .col .bota .row_txt_img .box_img .comun_img {
-    max-width: 380px;
+  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
+    max-width: 370px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .bota .row_img_txt {
+    display: grid;
+    grid-template-columns: 370px;
+    grid-template-rows: 200px 300px;
+    grid-template-areas: "texto" "imagen";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: fit-content;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_txt p {
+    font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .bota .row_img_txt .box_img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
+    max-width: 370px;
     max-height: 100%;
     object-fit: cover;
   }
@@ -2998,13 +3677,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .torque .row_txt_img .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
     color: #faebd7;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .torque .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .torque .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -3028,53 +3715,10 @@ footer .container .row .col .center div .icon {
     max-height: 100%;
     object-fit: cover;
   }
-  main section .container .row .col .auto .row_txt_img {
-    display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: 300px 300px;
-    gap: 2px;
-    grid-template-areas: "texto" "imagen";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .auto .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: texto;
-    margin-top: 0.2rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .auto .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: imagen;
-  }
-  main section .container .row .col .auto .row_txt_img .box_img .comun_img {
-    max-width: 380px;
-    max-height: 100%;
-    object-fit: cover;
-  }
   main section .container .row .col .pizzeria .row_txt_img {
     display: grid;
     grid-template-columns: 380px;
     grid-template-rows: 300px 300px;
-    gap: 2px;
     grid-template-areas: "texto" "imagen";
     width: 100%;
     justify-content: center;
@@ -3082,13 +3726,21 @@ footer .container .row .col .center div .icon {
   main section .container .row .col .pizzeria .row_txt_img .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: texto;
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
     color: #faebd7;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
     margin-left: 0.8rem;
@@ -3099,7 +3751,7 @@ footer .container .row .col .center div .icon {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_img {
+  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
     display: flex;
     width: 100%;
     height: 40vh;
@@ -3107,32 +3759,92 @@ footer .container .row .col .center div .icon {
     align-items: center;
     grid-area: imagen;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_img .comun_img {
+  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 380px;
     max-height: 100%;
     object-fit: cover;
   }
-  /*ORGANIC, HARDSURFACE, HIGHLIGHT*/
-  .row_img1_img2_txt {
+  main section .container .row .col .mario .row_txt_img1 {
+    /*----------------ORGANIC---575------------*/
     display: grid;
-    grid-template-columns: 110px 110px 110px;
-    grid-template-rows: 300px;
-    grid-template-areas: "imagen1 imagen2 texto";
+    grid-template-columns: 380px;
+    grid-template-rows: 260px 450px;
+    grid-template-areas: "texto" "imagen1";
     width: 100%;
     justify-content: center;
   }
-  .row_txt_img1 {
+  main section .container .row .col .mario .row_txt_img1 .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.3rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_txt p {
+    font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
+    width: 100%;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt {
     display: grid;
-    grid-template-columns: 120px 230px;
-    grid-template-rows: 300px;
-    grid-template-areas: "texto imagen1";
+    grid-template-columns: 380px;
+    grid-template-rows: 280px 450px 450px;
+    grid-template-areas: "texto" "imagen1" "imagen2";
     width: 100%;
     justify-content: center;
   }
-  /*CLIENTS*/
-  /*Ajuste tamaño insert pagina web*/
-  .web_insert {
-    max-width: 378px;
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.3rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt p {
+    font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
+    width: 220px;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
+    width: 220px;
   }
 }
 footer .container .row .col .center div .icon {
@@ -3143,14 +3855,24 @@ footer .container .row .col .center div .icon {
 /*----------------380--------------------*/
 @media (max-width: 380px) {
   main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada_high {
-    /*---------MAIN 360------------------------*/
-    margin: 0%;
+    /*---------MAIN 380------------------------*/
+    margin-left: 0%;
     width: 100%;
     height: 30vh;
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 45% 50%;
-    /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+  }
+  main .highsquare .container-fluid .row .col .config_margin_txt {
+    margin-left: 1.2rem;
+  }
+  main .highsquare .container-fluid .row .col .config_margin_txt h1 {
+    margin-right: 0.5rem;
+  }
+  main .highsquare .container-fluid .row .col .config_margin_txt p {
+    margin-left: 0.9rem;
+    margin-right: 2rem;
   }
   main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
     width: 290px;
@@ -3158,11 +3880,11 @@ footer .container .row .col .center div .icon {
     object-fit: cover;
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
     margin: 5px 0 5px 0;
   }
   main section .container .row .col div .gallery {
-    /*-------------PORTFOLIO----360-----------*/
+    /*-------------PORTFOLIO----380-----------*/
     /* Ajuste para la grilla del Portfolio General */
     grid-template-columns: repeat(2, 150px);
     grid-template-areas: "portafolio1 portafolio2" "portafolio3 portafolio4" "portafolio5 portafolio6" "portafolio7 portafolio8" "portafolio9 portafolio10" "portafolio11 portafolio12";
@@ -3170,7 +3892,6 @@ footer .container .row .col .center div .icon {
     justify-content: center;
   }
   main section .container .row .col div .gallery div .img_ajustada_port {
-    /* Ajuste para imagenes del Portfolio General 360*/
     width: 100%;
     height: 150px;
     object-fit: cover;
@@ -3178,9 +3899,11 @@ footer .container .row .col .center div .icon {
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  main section .container .row .col .config_flex .box_txt_clients {
-    /*-----------------------CLIENTS--360------------*/
+  main section .container .row .col .config_flex {
     flex-direction: column;
+  }
+  main section .container .row .col .config_flex .box_txt_clients {
+    /*----------- --CLIENTS--380------------*/
     display: flex;
     flex-direction: column;
     align-items: self-start;
@@ -3190,6 +3913,14 @@ footer .container .row .col .center div .icon {
     grid-area: texto;
     margin-top: 0.2rem;
     color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_clients h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex .box_txt_clients h4 {
     margin-left: 0.8rem;
@@ -3201,8 +3932,149 @@ footer .container .row .col .center div .icon {
     margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex div .web_insert {
-    /*Ajuste tamaño insert pagina web  360*/
+    /*Ajuste tamaño insert pagina web  380*/
     width: 280px;
+  }
+  main section .container .row .col .config_flex .logo {
+    /*--------------ABOUT---380--------------*/
+    margin: 0.4rem;
+    width: 20%;
+  }
+  main section .container .row .col .config_flex .logo .image_about {
+    width: 100%;
+  }
+  main section .container .row .col .config_flex .box_txt_about {
+    display: flex;
+    flex-direction: column;
+    align-items: fit-content;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.2rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_about h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about p {
+    font-size: 16px;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about {
+    margin-left: 0.8rem;
+    margin-right: 1.3rem;
+  }
+  main section .container .row .col .electrico .row_txt_img {
+    /*---------------HIGHLIGHT----380----------*/
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-rows: 200px 300px;
+    gap: 2px;
+    grid-template-areas: "texto" "imagen";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: fit-content;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_txt p {
+    font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_img {
+    display: flex;
+    width: 320px;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
+    max-width: 320px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .chancador .row_img_txt {
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-rows: 200px 300px;
+    gap: 2px;
+    grid-template-areas: "texto" "imagen";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: fit-content;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .box_txt p {
+    font-size: small;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+    display: flex;
+    width: 320px;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: imagen;
+  }
+  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
+    max-width: 320px;
+    max-height: 100%;
+    object-fit: cover;
   }
   footer .container .row .col .center div .icon {
     /* -------------FOOTER---360-------*/

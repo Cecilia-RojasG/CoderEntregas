@@ -99,12 +99,7 @@
                             .text_over_img {
                                 .img_ajustada_high {
                                     margin: 0%;
-                                    width: 100%;
-                                    height: 30vh;
-                                    object-fit: cover;
-                                    /* La imagen se recorta para cubrir el contenedor */
-                                    object-position: 45% 50%;
-                                    /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+                                    @include mix.ajuste_de_imagen(100%, 30vh, 45%, 50%);
                                 }
                             }
                         }
@@ -132,12 +127,7 @@
                             ;
                             .text_over_img {
                                 .img_ajustada_grid {
-                                    width: 100%;
-                                    height: 25vh;
-                                    object-fit: cover;
-                                    /* La imagen se recorta para cubrir el contenedor */
-                                    object-position: 50% 50%;
-                                    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
+                                    @include mix.ajuste_de_imagen(100%, 25vh, 50%, 50%);
                                     margin: 3px 0 3px 0;
                                 }
                             }
@@ -159,13 +149,7 @@
 
                                 div{
                                     .img_ajustada_port {
-                                        /* Ajuste para imagenes del Portfolio General */
-                                        width: 100%;
-                                        height: 200px;
-                                        object-fit: cover;
-                                        /* La imagen se recorta para cubrir el contenedor */
-                                        object-position: 50% 50%;
-                                        /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+                                        @include mix.ajuste_de_imagen(100%, 200px, 50%, 50%);
                                     }
                                 }
                             }
@@ -173,7 +157,7 @@
                         .config_flex{
                             .box_txt_clients {
                                 /*--------CLIENTS----768-----*/
-                                @include mix.box_txt(column, self-start, 40%, 2.5rem, small);
+                                @include mix.box_txt(column, flex-start, 40%, 2.5rem, small);
                             }
                             div{
                                 .web_insert {
@@ -183,7 +167,7 @@
                                 .box_txt_about {
                                     p {
                                         /*----------ABOUT----768------*/ 
-                                        font-size: small;
+                                        @include mix.box_txt(column, flex-start, 70%, 0.5rem, small);
                                         margin-left: 0.5rem;
                                         margin-right: 3.0rem;
                                     }
@@ -206,22 +190,11 @@
                                 margin: 5px 0 5px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, small);
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    height: 300px;
-                                    justify-content: center;
-                                    align-items: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        width: 400px;
-                                        height:300px;
-                                        object-fit: cover;
-                                    }
+                                    @include mix.box_img(300px, center, imagen, 400px, 300px);
                                 }
                             }
                         }
@@ -238,18 +211,13 @@
                                 margin: 5px 0 5px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, small);
                                 }
                                 .carousel{
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                height: 300px;
-                                                .comun_img {
-                                                    width: 400px;
-                                                    height:100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(300px, center, imagen, 400px, 300px);
                                             } 
                                         }
                                     }
@@ -261,86 +229,24 @@
                             .row_txt_img {
                                 /*---------------HARDSURFACE--768--------*/
                                 display: grid;
-                                grid-template-columns: 150px 400px;
+                                grid-template-columns: 200px 400px;
                                 grid-template-rows: 300px;
                                 grid-template-areas:
                                     "texto imagen"
                                 ;
                                 width: 100%;
                                 justify-content: center;
-                                margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, small);
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    justify-content: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 400px;
-                                    }
+                                    @include mix.box_img(300px, center, imagen, 400px, 300px);
                                 }
                             }
                         }
-                        .bota {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 400px 150px;
-                                grid-template-rows: 300px;
-                                grid-template-areas:
-                                    "imagen texto"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
-                                }
-                                
-                                .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    justify-content: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 400px;
-                                    }
-                                }
-                            }
-                        }
-                        .torque {
-                            .row_txt_img {
-                                display: grid;
-                                grid-template-columns: 150px 400px;
-                                grid-template-rows: 300px;
-                                grid-template-areas:
-                                    "texto imagen"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
-                                }
-
-                                .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    justify-content: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 400px;
-                                    }
-                                }
-                            }
-                        }
+                        
                         .auto {
                             .row_img_txt {
                                 display: grid;
@@ -353,63 +259,82 @@
                                 justify-content: center;
                                 
                                 .box_txt{
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, small);
                                 }
                                 
                                 .carousel{
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                display: flex;
-                                                width: 100%;
-                                                height: 40vh;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 400px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(300px, center, imagen, 400px, 300px);
                                             } 
                                         }
                                     }
                                 }
                             }
                         }
-                        .pizzeria {
+                        
+                        .bota {
+                            .row_img_txt {
+                                display: grid;
+                                grid-template-columns: 350px 200px;
+                                grid-template-rows: 350px;
+                                grid-template-areas:
+                                    "imagen texto"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, small);
+                                }
+                                
+                                .box_img {
+                                    @include mix.box_img(300px, center, imagen, 350px, 300px);
+                                }
+                            }
+                        }
+                        .torque {
                             .row_txt_img {
                                 display: grid;
-                                grid-template-columns: 150px 400px;
+                                grid-template-columns: 200px 350px;
                                 grid-template-rows: 300px;
                                 grid-template-areas:
                                     "texto imagen"
                                 ;
                                 width: 100%;
                                 justify-content: center;
-                                margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, small);
+                                }
+
+                                .box_img {
+                                    @include mix.box_img(300px, center, imagen, 350px, 300px);
+                                }
+                            }
+                        }
+                        
+                        .pizzeria {
+                            .row_txt_img {
+                                display: grid;
+                                grid-template-columns: 200px 400px;
+                                grid-template-rows: 300px;
+                                grid-template-areas:
+                                    "texto imagen"
+                                ;
+                                width: 100%;
+                                justify-content: center;
+                                
+                                .box_txt {
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, small);
                                 }
 
                                 .carousel{
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                display: flex;
-                                                width: 100%;
-                                                height: 40vh;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 400px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(300px, center, imagen, 400px, 300px);
                                             } 
                                         }
                                     }
@@ -427,7 +352,7 @@
                                 ;
                             
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 80%, 0.5rem, small);
+                                    @include mix.box_txt(column, flex-start, 80%, 0.5rem, small);
                                 }
 
                                 .box_img_tall_1{
@@ -447,7 +372,7 @@
                                 ;
 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, 0.5rem, small);
                                 }
 
                                 .box_img_tall_1{

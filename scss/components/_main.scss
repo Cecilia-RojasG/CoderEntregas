@@ -90,12 +90,7 @@ main {
 
                             .img_ajustada_high {
                                 margin: 0%;
-                                width: 100%;
-                                height: 40vh;
-                                object-fit: cover;
-                                /* La imagen se recorta para cubrir el contenedor */
-                                object-position: 45% 50%;
-                                /* El centro de la imagen se alinea al 45% del ancho y 50% de la altura */
+                                @include mix.ajuste_de_imagen(100%, 40vh, 45%, 50%);
                             }
                         }
                     }
@@ -150,13 +145,7 @@ main {
                             }
 
                             .img_ajustada_grid {
-                                width: 100%;
-                                height: 35vh;
-                                object-fit: cover;
-                                /* La imagen se recorta para cubrir el contenedor */
-                                object-position: 50% 50%;
-                                /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura */
-
+                                @include mix.ajuste_de_imagen(100%, 35vh, 50%, 50%);
                             }
 
                             img {
@@ -183,13 +172,7 @@ main {
 
                             div {
                                 .img_ajustada_port {
-                                    /* Ajuste para el tamaño de las imagenes del Portfolio General */
-                                    width: 100%;
-                                    height: 300px;
-                                    object-fit: cover;
-                                    /* La imagen se recorta para cubrir el contenedor */
-                                    object-position: 50% 50%;
-                                    /* El centro de la imagen se alinea al 50% del ancho y 75% de la altura*/
+                                    @include mix.ajuste_de_imagen(100%, 300px, 50%, 50%);
                                 }
 
                             }
@@ -361,18 +344,7 @@ main {
                             }
 
                             .box_img {
-                                display: flex;
-                                width: 100%;
-                                height: 40vh;
-                                justify-content: center;
-                                align-items: center;
-                                grid-area: imagen;
-
-                                .comun_img {
-                                    max-width: 900px;
-                                    max-height: 100%;
-                                    object-fit: cover;
-                                }
+                                @include mix.box_img(40vh, center, imagen, 900px, 100%);
                             }
                         }
                     }
@@ -396,18 +368,7 @@ main {
                                 .carousel-inner {
                                     .carousel-item {
                                         .box_img {
-                                            display: flex;
-                                            width: 100%;
-                                            height: 40vh;
-                                            justify-content: center;
-                                            align-items: center;
-                                            grid-area: imagen;
-
-                                            .comun_img {
-                                                max-width: 900px;
-                                                max-height: 100%;
-                                                object-fit: cover;
-                                            }
+                                            @include mix.box_img(40vh, center, imagen, 900px, 100%);
                                         }
                                     }
                                 }
@@ -433,18 +394,7 @@ main {
                             }
 
                             .box_img {
-                                display: flex;
-                                width: 100%;
-                                height: 40vh;
-                                justify-content: center;
-                                align-items: center;
-                                grid-area: imagen;
-
-                                .comun_img {
-                                    max-width: 900px;
-                                    max-height: 100%;
-                                    object-fit: cover;
-                                }
+                                @include mix.box_img(40vh, center, imagen, 900px, 100%);
                             }
                         }
                     }
@@ -469,18 +419,7 @@ main {
                                 .carousel-inner {
                                     .carousel-item {
                                         .box_img {
-                                            display: flex;
-                                            width: 100%;
-                                            height: 40vh;
-                                            justify-content: center;
-                                            align-items: center;
-                                            grid-area: imagen;
-
-                                            .comun_img {
-                                                max-width: 900px;
-                                                max-height: 100%;
-                                                object-fit: cover;
-                                            }
+                                            @include mix.box_img(40vh, center, imagen, 900px, 100%);
                                         }
                                     }
                                 }
@@ -507,18 +446,7 @@ main {
                                 .carousel-inner {
                                     .carousel-item {
                                         .box_img {
-                                            display: flex;
-                                            width: 100%;
-                                            height: 40vh;
-                                            justify-content: center;
-                                            align-items: center;
-                                            grid-area: imagen;
-
-                                            .comun_img {
-                                                max-width: 900px;
-                                                max-height: 100%;
-                                                object-fit: cover;
-                                            }
+                                            @include mix.box_img(40vh, center, imagen, 900px, 100%);
                                         }
                                     }
                                 }
@@ -542,18 +470,7 @@ main {
                             }
 
                             .box_img {
-                                display: flex;
-                                width: 100%;
-                                height: 40vh;
-                                justify-content: center;
-                                align-items: center;
-                                grid-area: imagen;
-
-                                .comun_img {
-                                    max-width: 900px;
-                                    max-height: 100%;
-                                    object-fit: cover;
-                                }
+                                @include mix.box_img(40vh, center, imagen, 900px, 100%);
                             }
                         }
                     }
@@ -576,18 +493,7 @@ main {
                             }
 
                             .box_img {
-                                display: flex;
-                                width: 100%;
-                                height: 40vh;
-                                justify-content: center;
-                                align-items: center;
-                                grid-area: imagen;
-
-                                .comun_img {
-                                    max-width: 900px;
-                                    max-height: 100%;
-                                    object-fit: cover;
-                                }
+                                @include mix.box_img(40vh, center, imagen, 900px, 100%);
                             }
                         }
                     }
