@@ -54,29 +54,18 @@ header {
                                 display: grid;
                                 grid-template-columns: 300px 800px;
                                 grid-template-areas:
-                                    "texto imagen"
+                                    "txt_electrico img_electrico"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, self-start, 100%, txt_electrico, 0.5rem, medium);
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    height: fit-content;
-                                    justify-content: center;
-                                    align-items: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 800px;
-                                        max-height: 100%;
-                                        object-fit: cover;
-                                    }
+                                    @include mix.box_img(fit-content, 100%, center, img_electrico, 800px, 100%);
                                 }
                             }
                         }
@@ -85,31 +74,20 @@ header {
                                 display: grid;
                                 grid-template-columns: 800px 300px;
                                 grid-template-areas:
-                                    "imagen texto"
+                                    "img_chancador txt_chancador"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, self-start, 100%, txt_chancador, 0.5rem, medium);
                                 }
                                 .carousel{
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                display: flex;
-                                                width: 100%;
-                                                height: fit-content;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 800px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(fit-content, 100%, center, img_chancador, 800px, 100%);
                                             } 
                                         }
                                     }
@@ -123,26 +101,18 @@ header {
                                 display: grid;
                                 grid-template-columns: 300px 800px;
                                 grid-template-areas:
-                                    "texto imagen"
+                                    "txt_triciclo img_triciclo"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, self-start, 100%, txt_triciclo, 0.5rem, medium);
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    height: fit-content;
-                                    justify-content: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 800px;
-                                    }
+                                    @include mix.box_img(fit-content, 100%, center, img_triciclo, 800px, 100%);
                                 }
                             }
                         }
@@ -151,27 +121,18 @@ header {
                                 display: grid;
                                 grid-template-columns: 800px 300px;
                                 grid-template-areas:
-                                    "imagen texto"
+                                    "img_bota txt_bota"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, self-start, 100%, txt_bota, 0.5rem, medium);
                                 }
                                 
                                 .box_img {
-                                    display: flex;
-                                    width: 100%;
-                                    height: fit-content;
-                                    justify-content: center;
-                                    align-items: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 800px;
-                                    }
+                                    @include mix.box_img(fit-content, 100%, center, img_bota, 800px, 100%);
                                 }
                             }
                         }
@@ -180,25 +141,18 @@ header {
                                 display: grid;
                                 grid-template-columns: 300px 800px;
                                 grid-template-areas:
-                                    "texto imagen"
+                                    "txt_torque img_torque"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, self-start, 100%, txt_torque, 0.5rem, medium);
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    height: fit-content;
-                                    justify-content: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 800px;
-                                    }
+                                    @include mix.box_img(fit-content, 100%, center, img_torque, 800px, 100%);
                                 }
                             }
                         }
@@ -207,31 +161,20 @@ header {
                                 display: grid;
                                 grid-template-columns: 800px 300px;
                                 grid-template-areas:
-                                    "imagen texto"
+                                    "img_auto txt_auto"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt{
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, self-start, 100%, txt_auto, 0.5rem, medium);
                                 }
                                 
                                 .carousel{
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                display: flex;
-                                                width: 100%;
-                                                height: fit-content;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 800px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(fit-content, 100%, center, img_auto, 800px, 100%);
                                             } 
                                         }
                                     }
@@ -243,32 +186,21 @@ header {
                                 display: grid;
                                 grid-template-columns: 300px 800px;
                                 grid-template-areas:
-                                    "texto imagen"
+                                    "txt_pizzeria img_pizzeria"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 margin: 10px 0 10px 0;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
+                                    @include mix.box_txt(column, self-start, 100%, txt_pizzeria, 0.5rem, medium);
                                 }
 
                                 .carousel{
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                display: flex;
-                                                width: 100%;
-                                                height: fit-content;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 800px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(fit-content, 100%, center, img_pizzeria, 800px, 100%);
                                             } 
                                         }
                                     }
@@ -276,64 +208,39 @@ header {
                             }
                         }
                         
-                        .mario{
-                            .row_txt_img1 {
-                                /*----------------ORGANIC-1490---------------*/
-                                display: grid;
-                                grid-template-columns: 400px 600px;
-                                grid-template-areas:
-                                "texto imagen1"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
+                        .grid_container_organic{
+                            /*---------------------ORGANIC--------------------------*/
+                            margin-top: 2rem;
+                            row-gap: 2rem;
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            grid-template-rows: auto auto;
+                            grid-template-areas:
+                                "txt_mario txt_mario img_mario"
+                                "img_seguridad1 img_seguridad2 txt_seguridad"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            .mario_txt {
+                                @include mix.box_txt(column, flex-start, 600px, txt_mario, 00.1rem, medium);
+                            }
 
-                                .box_txt {
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
-                                }
+                            .mario_img {
+                                @include mix.box_img(100%, 100%, center, img_mario, 100%, 600px);
+                            }
 
-                                .box_img_tall_1{
-                                    display: flex;
-                                    width: 100%;
-                                    height: 60vh;
-                                    justify-content: center;
-                                    grid-area: imagen1;
-                                    
-                                    .tall_img_0 {
-                                        max-width: 600px;
-                                        max-height: 60vh;
-                                        object-fit: cover;
-                                    }
-                                }
+                            .seguridad_txt{
+                                margin-left: 10px;
+                                @include mix.box_txt(column, flex-start, 600px, txt_seguridad, 0.1rem, medium);
+                            }
+
+                            .seguridad_img1{
+                                @include mix.box_img(100%, 300px, flex-start, img_seguridad1, 300px,600px);
+                            }
+                            .seguridad_img2{
+                                @include mix.box_img(100%, 300px, flex-start, img_seguridad2, 300px, 600px);
                             }
                         }
-                        .seguridad{                            
-                            .row_img1_img2_txt {
-                                display: grid;
-                                grid-template-columns: 300px 300px 400px;
-                                grid-template-areas:
-                                "imagen1 imagen2 texto"
-                                ;
-
-                                .box_txt_2pj{
-                                    @include mix.box_txt(column, self-start, 100%, 0.5rem, medium);
-                                }
-
-                                .box_img_tall_1{
-                                    .tall_img {
-                                        max-width: 300px;
-                                    }
-                                }
-
-                                .box_img_tall_2{
-                                    .tall_img {
-                                        max-width: 300px;
-                                        max-height: 60vh;
-                                    }
-                                }
-                            }
-                        }
-
                         .config_flex {
                             /*------------------CLIENTS...1490...............*/
                             display: flex;
@@ -341,7 +248,7 @@ header {
                             padding: 0.1rem;
 
                             .box_txt_clients {
-                                @include mix.box_txt(column, self-start, 40%, 1.5rem, medium);
+                                @include mix.box_txt(column, flex-start, 40%, txt_clients, 1.5rem, medium);
                             }
 
                             div {

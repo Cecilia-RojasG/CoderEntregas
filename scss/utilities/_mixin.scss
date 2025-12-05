@@ -1,14 +1,14 @@
 @use "sass:map";
 @use '../utilities/maps';
 
-@mixin box_txt ($direction, $align, $width, $marg_top, $fnt_size) {
+@mixin box_txt ($direction, $align, $width, $grd_area, $marg_top, $fnt_size) {
     display: flex;
     flex-direction: $direction;
     align-items: $align;
     justify-content: center;
     width: $width;
     height: 100%;
-    grid-area: texto;
+    grid-area: $grd_area;
     margin-top: $marg_top;
     color: map.get(maps.$colores,used);
     h2 {
@@ -43,9 +43,9 @@
 
 
 
-@mixin box_img ($height, $justify, $grd_area, $max_w, $max_h){
+@mixin box_img ($height, $width, $justify, $grd_area, $max_w, $max_h){
     display: flex;
-    width: 100%;
+    width: $width;
     height: $height;
     justify-content: $justify;
     align-items: center;

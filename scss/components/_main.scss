@@ -218,7 +218,7 @@ main {
                         padding: 0.1rem;
 
                         .box_txt_clients {
-                            @include mix.box_txt(column, self-start, 40%, 2.5rem, medium);
+                            @include mix.box_txt (column, flex-start, 40%, txt_clients, 2.5rem, medium);
                         }
 
 
@@ -245,87 +245,44 @@ main {
                         }
 
                         .box_txt_about {
-                            @include mix.box_txt(column, self-start, 70%, 0.8rem, medium);
+                            @include mix.box_txt(column, flex-start, 70%, txt_about, 0.8rem, medium);
                         }
                     }
 
+                    .grid_container_organic{
+                        /*---------------------ORGANIC--------------------------*/
+                        margin-top: 2rem;
+                        row-gap: 2rem;
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        grid-template-rows: auto auto;
+                        grid-template-areas:
+                            "txt_mario txt_mario img_mario"
+                            "img_seguridad1 img_seguridad2 txt_seguridad"
+                        ;
+                        width: 100%;
+                        justify-content: center;
+                        .mario_txt {
+                            @include mix.box_txt(column, flex-start, 600px, txt_mario, 0.1rem, medium);
+                        }
+
+                        .mario_img {
+                            @include mix.box_img(100%, 100%, center, img_mario, 100%, 600px);
+                        }
+
+                        .seguridad_txt{
+                            margin-left: 10px;
+                            @include mix.box_txt(column, flex-start, 600px, txt_seguridad, 0.1rem, medium);
+                        }
+
+                        .seguridad_img1{
+                            @include mix.box_img(100%, 300px, flex-start, img_seguridad1, 300px,600px);
+                        }
+                        .seguridad_img2{
+                            @include mix.box_img(100%, 300px, flex-start, img_seguridad2, 300px, 600px);
+                        }
+                    }
                     
-                    .mario {
-                        .row_txt_img1 {
-                            /*-------------ORGANIC-----------------*/
-                            display: grid;
-                            grid-template-columns: 400px 900px;
-                            grid-template-areas:
-                                "texto imagen1"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 10px 0;
-
-                            .box_txt_1pj {
-                                @include mix.box_txt(column, self-start, 400px, 0.5rem, medium);
-                            }
-
-                            .box_img_tall_1 {
-                                display: flex;
-                                width: 100%;
-                                height: 60vh;
-                                justify-content: center;
-                                grid-area: imagen1;
-
-                                .tall_img_0 {
-                                    max-width: 900px;
-                                    max-height: 60vh;
-                                    object-fit: cover;
-                                }
-                            }
-                        }
-                    }
-
-                    .seguridad {
-                        .row_img1_img2_txt {
-                            display: grid;
-                            grid-template-columns: 400px 400px 400px;
-                            grid-template-areas:
-                                "imagen1 imagen2 texto"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 10px 0;
-
-                            .box_txt_2pjs {
-                                @include mix.box_txt(column, self-start, 400px, 0.5rem, medium);
-                            }
-
-                            .box_img_tall_1 {
-                                display: flex;
-                                width: 100%;
-                                height: 60vh;
-                                justify-content: flex-start;
-                                grid-area: imagen1;
-
-                                .tall_img {
-                                    max-width: 400px;
-                                    max-height: 60vh;
-                                    object-fit: cover;
-                                }
-                            }
-
-                            .box_img_tall_2 {
-                                display: flex;
-                                width: 100%;
-                                height: 60vh;
-                                justify-content: flex-start;
-                                grid-area: imagen2;
-
-                                .tall_img {
-                                    max-width: 400px;
-                                    max-height: 60vh;
-                                    object-fit: cover;
-                                }
-                            }
-                        }
-                    }
 
                     .electrico {
                         .row_txt_img {
@@ -333,18 +290,18 @@ main {
                             display: grid;
                             grid-template-columns: 400px 900px;
                             grid-template-areas:
-                                "texto imagen"
+                                "txt_electrico img_electrico"
                             ;
                             width: 100%;
                             justify-content: center;
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                @include mix.box_txt(column, center, 100%, 0.5rem, medium);
+                                @include mix.box_txt(column, flex-start, 100%, txt_electrico, 0.5rem, medium);
                             }
 
                             .box_img {
-                                @include mix.box_img(40vh, center, imagen, 900px, 100%);
+                                @include mix.box_img(40vh, 100%, center, img_electrico, 900px, 100%);
                             }
                         }
                     }
@@ -354,21 +311,21 @@ main {
                             display: grid;
                             grid-template-columns: 900px 400px;
                             grid-template-areas:
-                                "imagen texto"
+                                "img_chancador txt_chancador"
                             ;
                             width: 100%;
                             justify-content: center;
                             margin: 10px 0 30px 0;
 
                             .box_txt {
-                                @include mix.box_txt(column, center, 100%, 0.5rem, medium);
+                                @include mix.box_txt(column, flex-start, 100%, txt_chancador,0.5rem, medium);
                             }
 
                             .carousel {
                                 .carousel-inner {
                                     .carousel-item {
                                         .box_img {
-                                            @include mix.box_img(40vh, center, imagen, 900px, 100%);
+                                            @include mix.box_img(40vh, 100%, center, img_chancador, 900px, 100%);
                                         }
                                     }
                                 }
@@ -383,18 +340,18 @@ main {
                             display: grid;
                             grid-template-columns: 400px 900px;
                             grid-template-areas:
-                                "texto imagen"
+                                "txt_triciclo img_triciclo"
                             ;
                             width: 100%;
                             justify-content: center;
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, 0.5rem, medium);
+                                @include mix.box_txt(column, flex-start, 100%, txt_triciclo, 0.5rem, medium);
                             }
 
                             .box_img {
-                                @include mix.box_img(40vh, center, imagen, 900px, 100%);
+                                @include mix.box_img(40vh, 100%, center, img_triciclo, 900px, 100%);
                             }
                         }
                     }
@@ -405,21 +362,21 @@ main {
                             display: grid;
                             grid-template-columns: 900px 400px;
                             grid-template-areas:
-                                "imagen texto"
+                                "img_auto txt_auto"
                             ;
                             width: 100%;
                             justify-content: center;
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, 0.5rem, medium);
+                                @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.5rem, medium);
                             }
 
                             .carousel {
                                 .carousel-inner {
                                     .carousel-item {
                                         .box_img {
-                                            @include mix.box_img(40vh, center, imagen, 900px, 100%);
+                                            @include mix.box_img(40vh, 100%, center, img_auto, 900px, 100%);
                                         }
                                     }
                                 }
@@ -432,21 +389,21 @@ main {
                             display: grid;
                             grid-template-columns: 400px 900px;
                             grid-template-areas:
-                                "texto imagen"
+                                "txt_pizzeria img_pizzeria"
                             ;
                             width: 100%;
                             justify-content: center;
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, 0.5rem, medium);
+                                @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.5rem, medium);
                             }
 
                             .carousel {
                                 .carousel-inner {
                                     .carousel-item {
                                         .box_img {
-                                            @include mix.box_img(40vh, center, imagen, 900px, 100%);
+                                            @include mix.box_img(40vh, 100%, center, img_pizzeria, 900px, 100%);
                                         }
                                     }
                                 }
@@ -459,18 +416,18 @@ main {
                             display: grid;
                             grid-template-columns: 400px 900px;
                             grid-template-areas:
-                                "texto imagen"
+                                "txt_torque img_torque"
                             ;
                             width: 100%;
                             justify-content: center;
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, 0.5rem, medium);
+                                @include mix.box_txt(column, flex-start, 100%, txt_torque, 0.5rem, medium);
                             }
 
                             .box_img {
-                                @include mix.box_img(40vh, center, imagen, 900px, 100%);
+                                @include mix.box_img(40vh, 100%, center, img_torque, 900px, 100%);
                             }
                         }
                     }
@@ -482,18 +439,18 @@ main {
                             display: grid;
                             grid-template-columns: 900px 400px;
                             grid-template-areas:
-                                "imagen texto"
+                                "img_bota txt_bota"
                             ;
                             width: 100%;
                             justify-content: center;
                             margin: 10px 0 10px 0;
 
                             .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, 0.5rem, medium);
+                                @include mix.box_txt(column, flex-start, 100%, txt_bota, 0.5rem, medium);
                             }
 
                             .box_img {
-                                @include mix.box_img(40vh, center, imagen, 900px, 100%);
+                                @include mix.box_img(40vh, 100%, center, img_bota, 900px, 100%);
                             }
                         }
                     }

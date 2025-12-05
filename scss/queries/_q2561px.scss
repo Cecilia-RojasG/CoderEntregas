@@ -34,7 +34,7 @@
                         .config_flex{
                             .box_txt {
                                 /*--------CLIENTS------2561---*/
-                                @include mix.box_txt(column, self-start, 100%, 0.5rem, large);
+                                @include mix.box_txt(column, flex-start, 100%, txt_clients, 0.5rem, large);
                             }
                             div{
                                 .web_insert {
@@ -43,12 +43,34 @@
                                 }
                             } 
                             .box_txt_about {
-                                @include mix.box_txt(column, self-start, 70%, 0.8rem, large);
+                                @include mix.box_txt(column, flex-start, 70%, txt_about, 0.8rem, large);
                                 p {
                                     /*----------ABOUT---2561-------*/ 
                                     margin-left: 1.5rem;
                                     margin-right: 4.0rem;
                                 }
+                            }
+                        }
+                        .grid_container_organic{
+                            /*---------------------ORGANIC----+2561-----------------*/
+                            .mario_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_mario, 00.1rem, x-large);
+                            }
+
+                            .mario_img {
+                                @include mix.box_img(100%, 100%, center, img_mario, 900px, 60vh);
+                            }
+
+                            .seguridad_txt{
+                                margin-left: 10px;
+                                @include mix.box_txt(column, flex-start, 100%, txt_seguridad, 0.1rem, x-large);
+                            }
+
+                            .seguridad_img1{
+                                @include mix.box_img(100%, 100%, flex-start, img_seguridad1, 440px, 60vh);
+                            }
+                            .seguridad_img2{
+                                @include mix.box_img(100%, 100%, flex-start, img_seguridad2, 440px, 60vh);
                             }
                         }
                     }

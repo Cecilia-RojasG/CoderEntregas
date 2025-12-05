@@ -73,17 +73,19 @@
                             flex-direction:column;
                             .box_txt_clients {
                                 /*----------- --CLIENTS--380------------*/
-                                @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                margin-left: 1.0rem;
+                                @include mix.box_txt(column, flex-start, 100%, txt_clients, 2.0rem, 16px);
                             }
                             div{
                                 .web_insert {
+                                    margin-left: 1rem;
                                     /*Ajuste tamaño insert pagina web  380*/
-                                    width: 280px;
+                                    width: 310px;
                                 }
                             }
                             .logo {
                                 /*--------------ABOUT---380--------------*/
-                                margin: 0.4rem;
+                                margin: 1.0rem;
                                 width: 20%;
 
                                 .image_about {
@@ -91,13 +93,13 @@
                                 }
                             }
                             .box_txt_about {
-                                @include mix.box_txt(column, fit-content, 100%, 0.2rem, 16px);
+                                @include mix.box_txt(column, fit-content, 100%, txt_about, 1.0rem, 16px);
                                     margin-left: 0.8rem;
                                     margin-right: 1.3rem;
                             }
                         }
 
-                                                .electrico {
+                        .electrico {
                             .row_txt_img {
                                 /*---------------HIGHLIGHT----380----------*/
                                 display: grid;
@@ -105,29 +107,18 @@
                                 grid-template-rows: 200px 300px;
                                 gap: 2px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_electrico"
+                                    "img_electrico"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, 0.1rem, small);
+                                    @include mix.box_txt(column, fit-content, 100%, txt_electrico, 0.1rem, small);
                                 }
 
                                 .box_img {
-                                    display: flex;
-                                    width: 320px;
-                                    height: 50vh;
-                                    justify-content: center;
-                                    align-items: center;
-                                    grid-area: imagen;
-
-                                    .comun_img {
-                                        max-width: 320px;
-                                        max-height: 100%;
-                                        object-fit: cover;
-                                    }
+                                    @include mix.box_img(50vh, 320px, center, img_electrico, 320px, 100%);
                                 }
                             }
                         }
@@ -138,36 +129,70 @@
                                 grid-template-rows: 200px 300px;
                                 gap: 2px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_chancador"
+                                    "img_chancador"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, 0.1rem, small);
+                                    @include mix.box_txt(column, fit-content, 100%, txt_chancador, 0.1rem, small);
                                 }
 
                                 .carousel {
                                     .carousel-inner {
                                         .carousel-item {
                                             .box_img {
-                                                display: flex;
-                                                width: 320px;
-                                                height: 50vh;
-                                                justify-content: center;
-                                                align-items: center;
-                                                grid-area: imagen;
-
-                                                .comun_img {
-                                                    max-width: 320px;
-                                                    max-height: 100%;
-                                                    object-fit: cover;
-                                                }
+                                                @include mix.box_img(50vh, 320px, center, img_chancador, 320px, 100%);
                                             }
                                         }
                                     }
                                 }
+                            }
+                        }
+                        .flex_center{
+                            div{
+                                .form_contact{
+                                    width: 40%;
+                                    margin-left: 14rem;
+                                    font-size: small;
+                                }
+                            }
+                        }
+
+                        .grid_container_organic{
+                            /*---------------------ORGANIC--------------------------*/
+                            margin-top: 3rem;
+                            row-gap: 2rem;
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            grid-template-rows: auto auto auto auto;
+                            grid-template-areas:
+                                "txt_mario txt_mario"
+                                "img_mario img_mario"
+                                "txt_seguridad txt_seguridad"
+                                "img_seguridad1 img_seguridad2" 
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            .mario_txt {
+                                @include mix.box_txt(column, flex-start, 280px, txt_mario, 0.1rem, 16px);
+                            }
+
+                            .mario_img {
+                                @include mix.box_img(100%, 100%, center, img_mario, 280px, 300px);
+                            }
+
+                            .seguridad_txt{
+                                margin-left: 20px;
+                                @include mix.box_txt(column, flex-start, 280px, txt_seguridad, 1.2rem, 16px);
+                            }
+
+                            .seguridad_img1{
+                                @include mix.box_img(100%, 140px, center, img_seguridad1, 140px,300px);
+                            }
+                            .seguridad_img2{
+                                @include mix.box_img(100%, 140px, center, img_seguridad2, 140px, 300px);
                             }
                         }
                     }

@@ -46,7 +46,7 @@
                         .config_flex {
                             .box_txt_clients {
                                 /*-------------CLIENTS------2560---*/
-                                @include mix.box_txt(column, self-start, 100%, 0.5rem, large);
+                                @include mix.box_txt(column, flex-start, 100%, txt_clients, 0.5rem, large);
                             }
 
                             div {
@@ -59,7 +59,7 @@
 
 
                             .box_txt_about {
-                                @include mix.box_txt(column, self-start, 70%, 0.8rem, larger);
+                                @include mix.box_txt(column, flex-start, 70%, txt_about, 0.8rem, larger);
                                 p {
                                     /*----------ABOUT----------*/
                                     margin-left: 0.5rem;

@@ -396,11 +396,11 @@ main section .container .row .col .config_flex {
 main section .container .row .col .config_flex .box_txt_clients {
   display: flex;
   flex-direction: column;
-  align-items: self-start;
+  align-items: flex-start;
   justify-content: center;
   width: 40%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_clients;
   margin-top: 2.5rem;
   color: #faebd7;
 }
@@ -441,11 +441,11 @@ main section .container .row .col .config_flex .logo .image_about {
 main section .container .row .col .config_flex .box_txt_about {
   display: flex;
   flex-direction: column;
-  align-items: self-start;
+  align-items: flex-start;
   justify-content: center;
   width: 70%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_about;
   margin-top: 0.8rem;
   color: #faebd7;
 }
@@ -466,120 +466,118 @@ main section .container .row .col .config_flex .box_txt_about p {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .mario .row_txt_img1 {
-  /*-------------ORGANIC-----------------*/
+main section .container .row .col .grid_container_organic {
+  /*---------------------ORGANIC--------------------------*/
+  margin-top: 2rem;
+  row-gap: 2rem;
   display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen1";
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "txt_mario txt_mario img_mario" "img_seguridad1 img_seguridad2 txt_seguridad";
   width: 100%;
   justify-content: center;
-  margin: 10px 0 10px 0;
 }
-main section .container .row .col .mario .row_txt_img1 .box_txt_1pj {
+main section .container .row .col .grid_container_organic .mario_txt {
   display: flex;
   flex-direction: column;
-  align-items: self-start;
+  align-items: flex-start;
   justify-content: center;
-  width: 400px;
+  width: 600px;
   height: 100%;
-  grid-area: texto;
-  margin-top: 0.5rem;
+  grid-area: txt_mario;
+  margin-top: 0.1rem;
   color: #faebd7;
 }
-main section .container .row .col .mario .row_txt_img1 .box_txt_1pj h2 {
+main section .container .row .col .grid_container_organic .mario_txt h2 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .mario .row_txt_img1 .box_txt_1pj h3 {
+main section .container .row .col .grid_container_organic .mario_txt h3 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .mario .row_txt_img1 .box_txt_1pj h4 {
+main section .container .row .col .grid_container_organic .mario_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .mario .row_txt_img1 .box_txt_1pj p {
+main section .container .row .col .grid_container_organic .mario_txt p {
   font-size: medium;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 {
+main section .container .row .col .grid_container_organic .mario_img {
   display: flex;
   width: 100%;
-  height: 60vh;
+  height: 100%;
   justify-content: center;
-  grid-area: imagen1;
+  align-items: center;
+  grid-area: img_mario;
 }
-main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
-  max-width: 900px;
-  max-height: 60vh;
+main section .container .row .col .grid_container_organic .mario_img .comun_img {
+  max-width: 100%;
+  max-height: 600px;
   object-fit: cover;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt {
-  display: grid;
-  grid-template-columns: 400px 400px 400px;
-  grid-template-areas: "imagen1 imagen2 texto";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs {
+main section .container .row .col .grid_container_organic .seguridad_txt {
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
-  align-items: self-start;
+  align-items: flex-start;
   justify-content: center;
-  width: 400px;
+  width: 600px;
   height: 100%;
-  grid-area: texto;
-  margin-top: 0.5rem;
+  grid-area: txt_seguridad;
+  margin-top: 0.1rem;
   color: #faebd7;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs h2 {
+main section .container .row .col .grid_container_organic .seguridad_txt h2 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs h3 {
+main section .container .row .col .grid_container_organic .seguridad_txt h3 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs h4 {
+main section .container .row .col .grid_container_organic .seguridad_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pjs p {
+main section .container .row .col .grid_container_organic .seguridad_txt p {
   font-size: medium;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 {
+main section .container .row .col .grid_container_organic .seguridad_img1 {
   display: flex;
-  width: 100%;
-  height: 60vh;
+  width: 300px;
+  height: 100%;
   justify-content: flex-start;
-  grid-area: imagen1;
+  align-items: center;
+  grid-area: img_seguridad1;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
-  max-width: 400px;
-  max-height: 60vh;
+main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
+  max-width: 300px;
+  max-height: 600px;
   object-fit: cover;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 {
+main section .container .row .col .grid_container_organic .seguridad_img2 {
   display: flex;
-  width: 100%;
-  height: 60vh;
+  width: 300px;
+  height: 100%;
   justify-content: flex-start;
-  grid-area: imagen2;
+  align-items: center;
+  grid-area: img_seguridad2;
 }
-main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
-  max-width: 400px;
-  max-height: 60vh;
+main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
+  max-width: 300px;
+  max-height: 600px;
   object-fit: cover;
 }
 main section .container .row .col .electrico .row_txt_img {
   /*--------------------HIGHLIGHTED--------------*/
   display: grid;
   grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen";
+  grid-template-areas: "txt_electrico img_electrico";
   width: 100%;
   justify-content: center;
   margin: 10px 0 10px 0;
@@ -587,11 +585,11 @@ main section .container .row .col .electrico .row_txt_img {
 main section .container .row .col .electrico .row_txt_img .box_txt {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_electrico;
   margin-top: 0.5rem;
   color: #faebd7;
 }
@@ -618,7 +616,7 @@ main section .container .row .col .electrico .row_txt_img .box_img {
   height: 40vh;
   justify-content: center;
   align-items: center;
-  grid-area: imagen;
+  grid-area: img_electrico;
 }
 main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
   max-width: 900px;
@@ -628,7 +626,7 @@ main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
 main section .container .row .col .chancador .row_img_txt {
   display: grid;
   grid-template-columns: 900px 400px;
-  grid-template-areas: "imagen texto";
+  grid-template-areas: "img_chancador txt_chancador";
   width: 100%;
   justify-content: center;
   margin: 10px 0 30px 0;
@@ -636,11 +634,11 @@ main section .container .row .col .chancador .row_img_txt {
 main section .container .row .col .chancador .row_img_txt .box_txt {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_chancador;
   margin-top: 0.5rem;
   color: #faebd7;
 }
@@ -667,7 +665,7 @@ main section .container .row .col .chancador .row_img_txt .carousel .carousel-in
   height: 40vh;
   justify-content: center;
   align-items: center;
-  grid-area: imagen;
+  grid-area: img_chancador;
 }
 main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
   max-width: 900px;
@@ -678,7 +676,7 @@ main section .container .row .col .triciclo .row_txt_img {
   /*-------------------HARDSURFACE--------------------*/
   display: grid;
   grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen";
+  grid-template-areas: "txt_triciclo img_triciclo";
   width: 100%;
   justify-content: center;
   margin: 10px 0 10px 0;
@@ -690,7 +688,7 @@ main section .container .row .col .triciclo .row_txt_img .box_txt {
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_triciclo;
   margin-top: 0.5rem;
   color: #faebd7;
 }
@@ -717,7 +715,7 @@ main section .container .row .col .triciclo .row_txt_img .box_img {
   height: 40vh;
   justify-content: center;
   align-items: center;
-  grid-area: imagen;
+  grid-area: img_triciclo;
 }
 main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
   max-width: 900px;
@@ -727,7 +725,7 @@ main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
 main section .container .row .col .auto .row_img_txt {
   display: grid;
   grid-template-columns: 900px 400px;
-  grid-template-areas: "imagen texto";
+  grid-template-areas: "img_auto txt_auto";
   width: 100%;
   justify-content: center;
   margin: 10px 0 10px 0;
@@ -739,7 +737,7 @@ main section .container .row .col .auto .row_img_txt .box_txt {
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_auto;
   margin-top: 0.5rem;
   color: #faebd7;
 }
@@ -766,7 +764,7 @@ main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .
   height: 40vh;
   justify-content: center;
   align-items: center;
-  grid-area: imagen;
+  grid-area: img_auto;
 }
 main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
   max-width: 900px;
@@ -776,7 +774,7 @@ main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .
 main section .container .row .col .pizzeria .row_txt_img {
   display: grid;
   grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen";
+  grid-template-areas: "txt_pizzeria img_pizzeria";
   width: 100%;
   justify-content: center;
   margin: 10px 0 10px 0;
@@ -788,7 +786,7 @@ main section .container .row .col .pizzeria .row_txt_img .box_txt {
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_pizzeria;
   margin-top: 0.5rem;
   color: #faebd7;
 }
@@ -815,7 +813,7 @@ main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inn
   height: 40vh;
   justify-content: center;
   align-items: center;
-  grid-area: imagen;
+  grid-area: img_pizzeria;
 }
 main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
   max-width: 900px;
@@ -825,7 +823,7 @@ main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inn
 main section .container .row .col .torque .row_txt_img {
   display: grid;
   grid-template-columns: 400px 900px;
-  grid-template-areas: "texto imagen";
+  grid-template-areas: "txt_torque img_torque";
   width: 100%;
   justify-content: center;
   margin: 10px 0 10px 0;
@@ -837,7 +835,7 @@ main section .container .row .col .torque .row_txt_img .box_txt {
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_torque;
   margin-top: 0.5rem;
   color: #faebd7;
 }
@@ -864,7 +862,7 @@ main section .container .row .col .torque .row_txt_img .box_img {
   height: 40vh;
   justify-content: center;
   align-items: center;
-  grid-area: imagen;
+  grid-area: img_torque;
 }
 main section .container .row .col .torque .row_txt_img .box_img .comun_img {
   max-width: 900px;
@@ -874,7 +872,7 @@ main section .container .row .col .torque .row_txt_img .box_img .comun_img {
 main section .container .row .col .bota .row_img_txt {
   display: grid;
   grid-template-columns: 900px 400px;
-  grid-template-areas: "imagen texto";
+  grid-template-areas: "img_bota txt_bota";
   width: 100%;
   justify-content: center;
   margin: 10px 0 10px 0;
@@ -886,7 +884,7 @@ main section .container .row .col .bota .row_img_txt .box_txt {
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-area: texto;
+  grid-area: txt_bota;
   margin-top: 0.5rem;
   color: #faebd7;
 }
@@ -913,7 +911,7 @@ main section .container .row .col .bota .row_img_txt .box_img {
   height: 40vh;
   justify-content: center;
   align-items: center;
-  grid-area: imagen;
+  grid-area: img_bota;
 }
 main section .container .row .col .bota .row_img_txt .box_img .comun_img {
   max-width: 900px;
@@ -968,6 +966,9 @@ main section .container .row .col div .edit_links {
 }
 
 /* -------------FOOTER---------------*/
+footer .container .row .col .center {
+  margin: 2rem 2rem 0rem 2rem;
+}
 footer .container .row .col .center div .icon {
   height: 45px;
 }
@@ -994,11 +995,11 @@ footer .container .row .col .center span {
     /*--------CLIENTS------2561---*/
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_clients;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1026,11 +1027,11 @@ footer .container .row .col .center span {
   main section .container .row .col .config_flex .box_txt_about {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 70%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_about;
     margin-top: 0.8rem;
     color: #faebd7;
   }
@@ -1055,6 +1056,105 @@ footer .container .row .col .center span {
     /*----------ABOUT---2561-------*/
     margin-left: 1.5rem;
     margin-right: 4rem;
+  }
+  main section .container .row .col .grid_container_organic {
+    /*---------------------ORGANIC----+2561-----------------*/
+  }
+  main section .container .row .col .grid_container_organic .mario_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_mario;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_mario;
+  }
+  main section .container .row .col .grid_container_organic .mario_img .comun_img {
+    max-width: 900px;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_seguridad;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: img_seguridad1;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
+    max-width: 440px;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: img_seguridad2;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
+    max-width: 440px;
+    max-height: 60vh;
+    object-fit: cover;
   }
 }
 /*----------------hasta 2560px-----------------*/
@@ -1086,11 +1186,11 @@ footer .container .row .col .center span {
     /*-------------CLIENTS------2560---*/
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_clients;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1118,11 +1218,11 @@ footer .container .row .col .center span {
   main section .container .row .col .config_flex .box_txt_about {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 70%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_about;
     margin-top: 0.8rem;
     color: #faebd7;
   }
@@ -1220,7 +1320,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /*---------------HIGHLIGHT-------------*/
     display: grid;
     grid-template-columns: 300px 800px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_electrico img_electrico";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1232,7 +1332,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_electrico;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1259,7 +1359,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_electrico;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
     max-width: 800px;
@@ -1269,7 +1369,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .chancador .row_img_txt {
     display: grid;
     grid-template-columns: 800px 300px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_chancador txt_chancador";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1281,7 +1381,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_chancador;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1308,7 +1408,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_chancador;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 800px;
@@ -1319,7 +1419,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /*---------------HARDSURFACE-------------*/
     display: grid;
     grid-template-columns: 300px 800px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_triciclo img_triciclo";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1331,7 +1431,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_triciclo;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1357,15 +1457,18 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 100%;
     height: fit-content;
     justify-content: center;
-    grid-area: imagen;
+    align-items: center;
+    grid-area: img_triciclo;
   }
   main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
     max-width: 800px;
+    max-height: 100%;
+    object-fit: cover;
   }
   main section .container .row .col .bota .row_img_txt {
     display: grid;
     grid-template-columns: 800px 300px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_bota txt_bota";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1377,7 +1480,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_bota;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1404,15 +1507,17 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_bota;
   }
   main section .container .row .col .bota .row_img_txt .box_img .comun_img {
     max-width: 800px;
+    max-height: 100%;
+    object-fit: cover;
   }
   main section .container .row .col .torque .row_txt_img {
     display: grid;
     grid-template-columns: 300px 800px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_torque img_torque";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1424,7 +1529,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_torque;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1447,17 +1552,21 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   }
   main section .container .row .col .torque .row_txt_img .box_img {
     display: flex;
+    width: 100%;
     height: fit-content;
     justify-content: center;
-    grid-area: imagen;
+    align-items: center;
+    grid-area: img_torque;
   }
   main section .container .row .col .torque .row_txt_img .box_img .comun_img {
     max-width: 800px;
+    max-height: 100%;
+    object-fit: cover;
   }
   main section .container .row .col .auto .row_img_txt {
     display: grid;
     grid-template-columns: 800px 300px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_auto txt_auto";
     width: 100%;
     justify-content: center;
   }
@@ -1468,7 +1577,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_auto;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1495,7 +1604,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_auto;
   }
   main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 800px;
@@ -1505,7 +1614,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .pizzeria .row_txt_img {
     display: grid;
     grid-template-columns: 300px 800px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_pizzeria img_pizzeria";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1517,7 +1626,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_pizzeria;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1544,101 +1653,119 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_pizzeria;
   }
   main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 800px;
     max-height: 100%;
     object-fit: cover;
   }
-  main section .container .row .col .mario .row_txt_img1 {
-    /*----------------ORGANIC-1490---------------*/
+  main section .container .row .col .grid_container_organic {
+    /*---------------------ORGANIC--------------------------*/
+    margin-top: 2rem;
+    row-gap: 2rem;
     display: grid;
-    grid-template-columns: 400px 600px;
-    grid-template-areas: "texto imagen1";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "txt_mario txt_mario img_mario" "img_seguridad1 img_seguridad2 txt_seguridad";
     width: 100%;
     justify-content: center;
-    margin: 10px 0 10px 0;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt {
+  main section .container .row .col .grid_container_organic .mario_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 600px;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.5rem;
+    grid-area: txt_mario;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h2 {
+  main section .container .row .col .grid_container_organic .mario_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h3 {
+  main section .container .row .col .grid_container_organic .mario_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
+  main section .container .row .col .grid_container_organic .mario_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt p {
+  main section .container .row .col .grid_container_organic .mario_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 {
+  main section .container .row .col .grid_container_organic .mario_img {
     display: flex;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     justify-content: center;
-    grid-area: imagen1;
+    align-items: center;
+    grid-area: img_mario;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
-    max-width: 600px;
-    max-height: 60vh;
+  main section .container .row .col .grid_container_organic .mario_img .comun_img {
+    max-width: 100%;
+    max-height: 600px;
     object-fit: cover;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt {
-    display: grid;
-    grid-template-columns: 300px 300px 400px;
-    grid-template-areas: "imagen1 imagen2 texto";
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj {
+  main section .container .row .col .grid_container_organic .seguridad_txt {
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 600px;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.5rem;
+    grid-area: txt_seguridad;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h2 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h3 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h4 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj p {
+  main section .container .row .col .grid_container_organic .seguridad_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
-    max-width: 300px;
+  main section .container .row .col .grid_container_organic .seguridad_img1 {
+    display: flex;
+    width: 300px;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: img_seguridad1;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
+  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
     max-width: 300px;
-    max-height: 60vh;
+    max-height: 600px;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 {
+    display: flex;
+    width: 300px;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: img_seguridad2;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
+    max-width: 300px;
+    max-height: 600px;
+    object-fit: cover;
   }
   main section .container .row .col .config_flex {
     /*------------------CLIENTS...1490...............*/
@@ -1649,11 +1776,11 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .config_flex .box_txt_clients {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 40%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_clients;
     margin-top: 1.5rem;
     color: #faebd7;
   }
@@ -1715,7 +1842,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /*---------------HIGHLIGHT----1290----*/
     display: grid;
     grid-template-columns: 200px 700px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_electrico img_electrico";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1727,7 +1854,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_electrico;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1754,7 +1881,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_electrico;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
     max-width: 700px;
@@ -1764,7 +1891,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .chancador .row_img_txt {
     display: grid;
     grid-template-columns: 800px 250px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_chancador txt_chancador";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1776,7 +1903,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_chancador;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1803,7 +1930,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_chancador;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 700px;
@@ -1813,8 +1940,8 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .triciclo .row_txt_img {
     /*---------------HARDSURFACE-----1290---*/
     display: grid;
-    grid-template-columns: 200px 700px;
-    grid-template-areas: "texto imagen";
+    grid-template-columns: 250px 650px;
+    grid-template-areas: "txt_triciclo img_triciclo";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1826,7 +1953,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_triciclo;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1852,15 +1979,18 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 100%;
     height: fit-content;
     justify-content: center;
-    grid-area: imagen;
+    align-items: center;
+    grid-area: img_triciclo;
   }
   main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
-    max-width: 700px;
+    max-width: 650px;
+    max-height: 100%;
+    object-fit: cover;
   }
   main section .container .row .col .bota .row_img_txt {
     display: grid;
     grid-template-columns: 650px 250px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_bota txt_bota";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1870,9 +2000,9 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     flex-direction: column;
     align-items: self-start;
     justify-content: center;
-    width: 100%;
+    width: txt_bota;
     height: 100%;
-    grid-area: texto;
+    grid-area: 100%;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1899,15 +2029,17 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_bota;
   }
   main section .container .row .col .bota .row_img_txt .box_img .comun_img {
-    max-width: 600px;
+    max-width: 650px;
+    max-height: 100%;
+    object-fit: cover;
   }
   main section .container .row .col .torque .row_txt_img {
     display: grid;
-    grid-template-columns: 200px 700px;
-    grid-template-areas: "texto imagen";
+    grid-template-columns: 250px 650px;
+    grid-template-areas: "txt_torque img_torque";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -1919,7 +2051,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_torque;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1942,17 +2074,21 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   }
   main section .container .row .col .torque .row_txt_img .box_img {
     display: flex;
+    width: 100%;
     height: fit-content;
     justify-content: center;
-    grid-area: imagen;
+    align-items: center;
+    grid-area: img_torque;
   }
   main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-    max-width: 700px;
+    max-width: 650px;
+    max-height: 100%;
+    object-fit: cover;
   }
   main section .container .row .col .auto .row_img_txt {
     display: grid;
-    grid-template-columns: 700px 200px;
-    grid-template-areas: "imagen texto";
+    grid-template-columns: 650px 250px;
+    grid-template-areas: "img_auto txt_auto";
     width: 100%;
     justify-content: center;
   }
@@ -1963,7 +2099,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_auto;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -1990,17 +2126,17 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_electrico;
   }
   main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 700px;
+    max-width: 650px;
     max-height: 100%;
     object-fit: cover;
   }
   main section .container .row .col .pizzeria .row_txt_img {
     display: grid;
-    grid-template-columns: 200px 700px;
-    grid-template-areas: "texto imagen";
+    grid-template-columns: 250px 650px;
+    grid-template-areas: "txt_pizzeria img_pizzeria";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2012,7 +2148,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_pizzeria;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2039,106 +2175,118 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_pizzeria;
   }
   main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 700px;
+    max-width: 650px;
     max-height: 100%;
     object-fit: cover;
   }
-  main section .container .row .col .mario .row_txt_img1 {
-    /*----------------ORGANIC-----1290---------*/
+  main section .container .row .col .grid_container_organic {
+    /*---------------------ORGANIC--------------------------*/
+    margin-top: 2rem;
+    row-gap: 2rem;
     display: grid;
-    grid-template-columns: 400px 500px;
-    grid-template-areas: "texto imagen1";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "txt_mario txt_mario img_mario" "img_seguridad1 img_seguridad2 txt_seguridad";
     width: 100%;
     justify-content: center;
-    margin: 10px 0 10px 0;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt {
+  main section .container .row .col .grid_container_organic .mario_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 400px;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.5rem;
+    grid-area: txt_mario;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h2 {
+  main section .container .row .col .grid_container_organic .mario_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h3 {
+  main section .container .row .col .grid_container_organic .mario_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
+  main section .container .row .col .grid_container_organic .mario_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt p {
+  main section .container .row .col .grid_container_organic .mario_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 {
+  main section .container .row .col .grid_container_organic .mario_img {
     display: flex;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     justify-content: center;
-    grid-area: imagen1;
+    align-items: center;
+    grid-area: img_mario;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
-    width: 500px;
-    max-height: 60vh;
+  main section .container .row .col .grid_container_organic .mario_img .comun_img {
+    max-width: 100%;
+    max-height: 400px;
     object-fit: cover;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt {
-    display: grid;
-    grid-template-columns: 250px 250px 400px;
-    grid-template-areas: "imagen1 imagen2 texto";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj {
+  main section .container .row .col .grid_container_organic .seguridad_txt {
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 400px;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.5rem;
+    grid-area: txt_seguridad;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h2 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h3 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h4 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj p {
+  main section .container .row .col .grid_container_organic .seguridad_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
-    max-width: 250px;
-    max-height: 60vh;
+  main section .container .row .col .grid_container_organic .seguridad_img1 {
+    display: flex;
+    width: 200px;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: img_seguridad1;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
+    max-width: 200px;
+    max-height: 400px;
     object-fit: cover;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
-    max-width: 250px;
-    max-height: 60vh;
+  main section .container .row .col .grid_container_organic .seguridad_img2 {
+    display: flex;
+    width: 200px;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: img_seguridad2;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
+    max-width: 200px;
+    max-height: 400px;
     object-fit: cover;
   }
   footer .container .row .col .center div .icon {
@@ -2184,7 +2332,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /*-------------ORGANIC-------1024------*/
     display: grid;
     grid-template-columns: 400px 400px;
-    grid-template-areas: "texto imagen1";
+    grid-template-areas: "txt_mario img_mario";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2192,11 +2340,11 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .mario .row_txt_img1 .box_txt_about {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 400px;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_mario;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2222,9 +2370,10 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 100%;
     height: 60vh;
     justify-content: center;
-    grid-area: imagen1;
+    align-items: center;
+    grid-area: img_mario;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
+  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .comun_img {
     max-width: 400px;
     max-height: 60vh;
     object-fit: cover;
@@ -2232,7 +2381,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .seguridad .row_img1_img2_txt {
     display: grid;
     grid-template-columns: 200px 200px 400px;
-    grid-template-areas: "imagen1 imagen2 texto";
+    grid-template-areas: "img_seguridad_1 img_seguridad_2 txt_seguridad";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2240,11 +2389,11 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 400px;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_seguridad;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2265,12 +2414,28 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_seguridad1;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .comun_img {
     max-width: 200px;
     max-height: 60vh;
     object-fit: cover;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_seguridad2;
+  }
+  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .comun_img {
     max-width: 200px;
     max-height: 60vh;
     object-fit: cover;
@@ -2279,7 +2444,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /*--------------------HIGHLIGHTED-------1024-------*/
     display: grid;
     grid-template-columns: 200px 500px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_electrico img_electrico";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2291,7 +2456,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_electrico;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2318,7 +2483,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_electrico;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
     max-width: 500px;
@@ -2328,7 +2493,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .chancador .row_img_txt {
     display: grid;
     grid-template-columns: 500px 200px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_chancador txt_chancador";
     width: 100%;
     justify-content: center;
     margin: 10px 0 30px 0;
@@ -2340,7 +2505,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_chancador;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2367,7 +2532,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: fit-content;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_chancador;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 500px;
@@ -2378,7 +2543,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /*-------------------HARDSURFACE-----1024--------------*/
     display: grid;
     grid-template-columns: 200px 500px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_triciclo img_triciclo";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2390,7 +2555,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_triciclo;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2417,7 +2582,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_triciclo;
   }
   main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
     max-width: 500px;
@@ -2427,7 +2592,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .pizzeria .row_txt_img {
     display: grid;
     grid-template-columns: 200px 500px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_pizzeria img_pizzeria";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2439,7 +2604,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_pizzeria;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2466,7 +2631,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_pizzeria;
   }
   main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 500px;
@@ -2476,7 +2641,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .torque .row_txt_img {
     display: grid;
     grid-template-columns: 200px 500px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_torque img_torque";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2488,7 +2653,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_torque;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2515,7 +2680,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_torque;
   }
   main section .container .row .col .torque .row_txt_img .box_img .comun_img {
     max-width: 500px;
@@ -2525,7 +2690,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .auto .row_img_txt {
     display: grid;
     grid-template-columns: 500px 200px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_auto txt_auto";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2537,7 +2702,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_auto;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2564,7 +2729,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_auto;
   }
   main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 500px;
@@ -2574,7 +2739,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .bota .row_img_txt {
     display: grid;
     grid-template-columns: 400px 300px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_bota txt_bota";
     width: 100%;
     justify-content: center;
     margin: 10px 0 10px 0;
@@ -2582,11 +2747,11 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   main section .container .row .col .bota .row_img_txt .box_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_bota;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2613,7 +2778,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_bota;
   }
   main section .container .row .col .bota .row_img_txt .box_img .comun_img {
     max-width: 400px;
@@ -2641,9 +2806,8 @@ footer .container .row .col .center div .icon {
   main .highsquare .container-fluid .row .col .electrico .row_txt_img {
     /*---------------HIGHLIGHT-----960------*/
     display: grid;
-    grid-template-columns: 300px 500px;
-    grid-template-rows: 300px;
-    grid-template-areas: "texto imagen";
+    grid-template-columns: 200px 400px;
+    grid-template-areas: "txt_electrico img_electrico";
     width: 100%;
     justify-content: center;
     margin: 5px 0 5px 0;
@@ -2655,7 +2819,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_electrico;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2682,11 +2846,60 @@ footer .container .row .col .center div .icon {
     height: 50vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_electrico;
   }
   main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_img .comun_img {
-    width: 500px;
+    max-width: 400px;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main .highsquare .container-fluid .row .col .chancador .row_img_txt {
+    display: grid;
+    grid-template-columns: 400px 200px;
+    grid-template-areas: "img_chancador txt_chancador";
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 30px 0;
+  }
+  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
     height: 100%;
+    grid-area: txt_chancador;
+    margin-top: 0.5rem;
+    color: #faebd7;
+  }
+  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt p {
+    font-size: medium;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main .highsquare .container-fluid .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_chancador;
+  }
+  main .highsquare .container-fluid .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
+    max-width: 400px;
+    max-height: 100%;
     object-fit: cover;
   }
 }
@@ -2810,7 +3023,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 40%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_clients;
     margin-top: 2.5rem;
     color: #faebd7;
   }
@@ -2842,7 +3055,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 70%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_about;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2872,7 +3085,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 250px 400px;
     grid-template-rows: 300px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_electrico img_electrico";
     width: 100%;
     justify-content: center;
     margin: 5px 0 5px 0;
@@ -2884,7 +3097,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_electrico;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2911,7 +3124,7 @@ footer .container .row .col .center div .icon {
     height: 300px;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_electrico;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
     max-width: 400px;
@@ -2922,7 +3135,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 400px 250px;
     grid-template-rows: 300px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_chancador txt_chancador";
     width: 100%;
     justify-content: center;
     margin: 5px 0 5px 0;
@@ -2934,7 +3147,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_chancador;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -2961,7 +3174,7 @@ footer .container .row .col .center div .icon {
     height: 300px;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_chancador;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 400px;
@@ -2973,7 +3186,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 200px 400px;
     grid-template-rows: 300px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_triciclo img_triciclo";
     width: 100%;
     justify-content: center;
   }
@@ -2984,7 +3197,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_triciclo;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -3011,7 +3224,7 @@ footer .container .row .col .center div .icon {
     height: 300px;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_triciclo;
   }
   main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
     max-width: 400px;
@@ -3022,7 +3235,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 400px 200px;
     grid-template-rows: 300px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_auto txt_auto";
     width: 100%;
     justify-content: center;
   }
@@ -3033,7 +3246,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_auto;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -3060,7 +3273,7 @@ footer .container .row .col .center div .icon {
     height: 300px;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_auto;
   }
   main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 400px;
@@ -3071,7 +3284,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 350px 200px;
     grid-template-rows: 350px;
-    grid-template-areas: "imagen texto";
+    grid-template-areas: "img_bota txt_bota";
     width: 100%;
     justify-content: center;
   }
@@ -3082,7 +3295,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_bota;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -3109,7 +3322,7 @@ footer .container .row .col .center div .icon {
     height: 300px;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_bota;
   }
   main section .container .row .col .bota .row_img_txt .box_img .comun_img {
     max-width: 350px;
@@ -3120,7 +3333,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 200px 350px;
     grid-template-rows: 300px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_torque img_torque";
     width: 100%;
     justify-content: center;
   }
@@ -3131,7 +3344,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_torque;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -3158,7 +3371,7 @@ footer .container .row .col .center div .icon {
     height: 300px;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_torque;
   }
   main section .container .row .col .torque .row_txt_img .box_img .comun_img {
     max-width: 350px;
@@ -3169,7 +3382,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 200px 400px;
     grid-template-rows: 300px;
-    grid-template-areas: "texto imagen";
+    grid-template-areas: "txt_pizzeria img_pizzeria";
     width: 100%;
     justify-content: center;
   }
@@ -3180,7 +3393,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_pizzeria;
     margin-top: 0.5rem;
     color: #faebd7;
   }
@@ -3207,89 +3420,113 @@ footer .container .row .col .center div .icon {
     height: 300px;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_pizzeria;
   }
   main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 400px;
     max-height: 300px;
     object-fit: cover;
   }
-  main section .container .row .col .mario .row_txt_img1 {
-    /*----------------ORGANIC---768------------*/
-    display: grid;
-    grid-template-columns: 400px 200px;
-    grid-template-areas: "texto imagen1";
+  main section .container .row .col .grid_container_organic {
+    /*---------------------ORGANIC--------------------------*/
+    margin-top: 3rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt {
+  main section .container .row .col .grid_container_organic .mario_txt {
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 80%;
+    width: 300px;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.5rem;
+    grid-area: txt_mario;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h2 {
+  main section .container .row .col .grid_container_organic .mario_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h3 {
+  main section .container .row .col .grid_container_organic .mario_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
+  main section .container .row .col .grid_container_organic .mario_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt p {
-    font-size: small;
+  main section .container .row .col .grid_container_organic .mario_txt p {
+    font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
+  main section .container .row .col .grid_container_organic .mario_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_mario;
+  }
+  main section .container .row .col .grid_container_organic .mario_img .comun_img {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 300px;
+    height: 100%;
+    grid-area: txt_seguridad;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt p {
+    font-size: medium;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img1 {
+    display: flex;
     width: 200px;
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt {
-    display: grid;
-    grid-template-columns: 100px 100px 400px;
-    grid-template-rows: 50vhpx;
-    grid-template-areas: "imagen1 imagen2 texto";
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.5rem;
-    color: #faebd7;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_seguridad1;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
+  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
+    max-width: 200px;
+    max-height: 350px;
+    object-fit: cover;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
+  main section .container .row .col .grid_container_organic .seguridad_img2 {
+    display: flex;
+    width: 200px;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: img_seguridad2;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
-    width: 100%;
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
-    width: 100%;
+  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
+    max-width: 200px;
+    max-height: 350px;
+    object-fit: cover;
   }
   main section .container .row .col .center_flex div .form_contact {
     /*-------------FORMULARIO DE CONTACTO---768---------*/
@@ -3340,11 +3577,11 @@ footer .container .row .col .center div .icon {
     /*----------- --CLIENTS--575------------*/
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_clients;
     margin-top: 0.2rem;
     color: #faebd7;
   }
@@ -3384,7 +3621,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_about;
     margin-top: 0.2rem;
     color: #faebd7;
   }
@@ -3415,7 +3652,7 @@ footer .container .row .col .center div .icon {
     grid-template-columns: 370px;
     grid-template-rows: 200px 300px;
     gap: 2px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_electrico" "img_electrico";
     width: 100%;
     justify-content: center;
   }
@@ -3426,7 +3663,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_electrico;
     margin-top: 0.1rem;
     color: #faebd7;
   }
@@ -3449,26 +3686,23 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .electrico .row_txt_img .box_img {
     display: flex;
-    width: 100%;
+    width: 370px;
     height: 50vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_electrico;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
     max-width: 370px;
     max-height: 100%;
     object-fit: cover;
   }
-  main section .container .row .col .electrico .row_txt_img .box_img {
-    width: 370px;
-  }
   main section .container .row .col .chancador .row_img_txt {
     display: grid;
     grid-template-columns: 370px;
     grid-template-rows: 200px 300px;
     gap: 2px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_chancador" "img_chancador";
     width: 100%;
     justify-content: center;
   }
@@ -3479,7 +3713,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_chancador;
     margin-top: 0.1rem;
     color: #faebd7;
   }
@@ -3502,19 +3736,16 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
     display: flex;
-    width: 100%;
+    width: 370px;
     height: 50vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_chancador;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 370px;
     max-height: 100%;
     object-fit: cover;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    width: 370px;
   }
   main section .container .row .col .triciclo .row_txt_img {
     /*---------------HARDSURFACE---575-------*/
@@ -3522,7 +3753,7 @@ footer .container .row .col .center div .icon {
     grid-template-columns: 370px;
     grid-template-rows: 200px 300px;
     gap: 2px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_triciclo" "img_triciclo";
     width: 100%;
     justify-content: center;
   }
@@ -3533,7 +3764,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_triciclo;
     margin-top: 0.1rem;
     color: #faebd7;
   }
@@ -3556,11 +3787,11 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .triciclo .row_txt_img .box_img {
     display: flex;
-    width: 100%;
+    width: 370px;
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_triciclo;
   }
   main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
     max-width: 370px;
@@ -3571,7 +3802,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 370px;
     grid-template-rows: 200px 300px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_auto" "img_auto";
     width: 100%;
     justify-content: center;
   }
@@ -3582,7 +3813,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_auto;
     margin-top: 0.2rem;
     color: #faebd7;
   }
@@ -3605,11 +3836,11 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
     display: flex;
-    width: 100%;
+    width: 370px;
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_auto;
   }
   main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 370px;
@@ -3620,7 +3851,7 @@ footer .container .row .col .center div .icon {
     display: grid;
     grid-template-columns: 370px;
     grid-template-rows: 200px 300px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_bota" "img_bota";
     width: 100%;
     justify-content: center;
   }
@@ -3631,7 +3862,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_bota;
     margin-top: 0.1rem;
     color: #faebd7;
   }
@@ -3654,11 +3885,11 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .bota .row_img_txt .box_img {
     display: flex;
-    width: 100%;
+    width: 370px;
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_bota;
   }
   main section .container .row .col .bota .row_img_txt .box_img .comun_img {
     max-width: 370px;
@@ -3667,10 +3898,10 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .torque .row_txt_img {
     display: grid;
-    grid-template-columns: 380px;
+    grid-template-columns: 370px;
     grid-template-rows: 300px 300px;
     gap: 2px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_torque" "img_torque";
     width: 100%;
     justify-content: center;
   }
@@ -3681,7 +3912,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_torque;
     margin-top: 0.1rem;
     color: #faebd7;
   }
@@ -3704,22 +3935,22 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .torque .row_txt_img .box_img {
     display: flex;
-    width: 100%;
+    width: 370px;
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_torque;
   }
   main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-    max-width: 380px;
+    max-width: 370px;
     max-height: 100%;
     object-fit: cover;
   }
   main section .container .row .col .pizzeria .row_txt_img {
     display: grid;
-    grid-template-columns: 380px;
+    grid-template-columns: 370px;
     grid-template-rows: 300px 300px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_pizzeria" "img_pizzeria";
     width: 100%;
     justify-content: center;
   }
@@ -3730,7 +3961,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_pizzeria;
     margin-top: 0.1rem;
     color: #faebd7;
   }
@@ -3753,98 +3984,123 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
     display: flex;
-    width: 100%;
+    width: 370px;
     height: 40vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_pizzeria;
   }
   main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 380px;
+    max-width: 370px;
     max-height: 100%;
     object-fit: cover;
   }
-  main section .container .row .col .mario .row_txt_img1 {
-    /*----------------ORGANIC---575------------*/
+  main section .container .row .col .grid_container_organic {
+    /*---------------------ORGANIC--------------------------*/
+    margin-top: 3rem;
+    row-gap: 2rem;
     display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: 260px 450px;
-    grid-template-areas: "texto" "imagen1";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "txt_mario txt_mario" "img_mario img_mario" "txt_seguridad txt_seguridad" "img_seguridad1 img_seguridad2";
     width: 100%;
     justify-content: center;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt {
+  main section .container .row .col .grid_container_organic .mario_txt {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 90%;
+    width: 375px;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.3rem;
+    grid-area: txt_mario;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h2 {
+  main section .container .row .col .grid_container_organic .mario_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h3 {
+  main section .container .row .col .grid_container_organic .mario_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt h4 {
+  main section .container .row .col .grid_container_organic .mario_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt p {
-    font-size: small;
+  main section .container .row .col .grid_container_organic .mario_txt p {
+    font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .tall_img_0 {
+  main section .container .row .col .grid_container_organic .mario_img {
+    display: flex;
     width: 100%;
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt {
-    display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: 280px 450px 450px;
-    grid-template-areas: "texto" "imagen1" "imagen2";
-    width: 100%;
+    height: 100%;
     justify-content: center;
+    align-items: center;
+    grid-area: img_mario;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt {
+  main section .container .row .col .grid_container_organic .mario_img .comun_img {
+    max-width: 100%;
+    max-height: 375px;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt {
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 90%;
+    width: 375px;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.3rem;
+    grid-area: txt_seguridad;
+    margin-top: 1.8rem;
     color: #faebd7;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h2 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h3 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt h4 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt p {
-    font-size: small;
+  main section .container .row .col .grid_container_organic .seguridad_txt p {
+    font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .tall_img {
-    width: 220px;
+  main section .container .row .col .grid_container_organic .seguridad_img1 {
+    display: flex;
+    width: 180px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_seguridad1;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .tall_img {
-    width: 220px;
+  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
+    max-width: 180px;
+    max-height: 375px;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 {
+    display: flex;
+    width: 180px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_seguridad2;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
+    max-width: 180px;
+    max-height: 375px;
+    object-fit: cover;
   }
 }
 footer .container .row .col .center div .icon {
@@ -3904,14 +4160,15 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .config_flex .box_txt_clients {
     /*----------- --CLIENTS--380------------*/
+    margin-left: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.2rem;
+    grid-area: txt_clients;
+    margin-top: 2rem;
     color: #faebd7;
   }
   main section .container .row .col .config_flex .box_txt_clients h2 {
@@ -3927,17 +4184,18 @@ footer .container .row .col .center div .icon {
     margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex .box_txt_clients p {
-    font-size: small;
+    font-size: 16px;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex div .web_insert {
+    margin-left: 1rem;
     /*Ajuste tamaño insert pagina web  380*/
-    width: 280px;
+    width: 310px;
   }
   main section .container .row .col .config_flex .logo {
     /*--------------ABOUT---380--------------*/
-    margin: 0.4rem;
+    margin: 1rem;
     width: 20%;
   }
   main section .container .row .col .config_flex .logo .image_about {
@@ -3950,8 +4208,8 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
-    margin-top: 0.2rem;
+    grid-area: txt_about;
+    margin-top: 1rem;
     color: #faebd7;
   }
   main section .container .row .col .config_flex .box_txt_about h2 {
@@ -3981,7 +4239,7 @@ footer .container .row .col .center div .icon {
     grid-template-columns: 320px;
     grid-template-rows: 200px 300px;
     gap: 2px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_electrico" "img_electrico";
     width: 100%;
     justify-content: center;
   }
@@ -3992,7 +4250,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_electrico;
     margin-top: 0.1rem;
     color: #faebd7;
   }
@@ -4019,7 +4277,7 @@ footer .container .row .col .center div .icon {
     height: 50vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_electrico;
   }
   main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
     max-width: 320px;
@@ -4031,7 +4289,7 @@ footer .container .row .col .center div .icon {
     grid-template-columns: 320px;
     grid-template-rows: 200px 300px;
     gap: 2px;
-    grid-template-areas: "texto" "imagen";
+    grid-template-areas: "txt_chancador" "img_chancador";
     width: 100%;
     justify-content: center;
   }
@@ -4042,7 +4300,7 @@ footer .container .row .col .center div .icon {
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: texto;
+    grid-area: txt_chancador;
     margin-top: 0.1rem;
     color: #faebd7;
   }
@@ -4069,11 +4327,123 @@ footer .container .row .col .center div .icon {
     height: 50vh;
     justify-content: center;
     align-items: center;
-    grid-area: imagen;
+    grid-area: img_chancador;
   }
   main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
     max-width: 320px;
     max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .flex_center div .form_contact {
+    width: 40%;
+    margin-left: 14rem;
+    font-size: small;
+  }
+  main section .container .row .col .grid_container_organic {
+    /*---------------------ORGANIC--------------------------*/
+    margin-top: 3rem;
+    row-gap: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "txt_mario txt_mario" "img_mario img_mario" "txt_seguridad txt_seguridad" "img_seguridad1 img_seguridad2";
+    width: 100%;
+    justify-content: center;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 280px;
+    height: 100%;
+    grid-area: txt_mario;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt p {
+    font-size: 16px;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_mario;
+  }
+  main section .container .row .col .grid_container_organic .mario_img .comun_img {
+    max-width: 280px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 280px;
+    height: 100%;
+    grid-area: txt_seguridad;
+    margin-top: 1.2rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_txt p {
+    font-size: 16px;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img1 {
+    display: flex;
+    width: 140px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_seguridad1;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
+    max-width: 140px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 {
+    display: flex;
+    width: 140px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_seguridad2;
+  }
+  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
+    max-width: 140px;
+    max-height: 300px;
     object-fit: cover;
   }
   footer .container .row .col .center div .icon {

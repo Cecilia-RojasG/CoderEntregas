@@ -64,7 +64,7 @@
                             flex-direction:column;
                             .box_txt_clients {
                                 /*----------- --CLIENTS--575------------*/
-                                @include mix.box_txt(column, self-start, 100%, 0.2rem, small);
+                                @include mix.box_txt(column, flex-start, 100%, txt_clients, 0.2rem, small);
                             }
                             div{
                                 .web_insert {
@@ -82,7 +82,7 @@
                                 }
                             }
                             .box_txt_about {
-                                @include mix.box_txt(column, fit-content, 100%, 0.2rem, 16px);
+                                @include mix.box_txt(column, fit-content, 100%, txt_about, 0.2rem, 16px);
                                     margin-left: 0.8rem;
                                     margin-right: 1.3rem;
                             }
@@ -97,19 +97,18 @@
                                 grid-template-rows: 200px 300px;
                                 gap: 2px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_electrico"
+                                    "img_electrico"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, 0.1rem, small);
+                                    @include mix.box_txt(column, fit-content, 100%, txt_electrico,0.1rem, small);
                                 }
 
                                 .box_img {
-                                    @include mix.box_img(50vh, center, imagen, 370px, 100%);
-                                    width: 370px;
+                                    @include mix.box_img(50vh, 370px, center, img_electrico, 370px, 100%);
                                 }
                             }
                         }
@@ -120,22 +119,21 @@
                                 grid-template-rows: 200px 300px;
                                 gap: 2px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_chancador"
+                                    "img_chancador"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, 0.1rem, small);
+                                    @include mix.box_txt(column, fit-content, 100%, txt_chancador, 0.1rem, small);
                                 }
 
                                 .carousel {
                                     .carousel-inner {
                                         .carousel-item {
                                             .box_img {
-                                                @include mix.box_img(50vh, center, imagen, 370px, 100%);
-                                                width: 370px;
+                                                @include mix.box_img(50vh, 370px, center, img_chancador, 370px, 100%);
                                             }
                                         }
                                     }
@@ -151,18 +149,18 @@
                                 grid-template-rows: 200px 300px;
                                 gap: 2px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_triciclo"
+                                    "img_triciclo"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, 0.1rem, small);
+                                    @include mix.box_txt(column, fit-content, 100%, txt_triciclo, 0.1rem, small);
                                 }
 
                                 .box_img {
-                                    @include mix.box_img(40vh, center, imagen, 370px, 300px);
+                                    @include mix.box_img(40vh, 370px, center, img_triciclo, 370px, 300px);
                                 }
                             }
                         }
@@ -173,21 +171,21 @@
                                 grid-template-columns: 370px;
                                 grid-template-rows: 200px 300px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_auto"
+                                    "img_auto"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, 0.2rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.2rem, small);
                                 }
 
                                 .carousel {
                                     .carousel-inner {
                                         .carousel-item {
                                             .box_img {
-                                                @include mix.box_img(40vh, center, imagen, 370px, 100%);
+                                                @include mix.box_img(40vh, 370px, center, img_auto, 370px, 100%);
                                             }
                                         }
                                     }
@@ -201,18 +199,18 @@
                                 grid-template-columns: 370px;
                                 grid-template-rows: 200px 300px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_bota"
+                                    "img_bota"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, 0.1rem, small);
+                                    @include mix.box_txt(column, fit-content, 100%, txt_bota, 0.1rem, small);
                                 }
 
                                 .box_img {
-                                    @include mix.box_img(40vh, center, imagen, 370px, 100%);
+                                    @include mix.box_img(40vh, 370px, center, img_bota, 370px, 100%);
                                 }
                             }
                         }
@@ -220,22 +218,22 @@
                         .torque {
                             .row_txt_img {
                                 display: grid;
-                                grid-template-columns: 380px;
+                                grid-template-columns: 370px;
                                 grid-template-rows: 300px 300px;
                                 gap: 2px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_torque"
+                                    "img_torque"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, 0.1rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, txt_torque,0.1rem, small);
                                 }
 
                                 .box_img {
-                                    @include mix.box_img(40vh, center, imagen, 380px, 100%);
+                                    @include mix.box_img(40vh, 370px, center, img_torque, 370px, 100%);
                                 }
                             }
                         }
@@ -243,24 +241,24 @@
                         .pizzeria {
                             .row_txt_img {
                                 display: grid;
-                                grid-template-columns: 380px;
+                                grid-template-columns: 370px;
                                 grid-template-rows: 300px 300px;
                                 grid-template-areas:
-                                    "texto"
-                                    "imagen"
+                                    "txt_pizzeria"
+                                    "img_pizzeria"
                                 ;
                                 width: 100%;
                                 justify-content: center;
                                 
                                 .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, 0.1rem, small);
+                                    @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.1rem, small);
                                 }
                                 
                                 .carousel{
                                     .carousel-inner{
                                         .carousel-item{
                                             .box_img {
-                                                @include mix.box_img(40vh, center, imagen, 380px, 100%);
+                                                @include mix.box_img(40vh, 370px, center, img_pizzeria, 370px, 100%);
                                             } 
                                         }
                                     }
@@ -268,59 +266,41 @@
                             }
                         }
 
-                        .mario{
-                            .row_txt_img1 {
-                                /*----------------ORGANIC---575------------*/
-                                display: grid;
-                                grid-template-columns: 380px;
-                                grid-template-rows: 260px 450px;
-                                grid-template-areas:
-                                    "texto" 
-                                    "imagen1"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                .box_txt {
-                                    @include mix.box_txt(column, center, 90%, 0.3rem, small);
-                                }
+                        .grid_container_organic{
+                            /*---------------------ORGANIC--------------------------*/
+                            margin-top: 3rem;
+                            row-gap: 2rem;
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            grid-template-rows: auto auto auto auto;
+                            grid-template-areas:
+                                "txt_mario txt_mario"
+                                "img_mario img_mario"
+                                "txt_seguridad txt_seguridad"
+                                "img_seguridad1 img_seguridad2" 
+                            ;
+                            width: 100%;
+                            justify-content: center;
+                            .mario_txt {
+                                @include mix.box_txt(column, flex-start, 375px, txt_mario, 00.1rem, medium);
+                            }
 
-                                .box_img_tall_1{
-                                    .tall_img_0 {
-                                        width: 100%;
-                                    }
-                                }
+                            .mario_img {
+                                @include mix.box_img(100%, 100%, center, img_mario, 100%, 375px);
+                            }
+
+                            .seguridad_txt{
+                                margin-left: 20px;
+                                @include mix.box_txt(column, flex-start, 375px, txt_seguridad, 1.8rem, medium);
+                            }
+
+                            .seguridad_img1{
+                                @include mix.box_img(100%, 180px, center, img_seguridad1, 180px,375px);
+                            }
+                            .seguridad_img2{
+                                @include mix.box_img(100%, 180px, center, img_seguridad2, 180px, 375px);
                             }
                         }
-                        .seguridad{                            
-                            .row_img1_img2_txt {
-                                display: grid;
-                                grid-template-columns: 380px;
-                                grid-template-rows: 280px 450px 450px;
-                                grid-template-areas:
-                                "texto"
-                                "imagen1" 
-                                "imagen2" 
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                .box_txt {
-                                    @include mix.box_txt(column, center, 90%, 0.3rem, small);
-                                }
-
-                                .box_img_tall_1{
-                                    .tall_img {
-                                        width: 220px;
-                                    }
-                                }
-
-                                .box_img_tall_2{
-                                    .tall_img {
-                                        width: 220px;
-                                    }
-                                }
-                            }
-                        }
-
                     }
                 }
             }
