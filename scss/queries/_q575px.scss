@@ -12,7 +12,6 @@
                 .row{
                     .col{
                         .config_margin_txt {
-                            padding: 1rem;
                             margin-left: 0.1rem;
                             h1 {
                                 margin-right: 0.1rem;
@@ -24,8 +23,8 @@
                             div {
                                 nav {
                                     .links_internos {
-                                        margin-left: 0.01rem;
-                                        gap: 5px;
+                                        font-size: x-small;
+                                        gap: 10px;
                                     }
                                 }
                             }
@@ -219,7 +218,7 @@
                                 flex-direction: column;
                                 .box_txt_cl_torque {
                                     width: 100%;
-                                    @include mix.box_txt (column, flex-start, 100%, txt_clients, 0.1rem, larger);
+                                    @include mix.box_txt (column, flex-start, 100%, txt_clients, 0.1rem, medium);
                                 }
                                 div {
                                     .web_insert {
@@ -234,7 +233,7 @@
                                 flex-direction: column;
                                 .box_txt_cl_thone {
                                     width: 100%;
-                                    @include mix.box_txt (column, flex-start, 100%, txt_clients, 0.1rem, larger);
+                                    @include mix.box_txt (column, flex-start, 100%, txt_clients, 0.1rem, medium);
                                 }
                                 div {
                                     width: 100%;
@@ -259,6 +258,30 @@
                                 @include mix.box_txt(column, fit-content, 100%, txt_about, 0.2rem, 16px);
                                     margin-left: 0.8rem;
                                     margin-right: 1.3rem;
+                            }
+                        }
+
+                        .flex_center{
+                            div{
+                                .form_contact{
+                                    /*----------- --CONTACT--380------------*/
+                                    max-width: 50%;
+                                    font-size: small;
+                                
+                                    ul {
+                                        li {
+                                            display: flex;
+                                            width: 300px;
+                                            label {
+                                                font-size: small;
+                                                width: 100px;
+                                            }
+                                            #mensaje{
+                                                width: 61%;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

@@ -46,11 +46,6 @@ label {
   font-size: clamp(16px, 0.9vw, 1.1rem);
 }
 
-/* 
-    these type the CSS variable as color
-    unlocking the ability for the browser 
-    to animate just that portion
-*/
 @property --＠color-1 {
   syntax: "<color>";
   inherits: false;
@@ -122,19 +117,19 @@ main section .container .row .col .flex_center {
   padding: 0.1rem;
 }
 
-main section .container .row .col div .edit_links, main section .container .row .col div .edit_links_inicio {
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links, main section .container .row .col div .edit_links_inicio {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
   color: rgb(163, 202, 223);
 }
-main section .container .row .col div .edit_links:visited, main section .container .row .col div .edit_links_inicio:visited {
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:visited, main section .container .row .col div .edit_links_inicio:visited {
   color: #faebd7;
 }
-main section .container .row .col div .edit_links:hover, main section .container .row .col div .edit_links_inicio:hover {
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:hover, main section .container .row .col div .edit_links_inicio:hover {
   color: rgb(139, 50, 241);
 }
-main section .container .row .col div .edit_links:active, main section .container .row .col div .edit_links_inicio:active {
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:active, main section .container .row .col div .edit_links_inicio:active {
   background-color: #000000;
   font-weight: bolder;
 }
@@ -218,17 +213,19 @@ main .highsquare #index_title {
 }
 main .highsquare .container-fluid .row .col .config_margin_txt {
   display: flex;
-  padding: 2rem;
+  padding: 0.5rem;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin-left: 1.9rem;
 }
 main .highsquare .container-fluid .row .col .config_margin_txt h1 {
   margin-right: 0.5rem;
 }
 main .highsquare .container-fluid .row .col .config_margin_txt p {
   margin-left: 1.9rem;
+}
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links {
+  /*--LINKS MAIN---*/
 }
 main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
   display: flex;
@@ -980,7 +977,7 @@ main section .container .row .col .flex_center div .form_contact {
   padding-top: 3rem;
   position: relative;
   text-align: left;
-  max-width: 95%;
+  max-width: 100%;
   box-sizing: border-box;
   /* Incluye padding y borde en el cálculo del ancho */
 }
@@ -992,12 +989,11 @@ main section .container .row .col .flex_center div .form_contact ul {
 }
 main section .container .row .col .flex_center div .form_contact ul li {
   display: flex;
-  padding: 1%;
 }
 main section .container .row .col .flex_center div .form_contact ul li label {
   font-size: larger;
   color: #faebd7;
-  width: 180px;
+  width: 210px;
 }
 main section .container .row .col .flex_center div .form_contact ul li label .name::after {
   content: "*";
@@ -1014,9 +1010,6 @@ main section .container .row .col .flex_center div .form_contact ul li label .su
 main section .container .row .col .flex_center div .form_contact ul li label .message::after {
   content: "*";
   color: brown;
-}
-main section .container .row .col div .edit_links {
-  /*--LINKS MAIN---*/
 }
 main section .container .row .col div .edit_links_inicio {
   /*--LINKS MAIN---*/
@@ -1597,11 +1590,20 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-right: 1rem;
   }
   main section .container .row .col .flex_center div .form_contact {
-    /*-------------FORMULARIO DE CONTACTO----------------*/
+    /*----------- --CONTACT--380------------*/
+    max-width: 70%;
     font-size: large;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li {
+    display: flex;
+    width: 600px;
   }
   main section .container .row .col .flex_center div .form_contact ul li label {
     font-size: large;
+    width: 160px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li #mensaje {
+    width: 75%;
   }
   main section .container .row .col .grid_container_highlighted {
     /*--------------------HIGHLIGHTED----1490------*/
@@ -1996,9 +1998,6 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     /* -------------FOOTER---1290--------*/
     height: 30px;
   }
-  footer .container .row .col .center span {
-    color: azure;
-  }
 }
 /*----------------1024--------------------*/
 @media (max-width: 1024px) {
@@ -2088,6 +2087,22 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
+  }
+  main section .container .row .col .flex_center div .form_contact {
+    /*----------- --CONTACT--1024------------*/
+    max-width: 50%;
+    font-size: medium;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li {
+    display: flex;
+    width: 600px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li label {
+    font-size: medium;
+    width: 100px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li #mensaje {
+    width: 70%;
   }
   main section .container .row .col .grid_container_organic {
     /*---------------------ORGANIC----1024------------*/
@@ -2208,105 +2223,6 @@ footer .container .row .col .center div .icon {
   header .menu_completo .nav .nav_list .submenu > ul {
     font-size: x-small;
   }
-  main .highsquare .container-fluid .row .col .electrico .row_txt_img {
-    /*---------------HIGHLIGHT-----960------*/
-    display: grid;
-    grid-template-columns: 200px 400px;
-    grid-template-areas: "txt_electrico img_electrico";
-    width: 100%;
-    justify-content: center;
-    margin: 5px 0 5px 0;
-  }
-  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_electrico;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_electrico;
-  }
-  main .highsquare .container-fluid .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 400px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main .highsquare .container-fluid .row .col .chancador .row_img_txt {
-    display: grid;
-    grid-template-columns: 400px 200px;
-    grid-template-areas: "img_chancador txt_chancador";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 30px 0;
-  }
-  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_chancador;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main .highsquare .container-fluid .row .col .chancador .row_img_txt .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main .highsquare .container-fluid .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_chancador;
-  }
-  main .highsquare .container-fluid .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 400px;
-    max-height: 100%;
-    object-fit: cover;
-  }
 }
 /*----------------768--------------------*/
 @media (max-width: 768px) {
@@ -2372,8 +2288,8 @@ footer .container .row .col .center div .icon {
   }
   main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
     /*-------------------MAIN 768-------------------*/
-    gap: 5px;
-    font-size: x-small;
+    gap: 15px;
+    font-size: medium;
   }
   main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada_high {
     margin: 0%;
@@ -2448,6 +2364,9 @@ footer .container .row .col .center div .icon {
     font-size: small;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients div {
+    width: 90vw;
   }
   main section .container .row .col .config_flex .box_txt_about {
     /*----------ABOUT----768------*/
@@ -2578,16 +2497,27 @@ footer .container .row .col .center div .icon {
     max-height: 350px;
     object-fit: cover;
   }
-  main section .container .row .col .center_flex div .form_contact {
-    /*-------------FORMULARIO DE CONTACTO---768---------*/
-    max-width: 100%;
+  main section .container .row .col .flex_center div .form_contact {
+    /*----------- --CONTACT--380------------*/
+    max-width: 50%;
+    font-size: medium;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li {
+    display: flex;
+    width: 500px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li label {
+    font-size: medium;
+    width: 100px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li #mensaje {
+    width: 61%;
   }
 }
 /*----------------575--------------------*/
 @media (max-width: 575px) {
   /*-------------MAIN------------*/
   main .highsquare .container-fluid .row .col .config_margin_txt {
-    padding: 1rem;
     margin-left: 0.1rem;
   }
   main .highsquare .container-fluid .row .col .config_margin_txt h1 {
@@ -2598,8 +2528,8 @@ footer .container .row .col .center div .icon {
     margin-right: 0.01rem;
   }
   main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
-    margin-left: 0.01rem;
-    gap: 5px;
+    font-size: x-small;
+    gap: 10px;
   }
   main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
     width: 100%;
@@ -3087,7 +3017,7 @@ footer .container .row .col .center div .icon {
     margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque p {
-    font-size: larger;
+    font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
@@ -3124,7 +3054,7 @@ footer .container .row .col .center div .icon {
     margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone p {
-    font-size: larger;
+    font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
@@ -3176,6 +3106,22 @@ footer .container .row .col .center div .icon {
     margin-left: 0.8rem;
     margin-right: 1.3rem;
   }
+  main section .container .row .col .flex_center div .form_contact {
+    /*----------- --CONTACT--380------------*/
+    max-width: 50%;
+    font-size: small;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li {
+    display: flex;
+    width: 300px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li label {
+    font-size: small;
+    width: 100px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li #mensaje {
+    width: 61%;
+  }
 }
 footer .container .row .col .center div .icon {
   /* -------------FOOTER---575--------*/
@@ -3195,14 +3141,14 @@ footer .container .row .col .center div .icon {
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
   main .highsquare .container-fluid .row .col .config_margin_txt {
-    margin-left: 1.2rem;
+    margin-left: 0.2rem;
   }
   main .highsquare .container-fluid .row .col .config_margin_txt h1 {
     margin-right: 0.5rem;
   }
   main .highsquare .container-fluid .row .col .config_margin_txt p {
-    margin-left: 0.9rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
     width: 290px;
@@ -3262,111 +3208,21 @@ footer .container .row .col .center div .icon {
     /*Ajuste posicion insert pagina web*/
     width: 350px;
   }
-  main section .container .row .col .electrico .row_txt_img {
-    /*---------------HIGHLIGHT----380----------*/
-    display: grid;
-    grid-template-columns: 320px;
-    grid-template-rows: 200px 300px;
-    gap: 2px;
-    grid-template-areas: "txt_electrico" "img_electrico";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: fit-content;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_electrico;
-    margin-top: 0.1rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img {
-    display: flex;
-    width: 320px;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_electrico;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 320px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .chancador .row_img_txt {
-    display: grid;
-    grid-template-columns: 320px;
-    grid-template-rows: 200px 300px;
-    gap: 2px;
-    grid-template-areas: "txt_chancador" "img_chancador";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: fit-content;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_chancador;
-    margin-top: 0.1rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 320px;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_chancador;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 320px;
-    max-height: 100%;
-    object-fit: cover;
-  }
   main section .container .row .col .flex_center div .form_contact {
-    width: 40%;
-    margin-left: 14rem;
+    /*----------- --CONTACT--380------------*/
+    max-width: 50%;
     font-size: small;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li {
+    display: flex;
+    width: 300px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li label {
+    font-size: small;
+    width: 100px;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li #mensaje {
+    width: 61%;
   }
   main section .container .row .col .grid_container_organic {
     /*---------------------ORGANIC--------------------------*/

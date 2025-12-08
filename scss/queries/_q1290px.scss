@@ -1,4 +1,3 @@
-@use '../base/variables' as v;
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
 
@@ -86,9 +85,6 @@
                                 /* -------------FOOTER---1290--------*/
                                 height: 30px;
                             }
-                        }
-                        span {
-                            color: azure;
                         }
                     }
                 }

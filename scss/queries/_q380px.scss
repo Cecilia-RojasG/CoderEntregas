@@ -1,4 +1,3 @@
-@use '../base/variables' as v;
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
 
@@ -21,13 +20,13 @@
                             }
                         }
                         .config_margin_txt {
-                            margin-left: 1.2rem;
+                            margin-left: 0.2rem;
                             h1 {
                                 margin-right: 0.5rem;
                             }
                             p {
-                                margin-left: 0.9rem;
-                                margin-right: 2.0rem;
+                                margin-left: 1rem;
+                                margin-right: 1rem;
                             }
                         }
                     }
@@ -82,63 +81,26 @@
                             }
                         }
 
-                        .electrico {
-                            .row_txt_img {
-                                /*---------------HIGHLIGHT----380----------*/
-                                display: grid;
-                                grid-template-columns: 320px;
-                                grid-template-rows: 200px 300px;
-                                gap: 2px;
-                                grid-template-areas:
-                                    "txt_electrico"
-                                    "img_electrico"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, txt_electrico, 0.1rem, small);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(50vh, 320px, center, img_electrico, 320px, 100%);
-                                }
-                            }
-                        }
-                        .chancador {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 320px;
-                                grid-template-rows: 200px 300px;
-                                gap: 2px;
-                                grid-template-areas:
-                                    "txt_chancador"
-                                    "img_chancador"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, txt_chancador, 0.1rem, small);
-                                }
-
-                                .carousel {
-                                    .carousel-inner {
-                                        .carousel-item {
-                                            .box_img {
-                                                @include mix.box_img(50vh, 320px, center, img_chancador, 320px, 100%);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
                         .flex_center{
                             div{
                                 .form_contact{
-                                    width: 40%;
-                                    margin-left: 14rem;
+                                    /*----------- --CONTACT--380------------*/
+                                    max-width: 50%;
                                     font-size: small;
+                                
+                                    ul {
+                                        li {
+                                            display: flex;
+                                            width: 300px;
+                                            label {
+                                                font-size: small;
+                                                width: 100px;
+                                            }
+                                            #mensaje{
+                                                width: 61%;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

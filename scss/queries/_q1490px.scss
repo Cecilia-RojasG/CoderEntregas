@@ -1,4 +1,3 @@
-@use '../base/variables' as v;
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
 
@@ -102,15 +101,23 @@ header {
                         
                         .flex_center{
                             div{
-                                .form_contact {
-                                    /*-------------FORMULARIO DE CONTACTO----------------*/
+                                .form_contact{
+                                    /*----------- --CONTACT--380------------*/
+                                    max-width: 70%;
                                     font-size: large;
+                                
                                     ul {
                                         li {
+                                            display: flex;
+                                            width: 600px;
                                             label {
                                                 font-size: large;
-                                                }
+                                                width: 160px;
                                             }
+                                            #mensaje{
+                                                width: 75%;
+                                            }
+                                        }
                                     }
                                 }
                             }

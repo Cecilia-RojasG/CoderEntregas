@@ -89,8 +89,8 @@
                                 nav {
                                     .links_internos {
                                         /*-------------------MAIN 768-------------------*/
-                                        gap: 5px;
-                                        font-size: x-small;
+                                        gap: 15px;
+                                        font-size: medium;
                                     }
                                 }
                             }
@@ -159,6 +159,10 @@
                                 /*--------CLIENTS----768-----*/
                                 @include mix.box_txt(column, flex-start, 40vw, txt_clients, 0.1rem, small);
                             }
+
+                            div {
+                                width: 90vw;
+                            }
                         }
                         .config_flex{                           
                             .box_txt_about {
@@ -191,11 +195,26 @@
                             }
                         }
 
-                        .center_flex{
+                        .flex_center{
                             div{
-                                .form_contact {
-                                    /*-------------FORMULARIO DE CONTACTO---768---------*/
-                                    max-width: 100%;
+                                .form_contact{
+                                    /*----------- --CONTACT--380------------*/
+                                    max-width: 50%;
+                                    font-size: medium;
+                                
+                                    ul {
+                                        li {
+                                            display: flex;
+                                            width: 500px;
+                                            label {
+                                                font-size: medium;
+                                                width: 100px;
+                                            }
+                                            #mensaje{
+                                                width: 61%;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

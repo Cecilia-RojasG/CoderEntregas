@@ -22,11 +22,10 @@ main {
                 .col {
                     .config_margin_txt {
                         display: flex;
-                        padding: 2rem;
+                        padding: 0.5rem;
                         justify-content: flex-start;
                         align-items: flex-start;
                         flex-direction: column;
-                        margin-left: 1.9rem;
 
                         h1 {
                             margin-right: 0.5rem;
@@ -34,6 +33,10 @@ main {
 
                         p {
                             margin-left: 1.9rem;
+                            .edit_links {
+                                /*--LINKS MAIN---*/
+                                @extend %edit_links_gral;
+                            }
                         }
 
                         div {
@@ -42,7 +45,6 @@ main {
                                     display: flex;
                                     list-style: none;
                                     gap: 20px;
-
                                     li {
                                         a {
                                             &:link {
@@ -477,7 +479,7 @@ main {
                                 padding-top: 3rem;
                                 position: relative;
                                 text-align: left;
-                                max-width: 95%;
+                                max-width: 100%;
                                 box-sizing: border-box;
                                 /* Incluye padding y borde en el cálculo del ancho */
 
@@ -487,15 +489,12 @@ main {
 
                                 ul {
                                     list-style: none;
-
                                     li {
                                         display: flex;
-                                        padding: 1%;
-
                                         label {
                                             font-size: larger;
                                             color: map.get(maps.$colores, used);
-                                            width: 180px;
+                                            width: 210px;
 
                                             .name::after {
                                                 content: '*';
@@ -520,13 +519,6 @@ main {
                                     }
                                 }
                             }
-                        }
-                    }
-
-                    div {
-                        .edit_links {
-                            /*--LINKS MAIN---*/
-                            @extend %edit_links_gral;
                         }
                     }
 
