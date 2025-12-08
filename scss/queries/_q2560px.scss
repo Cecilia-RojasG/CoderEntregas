@@ -20,6 +20,7 @@
 
                     .submenu {
                         &>ul {
+                            top: 22px;
                             font-size: large;
                         }
                     }
@@ -27,49 +28,5 @@
             }
         }
     }
-
-    main {
-        section {
-            .container {
-                .row {
-                    .col {
-                        .center_grid {
-                            .text_over_img {
-                                .img_ajustada_grid {
-                                    /*-..........--Main-.............--*/
-                                    /* Ajuste para el tamaño de las imagenes*/
-                                    @include mix.ajuste_de_imagen(640px, 300px, 50%, 50%);
-                                }
-                            }
-                        }
-
-                        .config_flex {
-                            .box_txt_clients {
-                                /*-------------CLIENTS------2560---*/
-                                @include mix.box_txt(column, flex-start, 100%, txt_clients, 0.5rem, large);
-                            }
-
-                            div {
-
-                                .web_insert {
-                                    /*Ajuste tamaño insert pagina web*/
-                                    margin-top: 5%;
-                                }
-                            }
-
-
-                            .box_txt_about {
-                                @include mix.box_txt(column, flex-start, 70%, txt_about, 0.8rem, larger);
-                                p {
-                                    /*----------ABOUT----------*/
-                                    margin-left: 0.5rem;
-                                    margin-right: 1.0rem;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    
 }

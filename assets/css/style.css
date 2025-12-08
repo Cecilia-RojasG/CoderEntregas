@@ -35,7 +35,7 @@ h4 {
 }
 
 p {
-  font-size: clamp(16px, 0.8vw, 0.9rem);
+  font-size: clamp(16px, 1vw, xx-large);
 }
 
 span {
@@ -108,30 +108,6 @@ article {
   }
 }
 /* Ajuste para imagenes del Portfolio General */
-/*  FUTUROS MIXINS
-
-
-@mixin row_txt_img ($col1, $col2, $margin) {
-    display: grid;
-    grid-template-columns: $col1 $col2;
-    grid-template-areas:
-        "texto imagen"
-    ;
-    width: 100%;
-    justify-content: center;
-    margin: $margin 0 $margin 0;
-
-@mixin row_img_txt ($col3, $col4, $margin){
-    display: grid;
-    grid-template-columns: $col3 $col4;
-    grid-template-areas:
-        "imagen texto"
-    ;
-    width: 100%;
-    justify-content: center;
-    argin: $margin 0 $margin 0;
-
-*/
 footer .container .row .col .center, main .highsquare .container-fluid .row .col .center {
   /*Centra con grid*/
   display: grid;
@@ -142,22 +118,23 @@ main section .container .row .col .flex_center {
   /*Centra con flex*/
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  padding: 0.1rem;
 }
 
-main section .container .row .col div .edit_links {
+main section .container .row .col div .edit_links, main section .container .row .col div .edit_links_inicio {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
   color: rgb(163, 202, 223);
 }
-main section .container .row .col div .edit_links:visited {
+main section .container .row .col div .edit_links:visited, main section .container .row .col div .edit_links_inicio:visited {
   color: #faebd7;
 }
-main section .container .row .col div .edit_links:hover {
+main section .container .row .col div .edit_links:hover, main section .container .row .col div .edit_links_inicio:hover {
   color: rgb(139, 50, 241);
 }
-main section .container .row .col div .edit_links:active {
+main section .container .row .col div .edit_links:active, main section .container .row .col div .edit_links_inicio:active {
   background-color: #000000;
   font-weight: bolder;
 }
@@ -212,12 +189,13 @@ header .menu_completo .nav .nav_list .submenu {
   position: relative;
 }
 header .menu_completo .nav .nav_list .submenu > ul {
+  z-index: 999;
   display: none;
   position: absolute;
-  top: 10px;
-  left: 5px;
-  width: 180px;
-  padding: 11px;
+  top: 16px;
+  left: 15px;
+  width: fit-content;
+  padding: 15px;
   background-color: #212121;
 }
 header .menu_completo .nav .nav_list .submenu:hover > ul {
@@ -239,6 +217,11 @@ main .highsquare #index_title {
   display: none;
 }
 main .highsquare .container-fluid .row .col .config_margin_txt {
+  display: flex;
+  padding: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
   margin-left: 1.9rem;
 }
 main .highsquare .container-fluid .row .col .config_margin_txt h1 {
@@ -298,10 +281,12 @@ main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada
   /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
 }
 main section .container .row .col .center_grid {
+  /*---------------HOME MAIN------------*/
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 0px;
+  padding-top: 3rem;
   /* La altura se ajusta al contenido */
   grid-template-rows: auto;
   grid-template-areas: "organic hardsurface";
@@ -346,14 +331,14 @@ main section .container .row .col .center_grid .text_over_img img {
   /* Elimina espacio extra debajo de la imagen */
 }
 main section .container .row .col div .gallery {
-  /*CONFIGRUACION DEL MAIN DE PORTFOLIO GENERAL*/
+  /*-------------PORTFOLIO GENERAL----------MAIN-----*/
   display: grid;
+  padding-top: 3rem;
   grid-template-columns: repeat(4, 320px);
   gap: 5px;
   grid-template-areas: "portafolio1 portafolio2 portafolio3 portafolio4" "portafolio5 portafolio6 portafolio7 portafolio8" "portafolio9 portafolio10 portafolio11 portafolio12";
   width: 100%;
   justify-content: center;
-  margin-top: 10px;
 }
 main section .container .row .col div .gallery div .img_ajustada_port {
   width: 100%;
@@ -387,92 +372,254 @@ main section .container .row .col div .gallery .electrica {
 main section .container .row .col div .gallery .chancador {
   grid-area: portafolio8;
 }
-main section .container .row .col .config_flex {
-  /*------------------CLIENTS......................*/
-  display: flex;
+main section .container .row .col .grid_container_hardsurface {
+  /*--------------------HARDSURFACE MAIN--------------*/
+  display: grid;
+  padding-top: 3rem;
+  column-gap: 0.5rem;
+  row-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto);
+  grid-template-areas: "txt_triciclo img_triciclo img_triciclo" "carousel_car carousel_car txt_auto" "txt_pizzeria carousel_pizza carousel_pizza" "img_bota img_bota txt_bota" "txt_torque img_torque img_torque";
+  width: 100%;
   justify-content: center;
-  padding: 0.1rem;
 }
-main section .container .row .col .config_flex .box_txt_clients {
+main section .container .row .col .grid_container_hardsurface .triciclo_txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 40%;
+  width: 100%;
   height: 100%;
-  grid-area: txt_clients;
-  margin-top: 2.5rem;
-  color: #faebd7;
-}
-main section .container .row .col .config_flex .box_txt_clients h2 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .config_flex .box_txt_clients h3 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .config_flex .box_txt_clients h4 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .config_flex .box_txt_clients p {
-  font-size: medium;
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .config_flex div {
-  width: 50%;
+  grid-area: txt_triciclo;
   margin-top: 0.1rem;
+  color: #faebd7;
 }
-main section .container .row .col .config_flex div .web_insert {
-  /*Ajuste posicion insert pagina web*/
+main section .container .row .col .grid_container_hardsurface .triciclo_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .triciclo_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .triciclo_txt h4 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .triciclo_txt p {
+  font-size: larger;
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .triciclo_img {
+  display: flex;
   width: 100%;
-  height: 60vh;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: img_triciclo;
 }
-main section .container .row .col .config_flex .logo {
-  /*--------------ABOUT-----------------*/
-  margin: 0.8rem;
-  width: 10%;
+main section .container .row .col .grid_container_hardsurface .triciclo_img .comun_img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
-main section .container .row .col .config_flex .logo .image_about {
-  width: 100%;
+main section .container .row .col .grid_container_hardsurface .triciclo_img {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
 }
-main section .container .row .col .config_flex .box_txt_about {
+main section .container .row .col .grid_container_hardsurface .auto_txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 70%;
+  width: 100%;
   height: 100%;
-  grid-area: txt_about;
-  margin-top: 0.8rem;
+  grid-area: txt_auto;
+  margin-top: 0.1rem;
   color: #faebd7;
 }
-main section .container .row .col .config_flex .box_txt_about h2 {
+main section .container .row .col .grid_container_hardsurface .auto_txt h2 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .config_flex .box_txt_about h3 {
+main section .container .row .col .grid_container_hardsurface .auto_txt h3 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .config_flex .box_txt_about h4 {
+main section .container .row .col .grid_container_hardsurface .auto_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .config_flex .box_txt_about p {
-  font-size: medium;
+main section .container .row .col .grid_container_hardsurface .auto_txt p {
+  font-size: larger;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .automovil {
+  grid-area: carousel_car;
+}
+main section .container .row .col .grid_container_hardsurface .automovil .carousel .carousel-inner .carousel-item .auto_img {
+  min-height: 500px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: img_auto;
+}
+main section .container .row .col .grid_container_hardsurface .automovil .carousel .carousel-inner .carousel-item .auto_img .comun_img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+main section .container .row .col .grid_container_hardsurface .automovil .carousel .carousel-inner .carousel-item .auto_img {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+}
+main section .container .row .col .grid_container_hardsurface .pizzeria_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: txt_pizzeria;
+  margin-top: 0.1rem;
+  color: #faebd7;
+}
+main section .container .row .col .grid_container_hardsurface .pizzeria_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .pizzeria_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .pizzeria_txt h4 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .pizzeria_txt p {
+  font-size: larger;
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface div {
+  grid-area: carousel_pizza;
+}
+main section .container .row .col .grid_container_hardsurface div .carousel .carousel-inner .carousel-item .pizzeria_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: img_pizzeria;
+}
+main section .container .row .col .grid_container_hardsurface div .carousel .carousel-inner .carousel-item .pizzeria_img .comun_img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .grid_container_hardsurface div .carousel .carousel-inner .carousel-item .pizzeria_img {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+}
+main section .container .row .col .grid_container_hardsurface .bota_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: txt_bota;
+  margin-top: 0.1rem;
+  color: #faebd7;
+}
+main section .container .row .col .grid_container_hardsurface .bota_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .bota_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .bota_txt h4 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .bota_txt p {
+  font-size: larger;
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .bota_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: img_bota;
+}
+main section .container .row .col .grid_container_hardsurface .bota_img .comun_img {
+  max-width: 100%;
+  max-height: 500xp;
+  object-fit: cover;
+}
+main section .container .row .col .grid_container_hardsurface .bota_img {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+}
+main section .container .row .col .grid_container_hardsurface .torque_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: txt_torque;
+  margin-top: 0.1rem;
+  color: #faebd7;
+}
+main section .container .row .col .grid_container_hardsurface .torque_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .torque_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .torque_txt h4 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .torque_txt p {
+  font-size: larger;
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .torque_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: img_torque;
+}
+main section .container .row .col .grid_container_hardsurface .torque_img .comun_img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 main section .container .row .col .grid_container_organic {
   /*---------------------ORGANIC--------------------------*/
-  margin-top: 2rem;
-  row-gap: 2rem;
+  padding-top: 3rem;
+  column-gap: 0.5rem;
+  row-gap: 3rem;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: repeat(auto);
   grid-template-areas: "txt_mario txt_mario img_mario" "img_seguridad1 img_seguridad2 txt_seguridad";
   width: 100%;
   justify-content: center;
@@ -485,7 +632,7 @@ main section .container .row .col .grid_container_organic .mario_txt {
   width: 600px;
   height: 100%;
   grid-area: txt_mario;
-  margin-top: 0.1rem;
+  margin-top: 0.01rem;
   color: #faebd7;
 }
 main section .container .row .col .grid_container_organic .mario_txt h2 {
@@ -501,7 +648,7 @@ main section .container .row .col .grid_container_organic .mario_txt h4 {
   margin-right: 1.5rem;
 }
 main section .container .row .col .grid_container_organic .mario_txt p {
-  font-size: medium;
+  font-size: larger;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
@@ -518,8 +665,14 @@ main section .container .row .col .grid_container_organic .mario_img .comun_img 
   max-height: 600px;
   object-fit: cover;
 }
+main section .container .row .col .grid_container_organic .mario_img {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+  width: 100%; /* O un % específico */
+  margin: 10px 0;
+}
 main section .container .row .col .grid_container_organic .seguridad_txt {
-  margin-left: 10px;
+  margin-left: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -527,7 +680,7 @@ main section .container .row .col .grid_container_organic .seguridad_txt {
   width: 600px;
   height: 100%;
   grid-area: txt_seguridad;
-  margin-top: 0.1rem;
+  margin-top: 0.01rem;
   color: #faebd7;
 }
 main section .container .row .col .grid_container_organic .seguridad_txt h2 {
@@ -543,7 +696,7 @@ main section .container .row .col .grid_container_organic .seguridad_txt h4 {
   margin-right: 1.5rem;
 }
 main section .container .row .col .grid_container_organic .seguridad_txt p {
-  font-size: medium;
+  font-size: larger;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
@@ -573,16 +726,19 @@ main section .container .row .col .grid_container_organic .seguridad_img2 .comun
   max-height: 600px;
   object-fit: cover;
 }
-main section .container .row .col .electrico .row_txt_img {
+main section .container .row .col .grid_container_highlighted {
   /*--------------------HIGHLIGHTED--------------*/
+  padding-top: 3rem;
+  column-gap: 0.5rem;
+  row-gap: 2rem;
   display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "txt_electrico img_electrico";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "txt_electrico img_electrico img_electrico" "carousel_chancador carousel_chancador txt_chancador";
   width: 100%;
   justify-content: center;
-  margin: 10px 0 10px 0;
 }
-main section .container .row .col .electrico .row_txt_img .box_txt {
+main section .container .row .col .grid_container_highlighted .electrico_txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -590,48 +746,44 @@ main section .container .row .col .electrico .row_txt_img .box_txt {
   width: 100%;
   height: 100%;
   grid-area: txt_electrico;
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
   color: #faebd7;
 }
-main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+main section .container .row .col .grid_container_highlighted .electrico_txt h2 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+main section .container .row .col .grid_container_highlighted .electrico_txt h3 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .electrico .row_txt_img .box_txt h4 {
+main section .container .row .col .grid_container_highlighted .electrico_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .electrico .row_txt_img .box_txt p {
-  font-size: medium;
+main section .container .row .col .grid_container_highlighted .electrico_txt p {
+  font-size: larger;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .electrico .row_txt_img .box_img {
+main section .container .row .col .grid_container_highlighted .electrico_img {
   display: flex;
   width: 100%;
-  height: 40vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
   grid-area: img_electrico;
 }
-main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-  max-width: 900px;
+main section .container .row .col .grid_container_highlighted .electrico_img .comun_img {
+  max-width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
-main section .container .row .col .chancador .row_img_txt {
-  display: grid;
-  grid-template-columns: 900px 400px;
-  grid-template-areas: "img_chancador txt_chancador";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 30px 0;
+main section .container .row .col .grid_container_highlighted .electrico_img {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
 }
-main section .container .row .col .chancador .row_img_txt .box_txt {
+main section .container .row .col .grid_container_highlighted .chancador_txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -639,294 +791,198 @@ main section .container .row .col .chancador .row_img_txt .box_txt {
   width: 100%;
   height: 100%;
   grid-area: txt_chancador;
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
   color: #faebd7;
 }
-main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+main section .container .row .col .grid_container_highlighted .chancador_txt h2 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+main section .container .row .col .grid_container_highlighted .chancador_txt h3 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .chancador .row_img_txt .box_txt h4 {
+main section .container .row .col .grid_container_highlighted .chancador_txt h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .chancador .row_img_txt .box_txt p {
-  font-size: medium;
+main section .container .row .col .grid_container_highlighted .chancador_txt p {
+  font-size: larger;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+main section .container .row .col .grid_container_highlighted .carousel {
+  grid-area: carousel_chancador;
+}
+main section .container .row .col .grid_container_highlighted .carousel .carousel-inner .carousel-item .chancador_img {
   display: flex;
   width: 100%;
-  height: 40vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
   grid-area: img_chancador;
 }
-main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-  max-width: 900px;
+main section .container .row .col .grid_container_highlighted .carousel .carousel-inner .carousel-item .chancador_img .comun_img {
+  max-width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
-main section .container .row .col .triciclo .row_txt_img {
-  /*-------------------HARDSURFACE--------------------*/
-  display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "txt_triciclo img_triciclo";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
+main section .container .row .col .config_flex_clients {
+  /*------------------CLIENTS.......MAIN..............*/
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  box-sizing: border-box;
+  row-gap: 2rem;
 }
-main section .container .row .col .triciclo .row_txt_img .box_txt {
+main section .container .row .col .config_flex_clients .cliente1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 40vw;
   height: 100%;
-  grid-area: txt_triciclo;
-  margin-top: 0.5rem;
+  grid-area: txt_clients;
+  margin-top: 0.1rem;
   color: #faebd7;
 }
-main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h2 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h3 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
+main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .triciclo .row_txt_img .box_txt p {
-  font-size: medium;
+main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque p {
+  font-size: larger;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .triciclo .row_txt_img .box_img {
-  display: flex;
+main section .container .row .col .config_flex_clients .cliente1 div {
+  width: 60vw;
+}
+main section .container .row .col .config_flex_clients .cliente1 div .web_insert {
+  /*Ajuste posicion insert pagina web*/
   width: 100%;
-  height: 40vh;
+  height: 50vh;
+}
+main section .container .row .col .config_flex_clients .cliente2 {
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  grid-area: img_triciclo;
 }
-main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
-}
-main section .container .row .col .auto .row_img_txt {
-  display: grid;
-  grid-template-columns: 900px 400px;
-  grid-template-areas: "img_auto txt_auto";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-main section .container .row .col .auto .row_img_txt .box_txt {
+main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone {
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 40vw;
   height: 100%;
-  grid-area: txt_auto;
-  margin-top: 0.5rem;
+  grid-area: txt_clients;
+  margin-top: 0.1rem;
   color: #faebd7;
 }
-main section .container .row .col .auto .row_img_txt .box_txt h2 {
+main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h2 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .auto .row_img_txt .box_txt h3 {
+main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h3 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .auto .row_img_txt .box_txt h4 {
+main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .auto .row_img_txt .box_txt p {
-  font-size: medium;
+main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone p {
+  font-size: larger;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+main section .container .row .col .config_flex_clients .cliente2 div {
+  width: 60vw;
+}
+main section .container .row .col .config_flex_clients .cliente2 div .client1_img {
+  width: 95%;
+  max-height: 70vh;
+}
+main section .container .row .col .config_flex {
   display: flex;
-  width: 100%;
-  height: 40vh;
   justify-content: center;
-  align-items: center;
-  grid-area: img_auto;
+  align-items: flex-start;
 }
-main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
+main section .container .row .col .config_flex .logo {
+  /*--------------ABOUT-----------------*/
+  padding-top: 3rem;
+  margin: 0.8rem;
+  width: 10%;
 }
-main section .container .row .col .pizzeria .row_txt_img {
-  display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "txt_pizzeria img_pizzeria";
+main section .container .row .col .config_flex .logo .image_about {
   width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
 }
-main section .container .row .col .pizzeria .row_txt_img .box_txt {
+main section .container .row .col .config_flex .box_txt_about {
+  padding-top: 3rem;
+}
+main section .container .row .col .config_flex .box_txt_about .divisor-div {
+  height: 0; /* Sin altura propia */
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+  width: 100%; /* O un % específico */
+  margin: 2rem 0;
+  grid-area: "divisor";
+}
+main section .container .row .col .config_flex .box_txt_about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 70%;
   height: 100%;
-  grid-area: txt_pizzeria;
-  margin-top: 0.5rem;
+  grid-area: txt_about;
+  margin-top: 0.8rem;
   color: #faebd7;
 }
-main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+main section .container .row .col .config_flex .box_txt_about h2 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+main section .container .row .col .config_flex .box_txt_about h3 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
+main section .container .row .col .config_flex .box_txt_about h4 {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .pizzeria .row_txt_img .box_txt p {
-  font-size: medium;
+main section .container .row .col .config_flex .box_txt_about p {
+  font-size: larger;
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
-  display: flex;
-  width: 100%;
-  height: 40vh;
-  justify-content: center;
-  align-items: center;
-  grid-area: img_pizzeria;
-}
-main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
-}
-main section .container .row .col .torque .row_txt_img {
-  display: grid;
-  grid-template-columns: 400px 900px;
-  grid-template-areas: "txt_torque img_torque";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-main section .container .row .col .torque .row_txt_img .box_txt {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  grid-area: txt_torque;
-  margin-top: 0.5rem;
-  color: #faebd7;
-}
-main section .container .row .col .torque .row_txt_img .box_txt h2 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .torque .row_txt_img .box_txt h3 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .torque .row_txt_img .box_txt h4 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .torque .row_txt_img .box_txt p {
-  font-size: medium;
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .torque .row_txt_img .box_img {
-  display: flex;
-  width: 100%;
-  height: 40vh;
-  justify-content: center;
-  align-items: center;
-  grid-area: img_torque;
-}
-main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
-}
-main section .container .row .col .bota .row_img_txt {
-  display: grid;
-  grid-template-columns: 900px 400px;
-  grid-template-areas: "img_bota txt_bota";
-  width: 100%;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-main section .container .row .col .bota .row_img_txt .box_txt {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  grid-area: txt_bota;
-  margin-top: 0.5rem;
-  color: #faebd7;
-}
-main section .container .row .col .bota .row_img_txt .box_txt h2 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .bota .row_img_txt .box_txt h3 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .bota .row_img_txt .box_txt h4 {
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .bota .row_img_txt .box_txt p {
-  font-size: medium;
-  margin-left: 0.8rem;
-  margin-right: 1.5rem;
-}
-main section .container .row .col .bota .row_img_txt .box_img {
-  display: flex;
-  width: 100%;
-  height: 40vh;
-  justify-content: center;
-  align-items: center;
-  grid-area: img_bota;
-}
-main section .container .row .col .bota .row_img_txt .box_img .comun_img {
-  max-width: 900px;
-  max-height: 100%;
-  object-fit: cover;
+main section .container .row .col .config_flex .box_txt_about p {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
 }
 main section .container .row .col .flex_center div .form_contact {
   /*-------------FORMULARIO DE CONTACTO----------------*/
-  border-radius: 5px;
+  font-size: larger;
+  padding-top: 3rem;
   position: relative;
-  text-align: lef;
-  max-width: 100%;
+  text-align: left;
+  max-width: 95%;
   box-sizing: border-box;
   /* Incluye padding y borde en el cálculo del ancho */
-  font-size: clamp(0.7rem, 0.9vw, 1.1rem);
 }
 main section .container .row .col .flex_center div .form_contact input:focus {
   background-color: bisque;
@@ -939,8 +995,9 @@ main section .container .row .col .flex_center div .form_contact ul li {
   padding: 1%;
 }
 main section .container .row .col .flex_center div .form_contact ul li label {
+  font-size: larger;
   color: #faebd7;
-  width: 140px;
+  width: 180px;
 }
 main section .container .row .col .flex_center div .form_contact ul li label .name::after {
   content: "*";
@@ -960,14 +1017,20 @@ main section .container .row .col .flex_center div .form_contact ul li label .me
 }
 main section .container .row .col div .edit_links {
   /*--LINKS MAIN---*/
-  font-size: small;
+}
+main section .container .row .col div .edit_links_inicio {
+  /*--LINKS MAIN---*/
+  font-size: medium;
   text-align: left;
-  margin-bottom: 5px;
+  margin-left: 3rem;
+  font-size: medium;
 }
 
 /* -------------FOOTER---------------*/
 footer .container .row .col .center {
-  margin: 2rem 2rem 0rem 2rem;
+  border-top: 1px solid #999; /* Crea una línea solo arriba */
+  padding-top: 3rem;
+  margin: 3rem 2rem 0rem 2rem;
 }
 footer .container .row .col .center div .icon {
   height: 45px;
@@ -989,40 +1052,72 @@ footer .container .row .col .center span {
     font-size: xx-large;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
+    top: 22px;
     font-size: x-large;
   }
-  main section .container .row .col .config_flex .box_txt {
-    /*--------CLIENTS------2561---*/
+  main .highsquare .container-fluid .row .col .config_margin_txt p {
+    font-size: x-large;
+  }
+  main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
+    gap: 30px;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque {
+    /*-------------CLIENTS------2560---*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 40vw;
     height: 100%;
     grid-area: txt_clients;
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     color: #faebd7;
   }
-  main section .container .row .col .config_flex .box_txt h2 {
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt h3 {
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt h4 {
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt p {
-    font-size: large;
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque p {
+    font-size: x-large;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex div .web_insert {
-    /*Ajuste tamaño insert pagina web*/
-    margin-top: 5%;
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone {
+    /*-------------CLIENTS------2560---*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40vw;
+    height: 100%;
+    grid-area: txt_clients;
+    margin-top: 0.3rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex .box_txt_about {
     display: flex;
@@ -1048,27 +1143,251 @@ footer .container .row .col .center span {
     margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex .box_txt_about p {
-    font-size: large;
+    font-size: x-large;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
   main section .container .row .col .config_flex .box_txt_about p {
-    /*----------ABOUT---2561-------*/
-    margin-left: 1.5rem;
-    margin-right: 4rem;
+    /*----------ABOUT-----2560----*/
+    margin-left: 0.5rem;
+    margin-right: 1rem;
   }
-  main section .container .row .col .grid_container_organic {
-    /*---------------------ORGANIC----+2561-----------------*/
+  main section .container .row .col .flex_center div .form_contact {
+    /*-------------FORMULARIO DE CONTACTO----------------*/
+    font-size: large;
   }
-  main section .container .row .col .grid_container_organic .mario_txt {
+  main section .container .row .col .flex_center div .form_contact ul li label {
+    font-size: large;
+    width: 180px;
+  }
+  main section .container .row .col div .edit_links {
+    /*--LINKS MAIN---*/
+    font-size: large;
+    margin-bottom: 5px;
+  }
+  main section .container .row .col div .gallery div .img_ajustada_port {
+    /*-------------PORTFOLIO GENERAL----------2561-----*/
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    /* La imagen se recorta para cubrir el contenedor */
+    object-position: 50% 50%;
+    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+  }
+  main section .container .row .col .grid_container_highlighted {
+    /*--------------------HIGHLIGHTED--------------*/
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: txt_mario;
+    grid-area: txt_electrico;
     margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_chancador;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface {
+    /*--------------------HARDSURFACE--------------*/
+  }
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_triciclo;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .auto_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_auto;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_hardsurface .auto_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .auto_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .auto_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .auto_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_pizzeria;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_bota;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_torque;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt p {
+    font-size: x-large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic {
+    /*---------------------ORGANIC--------------------------*/
+  }
+  main section .container .row .col .grid_container_organic .mario_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 600px;
+    height: 100%;
+    grid-area: txt_mario;
+    margin-top: 0.01rem;
     color: #faebd7;
   }
   main section .container .row .col .grid_container_organic .mario_txt h2 {
@@ -1088,29 +1407,16 @@ footer .container .row .col .center span {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .grid_container_organic .mario_img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_mario;
-  }
-  main section .container .row .col .grid_container_organic .mario_img .comun_img {
-    max-width: 900px;
-    max-height: 60vh;
-    object-fit: cover;
-  }
   main section .container .row .col .grid_container_organic .seguridad_txt {
     margin-left: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 600px;
     height: 100%;
     grid-area: txt_seguridad;
-    margin-top: 0.1rem;
+    margin-top: 0.01rem;
     color: #faebd7;
   }
   main section .container .row .col .grid_container_organic .seguridad_txt h2 {
@@ -1130,32 +1436,6 @@ footer .container .row .col .center span {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .grid_container_organic .seguridad_img1 {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    grid-area: img_seguridad1;
-  }
-  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
-    max-width: 440px;
-    max-height: 60vh;
-    object-fit: cover;
-  }
-  main section .container .row .col .grid_container_organic .seguridad_img2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    grid-area: img_seguridad2;
-  }
-  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
-    max-width: 440px;
-    max-height: 60vh;
-    object-fit: cover;
-  }
 }
 /*----------------hasta 2560px-----------------*/
 @media (max-width: 2560px) {
@@ -1170,83 +1450,8 @@ footer .container .row .col .center span {
     font-size: x-large;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
+    top: 22px;
     font-size: large;
-  }
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    /*-..........--Main-.............--*/
-    /* Ajuste para el tamaño de las imagenes*/
-    width: 640px;
-    height: 300px;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-  }
-  main section .container .row .col .config_flex .box_txt_clients {
-    /*-------------CLIENTS------2560---*/
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_clients;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients p {
-    font-size: large;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex div .web_insert {
-    /*Ajuste tamaño insert pagina web*/
-    margin-top: 5%;
-  }
-  main section .container .row .col .config_flex .box_txt_about {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 70%;
-    height: 100%;
-    grid-area: txt_about;
-    margin-top: 0.8rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .config_flex .box_txt_about h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about p {
-    font-size: larger;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about p {
-    /*----------ABOUT----------*/
-    margin-left: 0.5rem;
-    margin-right: 1rem;
   }
 }
 /*--------------------1961px-----------------*/
@@ -1298,9 +1503,16 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     font-size: medium;
   }
   header .menu_completo .nav .nav_list .submenu > ul {
+    top: 18px;
     font-size: small;
   }
   /*--------------MAIN 1490----------------*/
+  main .highsquare .container-fluid .row .col .config_margin_txt p {
+    font-size: large;
+  }
+  main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
+    gap: 10px;
+  }
   main section .container .row .col div .gallery {
     /*-----------PORTFOLIO GENERAL 1490----------*/
     grid-template-columns: repeat(4, 250px);
@@ -1316,360 +1528,285 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  main section .container .row .col .electrico .row_txt_img {
-    /*---------------HIGHLIGHT-------------*/
-    display: grid;
-    grid-template-columns: 300px 800px;
-    grid-template-areas: "txt_electrico img_electrico";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt {
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque {
+    /*-------------CLIENTS------2560---*/
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
+    height: 100%;
+    grid-area: txt_clients;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque p {
+    font-size: large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 div {
+    width: 80vw;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 div .web_insert {
+    height: 60vh;
+  }
+  main section .container .row .col .config_flex .box_txt_about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    grid-area: txt_about;
+    margin-top: 0.8rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_about h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about p {
+    font-size: large;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about p {
+    /*----------ABOUT-----2560----*/
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+  main section .container .row .col .flex_center div .form_contact {
+    /*-------------FORMULARIO DE CONTACTO----------------*/
+    font-size: large;
+  }
+  main section .container .row .col .flex_center div .form_contact ul li label {
+    font-size: large;
+  }
+  main section .container .row .col .grid_container_highlighted {
+    /*--------------------HIGHLIGHTED----1490------*/
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
     height: 100%;
     grid-area: txt_electrico;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
+  main section .container .row .col .grid_container_highlighted .electrico_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
+  main section .container .row .col .grid_container_highlighted .electrico_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
+  main section .container .row .col .grid_container_highlighted .electrico_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .electrico .row_txt_img .box_txt p {
+  main section .container .row .col .grid_container_highlighted .electrico_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .electrico .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_electrico;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 800px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .chancador .row_img_txt {
-    display: grid;
-    grid-template-columns: 800px 300px;
-    grid-template-areas: "img_chancador txt_chancador";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt {
+  main section .container .row .col .grid_container_highlighted .chancador_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
     grid-area: txt_chancador;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
+  main section .container .row .col .grid_container_highlighted .chancador_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
+  main section .container .row .col .grid_container_highlighted .chancador_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
+  main section .container .row .col .grid_container_highlighted .chancador_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .chancador .row_img_txt .box_txt p {
+  main section .container .row .col .grid_container_highlighted .chancador_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_chancador;
+  main section .container .row .col .grid_container_hardsurface {
+    /*--------------------HARDSURFACE-----1490---------*/
   }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 800px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .triciclo .row_txt_img {
-    /*---------------HARDSURFACE-------------*/
-    display: grid;
-    grid-template-columns: 300px 800px;
-    grid-template-areas: "txt_triciclo img_triciclo";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt {
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: txt_triciclo;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_txt p {
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_triciclo;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
-    max-width: 800px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .bota .row_img_txt {
-    display: grid;
-    grid-template-columns: 800px 300px;
-    grid-template-areas: "img_bota txt_bota";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt {
+  main section .container .row .col .grid_container_hardsurface .auto_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_bota;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_bota;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
-    max-width: 800px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .torque .row_txt_img {
-    display: grid;
-    grid-template-columns: 300px 800px;
-    grid-template-areas: "txt_torque img_torque";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_torque;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_torque;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-    max-width: 800px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .auto .row_img_txt {
-    display: grid;
-    grid-template-columns: 800px 300px;
-    grid-template-areas: "img_auto txt_auto";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: txt_auto;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt h2 {
+  main section .container .row .col .grid_container_hardsurface .auto_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt h3 {
+  main section .container .row .col .grid_container_hardsurface .auto_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt h4 {
+  main section .container .row .col .grid_container_hardsurface .auto_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt p {
+  main section .container .row .col .grid_container_hardsurface .auto_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_auto;
-  }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 800px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .pizzeria .row_txt_img {
-    display: grid;
-    grid-template-columns: 300px 800px;
-    grid-template-areas: "txt_pizzeria img_pizzeria";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt {
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
     grid-area: txt_pizzeria;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt p {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
+  main section .container .row .col .grid_container_hardsurface .bota_txt {
     display: flex;
-    width: 100%;
-    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    grid-area: img_pizzeria;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_bota;
+    margin-top: 0.1rem;
+    color: #faebd7;
   }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 800px;
-    max-height: 100%;
-    object-fit: cover;
+  main section .container .row .col .grid_container_hardsurface .bota_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt p {
+    font-size: medium;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_torque;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt p {
+    font-size: medium;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
   }
   main section .container .row .col .grid_container_organic {
     /*---------------------ORGANIC--------------------------*/
-    margin-top: 2rem;
-    row-gap: 2rem;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "txt_mario txt_mario img_mario" "img_seguridad1 img_seguridad2 txt_seguridad";
-    width: 100%;
-    justify-content: center;
   }
   main section .container .row .col .grid_container_organic .mario_txt {
     display: flex;
@@ -1679,7 +1816,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 600px;
     height: 100%;
     grid-area: txt_mario;
-    margin-top: 0.1rem;
+    margin-top: 0.01rem;
     color: #faebd7;
   }
   main section .container .row .col .grid_container_organic .mario_txt h2 {
@@ -1699,19 +1836,6 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .grid_container_organic .mario_img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_mario;
-  }
-  main section .container .row .col .grid_container_organic .mario_img .comun_img {
-    max-width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-  }
   main section .container .row .col .grid_container_organic .seguridad_txt {
     margin-left: 10px;
     display: flex;
@@ -1721,7 +1845,7 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 600px;
     height: 100%;
     grid-area: txt_seguridad;
-    margin-top: 0.1rem;
+    margin-top: 0.01rem;
     color: #faebd7;
   }
   main section .container .row .col .grid_container_organic .seguridad_txt h2 {
@@ -1740,75 +1864,6 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
-  }
-  main section .container .row .col .grid_container_organic .seguridad_img1 {
-    display: flex;
-    width: 300px;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    grid-area: img_seguridad1;
-  }
-  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
-    max-width: 300px;
-    max-height: 600px;
-    object-fit: cover;
-  }
-  main section .container .row .col .grid_container_organic .seguridad_img2 {
-    display: flex;
-    width: 300px;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    grid-area: img_seguridad2;
-  }
-  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
-    max-width: 300px;
-    max-height: 600px;
-    object-fit: cover;
-  }
-  main section .container .row .col .config_flex {
-    /*------------------CLIENTS...1490...............*/
-    display: flex;
-    justify-content: center;
-    padding: 0.1rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 40%;
-    height: 100%;
-    grid-area: txt_clients;
-    margin-top: 1.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex div {
-    width: 50%;
-    margin-top: 0.1rem;
-  }
-  main section .container .row .col .config_flex div .web_insert {
-    /*Ajuste posicion insert pagina web*/
-    width: 100%;
-    height: 60vh;
   }
 }
 /*----------------1290--------------------*/
@@ -1838,360 +1893,8 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  main section .container .row .col .electrico .row_txt_img {
-    /*---------------HIGHLIGHT----1290----*/
-    display: grid;
-    grid-template-columns: 200px 700px;
-    grid-template-areas: "txt_electrico img_electrico";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_electrico;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_electrico;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 700px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .chancador .row_img_txt {
-    display: grid;
-    grid-template-columns: 800px 250px;
-    grid-template-areas: "img_chancador txt_chancador";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_chancador;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_chancador;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 700px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .triciclo .row_txt_img {
-    /*---------------HARDSURFACE-----1290---*/
-    display: grid;
-    grid-template-columns: 250px 650px;
-    grid-template-areas: "txt_triciclo img_triciclo";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_triciclo;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_triciclo;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
-    max-width: 650px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .bota .row_img_txt {
-    display: grid;
-    grid-template-columns: 650px 250px;
-    grid-template-areas: "img_bota txt_bota";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: txt_bota;
-    height: 100%;
-    grid-area: 100%;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_bota;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
-    max-width: 650px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .torque .row_txt_img {
-    display: grid;
-    grid-template-columns: 250px 650px;
-    grid-template-areas: "txt_torque img_torque";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_torque;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_torque;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-    max-width: 650px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .auto .row_img_txt {
-    display: grid;
-    grid-template-columns: 650px 250px;
-    grid-template-areas: "img_auto txt_auto";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_auto;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_electrico;
-  }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 650px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .pizzeria .row_txt_img {
-    display: grid;
-    grid-template-columns: 250px 650px;
-    grid-template-areas: "txt_pizzeria img_pizzeria";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_pizzeria;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_pizzeria;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 650px;
-    max-height: 100%;
-    object-fit: cover;
-  }
   main section .container .row .col .grid_container_organic {
     /*---------------------ORGANIC--------------------------*/
-    margin-top: 2rem;
-    row-gap: 2rem;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "txt_mario txt_mario img_mario" "img_seguridad1 img_seguridad2 txt_seguridad";
-    width: 100%;
-    justify-content: center;
   }
   main section .container .row .col .grid_container_organic .mario_txt {
     display: flex;
@@ -2328,16 +2031,71 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  main section .container .row .col .mario .row_txt_img1 {
-    /*-------------ORGANIC-------1024------*/
-    display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-areas: "txt_mario img_mario";
-    width: 100%;
+  main section .container .row .col .config_flex_clients .box_txt_clients {
+    /*--------CLIENTS----768-----*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    margin: 10px 0 10px 0;
+    width: 40vw;
+    height: 100%;
+    grid-area: txt_clients;
+    margin-top: 0.1rem;
+    color: #faebd7;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt_about {
+  main section .container .row .col .config_flex_clients .box_txt_clients h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .box_txt_clients h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .box_txt_clients h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .box_txt_clients p {
+    font-size: medium;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p {
+    /*----------ABOUT----768------*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    grid-area: txt_about;
+    margin-top: 0.5rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex div .box_txt_about p p {
+    font-size: medium;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_organic {
+    /*---------------------ORGANIC----1024------------*/
+    padding-top: 3rem;
+    column-gap: 0.5rem;
+    row-gap: 3rem;
+  }
+  main section .container .row .col .grid_container_organic .mario_txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -2345,48 +2103,40 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 400px;
     height: 100%;
     grid-area: txt_mario;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt_about h2 {
+  main section .container .row .col .grid_container_organic .mario_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt_about h3 {
+  main section .container .row .col .grid_container_organic .mario_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt_about h4 {
+  main section .container .row .col .grid_container_organic .mario_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_txt_about p {
+  main section .container .row .col .grid_container_organic .mario_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 {
+  main section .container .row .col .grid_container_organic .mario_img {
     display: flex;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     justify-content: center;
     align-items: center;
     grid-area: img_mario;
   }
-  main section .container .row .col .mario .row_txt_img1 .box_img_tall_1 .comun_img {
-    max-width: 400px;
-    max-height: 60vh;
+  main section .container .row .col .grid_container_organic .mario_img .comun_img {
+    max-width: 100%;
+    max-height: 400px;
     object-fit: cover;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt {
-    display: grid;
-    grid-template-columns: 200px 200px 400px;
-    grid-template-areas: "img_seguridad_1 img_seguridad_2 txt_seguridad";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj {
+  main section .container .row .col .grid_container_organic .seguridad_txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -2394,395 +2144,50 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
     width: 400px;
     height: 100%;
     grid-area: txt_seguridad;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h2 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h3 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj h4 {
+  main section .container .row .col .grid_container_organic .seguridad_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_txt_2pj p {
+  main section .container .row .col .grid_container_organic .seguridad_txt p {
     font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 {
+  main section .container .row .col .grid_container_organic .seguridad_img1 {
     display: flex;
-    width: 100%;
-    height: 60vh;
+    width: 200px;
+    height: 100%;
     justify-content: center;
     align-items: center;
     grid-area: img_seguridad1;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_1 .comun_img {
+  main section .container .row .col .grid_container_organic .seguridad_img1 .comun_img {
     max-width: 200px;
-    max-height: 60vh;
+    max-height: 350px;
     object-fit: cover;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 {
+  main section .container .row .col .grid_container_organic .seguridad_img2 {
     display: flex;
-    width: 100%;
-    height: 60vh;
-    justify-content: center;
+    width: 200px;
+    height: 100%;
+    justify-content: flex-start;
     align-items: center;
     grid-area: img_seguridad2;
   }
-  main section .container .row .col .seguridad .row_img1_img2_txt .box_img_tall_2 .comun_img {
+  main section .container .row .col .grid_container_organic .seguridad_img2 .comun_img {
     max-width: 200px;
-    max-height: 60vh;
-    object-fit: cover;
-  }
-  main section .container .row .col .electrico .row_txt_img {
-    /*--------------------HIGHLIGHTED-------1024-------*/
-    display: grid;
-    grid-template-columns: 200px 500px;
-    grid-template-areas: "txt_electrico img_electrico";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_electrico;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_electrico;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 500px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .chancador .row_img_txt {
-    display: grid;
-    grid-template-columns: 500px 200px;
-    grid-template-areas: "img_chancador txt_chancador";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 30px 0;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_chancador;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_chancador;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 500px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .triciclo .row_txt_img {
-    /*-------------------HARDSURFACE-----1024--------------*/
-    display: grid;
-    grid-template-columns: 200px 500px;
-    grid-template-areas: "txt_triciclo img_triciclo";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_triciclo;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_triciclo;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
-    max-width: 500px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .pizzeria .row_txt_img {
-    display: grid;
-    grid-template-columns: 200px 500px;
-    grid-template-areas: "txt_pizzeria img_pizzeria";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_pizzeria;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_pizzeria;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 500px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .torque .row_txt_img {
-    display: grid;
-    grid-template-columns: 200px 500px;
-    grid-template-areas: "txt_torque img_torque";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_torque;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_torque;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-    max-width: 500px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .auto .row_img_txt {
-    display: grid;
-    grid-template-columns: 500px 200px;
-    grid-template-areas: "img_auto txt_auto";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_auto;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_auto;
-  }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 500px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .bota .row_img_txt {
-    display: grid;
-    grid-template-columns: 400px 300px;
-    grid-template-areas: "img_bota txt_bota";
-    width: 100%;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_bota;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt p {
-    font-size: medium;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_bota;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
-    max-width: 400px;
-    max-height: 100%;
+    max-height: 350px;
     object-fit: cover;
   }
 }
@@ -3015,424 +2420,69 @@ footer .container .row .col .center div .icon {
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  main section .container .row .col .config_flex .box_txt_clients {
+  main section .container .row .col .config_flex_clients .box_txt_clients {
     /*--------CLIENTS----768-----*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 40%;
+    width: 40vw;
     height: 100%;
     grid-area: txt_clients;
-    margin-top: 2.5rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
-  main section .container .row .col .config_flex .box_txt_clients h2 {
+  main section .container .row .col .config_flex_clients .box_txt_clients h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt_clients h3 {
+  main section .container .row .col .config_flex_clients .box_txt_clients h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt_clients h4 {
+  main section .container .row .col .config_flex_clients .box_txt_clients h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt_clients p {
+  main section .container .row .col .config_flex_clients .box_txt_clients p {
     font-size: small;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex div .web_insert {
-    margin-top: 5%;
-  }
-  main section .container .row .col .config_flex div .box_txt_about p {
+  main section .container .row .col .config_flex .box_txt_about {
     /*----------ABOUT----768------*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 70%;
+    width: 80%;
     height: 100%;
     grid-area: txt_about;
     margin-top: 0.5rem;
     color: #faebd7;
   }
-  main section .container .row .col .config_flex div .box_txt_about p h2 {
+  main section .container .row .col .config_flex .box_txt_about h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex div .box_txt_about p h3 {
+  main section .container .row .col .config_flex .box_txt_about h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex div .box_txt_about p h4 {
+  main section .container .row .col .config_flex .box_txt_about h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex div .box_txt_about p p {
+  main section .container .row .col .config_flex .box_txt_about p {
     font-size: small;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex div .box_txt_about p {
-    margin-left: 0.5rem;
-    margin-right: 3rem;
-  }
-  main section .container .row .col .electrico .row_txt_img {
-    /*---------------HIGHLIGHT---768----------*/
-    display: grid;
-    grid-template-columns: 250px 400px;
-    grid-template-rows: 300px;
-    grid-template-areas: "txt_electrico img_electrico";
-    width: 100%;
-    justify-content: center;
-    margin: 5px 0 5px 0;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_electrico;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_electrico;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 400px;
-    max-height: 300px;
-    object-fit: cover;
-  }
-  main section .container .row .col .chancador .row_img_txt {
-    display: grid;
-    grid-template-columns: 400px 250px;
-    grid-template-rows: 300px;
-    grid-template-areas: "img_chancador txt_chancador";
-    width: 100%;
-    justify-content: center;
-    margin: 5px 0 5px 0;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_chancador;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_chancador;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 400px;
-    max-height: 300px;
-    object-fit: cover;
-  }
-  main section .container .row .col .triciclo .row_txt_img {
-    /*---------------HARDSURFACE--768--------*/
-    display: grid;
-    grid-template-columns: 200px 400px;
-    grid-template-rows: 300px;
-    grid-template-areas: "txt_triciclo img_triciclo";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_triciclo;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_triciclo;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
-    max-width: 400px;
-    max-height: 300px;
-    object-fit: cover;
-  }
-  main section .container .row .col .auto .row_img_txt {
-    display: grid;
-    grid-template-columns: 400px 200px;
-    grid-template-rows: 300px;
-    grid-template-areas: "img_auto txt_auto";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_auto;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_auto;
-  }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 400px;
-    max-height: 300px;
-    object-fit: cover;
-  }
-  main section .container .row .col .bota .row_img_txt {
-    display: grid;
-    grid-template-columns: 350px 200px;
-    grid-template-rows: 350px;
-    grid-template-areas: "img_bota txt_bota";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_bota;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_bota;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
-    max-width: 350px;
-    max-height: 300px;
-    object-fit: cover;
-  }
-  main section .container .row .col .torque .row_txt_img {
-    display: grid;
-    grid-template-columns: 200px 350px;
-    grid-template-rows: 300px;
-    grid-template-areas: "txt_torque img_torque";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_torque;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_torque;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-    max-width: 350px;
-    max-height: 300px;
-    object-fit: cover;
-  }
-  main section .container .row .col .pizzeria .row_txt_img {
-    display: grid;
-    grid-template-columns: 200px 400px;
-    grid-template-rows: 300px;
-    grid-template-areas: "txt_pizzeria img_pizzeria";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_pizzeria;
-    margin-top: 0.5rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_pizzeria;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 400px;
-    max-height: 300px;
-    object-fit: cover;
   }
   main section .container .row .col .grid_container_organic {
     /*---------------------ORGANIC--------------------------*/
-    margin-top: 3rem;
+    padding-top: 0.5rem;
   }
   main section .container .row .col .grid_container_organic .mario_txt {
-    margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -3537,14 +2587,19 @@ footer .container .row .col .center div .icon {
 @media (max-width: 575px) {
   /*-------------MAIN------------*/
   main .highsquare .container-fluid .row .col .config_margin_txt {
-    margin-left: 1.2rem;
+    padding: 1rem;
+    margin-left: 0.1rem;
   }
   main .highsquare .container-fluid .row .col .config_margin_txt h1 {
-    margin-right: 0.5rem;
+    margin-right: 0.1rem;
   }
   main .highsquare .container-fluid .row .col .config_margin_txt p {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.01rem;
+  }
+  main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
+    margin-left: 0.01rem;
+    gap: 5px;
   }
   main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
     width: 100%;
@@ -3570,243 +2625,58 @@ footer .container .row .col .center div .icon {
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  main section .container .row .col .config_flex {
+  main section .container .row .col .grid_container_hardsurface {
+    /*--------------------HARDSURFACE 575--------------*/
+    display: flex;
+    padding-top: 3rem;
     flex-direction: column;
+    row-gap: 2px;
   }
-  main section .container .row .col .config_flex .box_txt_clients {
-    /*----------- --CLIENTS--575------------*/
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: txt_clients;
-    margin-top: 0.2rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_clients p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex div .web_insert {
-    /*Ajuste tamaño insert pagina web  380*/
-    width: 380px;
-  }
-  main section .container .row .col .config_flex .logo {
-    /*--------------ABOUT---575--------------*/
-    margin: 0.4rem;
-    width: 20%;
-  }
-  main section .container .row .col .config_flex .logo .image_about {
-    width: 100%;
-  }
-  main section .container .row .col .config_flex .box_txt_about {
-    display: flex;
-    flex-direction: column;
-    align-items: fit-content;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_about;
-    margin-top: 0.2rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .config_flex .box_txt_about h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about p {
-    font-size: 16px;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about {
-    margin-left: 0.8rem;
-    margin-right: 1.3rem;
-  }
-  main section .container .row .col .electrico .row_txt_img {
-    /*---------------HIGHLIGHT----575----------*/
-    display: grid;
-    grid-template-columns: 370px;
-    grid-template-rows: 200px 300px;
-    gap: 2px;
-    grid-template-areas: "txt_electrico" "img_electrico";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: fit-content;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_electrico;
-    margin-top: 0.1rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img {
-    display: flex;
-    width: 370px;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_electrico;
-  }
-  main section .container .row .col .electrico .row_txt_img .box_img .comun_img {
-    max-width: 370px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .chancador .row_img_txt {
-    display: grid;
-    grid-template-columns: 370px;
-    grid-template-rows: 200px 300px;
-    gap: 2px;
-    grid-template-areas: "txt_chancador" "img_chancador";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: fit-content;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_chancador;
-    margin-top: 0.1rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
-    display: flex;
-    width: 370px;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_chancador;
-  }
-  main section .container .row .col .chancador .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 370px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .triciclo .row_txt_img {
-    /*---------------HARDSURFACE---575-------*/
-    display: grid;
-    grid-template-columns: 370px;
-    grid-template-rows: 200px 300px;
-    gap: 2px;
-    grid-template-areas: "txt_triciclo" "img_triciclo";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .triciclo .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: fit-content;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
     grid-area: txt_triciclo;
-    margin-top: 0.1rem;
+    margin-top: 0.01rem;
     color: #faebd7;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h2 {
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h3 {
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_txt h4 {
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_txt p {
-    font-size: small;
+  main section .container .row .col .grid_container_hardsurface .triciclo_txt p {
+    font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_img {
+  main section .container .row .col .grid_container_hardsurface .triciclo_img {
     display: flex;
-    width: 370px;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     grid-area: img_triciclo;
   }
-  main section .container .row .col .triciclo .row_txt_img .box_img .comun_img {
-    max-width: 370px;
-    max-height: 300px;
+  main section .container .row .col .grid_container_hardsurface .triciclo_img .comun_img {
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
   }
-  main section .container .row .col .auto .row_img_txt {
-    display: grid;
-    grid-template-columns: 370px;
-    grid-template-rows: 200px 300px;
-    grid-template-areas: "txt_auto" "img_auto";
-    width: 100%;
-    justify-content: center;
+  main section .container .row .col .grid_container_hardsurface .triciclo_img {
+    padding-bottom: 4rem;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt {
+  main section .container .row .col .grid_container_hardsurface .auto_txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -3814,147 +2684,45 @@ footer .container .row .col .center div .icon {
     width: 100%;
     height: 100%;
     grid-area: txt_auto;
-    margin-top: 0.2rem;
+    margin-top: 3rem;
     color: #faebd7;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt h2 {
+  main section .container .row .col .grid_container_hardsurface .auto_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt h3 {
+  main section .container .row .col .grid_container_hardsurface .auto_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt h4 {
+  main section .container .row .col .grid_container_hardsurface .auto_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .auto .row_img_txt .box_txt p {
-    font-size: small;
+  main section .container .row .col .grid_container_hardsurface .auto_txt p {
+    font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img {
+  main section .container .row .col .grid_container_hardsurface .automovil {
+    grid-area: carousel_car;
+    padding-bottom: 4rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .automovil .carousel .carousel-inner .carousel-item .auto_img {
+    min-height: 200px;
     display: flex;
-    width: 370px;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     grid-area: img_auto;
   }
-  main section .container .row .col .auto .row_img_txt .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 370px;
-    max-height: 100%;
+  main section .container .row .col .grid_container_hardsurface .automovil .carousel .carousel-inner .carousel-item .auto_img .comun_img {
+    max-width: fit-content;
+    max-height: 250px;
     object-fit: cover;
   }
-  main section .container .row .col .bota .row_img_txt {
-    display: grid;
-    grid-template-columns: 370px;
-    grid-template-rows: 200px 300px;
-    grid-template-areas: "txt_bota" "img_bota";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: fit-content;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_bota;
-    margin-top: 0.1rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img {
-    display: flex;
-    width: 370px;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_bota;
-  }
-  main section .container .row .col .bota .row_img_txt .box_img .comun_img {
-    max-width: 370px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .torque .row_txt_img {
-    display: grid;
-    grid-template-columns: 370px;
-    grid-template-rows: 300px 300px;
-    gap: 2px;
-    grid-template-areas: "txt_torque" "img_torque";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_torque;
-    margin-top: 0.1rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_txt p {
-    font-size: small;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img {
-    display: flex;
-    width: 370px;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    grid-area: img_torque;
-  }
-  main section .container .row .col .torque .row_txt_img .box_img .comun_img {
-    max-width: 370px;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  main section .container .row .col .pizzeria .row_txt_img {
-    display: grid;
-    grid-template-columns: 370px;
-    grid-template-rows: 300px 300px;
-    grid-template-areas: "txt_pizzeria" "img_pizzeria";
-    width: 100%;
-    justify-content: center;
-  }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -3962,46 +2730,234 @@ footer .container .row .col .center div .icon {
     width: 100%;
     height: 100%;
     grid-area: txt_pizzeria;
-    margin-top: 0.1rem;
+    margin-top: 0.01rem;
     color: #faebd7;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h2 {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h3 {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt h4 {
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .box_txt p {
-    font-size: small;
+  main section .container .row .col .grid_container_hardsurface .pizzeria_txt p {
+    font-size: medium;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img {
+  main section .container .row .col .grid_container_hardsurface .modelo_pizzeria {
+    grid-area: carousel_pizza;
+    padding-bottom: 4rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .modelo_pizzeria .carousel .carousel-inner .carousel-item .pizzeria_img {
     display: flex;
-    width: 370px;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     grid-area: img_pizzeria;
   }
-  main section .container .row .col .pizzeria .row_txt_img .carousel .carousel-inner .carousel-item .box_img .comun_img {
-    max-width: 370px;
+  main section .container .row .col .grid_container_hardsurface .modelo_pizzeria .carousel .carousel-inner .carousel-item .pizzeria_img .comun_img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 98%;
+    height: 100%;
+    grid-area: txt_bota;
+    margin-top: 0.01rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_txt p {
+    font-size: medium;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_bota;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_img .comun_img {
+    max-width: 100%;
+    max-height: fit-content;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_hardsurface .bota_img {
+    padding-bottom: 4rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 98%;
+    height: 100%;
+    grid-area: txt_torque;
+    margin-top: 0.01rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_txt p {
+    font-size: medium;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_torque;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_img .comun_img {
+    max-width: 100%;
+    max-height: fit-content;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_hardsurface .torque_img {
+    padding-bottom: 4rem;
+  }
+  main section .container .row .col .grid_container_highlighted {
+    /*--------------------HIGHLIGHTED--------------*/
+    row-gap: 0.1rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(auto);
+    grid-template-areas: "txt_electrico txt_electrico" "img_electrico img_electrico" "txt_chancador txt_chancador" "carousel_chancador carousel_chancador";
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_electrico;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_txt p {
+    font-size: larger;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_electrico;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_img .comun_img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  main section .container .row .col .grid_container_highlighted .electrico_img {
+    padding-bottom: 4rem;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_chancador;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .chancador_txt p {
+    font-size: larger;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .grid_container_highlighted .carousel {
+    grid-area: carousel_chancador;
+    padding-bottom: 4rem;
+  }
+  main section .container .row .col .grid_container_highlighted .carousel .carousel-inner .carousel-item .chancador_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-area: img_chancador;
+  }
+  main section .container .row .col .grid_container_highlighted .carousel .carousel-inner .carousel-item .chancador_img .comun_img {
+    max-width: 100%;
     max-height: 100%;
     object-fit: cover;
   }
   main section .container .row .col .grid_container_organic {
     /*---------------------ORGANIC--------------------------*/
-    margin-top: 3rem;
-    row-gap: 2rem;
+    padding-top: 2rem;
     display: grid;
+    row-gap: 2rem;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: repeat(auto);
     grid-template-areas: "txt_mario txt_mario" "img_mario img_mario" "txt_seguridad txt_seguridad" "img_seguridad1 img_seguridad2";
     width: 100%;
     justify-content: center;
@@ -4048,7 +3004,6 @@ footer .container .row .col .center div .icon {
     object-fit: cover;
   }
   main section .container .row .col .grid_container_organic .seguridad_txt {
-    margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -4056,7 +3011,7 @@ footer .container .row .col .center div .icon {
     width: 375px;
     height: 100%;
     grid-area: txt_seguridad;
-    margin-top: 1.8rem;
+    margin-top: 0.1rem;
     color: #faebd7;
   }
   main section .container .row .col .grid_container_organic .seguridad_txt h2 {
@@ -4101,6 +3056,125 @@ footer .container .row .col .center div .icon {
     max-width: 180px;
     max-height: 375px;
     object-fit: cover;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 {
+    /*------------------CLIENTS.......575..............*/
+    padding: 0.1rem;
+    flex-direction: column;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_clients;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 .box_txt_cl_torque p {
+    font-size: larger;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente1 div .web_insert {
+    /*Ajuste posicion insert pagina web*/
+    width: 100%;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 {
+    padding: 0.1rem;
+    flex-direction: column;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_clients;
+    margin-top: 0.1rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone p {
+    font-size: larger;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 div {
+    width: 100%;
+  }
+  main section .container .row .col .config_flex_clients .cliente2 div .client1_img {
+    width: 100%;
+  }
+  main section .container .row .col .config_flex {
+    /*--------------ABOUT---575--------------*/
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main section .container .row .col .config_flex .logo {
+    margin: 0.4rem;
+    width: 20%;
+  }
+  main section .container .row .col .config_flex .box_txt_about {
+    display: flex;
+    flex-direction: column;
+    align-items: fit-content;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-area: txt_about;
+    margin-top: 0.2rem;
+    color: #faebd7;
+  }
+  main section .container .row .col .config_flex .box_txt_about h2 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h3 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about h4 {
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about p {
+    font-size: 16px;
+    margin-left: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  main section .container .row .col .config_flex .box_txt_about {
+    margin-left: 0.8rem;
+    margin-right: 1.3rem;
   }
 }
 footer .container .row .col .center div .icon {
@@ -4155,12 +3229,8 @@ footer .container .row .col .center div .icon {
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
   }
-  main section .container .row .col .config_flex {
-    flex-direction: column;
-  }
-  main section .container .row .col .config_flex .box_txt_clients {
+  main section .container .row .col .config_flex_clients .box_txt_clients {
     /*----------- --CLIENTS--380------------*/
-    margin-left: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -4171,67 +3241,26 @@ footer .container .row .col .center div .icon {
     margin-top: 2rem;
     color: #faebd7;
   }
-  main section .container .row .col .config_flex .box_txt_clients h2 {
+  main section .container .row .col .config_flex_clients .box_txt_clients h2 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt_clients h3 {
+  main section .container .row .col .config_flex_clients .box_txt_clients h3 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt_clients h4 {
+  main section .container .row .col .config_flex_clients .box_txt_clients h4 {
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex .box_txt_clients p {
+  main section .container .row .col .config_flex_clients .box_txt_clients p {
     font-size: 16px;
     margin-left: 0.8rem;
     margin-right: 1.5rem;
   }
-  main section .container .row .col .config_flex div .web_insert {
-    margin-left: 1rem;
-    /*Ajuste tamaño insert pagina web  380*/
-    width: 310px;
-  }
-  main section .container .row .col .config_flex .logo {
-    /*--------------ABOUT---380--------------*/
-    margin: 1rem;
-    width: 20%;
-  }
-  main section .container .row .col .config_flex .logo .image_about {
-    width: 100%;
-  }
-  main section .container .row .col .config_flex .box_txt_about {
-    display: flex;
-    flex-direction: column;
-    align-items: fit-content;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-area: txt_about;
-    margin-top: 1rem;
-    color: #faebd7;
-  }
-  main section .container .row .col .config_flex .box_txt_about h2 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about h3 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about h4 {
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about p {
-    font-size: 16px;
-    margin-left: 0.8rem;
-    margin-right: 1.5rem;
-  }
-  main section .container .row .col .config_flex .box_txt_about {
-    margin-left: 0.8rem;
-    margin-right: 1.3rem;
+  main section .container .row .col .config_flex_clients div .web_insert {
+    /*Ajuste posicion insert pagina web*/
+    width: 350px;
   }
   main section .container .row .col .electrico .row_txt_img {
     /*---------------HIGHLIGHT----380----------*/

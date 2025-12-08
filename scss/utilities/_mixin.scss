@@ -58,27 +58,3 @@
     }
 }
 
-/*  FUTUROS MIXINS
-
-
-@mixin row_txt_img ($col1, $col2, $margin) {
-    display: grid;
-    grid-template-columns: $col1 $col2;
-    grid-template-areas:
-        "texto imagen"
-    ;
-    width: 100%;
-    justify-content: center;
-    margin: $margin 0 $margin 0;
-
-@mixin row_img_txt ($col3, $col4, $margin){
-    display: grid;
-    grid-template-columns: $col3 $col4;
-    grid-template-areas:
-        "imagen texto"
-    ;
-    width: 100%;
-    justify-content: center;
-    argin: $margin 0 $margin 0;
-
-*/

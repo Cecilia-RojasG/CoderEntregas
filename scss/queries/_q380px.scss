@@ -69,33 +69,16 @@
                             }
                         }
 
-                        .config_flex{
-                            flex-direction:column;
+                        .config_flex_clients{
                             .box_txt_clients {
                                 /*----------- --CLIENTS--380------------*/
-                                margin-left: 1.0rem;
                                 @include mix.box_txt(column, flex-start, 100%, txt_clients, 2.0rem, 16px);
                             }
                             div{
                                 .web_insert {
-                                    margin-left: 1rem;
-                                    /*Ajuste tamaño insert pagina web  380*/
-                                    width: 310px;
+                                    /*Ajuste posicion insert pagina web*/
+                                    width: 350px;
                                 }
-                            }
-                            .logo {
-                                /*--------------ABOUT---380--------------*/
-                                margin: 1.0rem;
-                                width: 20%;
-
-                                .image_about {
-                                    width: 100%;
-                                }
-                            }
-                            .box_txt_about {
-                                @include mix.box_txt(column, fit-content, 100%, txt_about, 1.0rem, 16px);
-                                    margin-left: 0.8rem;
-                                    margin-right: 1.3rem;
                             }
                         }
 

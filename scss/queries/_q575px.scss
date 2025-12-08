@@ -1,4 +1,3 @@
-@use '../base/variables' as v;
 @use '../utilities/extend';
 @use '../utilities/mixin.scss' as mix;
 
@@ -13,13 +12,22 @@
                 .row{
                     .col{
                         .config_margin_txt {
-                            margin-left: 1.2rem;
+                            padding: 1rem;
+                            margin-left: 0.1rem;
                             h1 {
-                                margin-right: 0.5rem;
+                                margin-right: 0.1rem;
                             }
                             p {
-                                margin-left: 1.0rem;
-                                margin-right: 1.0rem;
+                                margin-left: 0.5rem;
+                                margin-right: 0.01rem;
+                            }
+                            div {
+                                nav {
+                                    .links_internos {
+                                        margin-left: 0.01rem;
+                                        gap: 5px;
+                                    }
+                                }
                             }
                         }
                     }
@@ -59,220 +67,122 @@
                                 }
                             }
                         }
-
-                        .config_flex{
-                            flex-direction:column;
-                            .box_txt_clients {
-                                /*----------- --CLIENTS--575------------*/
-                                @include mix.box_txt(column, flex-start, 100%, txt_clients, 0.2rem, small);
+                        .grid_container_hardsurface {
+                            /*--------------------HARDSURFACE 575--------------*/
+                            display: flex;
+                            padding-top: 3rem;
+                            flex-direction: column;
+                            row-gap: 2px;
+                            .triciclo_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_triciclo, 0.01rem, medium);
                             }
-                            div{
-                                .web_insert {
-                                    /*Ajuste tamaño insert pagina web  380*/
-                                    width: 380px;
-                                }
+
+                            .triciclo_img {
+                                @include mix.box_img(100%, 100%, center, img_triciclo, 100%, 100%);
+                                padding-bottom: 4rem;
                             }
-                            .logo {
-                                /*--------------ABOUT---575--------------*/
-                                margin: 0.4rem;
-                                width: 20%;
 
-                                .image_about {
-                                    width: 100%;
-                                }
+                            .auto_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_auto, 3rem, medium);
                             }
-                            .box_txt_about {
-                                @include mix.box_txt(column, fit-content, 100%, txt_about, 0.2rem, 16px);
-                                    margin-left: 0.8rem;
-                                    margin-right: 1.3rem;
-                            }
-                        }
 
-
-                        .electrico {
-                            .row_txt_img {
-                                /*---------------HIGHLIGHT----575----------*/
-                                display: grid;
-                                grid-template-columns: 370px;
-                                grid-template-rows: 200px 300px;
-                                gap: 2px;
-                                grid-template-areas:
-                                    "txt_electrico"
-                                    "img_electrico"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, txt_electrico,0.1rem, small);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(50vh, 370px, center, img_electrico, 370px, 100%);
-                                }
-                            }
-                        }
-                        .chancador {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 370px;
-                                grid-template-rows: 200px 300px;
-                                gap: 2px;
-                                grid-template-areas:
-                                    "txt_chancador"
-                                    "img_chancador"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, txt_chancador, 0.1rem, small);
-                                }
-
-                                .carousel {
-                                    .carousel-inner {
-                                        .carousel-item {
-                                            .box_img {
-                                                @include mix.box_img(50vh, 370px, center, img_chancador, 370px, 100%);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        
-                        .triciclo {
-                            .row_txt_img {
-                                /*---------------HARDSURFACE---575-------*/
-                                display: grid;
-                                grid-template-columns: 370px;
-                                grid-template-rows: 200px 300px;
-                                gap: 2px;
-                                grid-template-areas:
-                                    "txt_triciclo"
-                                    "img_triciclo"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, txt_triciclo, 0.1rem, small);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(40vh, 370px, center, img_triciclo, 370px, 300px);
-                                }
-                            }
-                        }
-
-                        .auto {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 370px;
-                                grid-template-rows: 200px 300px;
-                                grid-template-areas:
-                                    "txt_auto"
-                                    "img_auto"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.2rem, small);
-                                }
-
-                                .carousel {
-                                    .carousel-inner {
-                                        .carousel-item {
-                                            .box_img {
-                                                @include mix.box_img(40vh, 370px, center, img_auto, 370px, 100%);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .bota {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 370px;
-                                grid-template-rows: 200px 300px;
-                                grid-template-areas:
-                                    "txt_bota"
-                                    "img_bota"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, fit-content, 100%, txt_bota, 0.1rem, small);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(40vh, 370px, center, img_bota, 370px, 100%);
-                                }
-                            }
-                        }
-
-                        .torque {
-                            .row_txt_img {
-                                display: grid;
-                                grid-template-columns: 370px;
-                                grid-template-rows: 300px 300px;
-                                gap: 2px;
-                                grid-template-areas:
-                                    "txt_torque"
-                                    "img_torque"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_torque,0.1rem, small);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(40vh, 370px, center, img_torque, 370px, 100%);
-                                }
-                            }
-                        }
-                        
-                        .pizzeria {
-                            .row_txt_img {
-                                display: grid;
-                                grid-template-columns: 370px;
-                                grid-template-rows: 300px 300px;
-                                grid-template-areas:
-                                    "txt_pizzeria"
-                                    "img_pizzeria"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.1rem, small);
-                                }
-                                
+                            .automovil{
+                                grid-area: carousel_car;
+                                padding-bottom: 4rem;
                                 .carousel{
-                                    .carousel-inner{
-                                        .carousel-item{
-                                            .box_img {
-                                                @include mix.box_img(40vh, 370px, center, img_pizzeria, 370px, 100%);
-                                            } 
+                                    .carousel-inner {
+                                        .carousel-item {
+                                            .auto_img {
+                                                min-height: 200px;
+                                                @include mix.box_img(100%, 100%, center, img_auto, fit-content, 250px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pizzeria_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.01rem, medium);
+                            }
+
+                            .modelo_pizzeria {
+                                grid-area: carousel_pizza;
+                                padding-bottom: 4rem;
+                                .carousel{
+                                    .carousel-inner {
+                                        .carousel-item {
+                                            .pizzeria_img {
+                                                @include mix.box_img(100%, 100%, center, img_pizzeria, 100%, 100%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .bota_txt {
+                                @include mix.box_txt(column, flex-start, 98%, txt_bota, 0.01rem, medium);
+                            }
+
+                            .bota_img {
+                                @include mix.box_img(100%, 100%, center, img_bota, 100%, fit-content);
+                                padding-bottom: 4rem;
+                            }
+
+                            .torque_txt {
+                                @include mix.box_txt(column, flex-start, 98%, txt_torque, 0.01rem, medium);
+                            }
+
+                            .torque_img {
+                                @include mix.box_img(100%, 100%, center, img_torque, 100%, fit-content);
+                                padding-bottom: 4rem;
+                            }
+                        }
+
+                        .grid_container_highlighted {
+                            /*--------------------HIGHLIGHTED--------------*/
+                            row-gap: 0.1rem;
+                            grid-template-columns: auto auto;
+                            grid-template-rows: repeat(auto);
+                            grid-template-areas:
+                                "txt_electrico txt_electrico"
+                                "img_electrico img_electrico"
+                                "txt_chancador txt_chancador"
+                                "carousel_chancador carousel_chancador"
+                            ;
+
+                            .electrico_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_electrico, 0.1rem, larger);
+                            }
+
+                            .electrico_img {
+                                @include mix.box_img(100%, 100%, center, img_electrico, 100%, 100%);
+                                padding-bottom: 4rem;
+                            }
+
+                            .chancador_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_chancador, 0.1rem, larger);
+                            }
+
+                            .carousel {
+                                grid-area: carousel_chancador;
+                                padding-bottom: 4rem;
+                                .carousel-inner {
+                                    .carousel-item {
+                                        .chancador_img {
+                                            @include mix.box_img(100%, 100%, center, img_chancador, 100%, 100%);
                                         }
                                     }
                                 }
                             }
                         }
-
+                        
                         .grid_container_organic{
                             /*---------------------ORGANIC--------------------------*/
-                            margin-top: 3rem;
-                            row-gap: 2rem;
+                            padding-top: 2rem;
                             display: grid;
+                            row-gap: 2rem;
                             grid-template-columns: auto auto;
-                            grid-template-rows: auto auto auto auto;
+                            grid-template-rows: repeat(auto);
                             grid-template-areas:
                                 "txt_mario txt_mario"
                                 "img_mario img_mario"
@@ -280,7 +190,8 @@
                                 "img_seguridad1 img_seguridad2" 
                             ;
                             width: 100%;
-                            justify-content: center;
+                            justify-content: center;    
+
                             .mario_txt {
                                 @include mix.box_txt(column, flex-start, 375px, txt_mario, 00.1rem, medium);
                             }
@@ -290,8 +201,7 @@
                             }
 
                             .seguridad_txt{
-                                margin-left: 20px;
-                                @include mix.box_txt(column, flex-start, 375px, txt_seguridad, 1.8rem, medium);
+                                @include mix.box_txt(column, flex-start, 375px, txt_seguridad, 0.1rem, medium);
                             }
 
                             .seguridad_img1{
@@ -299,6 +209,56 @@
                             }
                             .seguridad_img2{
                                 @include mix.box_img(100%, 180px, center, img_seguridad2, 180px, 375px);
+                            }
+                        }
+
+                        .config_flex_clients {
+                            .cliente1{
+                                /*------------------CLIENTS.......575..............*/
+                                padding: 0.1rem;
+                                flex-direction: column;
+                                .box_txt_cl_torque {
+                                    width: 100%;
+                                    @include mix.box_txt (column, flex-start, 100%, txt_clients, 0.1rem, larger);
+                                }
+                                div {
+                                    .web_insert {
+                                        /*Ajuste posicion insert pagina web*/
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            
+                            .cliente2{
+                                padding: 0.1rem;
+                                flex-direction: column;
+                                .box_txt_cl_thone {
+                                    width: 100%;
+                                    @include mix.box_txt (column, flex-start, 100%, txt_clients, 0.1rem, larger);
+                                }
+                                div {
+                                    width: 100%;
+                                    .client1_img {  
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+
+                        .config_flex{
+                            /*--------------ABOUT---575--------------*/
+                            flex-direction:column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            .logo {
+                                margin: 0.4rem;
+                                width: 20%;
+
+                            }
+                            .box_txt_about {
+                                @include mix.box_txt(column, fit-content, 100%, txt_about, 0.2rem, 16px);
+                                    margin-left: 0.8rem;
+                                    margin-right: 1.3rem;
                             }
                         }
                     }

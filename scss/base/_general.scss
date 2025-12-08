@@ -1,3 +1,4 @@
+
 /* Reset de CSS */
 * {
     margin: 0;
@@ -34,7 +35,7 @@ h4 {
 }
 
 p {
-    font-size: clamp(16px, 0.8vw, 0.9rem);
+    font-size: clamp(16px, 1.0vw, xx-large);
 }
 
 span {
@@ -44,4 +45,5 @@ span {
 label {
     font-size: clamp(16px, 0.9vw, 1.1rem);
 }
+
 

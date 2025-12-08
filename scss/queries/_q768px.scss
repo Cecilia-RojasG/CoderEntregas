@@ -154,199 +154,23 @@
                                 }
                             }
                         }
-                        .config_flex{
+                        .config_flex_clients{
                             .box_txt_clients {
                                 /*--------CLIENTS----768-----*/
-                                @include mix.box_txt(column, flex-start, 40%, txt_clients, 2.5rem, small);
-                            }
-                            div{
-                                .web_insert {
-                                    margin-top: 5%;
-                                } 
-                            
-                                .box_txt_about {
-                                    p {
-                                        /*----------ABOUT----768------*/ 
-                                        @include mix.box_txt(column, flex-start, 70%, txt_about, 0.5rem, small);
-                                        margin-left: 0.5rem;
-                                        margin-right: 3.0rem;
-                                    }
-                                }
-                            }
-                            
-                        }
-                        
-                        .electrico {
-                            .row_txt_img {
-                                /*---------------HIGHLIGHT---768----------*/
-                                display: grid;
-                                grid-template-columns: 250px 400px;
-                                grid-template-rows: 300px;
-                                grid-template-areas:
-                                    "txt_electrico img_electrico"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 5px 0 5px 0;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_electrico, 0.5rem, small);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(300px, 100%, center, img_electrico, 400px, 300px);
-                                }
+                                @include mix.box_txt(column, flex-start, 40vw, txt_clients, 0.1rem, small);
                             }
                         }
-                        .chancador {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 400px 250px;
-                                grid-template-rows: 300px;
-                                grid-template-areas:
-                                    "img_chancador txt_chancador"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 5px 0 5px 0;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_chancador, 0.5rem, small);
-                                }
-                                .carousel{
-                                    .carousel-inner{
-                                        .carousel-item{
-                                            .box_img {
-                                                @include mix.box_img(300px, 100%, center, img_chancador, 400px, 300px);
-                                            } 
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    
-                        .triciclo {
-                            .row_txt_img {
-                                /*---------------HARDSURFACE--768--------*/
-                                display: grid;
-                                grid-template-columns: 200px 400px;
-                                grid-template-rows: 300px;
-                                grid-template-areas:
-                                    "txt_triciclo img_triciclo"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_triciclo, 0.5rem, small);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(300px, 100%, center, img_triciclo, 400px, 300px);
-                                }
-                            }
-                        }
-                        
-                        .auto {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 400px 200px;
-                                grid-template-rows: 300px;
-                                grid-template-areas:
-                                    "img_auto txt_auto"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt{
-                                    @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.5rem, small);
-                                }
-                                
-                                .carousel{
-                                    .carousel-inner{
-                                        .carousel-item{
-                                            .box_img {
-                                                @include mix.box_img(300px, 100%, center, img_auto, 400px, 300px);
-                                            } 
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        
-                        .bota {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 350px 200px;
-                                grid-template-rows: 350px;
-                                grid-template-areas:
-                                    "img_bota txt_bota"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_bota, 0.5rem, small);
-                                }
-                                
-                                .box_img {
-                                    @include mix.box_img(300px, 100%, center, img_bota, 350px, 300px);
-                                }
-                            }
-                        }
-                        .torque {
-                            .row_txt_img {
-                                display: grid;
-                                grid-template-columns: 200px 350px;
-                                grid-template-rows: 300px;
-                                grid-template-areas:
-                                    "txt_torque img_torque"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_torque, 0.5rem, small);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(300px, 100%, center, img_torque, 350px, 300px);
-                                }
-                            }
-                        }
-                        
-                        .pizzeria {
-                            .row_txt_img {
-                                display: grid;
-                                grid-template-columns: 200px 400px;
-                                grid-template-rows: 300px;
-                                grid-template-areas:
-                                    "txt_pizzeria img_pizzeria"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.5rem, small);
-                                }
-
-                                .carousel{
-                                    .carousel-inner{
-                                        .carousel-item{
-                                            .box_img {
-                                                @include mix.box_img(300px, 100%, center, img_pizzeria, 400px, 300px);
-                                            } 
-                                        }
-                                    }
-                                }
-                            }
+                        .config_flex{                           
+                            .box_txt_about {
+                                /*----------ABOUT----768------*/ 
+                                @include mix.box_txt(column, flex-start, 80%, txt_about, 0.5rem, small);
+                            }     
                         }
                         
                         .grid_container_organic{
                             /*---------------------ORGANIC--------------------------*/
-                            margin-top: 3rem;
+                            padding-top: 0.5rem;
                             .mario_txt {
-                                margin-left: 20px;
                                 @include mix.box_txt(column, flex-start, 300px, txt_mario, 00.1rem, medium);
                             }
 

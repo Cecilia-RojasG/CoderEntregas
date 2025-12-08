@@ -66,222 +66,48 @@
                             }
                         }
 
-                        .mario {
-                            .row_txt_img1 {
-                                /*-------------ORGANIC-------1024------*/
-                                display: grid;
-                                grid-template-columns: 400px 400px;
-                                grid-template-areas:
-                                    "txt_mario img_mario"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
-                                
+                        .config_flex_clients{
+                            .box_txt_clients {
+                                /*--------CLIENTS----768-----*/
+                                @include mix.box_txt(column, flex-start, 40vw, txt_clients, 0.1rem, medium);
+                            }
+                        }
+                        .config_flex{
+                            div{                            
                                 .box_txt_about {
-                                    @include mix.box_txt(column, flex-start, 400px, txt_mario, 0.5rem, medium);
-                                }
-
-                                .box_img_tall_1 {
-                                    @include mix.box_img(60vh, 100%, center, img_mario, 400px, 60vh);
-                                }
-                            }
-                        }
-
-                        .seguridad {
-                            .row_img1_img2_txt {
-                                display: grid;
-                                grid-template-columns: 200px 200px 400px;
-                                grid-template-areas:
-                                    "img_seguridad_1 img_seguridad_2 txt_seguridad"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
-
-                                .box_txt_2pj{
-                                    @include mix.box_txt(column, flex-start, 400px, txt_seguridad, 0.5rem, medium);
-                                }
-
-                                .box_img_tall_1 {
-                                    @include mix.box_img(60vh, 100%, center, img_seguridad1, 200px, 60vh);
-                                }
-
-                                .box_img_tall_2 {
-                                    @include mix.box_img(60vh, 100%, center, img_seguridad2, 200px, 60vh);
-                                }
-                            }
-                        }
-                        
-                        .electrico {
-                            .row_txt_img {
-                                /*--------------------HIGHLIGHTED-------1024-------*/
-                                display: grid;
-                                grid-template-columns: 200px 500px;
-                                grid-template-areas:
-                                    "txt_electrico img_electrico"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
-
-                                .box_txt{
-                                    @include mix.box_txt(column, flex-start, 100%, txt_electrico, 0.5rem, medium);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(fit-content, 100%, center, img_electrico, 500px, 100%);
-                                }
-                            }
-                        }
-
-                        .chancador {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 500px 200px;
-                                grid-template-areas:
-                                    "img_chancador txt_chancador"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 30px 0;
-
-                                .box_txt{
-                                    @include mix.box_txt(column, flex-start, 100%, txt_chancador, 0.5rem, medium);
-                                }
-
-                                .carousel{
-                                    .carousel-inner{
-                                        .carousel-item{
-                                            .box_img {
-                                                @include mix.box_img(fit-content, 100%, center, img_chancador, 500px, 100%);
-                                                
-                                            } 
-                                        }
-                                    }
-                                }
-                                
-                            }
-                        }
-
-                        .triciclo {
-                            .row_txt_img {
-                                /*-------------------HARDSURFACE-----1024--------------*/
-                                display: grid;
-                                grid-template-columns: 200px 500px;
-                                grid-template-areas:
-                                    "txt_triciclo img_triciclo"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
-
-                                .box_txt {
-                                    @include mix.box_txt(column, center, 100%, txt_triciclo, 0.5rem, medium);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(40vh, 100%, center, img_triciclo, 500px, 100%);
-                                }
-                            }
-                        }
-
-                        .pizzeria {
-                            .row_txt_img {
-                                display: grid;
-                                grid-template-columns: 200px 500px;
-                                grid-template-areas:
-                                    "txt_pizzeria img_pizzeria"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
-
-                                .box_txt {
-                                    @include mix.box_txt(column, center, 100%, txt_pizzeria, 0.5rem, medium);
-                                }
-
-                                .carousel{
-                                    .carousel-inner{
-                                        .carousel-item{
-                                            .box_img {
-                                                @include mix.box_img(40vh, 100%, center, img_pizzeria, 500px, 100%);
-                                            } 
-                                        }
+                                    p {
+                                        /*----------ABOUT----768------*/ 
+                                        @include mix.box_txt(column, flex-start, 80%, txt_about, 0.5rem, medium);
                                     }
                                 }
                             }
+                            
                         }
 
-                        .torque {
-                            .row_txt_img {
-                                display: grid;
-                                grid-template-columns: 200px 500px;
-                                grid-template-areas:
-                                    "txt_torque img_torque"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
+                        .grid_container_organic{
+                            /*---------------------ORGANIC----1024------------*/
+                            padding-top: 3rem;
+                            column-gap: 0.5rem;
+                            row-gap: 3rem;
+                            .mario_txt {
+                                @include mix.box_txt(column, flex-start, 400px, txt_mario, 00.1rem, medium);
+                            }
 
-                                .box_txt {
-                                    @include mix.box_txt(column, center, 100%, txt_torque, 0.5rem, medium);
-                                }
+                            .mario_img {
+                                @include mix.box_img(100%, 100%, center, img_mario, 100%, 400px);
+                            }
 
-                                .box_img {
-                                    @include mix.box_img(40vh, 100%, center, img_torque, 500px, 100%);
-                                }
+                            .seguridad_txt{
+                                @include mix.box_txt(column, flex-start, 400px, txt_seguridad, 0.1rem, medium);
+                            }
+
+                            .seguridad_img1{
+                                @include mix.box_img(100%, 200px, center, img_seguridad1, 200px,350px);
+                            }
+                            .seguridad_img2{
+                                @include mix.box_img(100%, 200px, flex-start, img_seguridad2, 200px, 350px);
                             }
                         }
-
-                        .auto {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 500px 200px;
-                                grid-template-areas:
-                                    "img_auto txt_auto"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
-
-                                .box_txt {
-                                    @include mix.box_txt(column, center, 100%, txt_auto, 0.5rem, medium);
-                                }
-
-                                .carousel{
-                                    .carousel-inner{
-                                        .carousel-item{
-                                            .box_img {
-                                                @include mix.box_img(40vh, 100%, center, img_auto, 500px, 100%);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .bota {
-                            .row_img_txt {
-                                display: grid;
-                                grid-template-columns: 400px 300px;
-                                grid-template-areas:
-                                    "img_bota txt_bota"
-                                ;
-                                width: 100%;
-                                justify-content: center;
-                                margin: 10px 0 10px 0;
-
-                                .box_txt {
-                                    @include mix.box_txt(column, flex-start, 100%, txt_bota, 0.5rem, medium);
-                                }
-
-                                .box_img {
-                                    @include mix.box_img(40vh, 100%, center, img_bota, 400px, 100%);
-                                }
-                            }
-                        }
-
                     }
                 }
             }

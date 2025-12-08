@@ -6,11 +6,11 @@
 /* -------------MAIN-------------- */
 main {
 
-    .highsquare {
+    .highsquare{
         /*CONFIGURACION DEL CUADRADO NEGRO SUPERIOR DE TODAS LAS PAGINAS*/
-        background-color: map.get(maps.$colores,highsq_back);
+        background-color: map.get(maps.$colores, highsq_back);
         padding: 10px 0px 10px 0px;
-        color: map.get(maps.$colores,txt);
+        color: map.get(maps.$colores, txt);
 
         /* Oculta el titulo del Index */
         #index_title {
@@ -21,10 +21,17 @@ main {
             .row {
                 .col {
                     .config_margin_txt {
+                        display: flex;
+                        padding: 2rem;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
                         margin-left: 1.9rem;
+
                         h1 {
                             margin-right: 0.5rem;
                         }
+
                         p {
                             margin-left: 1.9rem;
                         }
@@ -41,19 +48,19 @@ main {
                                             &:link {
                                                 text-decoration: none;
                                                 font-weight: 400;
-                                                color: map.get(maps.$colores,txt);
+                                                color: map.get(maps.$colores, txt);
                                             }
 
                                             &:visited {
-                                                color: map.get(maps.$colores,used);
+                                                color: map.get(maps.$colores, used);
                                             }
 
                                             &:hover {
-                                                color: map.get(maps.$colores,mora);
+                                                color: map.get(maps.$colores, mora);
                                             }
 
                                             &:active {
-                                                background-color: map.get(maps.$colores,highsq_back);
+                                                background-color: map.get(maps.$colores, highsq_back);
                                                 font-weight: bolder;
                                             }
                                         }
@@ -81,7 +88,7 @@ main {
                                 text-align: left;
                                 font-weight: bolder;
                                 text-transform: uppercase;
-                                color: map.get(maps.$colores,mora);
+                                color: map.get(maps.$colores, mora);
                                 /* Color del texto */
                                 z-index: 2;
                                 /* Se asegura que el texto esté encima de todo */
@@ -104,10 +111,12 @@ main {
             .row {
                 .col {
                     .center_grid {
+                        /*---------------HOME MAIN------------*/
                         display: grid;
                         place-items: center;
                         grid-template-columns: 1fr 1fr;
                         gap: 0px;
+                        padding-top: 3rem;
                         /* La altura se ajusta al contenido */
                         grid-template-rows: auto;
                         grid-template-areas:
@@ -136,9 +145,9 @@ main {
                                 text-align: left;
                                 font-weight: bolder;
                                 text-transform: uppercase;
-                                color: map.get(maps.$colores,mora);
+                                color: map.get(maps.$colores, mora);
                                 /* Color del texto */
-                                background-color: map.get(maps.$colores,transp);
+                                background-color: map.get(maps.$colores, transp);
                                 z-index: 2;
                                 /* Se asegura que el texto esté encima de todo */
 
@@ -157,8 +166,9 @@ main {
 
                     div {
                         .gallery {
-                            /*CONFIGRUACION DEL MAIN DE PORTFOLIO GENERAL*/
+                            /*-------------PORTFOLIO GENERAL----------MAIN-----*/
                             display: grid;
+                            padding-top: 3rem;
                             grid-template-columns: repeat(4, 320px);
                             gap: 5px;
                             grid-template-areas:
@@ -167,14 +177,11 @@ main {
                                 "portafolio9 portafolio10 portafolio11 portafolio12";
                             width: 100%;
                             justify-content: center;
-                            margin-top: 10px;
-
 
                             div {
                                 .img_ajustada_port {
                                     @include mix.ajuste_de_imagen(100%, 300px, 50%, 50%);
                                 }
-
                             }
 
                             .triciclo {
@@ -211,33 +218,231 @@ main {
                         }
                     }
 
-                    .config_flex {
-                        /*------------------CLIENTS......................*/
-                        display: flex;
+                    .grid_container_hardsurface {
+                        /*--------------------HARDSURFACE MAIN--------------*/
+                        display: grid;
+                        padding-top: 3rem;
+                        column-gap: 0.5rem;
+                        row-gap: 2rem;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: repeat(auto);
+                        grid-template-areas:
+                            "txt_triciclo img_triciclo img_triciclo"
+                            "carousel_car carousel_car txt_auto"
+                            "txt_pizzeria carousel_pizza carousel_pizza"
+                            "img_bota img_bota txt_bota"
+                            "txt_torque img_torque img_torque"
+                        ;
+                        width: 100%;
                         justify-content: center;
-                        padding: 0.1rem;
 
-                        .box_txt_clients {
-                            @include mix.box_txt (column, flex-start, 40%, txt_clients, 2.5rem, medium);
+                        .triciclo_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_triciclo, 0.1rem, larger);
                         }
 
+                        .triciclo_img {
+                            @include mix.box_img(100%, 100%, center, img_triciclo, 100%, 100%);
+                            padding-bottom: 3rem;
+                            border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+                        }
 
-                        div {
-                            width: 50%;
-                            margin-top: 0.1rem;
+                        .auto_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.1rem, larger);
+                        }
 
-                            .web_insert {
-                                /*Ajuste posicion insert pagina web*/
-                                width: 100%;
-                                height: 60vh;
+                        .automovil {
+                            grid-area: carousel_car;
+                            .carousel{
+                                .carousel-inner {
+                                    .carousel-item {
+                                        .auto_img {
+                                            min-height: 500px;
+                                            @include mix.box_img(100%, 100%, center, img_auto, 100%, 500px);
+                                            padding-bottom: 3rem;
+                                            border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+                                        }
+                                    }
+                                }
                             }
                         }
 
+                        .pizzeria_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.1rem, larger);
+                        }
+
+                        div {
+                            grid-area: carousel_pizza;
+                            .carousel{
+                                .carousel-inner {
+                                    .carousel-item {
+                                        .pizzeria_img {
+                                            @include mix.box_img(100%, 100%, center, img_pizzeria, 100%, 100%);
+                                            padding-bottom: 3rem;
+                                            border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .bota_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_bota, 0.1rem, larger);
+                        }
+
+                        .bota_img {
+                            @include mix.box_img(100%, 100%, center, img_bota, 100%, 500xp);
+                            padding-bottom: 3rem;
+                            border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+                        }
+
+                        .torque_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_torque, 0.1rem, larger);
+                        }
+
+                        .torque_img {
+                            @include mix.box_img(100%, 100%, center, img_torque, 100%, 100%);
+                        }
+                    }
+
+                    .grid_container_organic {
+                        /*---------------------ORGANIC--------------------------*/
+                        padding-top: 3rem;
+                        column-gap: 0.5rem;
+                        row-gap: 3rem;
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        grid-template-rows: repeat(auto);
+                        grid-template-areas:
+                            "txt_mario txt_mario img_mario"
+                            "img_seguridad1 img_seguridad2 txt_seguridad"
+                        ;
+                        width: 100%;
+                        justify-content: center;
+
+                        .mario_txt {
+                            @include mix.box_txt(column, flex-start, 600px, txt_mario, 0.01rem, larger);
+                        }
+
+                        .mario_img {
+                            @include mix.box_img(100%, 100%, center, img_mario, 100%, 600px);
+                                padding-bottom: 3rem;
+                                border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+                                width: 100%; /* O un % específico */
+                                margin: 10px 0;
+
+                        }
+
+                        .seguridad_txt {
+                            margin-left: 1rem;
+                            @include mix.box_txt(column, flex-start, 600px, txt_seguridad, 0.01rem, larger);
+                        }
+
+                        .seguridad_img1 {
+                            @include mix.box_img(100%, 300px, flex-start, img_seguridad1, 300px, 600px);
+                        }
+
+                        .seguridad_img2 {
+                            @include mix.box_img(100%, 300px, flex-start, img_seguridad2, 300px, 600px);
+                        }
+
+                    }
+
+                    .grid_container_highlighted {
+                        /*--------------------HIGHLIGHTED--------------*/
+                        padding-top: 3rem;
+                        column-gap: 0.5rem;
+                        row-gap: 2rem;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: auto auto;
+                        grid-template-areas:
+                            "txt_electrico img_electrico img_electrico"
+                            "carousel_chancador carousel_chancador txt_chancador"
+                        ;
+                        width: 100%;
+                        justify-content: center;
+
+                        .electrico_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_electrico, 0.1rem, larger);
+                        }
+
+                        .electrico_img {
+                            @include mix.box_img(100%, 100%, center, img_electrico, 100%, 100%);
+                            padding-bottom: 3rem;
+                            border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+                        }
+
+                        .chancador_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_chancador, 0.1rem, larger);
+                        }
+
+                        .carousel {
+                            grid-area: carousel_chancador;
+
+                            .carousel-inner {
+                                .carousel-item {
+                                    .chancador_img {
+                                        @include mix.box_img(100%, 100%, center, img_chancador, 100%, 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .config_flex_clients {
+                        /*------------------CLIENTS.......MAIN..............*/
+                        display: flex;
+                        flex-direction: column;
+                        padding-top: 3rem;
+                        box-sizing: border-box;
+                        row-gap: 2rem;
+                        .cliente1{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .box_txt_cl_torque {
+                                @include mix.box_txt (column, flex-start, 40vw, txt_clients, 0.1rem, larger);
+                            }
+                            div {
+                                width: 60vw;
+                                .web_insert {
+                                    /*Ajuste posicion insert pagina web*/
+                                    width: 100%;
+                                    height: 50vh;
+                                }
+                            }
+                        }
                         
+                        .cliente2{
+                            display: flex;
+                            flex-direction: row-reverse;
+                            justify-content: center;
+                            align-items: center;
+                            .box_txt_cl_thone {
+                                width: 40%;
+                                @include mix.box_txt (column, flex-start, 40vw, txt_clients, 0.1rem, larger);
+                            }
+                            div {
+                                width: 60vw;
+                                .client1_img {  
+                                    width: 95%;                                  
+                                    max-height: 70vh;
+                                }
+                            }
+                        }
+                    }
+
+                    .config_flex {
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+
                         .logo {
                             /*--------------ABOUT-----------------*/
+                            padding-top: 3rem;
                             margin: 0.8rem;
                             width: 10%;
+                            
 
                             .image_about {
                                 width: 100%;
@@ -245,231 +450,39 @@ main {
                         }
 
                         .box_txt_about {
-                            @include mix.box_txt(column, flex-start, 70%, txt_about, 0.8rem, medium);
-                        }
-                    }
-
-                    .grid_container_organic{
-                        /*---------------------ORGANIC--------------------------*/
-                        margin-top: 2rem;
-                        row-gap: 2rem;
-                        display: grid;
-                        grid-template-columns: auto auto auto;
-                        grid-template-rows: auto auto;
-                        grid-template-areas:
-                            "txt_mario txt_mario img_mario"
-                            "img_seguridad1 img_seguridad2 txt_seguridad"
-                        ;
-                        width: 100%;
-                        justify-content: center;
-                        .mario_txt {
-                            @include mix.box_txt(column, flex-start, 600px, txt_mario, 0.1rem, medium);
-                        }
-
-                        .mario_img {
-                            @include mix.box_img(100%, 100%, center, img_mario, 100%, 600px);
-                        }
-
-                        .seguridad_txt{
-                            margin-left: 10px;
-                            @include mix.box_txt(column, flex-start, 600px, txt_seguridad, 0.1rem, medium);
-                        }
-
-                        .seguridad_img1{
-                            @include mix.box_img(100%, 300px, flex-start, img_seguridad1, 300px,600px);
-                        }
-                        .seguridad_img2{
-                            @include mix.box_img(100%, 300px, flex-start, img_seguridad2, 300px, 600px);
-                        }
-                    }
-                    
-
-                    .electrico {
-                        .row_txt_img {
-                            /*--------------------HIGHLIGHTED--------------*/
-                            display: grid;
-                            grid-template-columns: 400px 900px;
-                            grid-template-areas:
-                                "txt_electrico img_electrico"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 10px 0;
-
-                            .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_electrico, 0.5rem, medium);
+                            padding-top: 3rem;
+                            .divisor-div {
+                                height: 0; /* Sin altura propia */
+                                border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+                                width: 100%; /* O un % específico */
+                                margin: 2.0rem 0;
+                                grid-area: "divisor";
                             }
 
-                            .box_img {
-                                @include mix.box_img(40vh, 100%, center, img_electrico, 900px, 100%);
+                            @include mix.box_txt(column, flex-start, 70%, txt_about, 0.8rem, larger);
+                            p {
+                                margin-left: 0.5rem;
+                                margin-right: 1.0rem;
                             }
                         }
                     }
 
-                    .chancador {
-                        .row_img_txt {
-                            display: grid;
-                            grid-template-columns: 900px 400px;
-                            grid-template-areas:
-                                "img_chancador txt_chancador"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 30px 0;
-
-                            .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_chancador,0.5rem, medium);
-                            }
-
-                            .carousel {
-                                .carousel-inner {
-                                    .carousel-item {
-                                        .box_img {
-                                            @include mix.box_img(40vh, 100%, center, img_chancador, 900px, 100%);
-                                        }
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-
-                    .triciclo {
-                        .row_txt_img {
-                            /*-------------------HARDSURFACE--------------------*/
-                            display: grid;
-                            grid-template-columns: 400px 900px;
-                            grid-template-areas:
-                                "txt_triciclo img_triciclo"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 10px 0;
-
-                            .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_triciclo, 0.5rem, medium);
-                            }
-
-                            .box_img {
-                                @include mix.box_img(40vh, 100%, center, img_triciclo, 900px, 100%);
-                            }
-                        }
-                    }
-                    
-
-                    .auto {
-                        .row_img_txt {
-                            display: grid;
-                            grid-template-columns: 900px 400px;
-                            grid-template-areas:
-                                "img_auto txt_auto"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 10px 0;
-
-                            .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.5rem, medium);
-                            }
-
-                            .carousel {
-                                .carousel-inner {
-                                    .carousel-item {
-                                        .box_img {
-                                            @include mix.box_img(40vh, 100%, center, img_auto, 900px, 100%);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .pizzeria {
-                        .row_txt_img {
-                            display: grid;
-                            grid-template-columns: 400px 900px;
-                            grid-template-areas:
-                                "txt_pizzeria img_pizzeria"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 10px 0;
-
-                            .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.5rem, medium);
-                            }
-
-                            .carousel {
-                                .carousel-inner {
-                                    .carousel-item {
-                                        .box_img {
-                                            @include mix.box_img(40vh, 100%, center, img_pizzeria, 900px, 100%);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .torque {
-                        .row_txt_img {
-                            display: grid;
-                            grid-template-columns: 400px 900px;
-                            grid-template-areas:
-                                "txt_torque img_torque"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 10px 0;
-
-                            .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_torque, 0.5rem, medium);
-                            }
-
-                            .box_img {
-                                @include mix.box_img(40vh, 100%, center, img_torque, 900px, 100%);
-                            }
-                        }
-                    }
-
-                    
-
-                    .bota {
-                        .row_img_txt {
-                            display: grid;
-                            grid-template-columns: 900px 400px;
-                            grid-template-areas:
-                                "img_bota txt_bota"
-                            ;
-                            width: 100%;
-                            justify-content: center;
-                            margin: 10px 0 10px 0;
-
-                            .box_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_bota, 0.5rem, medium);
-                            }
-
-                            .box_img {
-                                @include mix.box_img(40vh, 100%, center, img_bota, 900px, 100%);
-                            }
-                        }
-                    }
-
-                    .flex_center{
+                    .flex_center {
                         @extend %center_flex;
-                        div{
+
+                        div {
                             .form_contact {
                                 /*-------------FORMULARIO DE CONTACTO----------------*/
-                                border-radius: 5px;
+                                font-size: larger;
+                                padding-top: 3rem;
                                 position: relative;
-                                text-align: lef;
-                                max-width: 100%;
+                                text-align: left;
+                                max-width: 95%;
                                 box-sizing: border-box;
                                 /* Incluye padding y borde en el cálculo del ancho */
-                                font-size: clamp(0.7rem, 0.9vw, 1.1rem);
 
                                 input:focus {
-                                    background-color: map.get(maps.$colores,focus);
+                                    background-color: map.get(maps.$colores, focus);
                                 }
 
                                 ul {
@@ -480,8 +493,9 @@ main {
                                         padding: 1%;
 
                                         label {
-                                            color: map.get(maps.$colores,used);
-                                            width: 140px;
+                                            font-size: larger;
+                                            color: map.get(maps.$colores, used);
+                                            width: 180px;
 
                                             .name::after {
                                                 content: '*';
@@ -505,18 +519,25 @@ main {
                                         }
                                     }
                                 }
-                            } 
+                            }
                         }
-    
                     }
 
                     div {
                         .edit_links {
                             /*--LINKS MAIN---*/
                             @extend %edit_links_gral;
-                            font-size: small;
+                        }
+                    }
+
+                    div {
+                        .edit_links_inicio {
+                            /*--LINKS MAIN---*/
+                            @extend %edit_links_gral;
+                            font-size: medium;
                             text-align: left;
-                            margin-bottom: 5px;
+                            margin-left: 3.0rem;
+                            font-size: medium;
                         }
                     }
                 }

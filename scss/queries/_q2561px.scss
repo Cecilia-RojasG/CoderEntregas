@@ -18,6 +18,7 @@
 
                     .submenu {
                         &>ul {
+                            top: 22px;
                             font-size: x-large;
                         }
                     }
@@ -26,51 +27,131 @@
         }
     }
 
-    main{
+    main {
+        .highsquare {
+            .container-fluid {
+                .row {
+                    .col {
+                        .config_margin_txt {
+                            p {
+                                font-size: x-large;
+                            }
+
+                            div {
+                                nav {
+                                    .links_internos {
+                                        gap: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         section {
             .container {
                 .row {
                     .col {
-                        .config_flex{
-                            .box_txt {
-                                /*--------CLIENTS------2561---*/
-                                @include mix.box_txt(column, flex-start, 100%, txt_clients, 0.5rem, large);
-                            }
-                            div{
-                                .web_insert {
-                                    /*Ajuste tamaño insert pagina web*/
-                                    margin-top: 5%;
+                        .config_flex_clients {
+                            .cliente1{
+                                .box_txt_cl_torque {
+                                    /*-------------CLIENTS------2560---*/
+                                    @include mix.box_txt(column, flex-start, 40vw, txt_clients, 0.3rem, x-large);
                                 }
-                            } 
-                            .box_txt_about {
-                                @include mix.box_txt(column, flex-start, 70%, txt_about, 0.8rem, large);
-                                p {
-                                    /*----------ABOUT---2561-------*/ 
-                                    margin-left: 1.5rem;
-                                    margin-right: 4.0rem;
+                            }
+                            .cliente2{
+                                .box_txt_cl_thone {
+                                    /*-------------CLIENTS------2560---*/
+                                    @include mix.box_txt(column, flex-start, 40vw, txt_clients, 0.3rem, x-large);
                                 }
                             }
                         }
-                        .grid_container_organic{
-                            /*---------------------ORGANIC----+2561-----------------*/
+
+                        .config_flex{
+                            .box_txt_about {
+                                @include mix.box_txt(column, flex-start, 70%, txt_about, 0.8rem, x-large);
+                                p {
+                                    /*----------ABOUT-----2560----*/
+                                    margin-left: 0.5rem;
+                                    margin-right: 1.0rem;
+                                }
+                            }
+                        }
+                        
+                        .flex_center{
+                            div{
+                                .form_contact {
+                                    /*-------------FORMULARIO DE CONTACTO----------------*/
+                                    font-size: large;
+                                    ul {
+                                        li {
+                                            label {
+                                                font-size: large;
+                                                width: 180px;
+                                                }
+                                            }
+                                    }
+                                }
+                            }
+                        }
+
+                        div {
+                            .edit_links {
+                                /*--LINKS MAIN---*/
+                                font-size: large;
+                                margin-bottom: 5px;
+                            }
+
+                            .gallery {
+                                div{
+                                    .img_ajustada_port {
+                                        /*-------------PORTFOLIO GENERAL----------2561-----*/
+                                        @include mix.ajuste_de_imagen(100%, 320px, 50%, 50%);
+                                    }
+                                }
+                            }
+                        }
+
+                        .grid_container_highlighted{
+                            /*--------------------HIGHLIGHTED--------------*/
+                            .electrico_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_electrico, 0.1rem, x-large);
+                            }
+
+                            .chancador_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_chancador, 0.1rem, x-large);
+                            }
+                        }
+                        .grid_container_hardsurface{
+                            /*--------------------HARDSURFACE--------------*/
+                            .triciclo_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_triciclo, 0.1rem, x-large);
+                            }
+
+                            .auto_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.1rem, x-large);
+                            }
+
+                            .pizzeria_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.1rem, x-large);
+                            }
+
+                            .bota_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_bota, 0.1rem, x-large);
+                            }
+                            .torque_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_torque, 0.1rem, x-large);
+                            }
+                        }
+                        .grid_container_organic {
+                        /*---------------------ORGANIC--------------------------*/
                             .mario_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_mario, 00.1rem, x-large);
+                                @include mix.box_txt(column, flex-start, 600px, txt_mario, 0.01rem, x-large);
                             }
-
-                            .mario_img {
-                                @include mix.box_img(100%, 100%, center, img_mario, 900px, 60vh);
-                            }
-
-                            .seguridad_txt{
+                            .seguridad_txt {
                                 margin-left: 10px;
-                                @include mix.box_txt(column, flex-start, 100%, txt_seguridad, 0.1rem, x-large);
-                            }
-
-                            .seguridad_img1{
-                                @include mix.box_img(100%, 100%, flex-start, img_seguridad1, 440px, 60vh);
-                            }
-                            .seguridad_img2{
-                                @include mix.box_img(100%, 100%, flex-start, img_seguridad2, 440px, 60vh);
+                                @include mix.box_txt(column, flex-start, 600px, txt_seguridad, 0.01rem, x-large);
                             }
                         }
                     }
