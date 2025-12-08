@@ -217,6 +217,18 @@ main {
                             .chancador {
                                 grid-area: portafolio8;
                             }
+                            .chancador2 {
+                                grid-area: portafolio9;
+                            }
+                            .accidente {
+                                grid-area: portafolio10;
+                            }
+                            .galpon1 {
+                                grid-area: portafolio11;
+                            }
+                            .galpon2 {
+                                grid-area: portafolio12;
+                            }
                         }
                     }
 
@@ -234,6 +246,7 @@ main {
                             "txt_pizzeria carousel_pizza carousel_pizza"
                             "img_bota img_bota txt_bota"
                             "txt_torque img_torque img_torque"
+                            "carousel_galpon carousel_galpon txt_galpon"
                         ;
                         width: 100%;
                         justify-content: center;
@@ -254,6 +267,7 @@ main {
 
                         .automovil {
                             grid-area: carousel_car;
+                            @extend %center_flex;
                             .carousel{
                                 .carousel-inner {
                                     .carousel-item {
@@ -272,8 +286,9 @@ main {
                             @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.1rem, larger);
                         }
 
-                        div {
+                        .modelo_pizzeria {
                             grid-area: carousel_pizza;
+                            @extend %center_flex;
                             .carousel{
                                 .carousel-inner {
                                     .carousel-item {
@@ -303,7 +318,30 @@ main {
 
                         .torque_img {
                             @include mix.box_img(100%, 100%, center, img_torque, 100%, 100%);
+                            border-bottom: 1px solid #999; /* Crea una línea solo abajo */
                         }
+
+                        .galpon_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_galpon, 0.1rem, larger);
+                        }                      
+                        
+                        .modelo_galpon {
+                            grid-area: carousel_galpon;
+                            @extend %center_flex;
+
+                            .carousel{
+                                .carousel-inner {
+                                    .carousel-item {
+                                        .galpon_img {
+                                            @include mix.box_img(100%, 120%, center, img_galpon, 100%, 100%);                 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+
+
                     }
 
                     .grid_container_organic {
@@ -356,10 +394,11 @@ main {
                         row-gap: 2rem;
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr;
-                        grid-template-rows: auto auto;
+                        grid-template-rows: repeat(auto);
                         grid-template-areas:
                             "txt_electrico img_electrico img_electrico"
                             "carousel_chancador carousel_chancador txt_chancador"
+                            "txt_accidente img_accidente img_accidente"
                         ;
                         width: 100%;
                         justify-content: center;
@@ -379,6 +418,7 @@ main {
                         }
 
                         .carousel {
+                            @extend %center_flex;
                             grid-area: carousel_chancador;
 
                             .carousel-inner {
@@ -388,6 +428,16 @@ main {
                                     }
                                 }
                             }
+                        }
+
+                        .accidente_txt {
+                            @include mix.box_txt(column, flex-start, 100%, txt_accidente, 0.1rem, larger);
+                        }
+
+                        .accidente_img {
+                            @include mix.box_img(100%, 100%, center, img_accidente, 100%, 100%);
+                            padding-bottom: 3rem;
+                            border-bottom: 1px solid #999; /* Crea una línea solo abajo */
                         }
                     }
 
@@ -416,10 +466,8 @@ main {
                         }
                         
                         .cliente2{
-                            display: flex;
+                            @extend %center_flex;
                             flex-direction: row-reverse;
-                            justify-content: center;
-                            align-items: center;
                             .box_txt_cl_thone {
                                 width: 40%;
                                 @include mix.box_txt (column, flex-start, 40vw, txt_clients, 0.1rem, larger);
@@ -521,7 +569,10 @@ main {
                             }
                         }
                     }
-
+                    .separacion{
+                        padding-top: 3rem;
+                    }
+                    
                     div {
                         .edit_links_inicio {
                             /*--LINKS MAIN---*/

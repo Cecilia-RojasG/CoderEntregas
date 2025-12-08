@@ -109,12 +109,11 @@ footer .container .row .col .center, main .highsquare .container-fluid .row .col
   place-items: center;
 }
 
-main section .container .row .col .flex_center {
+main section .container .row .col .grid_container_hardsurface .automovil, main section .container .row .col .grid_container_hardsurface .modelo_pizzeria, main section .container .row .col .grid_container_hardsurface .modelo_galpon, main section .container .row .col .grid_container_highlighted .carousel, main section .container .row .col .config_flex_clients .cliente2, main section .container .row .col .flex_center {
   /*Centra con flex*/
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.1rem;
 }
 
 main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links, main section .container .row .col div .edit_links_inicio {
@@ -369,6 +368,18 @@ main section .container .row .col div .gallery .electrica {
 main section .container .row .col div .gallery .chancador {
   grid-area: portafolio8;
 }
+main section .container .row .col div .gallery .chancador2 {
+  grid-area: portafolio9;
+}
+main section .container .row .col div .gallery .accidente {
+  grid-area: portafolio10;
+}
+main section .container .row .col div .gallery .galpon1 {
+  grid-area: portafolio11;
+}
+main section .container .row .col div .gallery .galpon2 {
+  grid-area: portafolio12;
+}
 main section .container .row .col .grid_container_hardsurface {
   /*--------------------HARDSURFACE MAIN--------------*/
   display: grid;
@@ -377,7 +388,7 @@ main section .container .row .col .grid_container_hardsurface {
   row-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(auto);
-  grid-template-areas: "txt_triciclo img_triciclo img_triciclo" "carousel_car carousel_car txt_auto" "txt_pizzeria carousel_pizza carousel_pizza" "img_bota img_bota txt_bota" "txt_torque img_torque img_torque";
+  grid-template-areas: "txt_triciclo img_triciclo img_triciclo" "carousel_car carousel_car txt_auto" "txt_pizzeria carousel_pizza carousel_pizza" "img_bota img_bota txt_bota" "txt_torque img_torque img_torque" "carousel_galpon carousel_galpon txt_galpon";
   width: 100%;
   justify-content: center;
 }
@@ -503,10 +514,10 @@ main section .container .row .col .grid_container_hardsurface .pizzeria_txt p {
   margin-left: 0.8rem;
   margin-right: 1.5rem;
 }
-main section .container .row .col .grid_container_hardsurface div {
+main section .container .row .col .grid_container_hardsurface .modelo_pizzeria {
   grid-area: carousel_pizza;
 }
-main section .container .row .col .grid_container_hardsurface div .carousel .carousel-inner .carousel-item .pizzeria_img {
+main section .container .row .col .grid_container_hardsurface .modelo_pizzeria .carousel .carousel-inner .carousel-item .pizzeria_img {
   display: flex;
   width: 100%;
   height: 100%;
@@ -514,12 +525,12 @@ main section .container .row .col .grid_container_hardsurface div .carousel .car
   align-items: center;
   grid-area: img_pizzeria;
 }
-main section .container .row .col .grid_container_hardsurface div .carousel .carousel-inner .carousel-item .pizzeria_img .comun_img {
+main section .container .row .col .grid_container_hardsurface .modelo_pizzeria .carousel .carousel-inner .carousel-item .pizzeria_img .comun_img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
-main section .container .row .col .grid_container_hardsurface div .carousel .carousel-inner .carousel-item .pizzeria_img {
+main section .container .row .col .grid_container_hardsurface .modelo_pizzeria .carousel .carousel-inner .carousel-item .pizzeria_img {
   padding-bottom: 3rem;
   border-bottom: 1px solid #999; /* Crea una línea solo abajo */
 }
@@ -605,6 +616,53 @@ main section .container .row .col .grid_container_hardsurface .torque_img {
   grid-area: img_torque;
 }
 main section .container .row .col .grid_container_hardsurface .torque_img .comun_img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .grid_container_hardsurface .torque_img {
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+}
+main section .container .row .col .grid_container_hardsurface .galpon_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: txt_galpon;
+  margin-top: 0.1rem;
+  color: #faebd7;
+}
+main section .container .row .col .grid_container_hardsurface .galpon_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .galpon_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .galpon_txt h4 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .galpon_txt p {
+  font-size: larger;
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_hardsurface .modelo_galpon {
+  grid-area: carousel_galpon;
+}
+main section .container .row .col .grid_container_hardsurface .modelo_galpon .carousel .carousel-inner .carousel-item .galpon_img {
+  display: flex;
+  width: 120%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: img_galpon;
+}
+main section .container .row .col .grid_container_hardsurface .modelo_galpon .carousel .carousel-inner .carousel-item .galpon_img .comun_img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
@@ -730,8 +788,8 @@ main section .container .row .col .grid_container_highlighted {
   row-gap: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: "txt_electrico img_electrico img_electrico" "carousel_chancador carousel_chancador txt_chancador";
+  grid-template-rows: repeat(auto);
+  grid-template-areas: "txt_electrico img_electrico img_electrico" "carousel_chancador carousel_chancador txt_chancador" "txt_accidente img_accidente img_accidente";
   width: 100%;
   justify-content: center;
 }
@@ -824,6 +882,51 @@ main section .container .row .col .grid_container_highlighted .carousel .carouse
   max-height: 100%;
   object-fit: cover;
 }
+main section .container .row .col .grid_container_highlighted .accidente_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: txt_accidente;
+  margin-top: 0.1rem;
+  color: #faebd7;
+}
+main section .container .row .col .grid_container_highlighted .accidente_txt h2 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_highlighted .accidente_txt h3 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_highlighted .accidente_txt h4 {
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_highlighted .accidente_txt p {
+  font-size: larger;
+  margin-left: 0.8rem;
+  margin-right: 1.5rem;
+}
+main section .container .row .col .grid_container_highlighted .accidente_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-area: img_accidente;
+}
+main section .container .row .col .grid_container_highlighted .accidente_img .comun_img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+main section .container .row .col .grid_container_highlighted .accidente_img {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #999; /* Crea una línea solo abajo */
+}
 main section .container .row .col .config_flex_clients {
   /*------------------CLIENTS.......MAIN..............*/
   display: flex;
@@ -874,10 +977,7 @@ main section .container .row .col .config_flex_clients .cliente1 div .web_insert
   height: 50vh;
 }
 main section .container .row .col .config_flex_clients .cliente2 {
-  display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
 }
 main section .container .row .col .config_flex_clients .cliente2 .box_txt_cl_thone {
   width: 40%;
@@ -1010,6 +1110,9 @@ main section .container .row .col .flex_center div .form_contact ul li label .su
 main section .container .row .col .flex_center div .form_contact ul li label .message::after {
   content: "*";
   color: brown;
+}
+main section .container .row .col .separacion {
+  padding-top: 3rem;
 }
 main section .container .row .col div .edit_links_inicio {
   /*--LINKS MAIN---*/
