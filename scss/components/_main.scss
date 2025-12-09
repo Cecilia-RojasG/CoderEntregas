@@ -5,7 +5,6 @@
 
 /* -------------MAIN-------------- */
 main {
-
     .highsquare{
         /*CONFIGURACION DEL CUADRADO NEGRO SUPERIOR DE TODAS LAS PAGINAS*/
         background-color: map.get(maps.$colores, highsq_back);
@@ -116,20 +115,75 @@ main {
                         /*---------------HOME MAIN------------*/
                         display: grid;
                         place-items: center;
-                        grid-template-columns: 1fr 1fr;
                         gap: 0px;
                         padding-top: 3rem;
                         /* La altura se ajusta al contenido */
-                        grid-template-rows: auto;
+                        grid-template-columns: auto auto auto;
+                        grid-template-rows: auto auto;
                         grid-template-areas:
-                            "organic hardsurface";
+                            "about portfolio contact"
+                            "organic hardsurface clients";
 
-                        .organic_area {
-                            grid-area: organic;
+                        .about_area{
+                            grid-area: about;    
+                        }
+                        .hardsurface_area{
+                            grid-area: hardsurface;    
+                        }
+                        .portfolio_area{
+                            grid-area: portfolio;    
+                        }
+                        .organic_area{
+                            grid-area: organic;    
+                        }
+                        .client_area{
+                            grid-area: clients;    
+                        }
+                        .contact_area{
+                            grid-area: contact;    
                         }
 
-                        .hardsurface_area {
-                            grid-area: hardsurface;
+                        .card {
+                        width: 300px;
+                        height: 500px;
+                        margin: 1rem auto;
+                        perspective: 1000px;
+                        cursor: pointer;
+                        }
+
+                        .card-inner {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transition: transform 0.6s;
+                        transform-style: preserve-3d;
+                        }
+
+                        .card:hover .card-inner {
+                        transform: rotateY(180deg);
+                        }
+
+                        .card-front,
+                        .card-back {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0.05rem;
+                        }
+
+                        .card-front {
+                        background: map.get(maps.$colores, transp);
+                        border: 0.1px map.get(maps.$colores, transp);
+                        }
+
+                        .card-back {
+                        background: #8b5cf6;
+                        color: map.get(maps.$colores, txt);
+                        transform: rotateY(180deg);
                         }
 
                         .text_over_img {
@@ -156,7 +210,7 @@ main {
                             }
 
                             .img_ajustada_grid {
-                                @include mix.ajuste_de_imagen(100%, 35vh, 50%, 50%);
+                                @include mix.ajuste_de_imagen(100%, 100%, 50%, 50%);
                             }
 
                             img {

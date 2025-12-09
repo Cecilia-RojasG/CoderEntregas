@@ -1,10 +1,10 @@
 $colores: (
-    mora: rgb(139, 50, 241),
+    mora: rgb(187, 161, 218),
     used: #faebd7,
     txt: azure,
     back: #212121,
     highsq_back: #000000,
-    transp: rgba(0, 0, 0, 0.4),
+    transp: rgba(0, 0, 0, 0.5),
     focus: bisque,
     lnk_color: rgb(163, 202, 223)
 );
@@ -16,3 +16,14 @@ $breakpoints: (
     lg: 992px,
     xl: 1200px
 );
+
+$areas:(
+    org: 'organic',
+    hard: 'hardsurface',
+    abo: 'about',
+    port: 'portafolio',
+    high: 'highlight',
+    cli: 'clients',
+    cont: 'contact'
+);
+
