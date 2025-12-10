@@ -1,12 +1,15 @@
 $colores: (
-    mora: rgb(187, 161, 218),
+    mora: rgb(109, 26, 204),
+    violeta: rgb(159, 130, 238),
     used: #faebd7,
     txt: azure,
     back: #212121,
     highsq_back: #000000,
-    transp: rgba(0, 0, 0, 0.5),
+    transp: rgba(0, 0, 0, 0.4),
     focus: bisque,
-    lnk_color: rgb(163, 202, 223)
+    lnk_color: rgb(163, 202, 223),
+    back_txt_sup: rgba(0, 0, 0, 0.8),
+    card-back: #590a8d
 );
 
 $breakpoints: (

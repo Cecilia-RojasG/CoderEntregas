@@ -11,7 +11,7 @@ main {
         padding: 10px 0px 10px 0px;
         color: map.get(maps.$colores, txt);
 
-        /* Oculta el titulo del Index */
+        /* Oculta el titulo del Index */ 
         #index_title {
             display: none;
         }
@@ -93,7 +93,7 @@ main {
                                 /* Color del texto */
                                 z-index: 2;
                                 /* Se asegura que el texto esté encima de todo */
-                                background-color: rgba(0, 0, 0, 0.5);
+                                background-color: rgba(0, 0, 0, 0.6);
                             }
 
                             .img_ajustada_high {
@@ -114,10 +114,8 @@ main {
                     .center_grid {
                         /*---------------HOME MAIN------------*/
                         display: grid;
-                        place-items: center;
-                        gap: 0px;
+                        justify-content:space-evenly;
                         padding-top: 3rem;
-                        /* La altura se ajusta al contenido */
                         grid-template-columns: auto auto auto;
                         grid-template-rows: auto auto;
                         grid-template-areas:
@@ -144,46 +142,53 @@ main {
                         }
 
                         .card {
-                        width: 300px;
-                        height: 500px;
-                        margin: 1rem auto;
-                        perspective: 1000px;
-                        cursor: pointer;
+                            width: 400px;
+                            height: 300px;
+                            margin: 1rem auto;
+                            perspective: 1000px;
+                            cursor: pointer;
                         }
 
                         .card-inner {
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        transition: transform 0.6s;
-                        transform-style: preserve-3d;
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            transition: transform 0.6s;
+                            transform-style: preserve-3d;
                         }
 
                         .card:hover .card-inner {
-                        transform: rotateY(180deg);
+                            transform: rotateY(180deg);
                         }
 
                         .card-front,
                         .card-back {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        backface-visibility: hidden;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 0.05rem;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            border-radius: 0.05rem;
                         }
 
                         .card-front {
-                        background: map.get(maps.$colores, transp);
-                        border: 0.1px map.get(maps.$colores, transp);
+                            background: map.get(maps.$colores, used);
+                            border: 0.1px map.get(maps.$colores, transp);
                         }
 
                         .card-back {
-                        background: #8b5cf6;
-                        color: map.get(maps.$colores, txt);
-                        transform: rotateY(180deg);
+                            background: map.get(maps.$colores, card-back);
+                            color: map.get(maps.$colores, txt);
+                            transform: rotateY(180deg);
+                            p{
+                                margin: 1.0rem;
+                                a{
+                                    @extend %edit_links_gral;
+                                }     
+                            }    
                         }
 
                         .text_over_img {
@@ -194,17 +199,19 @@ main {
 
                             .txt_superpuesto {
                                 position: absolute;
-                                top: 10%;
+                                top: 5%;
                                 /* Posicion vertical */
                                 left: 5%;
                                 /* Posicion horizontal */
                                 text-align: left;
                                 font-weight: bolder;
+                                font-size: x-large;
                                 text-transform: uppercase;
-                                color: map.get(maps.$colores, mora);
+                                color: map.get(maps.$colores, violeta);
                                 /* Color del texto */
-                                background-color: map.get(maps.$colores, transp);
+                                background-color: map.get(maps.$colores, back_txt_sup);
                                 z-index: 2;
+                                backface-visibility: hidden;
                                 /* Se asegura que el texto esté encima de todo */
 
                             }

@@ -21,22 +21,5 @@
         }
     }
 }
-/*INDEX 1800*/
 
-    main {
-        section {
-            .container {
-                .row {
-                    .col {
-                        .center_grid {
-                            .text_over_img {
-                                .img_ajustada_grid {
-                                    @include mix.ajuste_de_imagen(100%, 100%, 50%, 50%);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+

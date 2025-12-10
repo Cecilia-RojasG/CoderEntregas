@@ -102,7 +102,6 @@ article {
     gap: 1lh;
   }
 }
-/* Ajuste para imagenes del Portfolio General */
 footer .container .row .col .center, main .highsquare .container-fluid .row .col .center {
   /*Centra con grid*/
   display: grid;
@@ -116,19 +115,19 @@ main section .container .row .col .grid_container_hardsurface .automovil, main s
   align-items: center;
 }
 
-main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links, main section .container .row .col div .edit_links_inicio {
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links, main section .container .row .col .center_grid .card-back p a, main section .container .row .col div .edit_links_inicio {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
   color: rgb(163, 202, 223);
 }
-main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:visited, main section .container .row .col div .edit_links_inicio:visited {
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:visited, main section .container .row .col .center_grid .card-back p a:visited, main section .container .row .col div .edit_links_inicio:visited {
   color: #faebd7;
 }
-main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:hover, main section .container .row .col div .edit_links_inicio:hover {
-  color: rgb(187, 161, 218);
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:hover, main section .container .row .col .center_grid .card-back p a:hover, main section .container .row .col div .edit_links_inicio:hover {
+  color: rgb(109, 26, 204);
 }
-main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:active, main section .container .row .col div .edit_links_inicio:active {
+main .highsquare .container-fluid .row .col .config_margin_txt p .edit_links:active, main section .container .row .col .center_grid .card-back p a:active, main section .container .row .col div .edit_links_inicio:active {
   background-color: #000000;
   font-weight: bolder;
 }
@@ -173,7 +172,7 @@ header .menu_completo .nav .nav_list li a:visited {
   color: #faebd7;
 }
 header .menu_completo .nav .nav_list li a:hover {
-  color: rgb(187, 161, 218);
+  color: rgb(109, 26, 204);
 }
 header .menu_completo .nav .nav_list li a:active {
   background-color: #000000;
@@ -240,7 +239,7 @@ main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_in
   color: #faebd7;
 }
 main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos li a:hover {
-  color: rgb(187, 161, 218);
+  color: rgb(109, 26, 204);
 }
 main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos li a:active {
   background-color: #000000;
@@ -261,11 +260,11 @@ main .highsquare .container-fluid .row .col .center .text_over_img .txt_superpue
   text-align: left;
   font-weight: bolder;
   text-transform: uppercase;
-  color: rgb(187, 161, 218);
+  color: rgb(109, 26, 204);
   /* Color del texto */
   z-index: 2;
   /* Se asegura que el texto esté encima de todo */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada_high {
   margin: 0%;
@@ -279,10 +278,8 @@ main .highsquare .container-fluid .row .col .center .text_over_img .img_ajustada
 main section .container .row .col .center_grid {
   /*---------------HOME MAIN------------*/
   display: grid;
-  place-items: center;
-  gap: 0px;
+  justify-content: space-evenly;
   padding-top: 3rem;
-  /* La altura se ajusta al contenido */
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   grid-template-areas: "about portfolio contact" "organic hardsurface clients";
@@ -306,8 +303,8 @@ main section .container .row .col .center_grid .contact_area {
   grid-area: contact;
 }
 main section .container .row .col .center_grid .card {
-  width: 300px;
-  height: 500px;
+  width: 400px;
+  height: 300px;
   margin: 1rem auto;
   perspective: 1000px;
   cursor: pointer;
@@ -331,16 +328,20 @@ main section .container .row .col .center_grid .card-back {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   border-radius: 0.05rem;
 }
 main section .container .row .col .center_grid .card-front {
-  background: rgba(0, 0, 0, 0.5);
-  border: 0.1px rgba(0, 0, 0, 0.5);
+  background: #faebd7;
+  border: 0.1px rgba(0, 0, 0, 0.4);
 }
 main section .container .row .col .center_grid .card-back {
-  background: #8b5cf6;
+  background: #590a8d;
   color: azure;
   transform: rotateY(180deg);
+}
+main section .container .row .col .center_grid .card-back p {
+  margin: 1rem;
 }
 main section .container .row .col .center_grid .text_over_img {
   position: relative;
@@ -350,17 +351,19 @@ main section .container .row .col .center_grid .text_over_img {
 }
 main section .container .row .col .center_grid .text_over_img .txt_superpuesto {
   position: absolute;
-  top: 10%;
+  top: 5%;
   /* Posicion vertical */
   left: 5%;
   /* Posicion horizontal */
   text-align: left;
   font-weight: bolder;
+  font-size: x-large;
   text-transform: uppercase;
-  color: rgb(187, 161, 218);
+  color: rgb(159, 130, 238);
   /* Color del texto */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 2;
+  backface-visibility: hidden;
   /* Se asegura que el texto esté encima de todo */
 }
 main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
@@ -1628,16 +1631,6 @@ footer .container .row .col .center span {
     font-size: medium;
   }
 }
-/*INDEX 1800*/
-main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* La imagen se recorta para cubrir el contenedor */
-  object-position: 50% 50%;
-  /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-}
-
 /*----------------1490--------------------*/
 /*--------HEADER---------*/
 @media (max-width: 1490px) {
@@ -1657,6 +1650,10 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   }
   main .highsquare .container-fluid .row .col .config_margin_txt div nav .links_internos {
     gap: 10px;
+  }
+  main section .container .row .col .center_grid .card {
+    width: 340px;
+    height: 255px;
   }
   main section .container .row .col div .gallery {
     /*-----------PORTFOLIO GENERAL 1490----------*/
@@ -2031,6 +2028,18 @@ main section .container .row .col .center_grid .text_over_img .img_ajustada_grid
   header .menu_completo .nav .nav_list .submenu > ul {
     font-size: small;
   }
+  main section .container .row .col .center_grid {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "about portfolio" "hardsurface organic" "contact  clients";
+  }
+  main section .container .row .col .card {
+    width: 400px;
+    height: 300px;
+    margin: 1rem auto;
+    perspective: 1000px;
+    cursor: pointer;
+  }
   main section .container .row .col div .gallery {
     /*---------------MAIN 1290--------------------*/
     /*-----------PORTFOLIO GENERAL 1290--------------*/
@@ -2375,6 +2384,10 @@ footer .container .row .col .center div .icon {
   header .menu_completo .nav .nav_list .submenu > ul {
     font-size: x-small;
   }
+  main section .container .row .col .center_grid .card {
+    width: 340px;
+    height: 255px;
+  }
 }
 /*----------------768--------------------*/
 @media (max-width: 768px) {
@@ -2454,23 +2467,14 @@ footer .container .row .col .center div .icon {
   }
   main section .container .row .col .center_grid {
     /*-----------------INDEX-----768-------*/
-    margin: 1.5%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0px;
-    place-items: center;
-    grid-template-rows: auto;
-    /* La altura se ajusta al contenido */
-    grid-template-areas: "organic" "hardsurface";
+    justify-content: space-around;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "about" "portfolio" "hardsurface" "organic" "contact" "clients";
   }
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 100%;
-    height: 25vh;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-    margin: 3px 0 3px 0;
+  main section .container .row .col .center_grid .card {
+    width: 400px;
+    height: 300px;
   }
   main section .container .row .col div .gallery {
     /*-------------PORTFOLIO------768--------------*/
@@ -2683,13 +2687,9 @@ footer .container .row .col .center div .icon {
     font-size: x-small;
     gap: 10px;
   }
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+  main section .container .row .col .center_grid .card {
+    width: 370px;
+    height: 278px;
   }
   main section .container .row .col div .gallery {
     /*-------------PORTFOLIO-------575-----------*/
@@ -3302,14 +3302,12 @@ footer .container .row .col .center div .icon {
     margin-left: 1rem;
     margin-right: 1rem;
   }
-  main section .container .row .col .center_grid .text_over_img .img_ajustada_grid {
-    width: 290px;
-    height: 25vh;
-    object-fit: cover;
-    /* La imagen se recorta para cubrir el contenedor */
-    object-position: 50% 50%;
-    /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
-    margin: 5px 0 5px 0;
+  main section .container .row .col .center_grid .card {
+    width: 300px;
+    height: 220px;
+    margin: 1rem auto;
+    perspective: 1000px;
+    cursor: pointer;
   }
   main section .container .row .col div .gallery {
     /*-------------PORTFOLIO----380-----------*/

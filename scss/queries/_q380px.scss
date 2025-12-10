@@ -38,11 +38,12 @@
                 .row {
                     .col {
                         .center_grid {
-                            .text_over_img {
-                                .img_ajustada_grid {
-                                    @include mix.ajuste_de_imagen(290px, 25vh, 50%, 50%);
-                                    margin: 5px 0 5px 0;
-                                }
+                            .card {
+                                width: 300px;
+                                height: 220px;
+                                margin: 1rem auto;
+                                perspective: 1000px;
+                                cursor: pointer;
                             }
                         }
                         div{

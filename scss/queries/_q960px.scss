@@ -21,4 +21,21 @@
         }
     }
 
+    main {
+        section {
+            .container {
+                .row {
+                    .col {
+                        .center_grid{
+                            .card {
+                                width: 340px;
+                                height: 255px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+

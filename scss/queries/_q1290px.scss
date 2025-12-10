@@ -25,6 +25,25 @@
             .container {
                 .row {
                     .col {
+
+                        .center_grid{
+                            grid-template-columns: auto auto;
+                            grid-template-rows: repeat(6, 1fr);
+                            grid-template-areas:
+                            "about portfolio"
+                            "hardsurface organic" 
+                            "contact  clients"
+                            ;
+                        }
+
+                        .card {
+                            width: 400px;
+                            height: 300px;
+                            margin: 1rem auto;
+                            perspective: 1000px;
+                            cursor: pointer;
+                        }
+
                         div{
                             .gallery {
                                 /*---------------MAIN 1290--------------------*/

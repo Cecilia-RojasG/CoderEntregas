@@ -114,22 +114,20 @@
                     .col {
                         .center_grid {
                             /*-----------------INDEX-----768-------*/
-                            margin: 1.5%;
-                            display: grid;
-                            grid-template-columns: 1fr;
-                            gap: 0px;
-                            place-items: center;
-                            grid-template-rows: auto;
-                            /* La altura se ajusta al contenido */
+                            justify-content:space-around;
+                            grid-template-columns: auto;
+                            grid-template-rows: repeat(6, 1fr);
                             grid-template-areas:
-                                "organic"
-                                "hardsurface"
+                            "about"
+                            "portfolio"
+                            "hardsurface"
+                            "organic" 
+                            "contact"
+                            "clients"
                             ;
-                            .text_over_img {
-                                .img_ajustada_grid {
-                                    @include mix.ajuste_de_imagen(100%, 25vh, 50%, 50%);
-                                    margin: 3px 0 3px 0;
-                                }
+                            .card {
+                                width: 400px;
+                                height: 300px;
                             }
                         }
                         div{
