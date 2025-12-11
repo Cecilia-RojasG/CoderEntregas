@@ -97,9 +97,21 @@
                         }
                         .center {
                             .text_over_img {
+                                .card_highlight{
+                                    left: 55vw;
+                                    width: 40vw;
+                                    /* Posicion horizontal */
+                                    p{  
+                                        text-align: left;
+                                        font-size: medium;
+                                        padding: 1rem 3rem 1rem 2rem;
+                                        margin: 1vw;
+                                        width: 100%;
+                                    } 
+                                }
                                 .img_ajustada_high {
                                     margin: 0%;
-                                    @include mix.ajuste_de_imagen(100%, 30vh, 45%, 50%);
+                                    @include mix.ajuste_de_imagen(100%, 33vh, 45%, 50%);
                                 }
                             }
                         }
@@ -165,7 +177,7 @@
                         .config_flex{                           
                             .box_txt_about {
                                 /*----------ABOUT----768------*/ 
-                                @include mix.box_txt(column, flex-start, 80%, txt_about, 0.5rem, small);
+                                @include mix.box_txt(column, flex-start, 90%, txt_about, 0.5rem, small);
                             }     
                         }
                         
@@ -190,6 +202,54 @@
                             }
                             .seguridad_img2{
                                 @include mix.box_img(100%, 200px, flex-start, img_seguridad2, 200px, 350px);
+                            }
+                        }
+
+                        .grid_container_highlighted {
+                            /*--------------------HIGHLIGHTED--------------*/
+                            padding-top: 3rem;
+                            column-gap: 0.5rem;
+                            row-gap: 2rem;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-template-rows: repeat(auto);
+                            grid-template-areas:
+                                "txt_electrico img_electrico img_electrico"
+                                "carousel_chancador carousel_chancador txt_chancador"
+                                "txt_accidente img_accidente img_accidente"
+                            ;
+                            width: 100%;
+                            justify-content: center;
+
+                            .electrico_txt {
+                                @include mix.box_txt(column, flex-start, 300px, txt_electrico, 0.1rem, larger);
+                            }
+
+                            .electrico_img {
+                                @include mix.box_img(100%, 100%, center, img_electrico, 100%, 350px);
+                                padding-bottom: 3rem;
+                            }
+
+                            .chancador_txt {
+                                @include mix.box_txt(column, flex-start, 300px, txt_chancador, 0.1rem, larger);
+                            }
+
+                            .carousel {
+                                .carousel-inner {
+                                    .carousel-item {
+                                        .chancador_img {
+                                            @include mix.box_img(100%, 100%, center, img_chancador, 100%, 350px);
+                                        }
+                                    }
+                                }
+                            }
+                            .accidente_txt {
+                                @include mix.box_txt(column, flex-start, 300px, txt_accidente, 0.1rem, larger);
+                            }
+
+                            .accidente_img {
+                                @include mix.box_img(100%, 100%, center, img_accidente, 100%, 350px);
+                                padding-bottom: 3rem;
                             }
                         }
 

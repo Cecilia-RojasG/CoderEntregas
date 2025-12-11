@@ -21,6 +21,36 @@
     }
 
     main{
+        .highsquare {
+            .container-fluid {
+                .row {
+                    .col {
+                        .center {
+                            .text_over_img {
+                                .card_highlight{
+                                    left: 60vw;
+                                    width: 30vw;
+                                    /* Posicion horizontal */
+                                    p{  
+                                        text-align: left;
+                                        font-size: medium;
+                                        padding: 1rem 2rem 1rem 2rem;
+                                        margin: 1vw;
+                                        width: 100%;
+                                    } 
+                            }
+                                .img_ajustada_high {
+                                    margin: 0%;
+                                    @include mix.ajuste_de_imagen(100%, 30vh, 45%, 50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
         section {
             .container {
                 .row {

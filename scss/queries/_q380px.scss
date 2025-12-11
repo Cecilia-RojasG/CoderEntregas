@@ -15,7 +15,18 @@
                                 .img_ajustada_high {
                                     /*---------MAIN 380------------------------*/
                                     margin-left: 0%;
-                                    @include mix.ajuste_de_imagen(100%, 30vh, 45%, 50%);
+                                    @include mix.ajuste_de_imagen(100%, 45vh, 42%, 50%);
+                                }
+                                .card_highlight{
+                                    left: 62vw;
+                                    width: 32vw;
+                                    /* Posicion horizontal */
+                                    p{  
+                                        font-size: 12px;
+                                        padding: 1rem 1rem 1rem 1rem;
+                                        margin: 0.5vw;
+                                        width: 100%;
+                                    } 
                                 }
                             }
                         }
@@ -38,6 +49,7 @@
                 .row {
                     .col {
                         .center_grid {
+                            padding-top: 1rem;
                             .card {
                                 width: 300px;
                                 height: 220px;
@@ -50,6 +62,7 @@
                             .gallery {
                                 /*-------------PORTFOLIO----380-----------*/
                                 /* Ajuste para la grilla del Portfolio General */
+                                padding-top: 1.5rem;
                                 grid-template-columns: repeat(2, 150px);
                                 grid-template-areas:
                                     "portafolio1 portafolio2"
@@ -66,6 +79,77 @@
                                         @include mix.ajuste_de_imagen(100%, 150px, 50%, 50%);
                                     }
                                 }
+                            }
+                        }
+
+                        .grid_container_hardsurface {
+                            /*--------------------HARDSURFACE 575--------------*/
+                            display: flex;
+                            padding-top: 1.5rem;
+                            flex-direction: column;
+                            row-gap: 2px;
+                            .triciclo_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_triciclo, 0.01rem, medium);
+                            }
+
+                            .triciclo_img {
+                                @include mix.box_img(100%, 100%, center, img_triciclo, 100%, 100%);
+                                padding-bottom: 4rem;
+                            }
+
+                            .auto_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.01rem, medium);
+                            }
+
+                            .automovil{
+                                grid-area: carousel_car;
+                                padding-bottom: 4rem;
+                                .carousel{
+                                    .carousel-inner {
+                                        .carousel-item {
+                                            .auto_img {
+                                                min-height: 190px;
+                                                @include mix.box_img(100%, 100%, center, img_auto, fit-content, 190px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pizzeria_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_pizzeria, 0.01rem, medium);
+                            }
+
+                            .modelo_pizzeria {
+                                grid-area: carousel_pizza;
+                                padding-bottom: 4rem;
+                                .carousel{
+                                    .carousel-inner {
+                                        .carousel-item {
+                                            .pizzeria_img {
+                                                @include mix.box_img(100%, 100%, center, img_pizzeria, 100%, 100%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .bota_txt {
+                                @include mix.box_txt(column, flex-start, 98%, txt_bota, 0.01rem, medium);
+                            }
+
+                            .bota_img {
+                                @include mix.box_img(100%, 100%, center, img_bota, 100%, fit-content);
+                                padding-bottom: 4rem;
+                            }
+
+                            .torque_txt {
+                                @include mix.box_txt(column, flex-start, 98%, txt_torque, 0.01rem, medium);
+                            }
+
+                            .torque_img {
+                                @include mix.box_img(100%, 100%, center, img_torque, 100%, fit-content);
+                                padding-bottom: 4rem;
                             }
                         }
 

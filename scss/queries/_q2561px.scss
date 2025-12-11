@@ -45,6 +45,23 @@
                                 }
                             }
                         }
+                        .center {
+                            .text_over_img {
+                                .card_highlight {
+                                    left: 60vw;
+                                    width: 30vw;
+
+                                    /* Posicion horizontal */
+                                    p {
+                                        font-size: xx-large;
+                                        padding: 7rem 4em 2rem 4em;
+                                        margin: 0.5vw;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+
                     }
                 }
             }

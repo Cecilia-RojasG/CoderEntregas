@@ -36,6 +36,23 @@
                                 }
                             }
                         }
+                        .center {
+                            .text_over_img {
+                                .card_highlight{
+                                    /* Posicion vertical */
+                                    left: 55vw;
+                                    width: 40vw;
+                                    /* Posicion horizontal */
+                                    p{  
+                                        text-align: left;
+                                        font-size: large;
+                                        padding: 2rem 3rem 1rem 2rem;
+                                        margin: 1vw;
+                                        width: 100%;
+                                    } 
+                                }
+                            }
+                        }
                     }
                 }
             }

@@ -42,6 +42,7 @@ article {
     color: transparent;
 }
 
+
 @layer demo.support {
 
     body {
@@ -77,5 +78,20 @@ article {
         gap: 1lh;
     }
 }
+
+
+/* Copy this code after the above code */
+@keyframes customAni {
+    0% {
+	    transform: scale(1);
+    }
+
+    100% {
+	    transform: scale(2.5);
+    }
+}
+
+
+
 
 

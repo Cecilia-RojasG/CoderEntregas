@@ -27,17 +27,35 @@ header {
     main {
         .highsquare {
             .container-fluid {
-            .row {
-                .col {
-                    .config_margin_txt {
-                        p {
-                            font-size: large;
-                        }
+                .row {
+                    .col {
+                        .center {
+                            .text_over_img {
+                                .card_highlight {
+                                    left: 60vw;
+                                    width: 30vw;
 
-                        div {
-                            nav {
-                                .links_internos {
-                                    gap: 10px;
+                                    /* Posicion horizontal */
+                                    p {
+                                        font-size: large;
+                                        padding: 4rem 4em 2rem 4em;
+                                        margin: 0.5vw;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .config_margin_txt {
+                            p {
+                                font-size: large;
+                            }
+
+                            div {
+                                nav {
+                                    .links_internos {
+                                        gap: 10px;
+                                    }
                                 }
                             }
                         }
@@ -46,7 +64,6 @@ header {
             }
         }
 
-        }
         section {
             .container {
                 .row {
@@ -61,6 +78,7 @@ header {
                         div{
                             .gallery {
                                 /*-----------PORTFOLIO GENERAL 1490----------*/
+                                padding-top: 3rem;
                                 grid-template-columns: repeat(4, 250px);
                                 grid-template-areas:
                                     "portafolio1 portafolio2 portafolio3 portafolio4"
@@ -132,6 +150,7 @@ header {
 
                         .grid_container_highlighted{
                             /*--------------------HIGHLIGHTED----1490------*/
+                            padding-top: 3rem;
                             .electrico_txt {
                                 @include mix.box_txt(column, flex-start, 90%, txt_electrico, 0.1rem, medium);
                             }
@@ -139,9 +158,14 @@ header {
                             .chancador_txt {
                                 @include mix.box_txt(column, flex-start, 90%, txt_chancador, 0.1rem, medium);
                             }
+
+                            .accidente_txt {
+                            @include mix.box_txt(column, flex-start, 90%, txt_accidente, 0.1rem, larger);
+                            }
                         }
                         .grid_container_hardsurface{
                             /*--------------------HARDSURFACE-----1490---------*/
+                            padding-top: 3rem;
                             .triciclo_txt {
                                 @include mix.box_txt(column, flex-start, 100%, txt_triciclo, 0.1rem, medium);
                             }
@@ -163,6 +187,7 @@ header {
                         }
                         .grid_container_organic {
                         /*---------------------ORGANIC--------------------------*/
+                            padding-top: 3rem;
                             .mario_txt {
                                 @include mix.box_txt(column, flex-start, 600px, txt_mario, 0.01rem, medium);
                             }

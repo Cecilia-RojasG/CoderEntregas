@@ -28,5 +28,23 @@
             }
         }
     }
-    
+
+    main {
+        .highsquare {
+            .container-fluid {
+                .row {
+                    .col {
+                        .center {
+                            .text_over_img {
+                                .card_highlight {
+                                    left: 60vw;
+                                    width: 30vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

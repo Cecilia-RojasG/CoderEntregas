@@ -12,8 +12,11 @@ main {
         color: map.get(maps.$colores, txt);
 
         /* Oculta el titulo del Index */ 
-        #index_title {
-            display: none;
+        #index_h1 {
+            Z-index: -1000;
+            font-size: 0;
+            color: map.get(maps.$colores, highsq_back);
+
         }
 
         .container-fluid {
@@ -94,6 +97,30 @@ main {
                                 z-index: 2;
                                 /* Se asegura que el texto esté encima de todo */
                                 background-color: rgba(0, 0, 0, 0.6);
+                            }
+                            .card_highlight{
+                                position: absolute;
+                                top: 0.01%;
+                                /* Posicion vertical */
+                                left: 60vw;
+                                width: 30vw;
+                                height: 100%;
+                                /* Posicion horizontal */
+                                
+                                font-weight: bolder;
+                                color: map.get(maps.$colores, used);
+                                overflow: hidden;
+                                /* Color del texto */
+                                z-index: 2;
+                                /* Se asegura que el texto esté encima de todo */
+                                background-color: map.get(maps.$colores, transp);
+                                p{  
+                                    text-align: left;
+                                    font-size: x-large;
+                                    padding: 2.5rem 6rem 2rem 2rem;
+                                    margin: 2vw;
+                                    width: 100%;
+                                } 
                             }
 
                             .img_ajustada_high {
@@ -241,6 +268,7 @@ main {
                             width: 100%;
                             justify-content: center;
 
+
                             div {
                                 .img_ajustada_port {
                                     @include mix.ajuste_de_imagen(100%, 300px, 50%, 50%);
@@ -249,46 +277,82 @@ main {
 
                             .triciclo {
                                 grid-area: portafolio1;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
 
                             .auto {
                                 grid-area: portafolio2;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
 
                             .mario {
                                 grid-area: portafolio3;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
 
                             .pizzeria_otro {
                                 grid-area: portafolio4;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
 
                             .pizzeria {
                                 grid-area: portafolio5;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
 
                             .bota {
                                 grid-area: portafolio6;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
 
                             .electrica {
                                 grid-area: portafolio7;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
 
                             .chancador {
                                 grid-area: portafolio8;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
                             .chancador2 {
                                 grid-area: portafolio9;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
                             .accidente {
                                 grid-area: portafolio10;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
                             .galpon1 {
                                 grid-area: portafolio11;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
                             .galpon2 {
                                 grid-area: portafolio12;
+                                >:hover{
+                                    animation: customAni 2s ease 0s infinite normal none;
+                                }
                             }
                         }
                     }

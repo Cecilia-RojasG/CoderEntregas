@@ -29,6 +29,27 @@
                                 }
                             }
                         }
+                        .center {
+                            .text_over_img {
+                                .img_ajustada_high {
+                                    /*---------MAIN 380------------------------*/
+                                    margin-left: 0%;
+                                    @include mix.ajuste_de_imagen(100%, 42vh, 45%, 50%);
+                                }
+
+                                .card_highlight{
+                                    left: 55vw;
+                                    width: 40vw;
+                                    /* Posicion horizontal */
+                                    p{
+                                        font-size: 15px;
+                                        padding: 1rem 1rem 1rem 1rem;
+                                        margin: 0.5vw;
+                                        width: 100%;
+                                    } 
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -81,7 +102,7 @@
                             }
 
                             .auto_txt {
-                                @include mix.box_txt(column, flex-start, 100%, txt_auto, 3rem, medium);
+                                @include mix.box_txt(column, flex-start, 100%, txt_auto, 0.01rem, medium);
                             }
 
                             .automovil{
@@ -92,7 +113,7 @@
                                         .carousel-item {
                                             .auto_img {
                                                 min-height: 200px;
-                                                @include mix.box_img(100%, 100%, center, img_auto, fit-content, 250px);
+                                                @include mix.box_img(100%, 100%, center, img_auto, fit-content, 220px);
                                             }
                                         }
                                     }
@@ -171,6 +192,56 @@
                                         }
                                     }
                                 }
+                            }
+                        }
+
+                        .grid_container_highlighted {
+                            /*--------------------HIGHLIGHTED--------------*/
+                            padding-top: 3rem;
+                            column-gap: 0.5rem;
+                            row-gap: 0.1rem;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: repeat(auto);
+                            grid-template-areas:
+                                "txt_electrico txt_electrico"
+                                "img_electrico img_electrico"
+                                "txt_chancador txt_chancador"
+                                "carousel_chancador carousel_chancador"
+                                "txt_accidente txt_accidente"
+                                "img_accidente img_accidente"
+                            ;
+
+                            .electrico_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_electrico, 0.1rem, larger);
+                            }
+
+                            .electrico_img {
+                                @include mix.box_img(100%, 100%, center, img_electrico, 100%, 100%);
+                                padding-bottom: 3rem;
+                            }
+
+                            .chancador_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_chancador, 0.1rem, larger);
+                            }
+
+                            .carousel {
+                                .carousel-inner {
+                                    .carousel-item {
+                                        .chancador_img {
+                                            @include mix.box_img(100%, 100%, center, img_chancador, 100%, 100%);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .accidente_txt {
+                                @include mix.box_txt(column, flex-start, 100%, txt_accidente, 0.1rem, larger);
+                            }
+
+                            .accidente_img {
+                                @include mix.box_img(100%, 100%, center, img_accidente, 100%, 100%);
+                                padding-bottom: 3rem;
                             }
                         }
                         
