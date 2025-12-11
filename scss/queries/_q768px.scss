@@ -162,6 +162,74 @@
                                         @include mix.ajuste_de_imagen(100%, 200px, 50%, 50%);
                                     }
                                 }
+
+                                .triciclo {
+                                    >:hover{
+                                        animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+
+                                .auto {
+                                    >:hover{
+                                        animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+
+                                .mario {
+                                    >:hover{
+                                        animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+
+                                .pizzeria_otro {
+                                    >:hover{
+                                        animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+
+                                .pizzeria {
+                                    >:hover{
+                                        animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+
+                                .bota {
+                                    >:hover{
+                                        animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+
+                                .electrica {
+                                    >:hover{
+                                        animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+
+                                .chancador {
+                                    >:hover{
+                                        animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+                                .chancador2 {
+                                    >:hover{
+                                        animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+                                .accidente {
+                                    >:hover{
+                                        animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+                                .galpon1 {
+                                    >:hover{
+                                        animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
+                                .galpon2 {
+                                    >:hover{
+                                        animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+                                    }
+                                }
                             }
                         }
                         .config_flex_clients{

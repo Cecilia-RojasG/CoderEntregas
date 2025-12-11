@@ -102,13 +102,34 @@ article {
     gap: 1lh;
   }
 }
-/* Copy this code after the above code */
-@keyframes customAni {
+@keyframes customAn1 {
   0% {
     transform: scale(1);
+    transform-origin: 50% 50%;
   }
   100% {
-    transform: scale(2.5);
+    transform: scale(2);
+    transform-origin: 50% 50%;
+  }
+}
+@keyframes customAn2 {
+  0% {
+    transform: scale(1);
+    transform-origin: 0% 50%;
+  }
+  100% {
+    transform: scale(2);
+    transform-origin: 0% 50%;
+  }
+}
+@keyframes customAn3 {
+  0% {
+    transform: scale(1);
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform: scale(2);
+    transform-origin: 100% 50%;
   }
 }
 footer .container .row .col .center, main .highsquare .container-fluid .row .col .center {
@@ -434,73 +455,73 @@ main section .container .row .col div .gallery .triciclo {
   grid-area: portafolio1;
 }
 main section .container .row .col div .gallery .triciclo > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .auto {
   grid-area: portafolio2;
 }
 main section .container .row .col div .gallery .auto > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .mario {
   grid-area: portafolio3;
 }
 main section .container .row .col div .gallery .mario > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .pizzeria_otro {
   grid-area: portafolio4;
 }
 main section .container .row .col div .gallery .pizzeria_otro > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .pizzeria {
   grid-area: portafolio5;
 }
 main section .container .row .col div .gallery .pizzeria > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .bota {
   grid-area: portafolio6;
 }
 main section .container .row .col div .gallery .bota > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .electrica {
   grid-area: portafolio7;
 }
 main section .container .row .col div .gallery .electrica > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .chancador {
   grid-area: portafolio8;
 }
 main section .container .row .col div .gallery .chancador > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .chancador2 {
   grid-area: portafolio9;
 }
 main section .container .row .col div .gallery .chancador2 > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .accidente {
   grid-area: portafolio10;
 }
 main section .container .row .col div .gallery .accidente > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .galpon1 {
   grid-area: portafolio11;
 }
 main section .container .row .col div .gallery .galpon1 > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col div .gallery .galpon2 {
   grid-area: portafolio12;
 }
 main section .container .row .col div .gallery .galpon2 > :hover {
-  animation: customAni 2s ease 0s infinite normal none;
+  animation: customAn1 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
 }
 main section .container .row .col .grid_container_hardsurface {
   /*--------------------HARDSURFACE MAIN--------------*/
@@ -1716,7 +1737,7 @@ footer .container .row .col .center span {
     font-size: medium;
   }
 }
-/*----------------1490--------------------*/
+/*--------------1490--------------------*/
 /*--------HEADER---------*/
 @media (max-width: 1490px) {
   header .menu_completo {
@@ -2665,6 +2686,42 @@ footer .container .row .col .center div .icon {
     /* La imagen se recorta para cubrir el contenedor */
     object-position: 50% 50%;
     /* El centro de la imagen se alinea al 50% del ancho y 50% de la altura*/
+  }
+  main section .container .row .col div .gallery .triciclo > :hover {
+    animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .auto > :hover {
+    animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .mario > :hover {
+    animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .pizzeria_otro > :hover {
+    animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .pizzeria > :hover {
+    animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .bota > :hover {
+    animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .electrica > :hover {
+    animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .chancador > :hover {
+    animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .chancador2 > :hover {
+    animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .accidente > :hover {
+    animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .galpon1 > :hover {
+    animation: customAn2 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
+  }
+  main section .container .row .col div .gallery .galpon2 > :hover {
+    animation: customAn3 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 normal both;
   }
   main section .container .row .col .config_flex_clients .box_txt_clients {
     /*--------CLIENTS----768-----*/
